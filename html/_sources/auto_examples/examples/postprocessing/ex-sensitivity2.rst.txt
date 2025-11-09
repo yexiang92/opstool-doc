@@ -235,12 +235,6 @@ Visualize the model
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    Widget(value='<iframe src="http://localhost:54458/index.html?ui=P_0x21b8a632fc0_0&reconnect=auto" class="pyvista" style="width: 99%; height: 600px; border: 1px solid rgb(221,221,221);"></iframe>')
-
 
 
 
@@ -382,9 +376,9 @@ It should be noted that since the **integrator may be reset internally**, you ne
 
  .. code-block:: none
 
-    🚀 OPSTOOL::SmartAnalyze:   0%|                                                             | 0/500 [00:00<?, ? step/s]    🚀 OPSTOOL::SmartAnalyze:  22%|██████████▋                                      | 109/500 [00:00<00:00, 1082.88 step/s]    🚀 OPSTOOL::SmartAnalyze:  45%|█████████████████████▉                           | 224/500 [00:00<00:00, 1120.89 step/s]    🚀 OPSTOOL::SmartAnalyze:  67%|█████████████████████████████████                | 337/500 [00:00<00:00, 1117.08 step/s]    🚀 OPSTOOL::SmartAnalyze:  90%|████████████████████████████████████████████     | 450/500 [00:00<00:00, 1121.17 step/s]    🚀 OPSTOOL::SmartAnalyze: 100%|█████████████████████████████████████████████████| 500/500 [00:00<00:00, 1121.17 step/s]    🚀 OPSTOOL::SmartAnalyze: 100%|█████████████████████████████████████████████████| 500/500 [00:00<00:00, 1113.91 step/s]
+    🚀 OPSTOOL::SmartAnalyze:   0%|                                                             | 0/500 [00:00<?, ? step/s]    🚀 OPSTOOL::SmartAnalyze:  22%|██████████▊                                      | 110/500 [00:00<00:00, 1093.24 step/s]    🚀 OPSTOOL::SmartAnalyze:  44%|█████████████████████▊                           | 222/500 [00:00<00:00, 1108.45 step/s]    🚀 OPSTOOL::SmartAnalyze:  67%|█████████████████████████████████                | 337/500 [00:00<00:00, 1122.76 step/s]    🚀 OPSTOOL::SmartAnalyze:  90%|████████████████████████████████████████████▎    | 452/500 [00:00<00:00, 1130.83 step/s]    🚀 OPSTOOL::SmartAnalyze: 100%|█████████████████████████████████████████████████| 500/500 [00:00<00:00, 1130.83 step/s]    🚀 OPSTOOL::SmartAnalyze: 100%|█████████████████████████████████████████████████| 500/500 [00:00<00:00, 1125.27 step/s]
     Note: OpenSees LogFile has been generated in .SmartAnalyze-OpenSees.log.
-    >>> 🎉 OPSTOOL::SmartAnalyze:: Successfully finished! Time consumption: 0.450 s. 🎉
+    >>> 🎉 OPSTOOL::SmartAnalyze:: Successfully finished! Time consumption: 0.445 s. 🎉
     OPSTOOL ::  All responses data with _odb_tag = sensitivity-pushover saved in 
     G:\opstool\docs\.opstool.output/RespStepData-sensitivity-pushover.nc!
 
@@ -691,7 +685,7 @@ The right column shows the hysteresis diagram of displacement :math:`U` and tota
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.496 seconds)
+   **Total running time of the script:** (0 minutes 1.381 seconds)
 
 
 .. _sphx_glr_download_auto_examples_examples_postprocessing_ex-sensitivity2.py:

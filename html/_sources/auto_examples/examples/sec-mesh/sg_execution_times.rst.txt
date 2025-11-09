@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:06.982** total execution time for 5 files **from auto_examples\examples\sec-mesh**:
+**00:07.048** total execution time for 5 files **from auto_examples\examples\sec-mesh**:
 
 .. container::
 
@@ -33,17 +33,17 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_examples_sec-mesh_ex-sec-props.py` (``ex-sec-props.py``)
-     - 00:03.469
+     - 00:03.607
      - 0.0
    * - :ref:`sphx_glr_auto_examples_examples_sec-mesh_ex-rc-section.py` (``ex-rc-section.py``)
-     - 00:01.202
+     - 00:01.139
      - 0.0
    * - :ref:`sphx_glr_auto_examples_examples_sec-mesh_ex-bridge-deck.py` (``ex-bridge-deck.py``)
-     - 00:00.881
+     - 00:00.911
      - 0.0
    * - :ref:`sphx_glr_auto_examples_examples_sec-mesh_ex-composite.py` (``ex-composite.py``)
-     - 00:00.851
+     - 00:00.830
      - 0.0
    * - :ref:`sphx_glr_auto_examples_examples_sec-mesh_ex-cfst.py` (``ex-cfst.py``)
-     - 00:00.578
+     - 00:00.560
      - 0.0

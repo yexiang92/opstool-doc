@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**03:56.615** total execution time for 9 files **from auto_examples\examples\postprocessing**:
+**03:04.018** total execution time for 9 files **from auto_examples\examples\postprocessing**:
 
 .. container::
 
@@ -33,19 +33,16 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_examples_postprocessing_ex-ssi-Gu.py` (``ex-ssi-Gu.py``)
-     - 02:14.577
+     - 02:10.405
      - 0.0
    * - :ref:`sphx_glr_auto_examples_examples_postprocessing_ex-nonlinear-frame-transient.py` (``ex-nonlinear-frame-transient.py``)
-     - 00:50.025
-     - 0.0
-   * - :ref:`sphx_glr_auto_examples_examples_postprocessing_ex-excavation.py` (``ex-excavation.py``)
-     - 00:47.395
+     - 00:49.211
      - 0.0
    * - :ref:`sphx_glr_auto_examples_examples_postprocessing_ex-fsi-gu.py` (``ex-fsi-gu.py``)
-     - 00:03.122
+     - 00:03.022
      - 0.0
    * - :ref:`sphx_glr_auto_examples_examples_postprocessing_ex-sensitivity2.py` (``ex-sensitivity2.py``)
-     - 00:01.496
+     - 00:01.381
      - 0.0
    * - :ref:`sphx_glr_auto_examples_examples_postprocessing_ex-cantilever-roll-up.py` (``ex-cantilever-roll-up.py``)
      - 00:00.000
@@ -54,6 +51,9 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_examples_postprocessing_ex-ele-removal-add.py` (``ex-ele-removal-add.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_examples_postprocessing_ex-excavation.py` (``ex-excavation.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_examples_postprocessing_ex-forma11c.py` (``ex-forma11c.py``)
