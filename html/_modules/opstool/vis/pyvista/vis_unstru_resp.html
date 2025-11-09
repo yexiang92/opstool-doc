@@ -1,0 +1,1281 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../../genindex.html" /><link rel="search" title="Search" href="../../../../search.html" />
+
+    <link rel="shortcut icon" href="../../../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
+        <title>opstool.vis.pyvista.vis_unstru_resp - opstool 1.0.20 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=85e76eac" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/_css/shared.css?v=165b944a" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/_css/furo.css?v=75230d29" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #fbf1c7;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../../index.html"><div class="brand">opstool 1.0.20 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../../../_static/logo-light.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../../../_static/logo-dark.png" alt="Dark Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../../../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Quick Start</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../known_issues.html">Known Issues</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../quick_start.html">Quick Start</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Quick Start</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/quick-start/index.html">Quick Start</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Quick Start</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/quick-start/ex-frame2D.html">Two-Dimensional Moment Frame Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/quick-start/ex-quick-plot-model.html">Quick Model and Eigen Visualization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/pre/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/pre/sec_mesh.html">Fiber Section Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/pre/read_gmsh.html">Converting GMSH to OpenSeesPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/pre/tcl2py.html">Convert Tcl code to OpenSeesPy commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/pre/unit_system.html">Automatic Unit Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/pre/model_data.html">Quickly apply gravity loads and obtain mass and stiffness matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/pre/loads.html">Loads Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/pre/model_mass.html">Model mass generation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/post/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/eigen.html">Eigenvalue Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/nodal_resp.html">Node Responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/frame_resp.html">Frame Responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/fiber_sec_resp.html">Fiber Section Responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/truss_resp.html">Truss Responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/shell_resp.html">Shell Responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/plane_up_resp.html">Plane response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/brick_resp.html">Brick Responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/sensitivity_resp.html">Sensitivity Analysis Responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/unit_transform.html">Unit conversion in post-processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_model_plotly.html">Model Geometry (Plotly)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_eigen_plotly.html">Eigen (Plotly)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_nodal_resp_plotly.html">Nodal Responses (Plotly)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_frame_resp_plotly.html">Frame Responses (Plotly)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_truss_resp_plotly.html">Truss Responses (Plotly)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_shell_resp_plotly.html">Shell Responses (Plotly)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_plane_resp_plotly.html">Plane Responses (Plotly)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_brick_resp_plotly.html">Brick Responses (Plotly)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_model_pyvista.html">Model Geometry (Pyvista)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_eigen_pyvista.html">Eigen (Pyvista)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_nodal_resp_pyvista.html">Nodal Responses (Pyvista)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_frame_resp_pyvista.html">Frame Responses (Pyvista)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_truss_resp_pyvista.html">Truss Responses (Pyvista)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_shell_resp_pyvista.html">Shell Responses (Pyvista)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_plane_resp_pyvista.html">Plane Responses (Pyvista)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_brick_resp_pyvista.html">Brick Responses (Pyvista)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/analysis/index.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/analysis/smart_analysis.html">Smart Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/analysis/mc_analysis.html">Moment Curvature Analysis of Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/analysis/buckling_analysis_linear.html">Linear Buckling Analysis</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.load_ops_examples.html">load_ops_examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.add_ops_hints_file.html">add_ops_hints_file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.run_model.html">run_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.print_version.html">print_version</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../src/api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html">FiberSecMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.SecMesh.html">SecMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.create_material.html">create_material</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.create_polygon_patch.html">create_polygon_patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.create_circle_patch.html">create_circle_patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.create_patch_from_dxf.html">create_patch_from_dxf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.create_polygon_points.html">create_polygon_points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.create_circle_points.html">create_circle_points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.offset.html">offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.line_offset.html">line_offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.poly_offset.html">poly_offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.set_patch_material.html">set_patch_material</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.vis_fiber_sec_real.html">vis_fiber_sec_real</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.section.html">opstool.pre.section.section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.fiber.html">opstool.pre.section.fiber</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.patch.html">opstool.pre.section.patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.layer.html">opstool.pre.section.layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.plot_fiber_sec_cmds.html">opstool.pre.section.plot_fiber_sec_cmds</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.tcl2py.html">tcl2py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.Gmsh2OPS.html">Gmsh2OPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.UnitSystem.html">UnitSystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.create_gravity_load.html">create_gravity_load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.gen_grav_load.html">gen_grav_load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.transform_beam_uniform_load.html">transform_beam_uniform_load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.transform_beam_point_load.html">transform_beam_point_load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.transform_surface_uniform_load.html">transform_surface_uniform_load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.apply_load_distribution.html">apply_load_distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.get_node_coord.html">get_node_coord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.get_node_mass.html">get_node_mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.get_mck.html">get_mck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.ModelMass.html">ModelMass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.find_void_nodes.html">find_void_nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.remove_void_nodes.html">remove_void_nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.set_odb_path.html">set_odb_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.update_unit_system.html">update_unit_system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.reset_unit_system.html">reset_unit_system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.save_model_data.html">save_model_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.save_eigen_data.html">save_eigen_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.save_linear_buckling_data.html">save_linear_buckling_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.CreateODB.html">CreateODB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_model_data.html">get_model_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_eigen_data.html">get_eigen_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_linear_buckling_data.html">get_linear_buckling_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_nodal_responses.html">get_nodal_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_element_responses.html">get_element_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_sensitivity_responses.html">get_sensitivity_responses</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.set_plot_props.html">set_plot_props</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.set_plot_colors.html">set_plot_colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.plot_model.html">plot_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.plot_eigen.html">plot_eigen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.plot_eigen_animation.html">plot_eigen_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.plot_eigen_table.html">plot_eigen_table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.plot_nodal_responses.html">plot_nodal_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.plot_nodal_responses_animation.html">plot_nodal_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.plot_truss_responses.html">plot_truss_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.plot_truss_responses_animation.html">plot_truss_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.plot_frame_responses.html">plot_frame_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.plot_frame_responses_animation.html">plot_frame_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.plot_unstruct_responses.html">plot_unstruct_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.plot_unstruct_responses_animation.html">plot_unstruct_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.set_plot_props.html">set_plot_props</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.set_plot_colors.html">set_plot_colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.plot_model.html">plot_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.plot_eigen.html">plot_eigen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.plot_eigen_animation.html">plot_eigen_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.plot_nodal_responses.html">plot_nodal_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.plot_nodal_responses_animation.html">plot_nodal_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.plot_truss_responses.html">plot_truss_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.plot_truss_responses_animation.html">plot_truss_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.plot_frame_responses.html">plot_frame_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.plot_frame_responses_animation.html">plot_frame_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.plot_unstruct_responses.html">plot_unstruct_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.plot_unstruct_responses_animation.html">plot_unstruct_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.get_nodal_responses_dataset.html">get_nodal_responses_dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.get_unstruct_responses_dataset.html">get_unstruct_responses_dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.anlys.SmartAnalyze.html">SmartAnalyze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.anlys.MomentCurvature.html">MomentCurvature</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div><a
+  class="gh-source"
+  href="https://github.com/yexiang92/opstool"
+  aria-label="On GitHub"
+  target="_blank"
+>
+  <svg
+    stroke="currentColor"
+    fill="currentColor"
+    stroke-width="0"
+    viewBox="0 0 16 16"
+    class="gh-source--icon"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+    ></path>
+  </svg>
+  <span class="gh-source--info">
+    <span class="gh-source--repo-text"> yexiang92/opstool </span>
+    <span class="gh-source--version">
+      <svg
+        stroke="currentColor"
+        fill="currentColor"
+        stroke-width="0"
+        viewBox="0 0 16 16"
+        class="gh-source--version-icon"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+        />
+      </svg>
+      <span class="gh-source--version-text"> 1.0.20 </span>
+    </span>
+  </span>
+</a>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <h1>Source code for opstool.vis.pyvista.vis_unstru_resp</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+
+<span class="kn">from</span> <span class="nn">...post</span> <span class="kn">import</span> <span class="n">loadODB</span>
+<span class="kn">from</span> <span class="nn">.._plot_unstru_resp_base</span> <span class="kn">import</span> <span class="n">PlotUnstruResponseBase</span>
+<span class="kn">from</span> <span class="nn">.plot_resp_base</span> <span class="kn">import</span> <span class="n">PlotResponsePyvistaBase</span>
+<span class="kn">from</span> <span class="nn">.plot_utils</span> <span class="kn">import</span> <span class="n">PLOT_ARGS</span><span class="p">,</span> <span class="n">_plot_unstru_cmap</span>
+
+
+<span class="k">class</span> <span class="nc">PlotUnstruResponse</span><span class="p">(</span><span class="n">PlotUnstruResponseBase</span><span class="p">,</span> <span class="n">PlotResponsePyvistaBase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_info_steps</span><span class="p">,</span> <span class="n">resp_step</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">nodal_resp_steps</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">model_info_steps</span><span class="p">,</span> <span class="n">resp_step</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">nodal_resp_steps</span><span class="o">=</span><span class="n">nodal_resp_steps</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_make_title</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scalars</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">resp_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;stressmeasures&quot;</span><span class="p">,</span> <span class="s2">&quot;stressmeasuresatnodes&quot;</span><span class="p">]:</span>
+            <span class="n">resp_type</span> <span class="o">=</span> <span class="s2">&quot;Stress Measures&quot;</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">resp_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;strainmeasures&quot;</span><span class="p">,</span> <span class="s2">&quot;strainmeasuresatnodes&quot;</span><span class="p">]:</span>
+            <span class="n">resp_type</span> <span class="o">=</span> <span class="s2">&quot;Strain Measures&quot;</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">resp_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;sectionforces&quot;</span><span class="p">,</span> <span class="s2">&quot;sectionforcesatnodes&quot;</span><span class="p">]:</span>
+            <span class="n">resp_type</span> <span class="o">=</span> <span class="s2">&quot;Section Forces&quot;</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">resp_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;sectiondeformations&quot;</span><span class="p">,</span> <span class="s2">&quot;sectiondeformationsatnodes&quot;</span><span class="p">]:</span>
+            <span class="n">resp_type</span> <span class="o">=</span> <span class="s2">&quot;Section Deformations&quot;</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">resp_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;stresses&quot;</span><span class="p">,</span> <span class="s2">&quot;stressesatnodes&quot;</span><span class="p">]:</span>
+            <span class="n">resp_type</span> <span class="o">=</span> <span class="s2">&quot;Stresses&quot;</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">resp_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;strains&quot;</span><span class="p">,</span> <span class="s2">&quot;strainsatnodes&quot;</span><span class="p">]:</span>
+            <span class="n">resp_type</span> <span class="o">=</span> <span class="s2">&quot;Strains&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">resp_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resp_type</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">ele_type</span><span class="o">.</span><span class="n">capitalize</span><span class="p">(),</span>
+            <span class="s2">&quot;resp_type&quot;</span><span class="p">:</span> <span class="n">resp_type</span><span class="p">,</span>
+            <span class="s2">&quot;dof&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">component</span><span class="o">.</span><span class="n">capitalize</span><span class="p">(),</span>
+            <span class="s2">&quot;min&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">scalars</span><span class="p">),</span>
+            <span class="s2">&quot;max&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">scalars</span><span class="p">),</span>
+            <span class="s2">&quot;step&quot;</span><span class="p">:</span> <span class="n">step</span><span class="p">,</span>
+            <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="n">time</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="sa">f</span><span class="s2">&quot;* </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> Responses&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;* </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;resp_type&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;* </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;dof&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (DOF)&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3E</span><span class="si">}</span><span class="s2"> (min)&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3E</span><span class="si">}</span><span class="s2"> (max)&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;step&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (step)&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> (time)&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit_symbol</span><span class="p">:</span>
+            <span class="n">info</span><span class="p">[</span><span class="s2">&quot;unit&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit_symbol</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;unit&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (unit)&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_point</span> <span class="ow">and</span> <span class="s2">&quot;Sec&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">resp_type</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">ele_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;shell&quot;</span><span class="p">:</span>
+            <span class="n">info</span><span class="p">[</span><span class="s2">&quot;fiber_point&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_point</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;* </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;fiber_point&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (Fiber)&quot;</span><span class="p">)</span>
+
+        <span class="n">max_len</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">)</span>
+        <span class="n">padded_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="n">max_len</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">padded_lines</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="k">def</span> <span class="nf">_get_mesh_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">ele_tags</span><span class="p">,</span> <span class="n">defo_scale</span><span class="p">):</span>
+        <span class="n">pos_defo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_defo_coord_da</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">defo_scale</span><span class="p">))</span>
+        <span class="n">tags</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="n">cell_types</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_unstru_info</span><span class="p">(</span><span class="n">ele_tags</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+        <span class="n">scalars</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resp_step</span><span class="p">[</span><span class="n">step</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">pos_defo</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="n">cell_types</span><span class="p">,</span> <span class="n">scalars</span>
+
+    <span class="k">def</span> <span class="nf">get_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">ele_tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">defo_scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the dataset for the specified step and element tags.&quot;&quot;&quot;</span>
+        <span class="n">step</span><span class="p">,</span> <span class="n">clim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_resp_peak</span><span class="p">(</span><span class="n">idx</span><span class="o">=</span><span class="n">step</span><span class="p">)</span>
+        <span class="n">pos</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="n">cell_types</span><span class="p">,</span> <span class="n">scalars</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_mesh_data</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">ele_tags</span><span class="p">,</span> <span class="n">defo_scale</span><span class="o">=</span><span class="n">defo_scale</span><span class="p">)</span>
+        <span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UnstructuredGrid</span><span class="p">(</span><span class="n">cells</span><span class="p">,</span> <span class="n">cell_types</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
+        <span class="n">grid</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">resp_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">scalars</span>
+        <span class="k">return</span> <span class="n">grid</span>
+
+    <span class="k">def</span> <span class="nf">_create_mesh</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">plotter</span><span class="p">,</span>
+        <span class="n">value</span><span class="p">,</span>
+        <span class="n">ele_tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">plot_all_mesh</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">clim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="s2">&quot;surface&quot;</span><span class="p">,</span>
+        <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;iso&quot;</span><span class="p">,</span>
+        <span class="n">defo_scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">show_outline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">show_bc</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">bc_scale</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">show_mp_constraint</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="n">step</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">node_no_deform_coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_node_da</span><span class="p">(</span><span class="n">step</span><span class="p">))</span>
+        <span class="n">pos</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="n">cell_types</span><span class="p">,</span> <span class="n">scalars</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_mesh_data</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">ele_tags</span><span class="p">,</span> <span class="n">defo_scale</span><span class="p">)</span>
+        <span class="c1">#  ---------------------------------</span>
+        <span class="n">plotter</span><span class="o">.</span><span class="n">clear_actors</span><span class="p">()</span>  <span class="c1"># !!!!!!</span>
+        <span class="k">if</span> <span class="n">plot_all_mesh</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_plot_all_mesh</span><span class="p">(</span><span class="n">plotter</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">)</span>
+        <span class="n">resp_plot</span> <span class="o">=</span> <span class="n">_plot_unstru_cmap</span><span class="p">(</span>
+            <span class="n">plotter</span><span class="p">,</span>
+            <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span>
+            <span class="n">cells</span><span class="o">=</span><span class="n">cells</span><span class="p">,</span>
+            <span class="n">cell_types</span><span class="o">=</span><span class="n">cell_types</span><span class="p">,</span>
+            <span class="n">scalars</span><span class="o">=</span><span class="n">scalars</span><span class="p">,</span>
+            <span class="n">cmap</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pargs</span><span class="o">.</span><span class="n">cmap</span><span class="p">,</span>
+            <span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">,</span>
+            <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">show_edges</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pargs</span><span class="o">.</span><span class="n">show_mesh_edges</span><span class="p">,</span>
+            <span class="n">edge_color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pargs</span><span class="o">.</span><span class="n">mesh_edge_color</span><span class="p">,</span>
+            <span class="n">edge_width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pargs</span><span class="o">.</span><span class="n">mesh_edge_width</span><span class="p">,</span>
+            <span class="n">opacity</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pargs</span><span class="o">.</span><span class="n">mesh_opacity</span><span class="p">,</span>
+            <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+            <span class="n">pos_origin</span><span class="o">=</span><span class="n">node_no_deform_coords</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">title</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_title</span><span class="p">(</span><span class="n">scalars</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="n">step</span><span class="p">])</span>
+        <span class="n">scalar_bar</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_scalar_bar</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">pargs</span><span class="o">.</span><span class="n">scalar_bar_kargs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">scalar_bar</span><span class="p">:</span>
+            <span class="c1"># scalar_bar.SetTitle(title)</span>
+            <span class="n">title_prop</span> <span class="o">=</span> <span class="n">scalar_bar</span><span class="o">.</span><span class="n">GetTitleTextProperty</span><span class="p">()</span>
+            <span class="c1"># title_prop.SetJustificationToRight()</span>
+            <span class="n">title_prop</span><span class="o">.</span><span class="n">BoldOn</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">show_outline</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_plot_outline</span><span class="p">(</span><span class="n">plotter</span><span class="p">)</span>
+        <span class="n">bc_grid</span><span class="p">,</span> <span class="n">mp_grid</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">show_bc</span><span class="p">:</span>
+            <span class="n">bc_grid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_bc</span><span class="p">(</span><span class="n">plotter</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">defo_scale</span><span class="o">=</span><span class="n">defo_scale</span><span class="p">,</span> <span class="n">bc_scale</span><span class="o">=</span><span class="n">bc_scale</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">show_mp_constraint</span><span class="p">:</span>
+            <span class="n">mp_grid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_mp_constraint</span><span class="p">(</span><span class="n">plotter</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">defo_scale</span><span class="o">=</span><span class="n">defo_scale</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_plotter</span><span class="p">(</span><span class="n">plotter</span><span class="p">,</span> <span class="n">cpos</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">resp_plot</span><span class="p">,</span> <span class="n">scalar_bar</span><span class="p">,</span> <span class="n">bc_grid</span><span class="p">,</span> <span class="n">mp_grid</span>
+
+    <span class="k">def</span> <span class="nf">_update_mesh</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">step</span><span class="p">,</span>
+        <span class="n">ele_tags</span><span class="p">,</span>
+        <span class="n">resp_plot</span><span class="p">,</span>
+        <span class="n">scalar_bar</span><span class="p">,</span>
+        <span class="n">bc_grid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">mp_grid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">defo_scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">bc_scale</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="n">step</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">step</span><span class="p">)</span>
+        <span class="n">pos</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="n">cell_types</span><span class="p">,</span> <span class="n">scalars</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_mesh_data</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">ele_tags</span><span class="p">,</span> <span class="n">defo_scale</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">resp_plot</span><span class="p">:</span>
+            <span class="n">resp_plot</span><span class="o">.</span><span class="n">points</span> <span class="o">=</span> <span class="n">pos</span>
+            <span class="n">resp_plot</span><span class="p">[</span><span class="s2">&quot;scalars&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">scalars</span>
+
+        <span class="k">if</span> <span class="n">scalar_bar</span><span class="p">:</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_title</span><span class="p">(</span><span class="n">scalars</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="n">step</span><span class="p">])</span>
+            <span class="n">scalar_bar</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">mp_grid</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_plot_mp_constraint_update</span><span class="p">(</span><span class="n">mp_grid</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">defo_scale</span><span class="o">=</span><span class="n">defo_scale</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">bc_grid</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_plot_bc_update</span><span class="p">(</span><span class="n">bc_grid</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">defo_scale</span><span class="o">=</span><span class="n">defo_scale</span><span class="p">,</span> <span class="n">bc_scale</span><span class="o">=</span><span class="n">bc_scale</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">plot_slide</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">plotter</span><span class="p">,</span>
+        <span class="n">ele_tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="s2">&quot;surface&quot;</span><span class="p">,</span>
+        <span class="n">plot_model</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;iso&quot;</span><span class="p">,</span>
+        <span class="n">show_defo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">defo_scale</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">show_bc</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">bc_scale</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">show_mp_constraint</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">show_outline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">clim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_resp_peak</span><span class="p">()</span>
+        <span class="n">alpha_</span> <span class="o">=</span> <span class="n">defo_scale</span> <span class="k">if</span> <span class="n">show_defo</span> <span class="k">else</span> <span class="mf">0.0</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ModelUpdate</span><span class="p">:</span>
+            <span class="n">func</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_create_mesh</span><span class="p">,</span>
+                <span class="n">plotter</span><span class="p">,</span>
+                <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span>
+                <span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">,</span>
+                <span class="n">plot_all_mesh</span><span class="o">=</span><span class="n">plot_model</span><span class="p">,</span>
+                <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+                <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span>
+                <span class="n">defo_scale</span><span class="o">=</span><span class="n">alpha_</span><span class="p">,</span>
+                <span class="n">show_outline</span><span class="o">=</span><span class="n">show_outline</span><span class="p">,</span>
+                <span class="n">show_bc</span><span class="o">=</span><span class="n">show_bc</span><span class="p">,</span>
+                <span class="n">bc_scale</span><span class="o">=</span><span class="n">bc_scale</span><span class="p">,</span>
+                <span class="n">show_mp_constraint</span><span class="o">=</span><span class="n">show_mp_constraint</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">resp_plot</span><span class="p">,</span> <span class="n">scalar_bar</span><span class="p">,</span> <span class="n">bc_grid</span><span class="p">,</span> <span class="n">mp_grid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_mesh</span><span class="p">(</span>
+                <span class="n">plotter</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">num_steps</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span>
+                <span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">,</span>
+                <span class="n">plot_all_mesh</span><span class="o">=</span><span class="n">plot_model</span><span class="p">,</span>
+                <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+                <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span>
+                <span class="n">defo_scale</span><span class="o">=</span><span class="n">alpha_</span><span class="p">,</span>
+                <span class="n">show_outline</span><span class="o">=</span><span class="n">show_outline</span><span class="p">,</span>
+                <span class="n">show_bc</span><span class="o">=</span><span class="n">show_bc</span><span class="p">,</span>
+                <span class="n">bc_scale</span><span class="o">=</span><span class="n">bc_scale</span><span class="p">,</span>
+                <span class="n">show_mp_constraint</span><span class="o">=</span><span class="n">show_mp_constraint</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">func</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_update_mesh</span><span class="p">,</span>
+                <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span>
+                <span class="n">resp_plot</span><span class="o">=</span><span class="n">resp_plot</span><span class="p">,</span>
+                <span class="n">scalar_bar</span><span class="o">=</span><span class="n">scalar_bar</span><span class="p">,</span>
+                <span class="n">bc_grid</span><span class="o">=</span><span class="n">bc_grid</span><span class="p">,</span>
+                <span class="n">mp_grid</span><span class="o">=</span><span class="n">mp_grid</span><span class="p">,</span>
+                <span class="n">bc_scale</span><span class="o">=</span><span class="n">bc_scale</span><span class="p">,</span>
+                <span class="n">defo_scale</span><span class="o">=</span><span class="n">alpha_</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="n">plotter</span><span class="o">.</span><span class="n">add_slider_widget</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_steps</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">num_steps</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">slider_widget_args</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">plot_peak_step</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">plotter</span><span class="p">,</span>
+        <span class="n">step</span><span class="o">=</span><span class="s2">&quot;absMax&quot;</span><span class="p">,</span>
+        <span class="n">ele_tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="s2">&quot;surface&quot;</span><span class="p">,</span>
+        <span class="n">plot_model</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;iso&quot;</span><span class="p">,</span>
+        <span class="n">defo_scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">show_defo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">show_bc</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">bc_scale</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">show_mp_constraint</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">show_outline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="n">step</span><span class="p">,</span> <span class="n">clim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_resp_peak</span><span class="p">(</span><span class="n">idx</span><span class="o">=</span><span class="n">step</span><span class="p">)</span>
+        <span class="n">alpha_</span> <span class="o">=</span> <span class="n">defo_scale</span> <span class="k">if</span> <span class="n">show_defo</span> <span class="k">else</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_create_mesh</span><span class="p">(</span>
+            <span class="n">plotter</span><span class="o">=</span><span class="n">plotter</span><span class="p">,</span>
+            <span class="n">value</span><span class="o">=</span><span class="n">step</span><span class="p">,</span>
+            <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span>
+            <span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">,</span>
+            <span class="n">plot_all_mesh</span><span class="o">=</span><span class="n">plot_model</span><span class="p">,</span>
+            <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+            <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span>
+            <span class="n">defo_scale</span><span class="o">=</span><span class="n">alpha_</span><span class="p">,</span>
+            <span class="n">show_outline</span><span class="o">=</span><span class="n">show_outline</span><span class="p">,</span>
+            <span class="n">show_bc</span><span class="o">=</span><span class="n">show_bc</span><span class="p">,</span>
+            <span class="n">bc_scale</span><span class="o">=</span><span class="n">bc_scale</span><span class="p">,</span>
+            <span class="n">show_mp_constraint</span><span class="o">=</span><span class="n">show_mp_constraint</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">plot_anim</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">plotter</span><span class="p">,</span>
+        <span class="n">ele_tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">framerate</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">savefig</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;ShellRespAnimation.gif&quot;</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="s2">&quot;surface&quot;</span><span class="p">,</span>
+        <span class="n">plot_model</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;iso&quot;</span><span class="p">,</span>
+        <span class="n">defo_scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">show_defo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">show_bc</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">bc_scale</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">show_mp_constraint</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">show_outline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="k">if</span> <span class="n">framerate</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">framerate</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_steps</span> <span class="o">/</span> <span class="mi">11</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">savefig</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.gif&quot;</span><span class="p">):</span>
+            <span class="n">plotter</span><span class="o">.</span><span class="n">open_gif</span><span class="p">(</span><span class="n">savefig</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="n">framerate</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plotter</span><span class="o">.</span><span class="n">open_movie</span><span class="p">(</span><span class="n">savefig</span><span class="p">,</span> <span class="n">framerate</span><span class="o">=</span><span class="n">framerate</span><span class="p">)</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">clim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_resp_peak</span><span class="p">()</span>
+        <span class="n">alpha_</span> <span class="o">=</span> <span class="n">defo_scale</span> <span class="k">if</span> <span class="n">show_defo</span> <span class="k">else</span> <span class="mf">0.0</span>
+        <span class="c1"># plotter.write_frame()  # write initial data</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ModelUpdate</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_steps</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_create_mesh</span><span class="p">(</span>
+                    <span class="n">plotter</span><span class="p">,</span>
+                    <span class="n">step</span><span class="p">,</span>
+                    <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span>
+                    <span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">,</span>
+                    <span class="n">plot_all_mesh</span><span class="o">=</span><span class="n">plot_model</span><span class="p">,</span>
+                    <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+                    <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span>
+                    <span class="n">defo_scale</span><span class="o">=</span><span class="n">alpha_</span><span class="p">,</span>
+                    <span class="n">show_outline</span><span class="o">=</span><span class="n">show_outline</span><span class="p">,</span>
+                    <span class="n">show_bc</span><span class="o">=</span><span class="n">show_bc</span><span class="p">,</span>
+                    <span class="n">bc_scale</span><span class="o">=</span><span class="n">bc_scale</span><span class="p">,</span>
+                    <span class="n">show_mp_constraint</span><span class="o">=</span><span class="n">show_mp_constraint</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="n">plotter</span><span class="o">.</span><span class="n">write_frame</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">resp_plot</span><span class="p">,</span> <span class="n">scalar_bar</span><span class="p">,</span> <span class="n">bc_grid</span><span class="p">,</span> <span class="n">mp_grid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_mesh</span><span class="p">(</span>
+                <span class="n">plotter</span><span class="p">,</span>
+                <span class="mi">0</span><span class="p">,</span>
+                <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span>
+                <span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">,</span>
+                <span class="n">plot_all_mesh</span><span class="o">=</span><span class="n">plot_model</span><span class="p">,</span>
+                <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+                <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span>
+                <span class="n">defo_scale</span><span class="o">=</span><span class="n">alpha_</span><span class="p">,</span>
+                <span class="n">show_outline</span><span class="o">=</span><span class="n">show_outline</span><span class="p">,</span>
+                <span class="n">show_bc</span><span class="o">=</span><span class="n">show_bc</span><span class="p">,</span>
+                <span class="n">bc_scale</span><span class="o">=</span><span class="n">bc_scale</span><span class="p">,</span>
+                <span class="n">show_mp_constraint</span><span class="o">=</span><span class="n">show_mp_constraint</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">plotter</span><span class="o">.</span><span class="n">write_frame</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_steps</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_update_mesh</span><span class="p">(</span>
+                    <span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">,</span>
+                    <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span>
+                    <span class="n">resp_plot</span><span class="o">=</span><span class="n">resp_plot</span><span class="p">,</span>
+                    <span class="n">scalar_bar</span><span class="o">=</span><span class="n">scalar_bar</span><span class="p">,</span>
+                    <span class="n">bc_grid</span><span class="o">=</span><span class="n">bc_grid</span><span class="p">,</span>
+                    <span class="n">mp_grid</span><span class="o">=</span><span class="n">mp_grid</span><span class="p">,</span>
+                    <span class="n">bc_scale</span><span class="o">=</span><span class="n">bc_scale</span><span class="p">,</span>
+                    <span class="n">defo_scale</span><span class="o">=</span><span class="n">alpha_</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="n">plotter</span><span class="o">.</span><span class="n">write_frame</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="plot_unstruct_responses">
+<a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.vis.pyvista.plot_unstruct_responses.html#opstool.vis.pyvista.plot_unstruct_responses">[docs]</a>
+<span class="k">def</span> <span class="nf">plot_unstruct_responses</span><span class="p">(</span>
+    <span class="n">odb_tag</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">ele_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Shell&quot;</span><span class="p">,</span>
+    <span class="n">ele_tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">slides</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">step</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;absMax&quot;</span><span class="p">,</span>
+    <span class="n">resp_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;sectionForces&quot;</span><span class="p">,</span>
+    <span class="n">resp_dof</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;MXX&quot;</span><span class="p">,</span>
+    <span class="n">shell_fiber_loc</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;top&quot;</span><span class="p">,</span>
+    <span class="n">style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;surface&quot;</span><span class="p">,</span>
+    <span class="n">unit_symbol</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">unit_factor</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">show_defo</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">defo_scale</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">show_bc</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">bc_scale</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">show_mp_constraint</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">show_outline</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">cpos</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;iso&quot;</span><span class="p">,</span>
+    <span class="n">show_model</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Visualizing unstructured element (Shell, Plane, Brick) Response.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    odb_tag: Union[int, str], default: 1</span>
+<span class="sd">        Tag of output databases (ODB) to be visualized.</span>
+<span class="sd">    ele_tags: Union[int, list], default: None</span>
+<span class="sd">        The tags of elements to be visualized.</span>
+<span class="sd">        If None, all elements are selected.</span>
+<span class="sd">    slides: bool, default: False</span>
+<span class="sd">        Display the response for each step in the form of a slideshow.</span>
+<span class="sd">        Otherwise, show the step with the following ``step`` parameter.</span>
+<span class="sd">    step: Union[int, str], default: &quot;absMax&quot;</span>
+<span class="sd">        If slides = False, this parameter will be used as the step to plot.</span>
+<span class="sd">        If str, Optional: [absMax, absMin, Max, Min].</span>
+<span class="sd">        If int, this step will be demonstrated (counting from 0).</span>
+<span class="sd">    ele_type: str, default: &quot;Shell&quot;</span>
+<span class="sd">        Element type, optional, one of [&quot;Shell&quot;, &quot;Plane&quot;, &quot;Solid&quot;].</span>
+<span class="sd">    resp_type: str, default: None</span>
+<span class="sd">        Response type, which dependents on the element type `ele_type`.</span>
+
+<span class="sd">        #. For ``Shell`` elements, one of [&quot;sectionForces&quot;, &quot;sectionDeformations&quot;, &quot;sectionForcesAtNodes&quot;, &quot;sectionDeformationsAtNodes&quot;, &quot;Stresses&quot;, &quot;Strains&quot;, &quot;StressesAtNodes&quot;, &quot;StrainsAtNodes&quot;].</span>
+<span class="sd">            If it endswith `AtNodes`, responses at nodes will be displayed,</span>
+<span class="sd">            else responses at Gaussian integration points will be averaged for each element (per unit length).</span>
+<span class="sd">            If None, defaults to &quot;sectionForces&quot;.</span>
+<span class="sd">        #. For ``Plane`` elements, one of [&quot;stresses&quot;, &quot;strains&quot;, &quot;stressesAtNodes&quot;, &quot;strainsAtNodes&quot;].</span>
+<span class="sd">            If it endswith `AtNodes`, responses at nodes will be displayed,</span>
+<span class="sd">            else responses at Gaussian integration points will be averaged for each element.</span>
+<span class="sd">            If None, defaults to &quot;stresses&quot;.</span>
+<span class="sd">        #. For ``Brick`` or ``Solid`` elements, one of [&quot;stresses&quot;, &quot;strains&quot;, &quot;stressesAtNodes&quot;, &quot;strainsAtNodes&quot;].</span>
+<span class="sd">            If it endswith `AtNodes`, responses at nodes will be displayed,</span>
+<span class="sd">            else responses at Gaussian integration points will be averaged for each element.</span>
+<span class="sd">            If None, defaults to &quot;stresses&quot;.</span>
+
+<span class="sd">    resp_dof: str, default: None</span>
+<span class="sd">        Dof to be visualized, which dependents on the element type `ele_type`.</span>
+
+<span class="sd">        .. Note::</span>
+<span class="sd">            The `resp_dof` here is consistent with stress-strain (force-deformation),</span>
+<span class="sd">            and whether it is stress or strain depends on the parameter `resp_type`.</span>
+
+<span class="sd">        #. For ``Shell`` elements, If resp_type is the section responses, one of [&quot;FXX&quot;, &quot;FYY&quot;, &quot;FXY&quot;, &quot;MXX&quot;, &quot;MYY&quot;, &quot;MXY&quot;, &quot;VXZ&quot;, &quot;VYZ&quot;]. If resp_type is the stress or strain, one of [&quot;sigma11&quot;, &quot;sigma22&quot;, &quot;sigma12&quot;, &quot;sigma23&quot;, &quot;sigma13&quot;].</span>
+<span class="sd">            If None, defaults to &quot;MXX&quot;.</span>
+<span class="sd">        #. For ``Plane`` elements, one of [&quot;sigma11&quot;, &quot;sigma22&quot;, &quot;sigma12&quot;, &quot;p1&quot;, &quot;p2&quot;, &quot;sigma_vm&quot;, &quot;tau_max&quot;].</span>
+
+<span class="sd">            * &quot;sigma11, sigma22, sigma12&quot;: Normal stress and shear stress (strain) in the x-y plane.</span>
+<span class="sd">            * &quot;p1, p2&quot;: Principal stresses (strains).</span>
+<span class="sd">            * &quot;sigma_vm&quot;: Von Mises stress.</span>
+<span class="sd">            * &quot;tau_max&quot;: Maximum shear stress (strains).</span>
+<span class="sd">            * If None, defaults to &quot;sigma_vm&quot;.</span>
+
+<span class="sd">        #. For ``Brick`` or ``Solid`` elements, one of [&quot;sigma11&quot;, &quot;sigma22&quot;, &quot;sigma33&quot;, &quot;sigma12&quot;, &quot;sigma23&quot;, &quot;sigma13&quot;, &quot;p1&quot;, &quot;p2&quot;, &quot;p3&quot;, &quot;sigma_vm&quot;, &quot;tau_max&quot;, &quot;sigma_oct&quot;, &quot;tau_oct&quot;]</span>
+
+<span class="sd">            * &quot;sigma11, sigma22, sigma33&quot;: Normal stress (strain) along x, y, z.</span>
+<span class="sd">            * &quot;sigma12, sigma23, sigma13&quot;: Shear stress (strain).</span>
+<span class="sd">            * &quot;p1, p2, p3&quot;: Principal stresses (strains).</span>
+<span class="sd">            * &quot;sigma_vm&quot;: Von Mises stress.</span>
+<span class="sd">            * &quot;tau_max&quot;: Maximum shear stress (strains).</span>
+<span class="sd">            * &quot;sigma_oct&quot;: Octahedral normal stress (strains).</span>
+<span class="sd">            * &quot;tau_oct&quot;: Octahedral shear stress (strains).</span>
+<span class="sd">            * If None, defaults to &quot;sigma_vm&quot;.</span>
+
+<span class="sd">    shell_fiber_loc: Optional[Union[str, int]], default: &quot;top&quot;, added in v1.0.16</span>
+<span class="sd">        The location of the fiber point for shell elements.</span>
+<span class="sd">        If str, one of [&quot;top&quot;, &quot;bottom&quot;, &quot;middle&quot;].</span>
+<span class="sd">        If int, the index of the fiber point to be visualized, from 1 (bottom) to N (top).</span>
+<span class="sd">        The fiber point is the fiber layer in the shell section.</span>
+<span class="sd">        Note that this parameter is only valid for stresses and strains in shell elements.</span>
+
+<span class="sd">    unit_symbol: str, default: None</span>
+<span class="sd">        Unit symbol to be displayed in the plot.</span>
+<span class="sd">    unit_factor: float, default: None</span>
+<span class="sd">        The multiplier used to convert units.</span>
+<span class="sd">        For example, if you want to visualize stress and the current data unit is kPa, you can set ``unit_symbol=&quot;kPa&quot; and unit_factor=1.0``.</span>
+<span class="sd">        If you want to visualize in MPa, you can set ``unit_symbol=&quot;MPa&quot; and unit_factor=0.001``.</span>
+<span class="sd">    style: str, default: surface</span>
+<span class="sd">        Visualization the mesh style of surfaces and solids.</span>
+<span class="sd">        One of the following: style=&#39;surface&#39;, style=&#39;wireframe&#39;, style=&#39;points&#39;, style=&#39;points_gaussian&#39;.</span>
+<span class="sd">        Defaults to &#39;surface&#39;. Note that &#39;wireframe&#39; only shows a wireframe of the outer geometry.</span>
+<span class="sd">    show_defo: bool, default: True</span>
+<span class="sd">        Whether to display the deformed shape.</span>
+<span class="sd">    defo_scale: float, default: 1.0</span>
+<span class="sd">        Scales the size of the deformation presentation when show_defo is True.</span>
+<span class="sd">        If set to False, the deformed shape will not be scaled (original deformation).</span>
+<span class="sd">        If set to True or &quot;auto&quot;, the deformed shape will be scaled by the default scale (i.e., 1/20 of the maximum model dimensions).</span>
+<span class="sd">        If set to a float or int, it will scale the deformed shape by that factor.</span>
+<span class="sd">    show_bc: bool, default: True</span>
+<span class="sd">        Whether to display boundary supports.</span>
+<span class="sd">    bc_scale: float, default: 1.0</span>
+<span class="sd">        Scale the size of boundary support display.</span>
+<span class="sd">    show_mp_constraint: bool, default: False</span>
+<span class="sd">        Whether to show multipoint (MP) constraint.</span>
+<span class="sd">    show_outline: bool, default: False</span>
+<span class="sd">        Whether to display the outline of the model.</span>
+<span class="sd">    cpos: str, default: iso</span>
+<span class="sd">        Model display perspective, optional: &quot;iso&quot;, &quot;xy&quot;, &quot;yx&quot;, &quot;xz&quot;, &quot;zx&quot;, &quot;yz&quot;, &quot;zy&quot;.</span>
+<span class="sd">        If 3d, defaults to &quot;iso&quot;. If 2d, defaults to &quot;xy&quot;.</span>
+<span class="sd">    show_model: bool, default: True</span>
+<span class="sd">        Whether to plot the all model or not.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Plotting object of PyVista to display vtk meshes or numpy arrays.</span>
+<span class="sd">    See `pyvista.Plotter &lt;https://docs.pyvista.org/api/plotting/_autosummary/pyvista.plotter&gt;`_.</span>
+
+<span class="sd">    You can use</span>
+<span class="sd">    `Plotter.show &lt;https://docs.pyvista.org/api/plotting/_autosummary/pyvista.plotter.show#pyvista.Plotter.show&gt;`_.</span>
+<span class="sd">    to display the plotting window.</span>
+
+<span class="sd">    You can also use</span>
+<span class="sd">    `Plotter.export_html &lt;https://docs.pyvista.org/api/plotting/_autosummary/pyvista.plotter.export_html#pyvista.Plotter.export_html&gt;`_.</span>
+<span class="sd">    to export this plotter as an interactive scene to an HTML file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">model_info_steps</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">resp_step</span> <span class="o">=</span> <span class="n">loadODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="n">ele_type</span><span class="p">)</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">node_resp_steps</span> <span class="o">=</span> <span class="n">loadODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="s2">&quot;Nodal&quot;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span>
+        <span class="n">notebook</span><span class="o">=</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">notebook</span><span class="p">,</span>
+        <span class="n">line_smoothing</span><span class="o">=</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">line_smoothing</span><span class="p">,</span>
+        <span class="n">polygon_smoothing</span><span class="o">=</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">polygon_smoothing</span><span class="p">,</span>
+        <span class="n">off_screen</span><span class="o">=</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">off_screen</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">plotbase</span> <span class="o">=</span> <span class="n">PlotUnstruResponse</span><span class="p">(</span><span class="n">model_info_steps</span><span class="p">,</span> <span class="n">resp_step</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">nodal_resp_steps</span><span class="o">=</span><span class="n">node_resp_steps</span><span class="p">)</span>
+    <span class="n">plotbase</span><span class="o">.</span><span class="n">set_unit</span><span class="p">(</span><span class="n">symbol</span><span class="o">=</span><span class="n">unit_symbol</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="n">unit_factor</span><span class="p">)</span>
+    <span class="n">plotbase</span><span class="o">.</span><span class="n">refactor_resp_step</span><span class="p">(</span>
+        <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span> <span class="n">ele_type</span><span class="o">=</span><span class="n">ele_type</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="n">resp_type</span><span class="p">,</span> <span class="n">component</span><span class="o">=</span><span class="n">resp_dof</span><span class="p">,</span> <span class="n">fiber_point</span><span class="o">=</span><span class="n">shell_fiber_loc</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">slides</span><span class="p">:</span>
+        <span class="n">plotbase</span><span class="o">.</span><span class="n">plot_slide</span><span class="p">(</span>
+            <span class="n">plotter</span><span class="p">,</span>
+            <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span>
+            <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+            <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span>
+            <span class="n">plot_model</span><span class="o">=</span><span class="n">show_model</span><span class="p">,</span>
+            <span class="n">defo_scale</span><span class="o">=</span><span class="n">defo_scale</span><span class="p">,</span>
+            <span class="n">show_defo</span><span class="o">=</span><span class="n">show_defo</span><span class="p">,</span>
+            <span class="n">show_bc</span><span class="o">=</span><span class="n">show_bc</span><span class="p">,</span>
+            <span class="n">bc_scale</span><span class="o">=</span><span class="n">bc_scale</span><span class="p">,</span>
+            <span class="n">show_mp_constraint</span><span class="o">=</span><span class="n">show_mp_constraint</span><span class="p">,</span>
+            <span class="n">show_outline</span><span class="o">=</span><span class="n">show_outline</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">plotbase</span><span class="o">.</span><span class="n">plot_peak_step</span><span class="p">(</span>
+            <span class="n">plotter</span><span class="p">,</span>
+            <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span>
+            <span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">,</span>
+            <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+            <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span>
+            <span class="n">plot_model</span><span class="o">=</span><span class="n">show_model</span><span class="p">,</span>
+            <span class="n">defo_scale</span><span class="o">=</span><span class="n">defo_scale</span><span class="p">,</span>
+            <span class="n">show_defo</span><span class="o">=</span><span class="n">show_defo</span><span class="p">,</span>
+            <span class="n">show_bc</span><span class="o">=</span><span class="n">show_bc</span><span class="p">,</span>
+            <span class="n">bc_scale</span><span class="o">=</span><span class="n">bc_scale</span><span class="p">,</span>
+            <span class="n">show_mp_constraint</span><span class="o">=</span><span class="n">show_mp_constraint</span><span class="p">,</span>
+            <span class="n">show_outline</span><span class="o">=</span><span class="n">show_outline</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">anti_aliasing</span><span class="p">:</span>
+        <span class="n">plotter</span><span class="o">.</span><span class="n">enable_anti_aliasing</span><span class="p">(</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">anti_aliasing</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">plotbase</span><span class="o">.</span><span class="n">_update_plotter</span><span class="p">(</span><span class="n">plotter</span><span class="p">,</span> <span class="n">cpos</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="plot_unstruct_responses_animation">
+<a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.vis.pyvista.plot_unstruct_responses_animation.html#opstool.vis.pyvista.plot_unstruct_responses_animation">[docs]</a>
+<span class="k">def</span> <span class="nf">plot_unstruct_responses_animation</span><span class="p">(</span>
+    <span class="n">odb_tag</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">ele_tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">framerate</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">ele_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Shell&quot;</span><span class="p">,</span>
+    <span class="n">resp_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">resp_dof</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">shell_fiber_loc</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;top&quot;</span><span class="p">,</span>
+    <span class="n">savefig</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">off_screen</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;surface&quot;</span><span class="p">,</span>
+    <span class="n">unit_symbol</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">unit_factor</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">show_defo</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">defo_scale</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">show_bc</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">bc_scale</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">show_mp_constraint</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">show_outline</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">cpos</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;iso&quot;</span><span class="p">,</span>
+    <span class="n">show_model</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Unstructured element (Shell, Plane, Brick) response animation.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    odb_tag: Union[int, str], default: 1</span>
+<span class="sd">        Tag of output databases (ODB) to be visualized.</span>
+<span class="sd">    ele_tags: Union[int, list], default: None</span>
+<span class="sd">        The tags of truss elements to be visualized. If None, all truss elements are selected.</span>
+<span class="sd">    ele_type: str, default: &quot;Shell&quot;</span>
+<span class="sd">        Element type, optional, one of [&quot;Shell&quot;, &quot;Plane&quot;, &quot;Solid&quot;].</span>
+<span class="sd">    framerate: int, default: None</span>
+<span class="sd">        Framerate for the display, i.e., the number of frames per second.</span>
+<span class="sd">    savefig: str, default: None</span>
+<span class="sd">        Path to save the animation. The suffix can be ``.gif`` or ``.mp4``.</span>
+<span class="sd">    off_screen: bool, default: True</span>
+<span class="sd">        Off-screen rendering, i.e., not showing the rendering window.</span>
+<span class="sd">        If False, the rendering window will be displayed.</span>
+<span class="sd">    resp_type: str, default: None</span>
+<span class="sd">        Response type, which dependents on the element type `ele_type`.</span>
+
+<span class="sd">        #. For ``Shell`` elements, one of [&quot;sectionForces&quot;, &quot;sectionDeformations&quot;, &quot;sectionForcesAtNodes&quot;, &quot;sectionDeformationsAtNodes&quot;, &quot;Stresses&quot;, &quot;Strains&quot;, &quot;StressesAtNodes&quot;, &quot;StrainsAtNodes&quot;].</span>
+<span class="sd">            If it endswith `AtNodes`, responses at nodes will be displayed,</span>
+<span class="sd">            else responses at Gaussian integration points will be averaged for each element (per unit length).</span>
+<span class="sd">            If None, defaults to &quot;sectionForces&quot;.</span>
+<span class="sd">        #. For ``Plane`` elements, one of [&quot;stresses&quot;, &quot;strains&quot;, &quot;stressesAtNodes&quot;, &quot;strainsAtNodes&quot;].</span>
+<span class="sd">            If it endswith `AtNodes`, responses at nodes will be displayed,</span>
+<span class="sd">            else responses at Gaussian integration points will be averaged for each element.</span>
+<span class="sd">            If None, defaults to &quot;stresses&quot;.</span>
+<span class="sd">        #. For ``Brick`` or ``Solid`` elements, one of [&quot;stresses&quot;, &quot;strains&quot;, &quot;stressesAtNodes&quot;, &quot;strainsAtNodes&quot;].</span>
+<span class="sd">            If it endswith `AtNodes`, responses at nodes will be displayed,</span>
+<span class="sd">            else responses at Gaussian integration points will be averaged for each element.</span>
+<span class="sd">            If None, defaults to &quot;stresses&quot;.</span>
+
+<span class="sd">    resp_dof: str, default: None</span>
+<span class="sd">        Dof to be visualized, which dependents on the element type `ele_type`.</span>
+
+<span class="sd">        .. Note::</span>
+<span class="sd">            The `resp_dof` here is consistent with stress-strain (force-deformation),</span>
+<span class="sd">            and whether it is stress or strain depends on the parameter `resp_type`.</span>
+
+<span class="sd">        #. For ``Shell`` elements, If resp_type is the section responses, one of [&quot;FXX&quot;, &quot;FYY&quot;, &quot;FXY&quot;, &quot;MXX&quot;, &quot;MYY&quot;, &quot;MXY&quot;, &quot;VXZ&quot;, &quot;VYZ&quot;]. If resp_type is the stress or strain, one of [&quot;sigma11&quot;, &quot;sigma22&quot;, &quot;sigma12&quot;, &quot;sigma23&quot;, &quot;sigma13&quot;].</span>
+<span class="sd">            If None, defaults to &quot;MXX&quot;.</span>
+<span class="sd">        #. For ``Plane`` elements, one of [&quot;sigma11&quot;, &quot;sigma22&quot;, &quot;sigma12&quot;, &quot;p1&quot;, &quot;p2&quot;, &quot;sigma_vm&quot;, &quot;tau_max&quot;].</span>
+
+<span class="sd">            * &quot;sigma11, sigma22, sigma12&quot;: Normal stress and shear stress (strain) in the x-y plane.</span>
+<span class="sd">            * &quot;p1, p2&quot;: Principal stresses (strains).</span>
+<span class="sd">            * &quot;sigma_vm&quot;: Von Mises stress.</span>
+<span class="sd">            * &quot;tau_max&quot;: Maximum shear stress (strains).</span>
+<span class="sd">            * If None, defaults to &quot;sigma_vm&quot;.</span>
+
+<span class="sd">        #. For ``Brick`` or ``Solid`` elements, one of [&quot;sigma11&quot;, &quot;sigma22&quot;, &quot;sigma33&quot;, &quot;sigma12&quot;, &quot;sigma23&quot;, &quot;sigma13&quot;, &quot;p1&quot;, &quot;p2&quot;, &quot;p3&quot;, &quot;sigma_vm&quot;, &quot;tau_max&quot;, &quot;sigma_oct&quot;, &quot;tau_oct&quot;]</span>
+
+<span class="sd">            * &quot;sigma11, sigma22, sigma33&quot;: Normal stress (strain) along x, y, z.</span>
+<span class="sd">            * &quot;sigma12, sigma23, sigma13&quot;: Shear stress (strain).</span>
+<span class="sd">            * &quot;p1, p2, p3&quot;: Principal stresses (strains).</span>
+<span class="sd">            * &quot;sigma_vm&quot;: Von Mises stress.</span>
+<span class="sd">            * &quot;tau_max&quot;: Maximum shear stress (strains).</span>
+<span class="sd">            * &quot;sigma_oct&quot;: Octahedral normal stress (strains).</span>
+<span class="sd">            * &quot;tau_oct&quot;: Octahedral shear stress (strains).</span>
+<span class="sd">            * If None, defaults to &quot;sigma_vm&quot;.</span>
+
+<span class="sd">    shell_fiber_loc: Optional[Union[str, int]], default: &quot;top&quot;, added in v1.0.16</span>
+<span class="sd">        The location of the fiber point for shell elements.</span>
+<span class="sd">        If str, one of [&quot;top&quot;, &quot;bottom&quot;, &quot;middle&quot;].</span>
+<span class="sd">        If int, the index of the fiber point to be visualized, from 1 (bottom) to N (top).</span>
+<span class="sd">        The fiber point is the fiber layer in the shell section.</span>
+<span class="sd">        Note that this parameter is only valid for stresses and strains in shell elements.</span>
+
+<span class="sd">    unit_symbol: str, default: None</span>
+<span class="sd">        Unit symbol to be displayed in the plot.</span>
+<span class="sd">    unit_factor: float, default: None</span>
+<span class="sd">        The multiplier used to convert units.</span>
+<span class="sd">        For example, if you want to visualize stress and the current data unit is kPa, you can set ``unit_symbol=&quot;kPa&quot; and unit_factor=1.0``.</span>
+<span class="sd">        If you want to visualize in MPa, you can set ``unit_symbol=&quot;MPa&quot; and unit_factor=0.001``.</span>
+<span class="sd">    style: str, default: surface</span>
+<span class="sd">        Visualization the mesh style of surfaces and solids.</span>
+<span class="sd">        One of the following: style=&#39;surface&#39;, style=&#39;wireframe&#39;, style=&#39;points&#39;, style=&#39;points_gaussian&#39;.</span>
+<span class="sd">        Defaults to &#39;surface&#39;. Note that &#39;wireframe&#39; only shows a wireframe of the outer geometry.</span>
+<span class="sd">    show_defo: bool, default: True</span>
+<span class="sd">        Whether to display the deformed shape.</span>
+<span class="sd">    defo_scale: float, default: 1.0</span>
+<span class="sd">        Scales the size of the deformation presentation.</span>
+<span class="sd">        If set to False, the deformed shape will not be scaled (original deformation).</span>
+<span class="sd">        If set to True or &quot;auto&quot;, the deformed shape will be scaled by the default scale (i.e., 1/20 of the maximum model dimensions).</span>
+<span class="sd">        If set to a float or int, it will scale the deformed shape by that factor.</span>
+<span class="sd">    show_bc: bool, default: True</span>
+<span class="sd">        Whether to display boundary supports.</span>
+<span class="sd">    bc_scale: float, default: 1.0</span>
+<span class="sd">        Scale the size of boundary support display.</span>
+<span class="sd">    show_mp_constraint: bool, default: False</span>
+<span class="sd">        Whether to show multipoint (MP) constraint.</span>
+<span class="sd">    show_outline: bool, default: False</span>
+<span class="sd">        Whether to display the outline of the model.</span>
+<span class="sd">    cpos: str, default: iso</span>
+<span class="sd">        Model display perspective, optional: &quot;iso&quot;, &quot;xy&quot;, &quot;yx&quot;, &quot;xz&quot;, &quot;zx&quot;, &quot;yz&quot;, &quot;zy&quot;.</span>
+<span class="sd">        If 3d, defaults to &quot;iso&quot;. If 2d, defaults to &quot;xy&quot;.</span>
+<span class="sd">    show_model: bool, default: True</span>
+<span class="sd">        Whether to plot the all model or not.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Plotting object of PyVista to display vtk meshes or numpy arrays.</span>
+<span class="sd">    See `pyvista.Plotter &lt;https://docs.pyvista.org/api/plotting/_autosummary/pyvista.plotter&gt;`_.</span>
+
+<span class="sd">    You can use</span>
+<span class="sd">    `Plotter.show &lt;https://docs.pyvista.org/api/plotting/_autosummary/pyvista.plotter.show#pyvista.Plotter.show&gt;`_.</span>
+<span class="sd">    to display the plotting window.</span>
+
+<span class="sd">    You can also use</span>
+<span class="sd">    `Plotter.export_html &lt;https://docs.pyvista.org/api/plotting/_autosummary/pyvista.plotter.export_html#pyvista.Plotter.export_html&gt;`_.</span>
+<span class="sd">    to export this plotter as an interactive scene to an HTML file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">savefig</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">savefig</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ele_type</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span><span class="si">}</span><span class="s2">RespAnimation.gif&quot;</span>
+    <span class="n">model_info_steps</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">resp_step</span> <span class="o">=</span> <span class="n">loadODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="n">ele_type</span><span class="p">)</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">node_resp_steps</span> <span class="o">=</span> <span class="n">loadODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="s2">&quot;Nodal&quot;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span>
+        <span class="n">notebook</span><span class="o">=</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">notebook</span><span class="p">,</span>
+        <span class="n">line_smoothing</span><span class="o">=</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">line_smoothing</span><span class="p">,</span>
+        <span class="n">polygon_smoothing</span><span class="o">=</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">polygon_smoothing</span><span class="p">,</span>
+        <span class="n">off_screen</span><span class="o">=</span><span class="n">off_screen</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">plotbase</span> <span class="o">=</span> <span class="n">PlotUnstruResponse</span><span class="p">(</span><span class="n">model_info_steps</span><span class="p">,</span> <span class="n">resp_step</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">nodal_resp_steps</span><span class="o">=</span><span class="n">node_resp_steps</span><span class="p">)</span>
+    <span class="n">plotbase</span><span class="o">.</span><span class="n">set_unit</span><span class="p">(</span><span class="n">symbol</span><span class="o">=</span><span class="n">unit_symbol</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="n">unit_factor</span><span class="p">)</span>
+    <span class="n">plotbase</span><span class="o">.</span><span class="n">refactor_resp_step</span><span class="p">(</span>
+        <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span> <span class="n">ele_type</span><span class="o">=</span><span class="n">ele_type</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="n">resp_type</span><span class="p">,</span> <span class="n">component</span><span class="o">=</span><span class="n">resp_dof</span><span class="p">,</span> <span class="n">fiber_point</span><span class="o">=</span><span class="n">shell_fiber_loc</span>
+    <span class="p">)</span>
+    <span class="n">plotbase</span><span class="o">.</span><span class="n">plot_anim</span><span class="p">(</span>
+        <span class="n">plotter</span><span class="p">,</span>
+        <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span>
+        <span class="n">framerate</span><span class="o">=</span><span class="n">framerate</span><span class="p">,</span>
+        <span class="n">savefig</span><span class="o">=</span><span class="n">savefig</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+        <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span>
+        <span class="n">plot_model</span><span class="o">=</span><span class="n">show_model</span><span class="p">,</span>
+        <span class="n">defo_scale</span><span class="o">=</span><span class="n">defo_scale</span><span class="p">,</span>
+        <span class="n">show_defo</span><span class="o">=</span><span class="n">show_defo</span><span class="p">,</span>
+        <span class="n">show_bc</span><span class="o">=</span><span class="n">show_bc</span><span class="p">,</span>
+        <span class="n">bc_scale</span><span class="o">=</span><span class="n">bc_scale</span><span class="p">,</span>
+        <span class="n">show_mp_constraint</span><span class="o">=</span><span class="n">show_mp_constraint</span><span class="p">,</span>
+        <span class="n">show_outline</span><span class="o">=</span><span class="n">show_outline</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">anti_aliasing</span><span class="p">:</span>
+        <span class="n">plotter</span><span class="o">.</span><span class="n">enable_anti_aliasing</span><span class="p">(</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">anti_aliasing</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Animation has been saved as </span><span class="si">{</span><span class="n">savefig</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">plotbase</span><span class="o">.</span><span class="n">_update_plotter</span><span class="p">(</span><span class="n">plotter</span><span class="p">,</span> <span class="n">cpos</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_unstruct_responses_dataset">
+<a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.vis.pyvista.get_unstruct_responses_dataset.html#opstool.vis.pyvista.get_unstruct_responses_dataset">[docs]</a>
+<span class="k">def</span> <span class="nf">get_unstruct_responses_dataset</span><span class="p">(</span>
+    <span class="n">odb_tag</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">ele_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Shell&quot;</span><span class="p">,</span>
+    <span class="n">ele_tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">step</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;absMax&quot;</span><span class="p">,</span>
+    <span class="n">resp_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;sectionForces&quot;</span><span class="p">,</span>
+    <span class="n">resp_dof</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;MXX&quot;</span><span class="p">,</span>
+    <span class="n">shell_fiber_loc</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;top&quot;</span><span class="p">,</span>
+    <span class="n">defo_scale</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pv</span><span class="o">.</span><span class="n">UnstructuredGrid</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get unstructured element (Shell, Plane, Brick) Dataset (Pyvista).</span>
+<span class="sd">    Data Model in PyVista can be found at `PyVista Data Model &lt;https://docs.pyvista.org/user-guide/data_model&gt;`_.</span>
+
+<span class="sd">    Added in version 1.0.18+.</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">        This function is used to get the dataset for unstructured element responses.</span>
+<span class="sd">        It is useful for further processing or visualization in PyVista.</span>
+<span class="sd">        For more details, please refer to the</span>
+<span class="sd">        `Pyvista Examples &lt;https://docs.pyvista.org/examples/&gt;`_.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    odb_tag: Union[int, str], default: 1</span>
+<span class="sd">        Tag of output databases (ODB) to be visualized.</span>
+<span class="sd">    ele_tags: Union[int, list], default: None</span>
+<span class="sd">        The tags of elements to be visualized.</span>
+<span class="sd">        If None, all elements are selected.</span>
+<span class="sd">    step: Union[int, str], default: &quot;absMax&quot;</span>
+<span class="sd">        If slides = False, this parameter will be used as the step to plot.</span>
+<span class="sd">        If str, Optional: [absMax, absMin, Max, Min].</span>
+<span class="sd">        If int, this step will be demonstrated (counting from 0).</span>
+<span class="sd">    ele_type: str, default: &quot;Shell&quot;</span>
+<span class="sd">        Element type, optional, one of [&quot;Shell&quot;, &quot;Plane&quot;, &quot;Solid&quot;].</span>
+<span class="sd">    resp_type: str, default: None</span>
+<span class="sd">        Response type, which dependents on the element type `ele_type`.</span>
+
+<span class="sd">        #. For ``Shell`` elements, one of [&quot;sectionForces&quot;, &quot;sectionDeformations&quot;, &quot;sectionForcesAtNodes&quot;, &quot;sectionDeformationsAtNodes&quot;, &quot;Stresses&quot;, &quot;Strains&quot;, &quot;StressesAtNodes&quot;, &quot;StrainsAtNodes&quot;].</span>
+<span class="sd">            If it endswith `AtNodes`, responses at nodes will be displayed,</span>
+<span class="sd">            else responses at Gaussian integration points will be averaged for each element (per unit length).</span>
+<span class="sd">            If None, defaults to &quot;sectionForces&quot;.</span>
+<span class="sd">        #. For ``Plane`` elements, one of [&quot;stresses&quot;, &quot;strains&quot;, &quot;stressesAtNodes&quot;, &quot;strainsAtNodes&quot;].</span>
+<span class="sd">            If it endswith `AtNodes`, responses at nodes will be displayed,</span>
+<span class="sd">            else responses at Gaussian integration points will be averaged for each element.</span>
+<span class="sd">            If None, defaults to &quot;stresses&quot;.</span>
+<span class="sd">        #. For ``Brick`` or ``Solid`` elements, one of [&quot;stresses&quot;, &quot;strains&quot;, &quot;stressesAtNodes&quot;, &quot;strainsAtNodes&quot;].</span>
+<span class="sd">            If it endswith `AtNodes`, responses at nodes will be displayed,</span>
+<span class="sd">            else responses at Gaussian integration points will be averaged for each element.</span>
+<span class="sd">            If None, defaults to &quot;stresses&quot;.</span>
+
+<span class="sd">    resp_dof: str, default: None</span>
+<span class="sd">        Dof to be visualized, which dependents on the element type `ele_type`.</span>
+
+<span class="sd">        .. Note::</span>
+<span class="sd">            The `resp_dof` here is consistent with stress-strain (force-deformation),</span>
+<span class="sd">            and whether it is stress or strain depends on the parameter `resp_type`.</span>
+
+<span class="sd">        #. For ``Shell`` elements, If resp_type is the section responses, one of [&quot;FXX&quot;, &quot;FYY&quot;, &quot;FXY&quot;, &quot;MXX&quot;, &quot;MYY&quot;, &quot;MXY&quot;, &quot;VXZ&quot;, &quot;VYZ&quot;]. If resp_type is the stress or strain, one of [&quot;sigma11&quot;, &quot;sigma22&quot;, &quot;sigma12&quot;, &quot;sigma23&quot;, &quot;sigma13&quot;].</span>
+<span class="sd">            If None, defaults to &quot;MXX&quot;.</span>
+<span class="sd">        #. For ``Plane`` elements, one of [&quot;sigma11&quot;, &quot;sigma22&quot;, &quot;sigma12&quot;, &quot;p1&quot;, &quot;p2&quot;, &quot;sigma_vm&quot;, &quot;tau_max&quot;].</span>
+
+<span class="sd">            * &quot;sigma11, sigma22, sigma12&quot;: Normal stress and shear stress (strain) in the x-y plane.</span>
+<span class="sd">            * &quot;p1, p2&quot;: Principal stresses (strains).</span>
+<span class="sd">            * &quot;sigma_vm&quot;: Von Mises stress.</span>
+<span class="sd">            * &quot;tau_max&quot;: Maximum shear stress (strains).</span>
+<span class="sd">            * If None, defaults to &quot;sigma_vm&quot;.</span>
+
+<span class="sd">        #. For ``Brick`` or ``Solid`` elements, one of [&quot;sigma11&quot;, &quot;sigma22&quot;, &quot;sigma33&quot;, &quot;sigma12&quot;, &quot;sigma23&quot;, &quot;sigma13&quot;, &quot;p1&quot;, &quot;p2&quot;, &quot;p3&quot;, &quot;sigma_vm&quot;, &quot;tau_max&quot;, &quot;sigma_oct&quot;, &quot;tau_oct&quot;]</span>
+
+<span class="sd">            * &quot;sigma11, sigma22, sigma33&quot;: Normal stress (strain) along x, y, z.</span>
+<span class="sd">            * &quot;sigma12, sigma23, sigma13&quot;: Shear stress (strain).</span>
+<span class="sd">            * &quot;p1, p2, p3&quot;: Principal stresses (strains).</span>
+<span class="sd">            * &quot;sigma_vm&quot;: Von Mises stress.</span>
+<span class="sd">            * &quot;tau_max&quot;: Maximum shear stress (strains).</span>
+<span class="sd">            * &quot;sigma_oct&quot;: Octahedral normal stress (strains).</span>
+<span class="sd">            * &quot;tau_oct&quot;: Octahedral shear stress (strains).</span>
+<span class="sd">            * If None, defaults to &quot;sigma_vm&quot;.</span>
+
+<span class="sd">    shell_fiber_loc: Optional[Union[str, int]], default: &quot;top&quot;, added in v1.0.16</span>
+<span class="sd">        The location of the fiber point for shell elements.</span>
+<span class="sd">        If str, one of [&quot;top&quot;, &quot;bottom&quot;, &quot;middle&quot;].</span>
+<span class="sd">        If int, the index of the fiber point to be visualized, from 1 (bottom) to N (top).</span>
+<span class="sd">        The fiber point is the fiber layer in the shell section.</span>
+<span class="sd">        Note that this parameter is only valid for stresses and strains in shell elements.</span>
+<span class="sd">    defo_scale: float, default: 0.0</span>
+<span class="sd">        Scales the size of the deformation presentation.</span>
+<span class="sd">        If set to False or 0.0, the deformed shape will not be scaled (original deformation).</span>
+<span class="sd">        If set to True or &quot;auto&quot;, the deformed shape will be scaled by the default scale (i.e., 1/20 of the maximum model dimensions).</span>
+<span class="sd">        If set to a float or int, it will scale the deformed shape by that factor.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    dataset: `pyvista.UnstructuredGrid &lt;https://docs.pyvista.org/api/core/_autosummary/pyvista.unstructuredgrid#pyvista.UnstructuredGrid&gt;`_.</span>
+<span class="sd">        PyVista UnstructuredGrid dataset containing the response data for the specified elements and step.</span>
+<span class="sd">        Scalars are stored in the ``resp_type`` field of the dataset.</span>
+
+<span class="sd">        Data Model in PyVista can be found at `PyVista Data Model &lt;https://docs.pyvista.org/user-guide/data_model&gt;`_.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">model_info_steps</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">resp_step</span> <span class="o">=</span> <span class="n">loadODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="n">ele_type</span><span class="p">)</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">node_resp_steps</span> <span class="o">=</span> <span class="n">loadODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="s2">&quot;Nodal&quot;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">plotbase</span> <span class="o">=</span> <span class="n">PlotUnstruResponse</span><span class="p">(</span><span class="n">model_info_steps</span><span class="p">,</span> <span class="n">resp_step</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">nodal_resp_steps</span><span class="o">=</span><span class="n">node_resp_steps</span><span class="p">)</span>
+    <span class="n">plotbase</span><span class="o">.</span><span class="n">refactor_resp_step</span><span class="p">(</span>
+        <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span> <span class="n">ele_type</span><span class="o">=</span><span class="n">ele_type</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="n">resp_type</span><span class="p">,</span> <span class="n">component</span><span class="o">=</span><span class="n">resp_dof</span><span class="p">,</span> <span class="n">fiber_point</span><span class="o">=</span><span class="n">shell_fiber_loc</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">plotbase</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">ele_tags</span><span class="p">,</span> <span class="n">defo_scale</span><span class="o">=</span><span class="n">defo_scale</span><span class="p">)</span></div>
+
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, Yexiang Yan
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../../_static/documentation_options.js?v=9a2e067c"></script>
+    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../../../_static/thebelab-helper.js"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    </body>
+</html>
