@@ -1,5 +1,5 @@
 # docs/conf.py
-project = "opstool"
+project = "opstool-doc"
 extensions = []
 templates_path = []
 exclude_patterns = []
