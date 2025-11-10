@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:07.153** total execution time for 1 file **from auto_examples\examples\vis**:
+**00:07.090** total execution time for 1 file **from auto_examples\examples\vis**:
 
 .. container::
 
@@ -33,5 +33,5 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_examples_vis_ex-vis-megatall.py` (``ex-vis-megatall.py``)
-     - 00:07.153
+     - 00:07.090
      - 0.0

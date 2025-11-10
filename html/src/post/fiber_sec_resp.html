@@ -9,7 +9,7 @@
         <title>Post-processing for fiber section responses - opstool 1.0.20 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=85e76eac" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css?v=572af1d6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
@@ -679,7 +679,7 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ODB</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">CreateODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fiber_ele_tags</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ODB</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">CreateODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">save_fiber_sec_resp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fiber_ele_tags</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
 <span class="k">while</span> <span class="n">ok</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">currentDisp</span> <span class="o">&lt;</span> <span class="n">maxU</span><span class="p">:</span>
     <span class="n">ok</span> <span class="o">=</span> <span class="n">ops</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
@@ -700,7 +700,8 @@
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  All responses data with _odb_tag = <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> saved in <span style="color: #1cc7d0; text-decoration-color: #1cc7d0; font-weight: bold">.opstool.output/RespStepData-</span><span style="color: #1cc7d0; text-decoration-color: #1cc7d0; font-weight: bold">1.</span><span style="color: #1cc7d0; text-decoration-color: #1cc7d0; font-weight: bold">nc</span>!
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  All responses data with _odb_tag = <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> saved in
+<span style="color: #ffc20e; text-decoration-color: #ffc20e; font-weight: bold">g:\opstool\docs\src\post\.opstool.output/RespStepData-</span><span style="color: #ffc20e; text-decoration-color: #ffc20e; font-weight: bold">1.</span><span style="color: #ffc20e; text-decoration-color: #ffc20e; font-weight: bold">nc</span>!
 </pre></div>
 </div>
 </section>
@@ -726,7 +727,7 @@
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading FiberSection response data from <span style="color: #2dde98; text-decoration-color: #2dde98; font-weight: bold">.opstool.output/RespStepData-</span><span style="color: #2dde98; text-decoration-color: #2dde98; font-weight: bold">1.</span><span style="color: #2dde98; text-decoration-color: #2dde98; font-weight: bold">nc</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading FiberSection response data from <span style="color: #ff4c4c; text-decoration-color: #ff4c4c; font-weight: bold">g:\opstool\docs\src\post\.opstool.output/RespStepData-</span><span style="color: #ff4c4c; text-decoration-color: #ff4c4c; font-weight: bold">1.</span><span style="color: #ff4c4c; text-decoration-color: #ff4c4c; font-weight: bold">nc</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
 </pre></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -914,7 +915,7 @@ Coordinates:
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading Frame response data from <span style="color: #2dde98; text-decoration-color: #2dde98; font-weight: bold">.opstool.output/RespStepData-</span><span style="color: #2dde98; text-decoration-color: #2dde98; font-weight: bold">1.</span><span style="color: #2dde98; text-decoration-color: #2dde98; font-weight: bold">nc</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading Frame response data from <span style="color: #8e43e7; text-decoration-color: #8e43e7; font-weight: bold">g:\opstool\docs\src\post\.opstool.output/RespStepData-</span><span style="color: #8e43e7; text-decoration-color: #8e43e7; font-weight: bold">1.</span><span style="color: #8e43e7; text-decoration-color: #8e43e7; font-weight: bold">nc</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
 </pre></div>
 </div>
 <div class="nboutput nblast docutils container">

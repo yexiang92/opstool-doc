@@ -359,12 +359,6 @@ all lines and points on a geometry using the following commands:
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    Widget(value='<iframe src="http://localhost:55809/index.html?ui=P_0x24412455af0_0&reconnect=auto" class="pyvista" style="width: 99%; height: 600px; border: 1px solid rgb(221,221,221);"></iframe>')
-
 
 
 
@@ -411,7 +405,6 @@ all lines and points on a geometry using the following commands:
  .. code-block:: none
 
     OPSTOOL ::  Eigen data has been saved to G:\opstool\docs\.opstool.output/EigenData-Auto.nc!
-    Widget(value='<iframe src="http://localhost:55809/index.html?ui=P_0x244100f0e00_0&reconnect=auto" class="pyvista" style="width: 99%; height: 600px; border: 1px solid rgb(221,221,221);"></iframe>')
 
 
 
@@ -441,6 +434,12 @@ First, we convert the element to which the surface load is applied to
 
 
 
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    TriSurfaceLoad element - Written: J. A. Abell (UANDES). Inspired by the makers of SurfaceLoad
 
 
 
@@ -538,7 +537,6 @@ First, we convert the element to which the surface load is applied to
  .. code-block:: none
 
     OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-1.nc ...
-    Widget(value='<iframe src="http://localhost:55809/index.html?ui=P_0x24406ba6e10_0&reconnect=auto" class="pyvista" style="width: 99%; height: 600px; border: 1px solid rgb(221,221,221);"></iframe>')
 
 
 
@@ -593,7 +591,6 @@ First, we convert the element to which the surface load is applied to
  .. code-block:: none
 
     OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-1.nc ...
-    Widget(value='<iframe src="http://localhost:55809/index.html?ui=P_0x244100a4b30_0&reconnect=auto" class="pyvista" style="width: 99%; height: 600px; border: 1px solid rgb(221,221,221);"></iframe>')
 
 
 
@@ -601,7 +598,7 @@ First, we convert the element to which the surface load is applied to
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.579 seconds)
+   **Total running time of the script:** (0 minutes 2.447 seconds)
 
 
 .. _sphx_glr_download_auto_examples_examples_preprocessing_ex-read-gmsh-2.py:

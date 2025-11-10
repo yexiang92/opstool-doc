@@ -9,7 +9,7 @@
         <title>Gmsh2OPS: Case 2 - opstool 1.0.20 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=85e76eac" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css?v=572af1d6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
@@ -708,9 +708,6 @@ Static Scene</label><div class="sd-tab-content docutils">
 Interactive Scene</label><div class="sd-tab-content docutils">
 <iframe src='../../../_static/static_viewer.html?fileURL=../_images/auto_examples/examples/preprocessing/images/sphx_glr_ex-read-gmsh-2_001.vtksz' width='100%%' height='400px' frameborder='0'></iframe></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Widget(value=&#39;&lt;iframe src=&quot;http://localhost:55809/index.html?ui=P_0x24412455af0_0&amp;reconnect=auto&quot; class=&quot;pyvista&quot; style=&quot;width: 99%; height: 600px; border: 1px solid rgb(221,221,221);&quot;&gt;&lt;/iframe&gt;&#39;)
-</pre></div>
-</div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">vis</span><span class="o">.</span><span class="n">pyvista</span><span class="o">.</span><span class="n">plot_eigen</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -726,7 +723,6 @@ Interactive Scene</label><div class="sd-tab-content docutils">
 <iframe src='../../../_static/static_viewer.html?fileURL=../_images/auto_examples/examples/preprocessing/images/sphx_glr_ex-read-gmsh-2_002.vtksz' width='100%%' height='400px' frameborder='0'></iframe></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>OPSTOOL ::  Eigen data has been saved to G:\opstool\docs\.opstool.output/EigenData-Auto.nc!
-Widget(value=&#39;&lt;iframe src=&quot;http://localhost:55809/index.html?ui=P_0x244100f0e00_0&amp;reconnect=auto&quot; class=&quot;pyvista&quot; style=&quot;width: 99%; height: 600px; border: 1px solid rgb(221,221,221);&quot;&gt;&lt;/iframe&gt;&#39;)
 </pre></div>
 </div>
 <p>We can apply the load by extracting the elements belonging to surface with tag 27:
@@ -742,6 +738,9 @@ First, we convert the element to which the surface load is applied to
 <span class="n">ops</span><span class="o">.</span><span class="n">timeSeries</span><span class="p">(</span><span class="s2">&quot;Linear&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">ops</span><span class="o">.</span><span class="n">pattern</span><span class="p">(</span><span class="s2">&quot;Plain&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">ops</span><span class="o">.</span><span class="n">eleLoad</span><span class="p">(</span><span class="s2">&quot;-ele&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">load_ele_tags</span><span class="p">,</span> <span class="s2">&quot;-type&quot;</span><span class="p">,</span> <span class="s2">&quot;-surfaceLoad&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>TriSurfaceLoad element - Written: J. A. Abell (UANDES). Inspired by the makers of SurfaceLoad
 </pre></div>
 </div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">constraints</span><span class="p">(</span><span class="s2">&quot;Transformation&quot;</span><span class="p">)</span>
@@ -786,7 +785,6 @@ Interactive Scene</label><div class="sd-tab-content docutils">
 <iframe src='../../../_static/static_viewer.html?fileURL=../_images/auto_examples/examples/preprocessing/images/sphx_glr_ex-read-gmsh-2_003.vtksz' width='100%%' height='400px' frameborder='0'></iframe></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-1.nc ...
-Widget(value=&#39;&lt;iframe src=&quot;http://localhost:55809/index.html?ui=P_0x24406ba6e10_0&amp;reconnect=auto&quot; class=&quot;pyvista&quot; style=&quot;width: 99%; height: 600px; border: 1px solid rgb(221,221,221);&quot;&gt;&lt;/iframe&gt;&#39;)
 </pre></div>
 </div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">opst</span><span class="o">.</span><span class="n">vis</span><span class="o">.</span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_props</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
@@ -811,10 +809,9 @@ Interactive Scene</label><div class="sd-tab-content docutils">
 <iframe src='../../../_static/static_viewer.html?fileURL=../_images/auto_examples/examples/preprocessing/images/sphx_glr_ex-read-gmsh-2_004.vtksz' width='100%%' height='400px' frameborder='0'></iframe></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-1.nc ...
-Widget(value=&#39;&lt;iframe src=&quot;http://localhost:55809/index.html?ui=P_0x244100a4b30_0&amp;reconnect=auto&quot; class=&quot;pyvista&quot; style=&quot;width: 99%; height: 600px; border: 1px solid rgb(221,221,221);&quot;&gt;&lt;/iframe&gt;&#39;)
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.579 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.447 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-examples-preprocessing-ex-read-gmsh-2-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/80fcb482f1b886a5c36b70f314b23cf0/ex-read-gmsh-2.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">ex-read-gmsh-2.ipynb</span></code></a></p>

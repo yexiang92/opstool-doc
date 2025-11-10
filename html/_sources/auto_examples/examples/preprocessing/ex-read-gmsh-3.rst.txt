@@ -239,12 +239,6 @@ Model Geometry Visualization
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    Widget(value='<iframe src="http://localhost:55809/index.html?ui=P_0x244046c0c50_0&reconnect=auto" class="pyvista" style="width: 99%; height: 600px; border: 1px solid rgb(221,221,221);"></iframe>')
-
 
 
 
@@ -296,7 +290,6 @@ Eigenvalue results visualization
  .. code-block:: none
 
     OPSTOOL ::  Eigen data has been saved to G:\opstool\docs\.opstool.output/EigenData-Auto.nc!
-    Widget(value='<iframe src="http://localhost:55809/index.html?ui=P_0x244124dd730_0&reconnect=auto" class="pyvista" style="width: 99%; height: 600px; border: 1px solid rgb(221,221,221);"></iframe>')
 
 
 
@@ -447,7 +440,6 @@ Visualization of nodal displacements
  .. code-block:: none
 
     OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-static.nc ...
-    Widget(value='<iframe src="http://localhost:55809/index.html?ui=P_0x24406a1ed20_0&reconnect=auto" class="pyvista" style="width: 99%; height: 600px; border: 1px solid rgb(221,221,221);"></iframe>')
 
 
 
@@ -547,7 +539,7 @@ GMSH model finalization
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 16.326 seconds)
+   **Total running time of the script:** (0 minutes 16.039 seconds)
 
 
 .. _sphx_glr_download_auto_examples_examples_preprocessing_ex-read-gmsh-3.py:

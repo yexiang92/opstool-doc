@@ -9,7 +9,7 @@
         <title>Gmsh2OPS: Linear shell arch model - opstool 1.0.20 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=85e76eac" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css?v=572af1d6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
@@ -577,7 +577,8 @@ Info:: Mesh Information &gt;&gt;&gt;
 <span class="n">opst</span><span class="o">.</span><span class="n">pre</span><span class="o">.</span><span class="n">remove_void_nodes</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Info:: Free nodes with tags [9, 10, 12, 15, 17] have been removed!
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Using ASDShellQ4 - Developed by: Massimo Petracca, Guido Camata, ASDEA Software Technology
+Info:: Free nodes with tags [9, 10, 12, 15, 17] have been removed!
 </pre></div>
 </div>
 </section>
@@ -613,7 +614,7 @@ We can check the nodal masses by:</p>
 </section>
 <section id="eigen-visulaization">
 <h2>Eigen Visulaization<a class="headerlink" href="#eigen-visulaization" title="Link to this heading">¶</a></h2>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">vis</span><span class="o">.</span><span class="n">pyvista</span><span class="o">.</span><span class="n">plot_eigen</span><span class="p">(</span><span class="n">mode_tags</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">vis</span><span class="o">.</span><span class="n">pyvista</span><span class="o">.</span><span class="n">plot_eigen</span><span class="p">(</span><span class="n">mode_tags</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -627,7 +628,8 @@ Static Scene</label><div class="sd-tab-content docutils">
 Interactive Scene</label><div class="sd-tab-content docutils">
 <iframe src='../../../_static/static_viewer.html?fileURL=../_images/auto_examples/examples/preprocessing/images/sphx_glr_ex-read-gmsh-4_002.vtksz' width='100%%' height='400px' frameborder='0'></iframe></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>OPSTOOL ::  Eigen data has been saved to G:\opstool\docs\.opstool.output/EigenData-Auto.nc!
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Using DomainModalProperties - Developed by: Massimo Petracca, Guido Camata, ASDEA Software Technology
+OPSTOOL ::  Eigen data has been saved to G:\opstool\docs\.opstool.output/EigenData-Auto.nc!
 </pre></div>
 </div>
 </section>
@@ -726,7 +728,7 @@ you can find options in <a class="reference external" href="https://gmsh.info/do
 <span class="n">gmsh</span><span class="o">.</span><span class="n">finalize</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.039 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.059 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-examples-preprocessing-ex-read-gmsh-4-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/818a9bd4cb7d2665b8756b2503ee5fa8/ex-read-gmsh-4.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">ex-read-gmsh-4.ipynb</span></code></a></p>
