@@ -6,3 +6,8 @@ build:
   os: ubuntu-lts-latest
   tools:
     python: "3.12"
+jobs:
+    build:
+      html:
+        - mkdir -p $READTHEDOCS_OUTPUT/html
+        - cp -a html/. $READTHEDOCS_OUTPUT/html/
