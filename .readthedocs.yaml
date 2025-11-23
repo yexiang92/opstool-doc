@@ -6,6 +6,5 @@ build:
   tools:
     python: "3.11"
   commands:
-    # 直接复制HTML文件到输出目录
     - mkdir -p $READTHEDOCS_OUTPUT/html/
     - cp -r html/* $READTHEDOCS_OUTPUT/html/
