@@ -329,7 +329,7 @@ Rectangular Concrete Section
     │ centroid  │ (1.500E+02, 2.979E+02) │ Elastic centroid                       │
     │ Iy        │ 5.991E+09              │ Moment of inertia y-axis               │
     │ Iz        │ 1.419E+09              │ Moment of inertia z-axis               │
-    │ Iyz       │ 2.500E-01              │ Product of inertia                     │
+    │ Iyz       │ 3.438E-01              │ Product of inertia                     │
     │ Wyt       │ 1.983E+07              │ Section moduli of top fibres y-axis    │
     │ Wyb       │ 2.011E+07              │ Section moduli of bottom fibres y-axis │
     │ Wzt       │ 9.459E+06              │ Section moduli of top fibres z-axis    │
@@ -515,7 +515,7 @@ Geometric operations
     │ centroid  │ (8.500E+01, 1.750E+01) │ Elastic centroid                       │
     │ Iy        │ 3.466E+06              │ Moment of inertia y-axis               │
     │ Iz        │ 2.571E+08              │ Moment of inertia z-axis               │
-    │ Iyz       │ -1.221E-04             │ Product of inertia                     │
+    │ Iyz       │ -6.104E-04             │ Product of inertia                     │
     │ Wyt       │ 1.980E+05              │ Section moduli of top fibres y-axis    │
     │ Wyb       │ 1.980E+05              │ Section moduli of bottom fibres y-axis │
     │ Wzt       │ 2.546E+06              │ Section moduli of top fibres z-axis    │
@@ -578,7 +578,7 @@ Geometric operations
     │ centroid  │ (8.500E+01, 1.750E+01) │ Elastic centroid                       │
     │ Iy        │ 2.571E+08              │ Moment of inertia y-axis               │
     │ Iz        │ 3.466E+06              │ Moment of inertia z-axis               │
-    │ Iyz       │ -7.324E-04             │ Product of inertia                     │
+    │ Iyz       │ -6.714E-04             │ Product of inertia                     │
     │ Wyt       │ 2.546E+06              │ Section moduli of top fibres y-axis    │
     │ Wyb       │ 2.546E+06              │ Section moduli of bottom fibres y-axis │
     │ Wzt       │ 1.980E+05              │ Section moduli of top fibres z-axis    │
@@ -594,7 +594,7 @@ Geometric operations
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.593 seconds)
+   **Total running time of the script:** (0 minutes 2.461 seconds)
 
 
 .. _sphx_glr_download_auto_examples_examples_sec-mesh_ex-sec-props.py:

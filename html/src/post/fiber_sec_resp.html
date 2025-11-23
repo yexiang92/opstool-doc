@@ -6,8 +6,8 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Truss element Response" href="truss_resp.html" /><link rel="prev" title="Frame element Response" href="frame_resp.html" />
 
     <link rel="shortcut icon" href="../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>Post-processing for fiber section responses - opstool 1.0.21 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=85e76eac" />
+        <title>Post-processing for fiber section responses - opstool 1.0.22 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5f771d8e" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css?v=572af1d6" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -177,7 +177,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">opstool 1.0.21 documentation</div></a>
+      <a href="../../index.html"><div class="brand">opstool 1.0.22 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -232,7 +232,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../pre/unit_system.html">Automatic Unit Conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pre/model_data.html">Quickly apply gravity loads and obtain mass and stiffness matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pre/loads.html">Loads Processing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../pre/model_mass.html">Model mass generation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Post-Processing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
@@ -248,26 +247,32 @@
 <li class="toctree-l2"><a class="reference internal" href="unit_transform.html">Unit conversion in post-processing</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../vis/plotly/plot_model_plotly.html">Model Geometry (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/plotly/plot_eigen_plotly.html">Eigen (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/plotly/plot_nodal_resp_plotly.html">Nodal Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/plotly/plot_frame_resp_plotly.html">Frame Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/plotly/plot_truss_resp_plotly.html">Truss Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/plotly/plot_shell_resp_plotly.html">Shell Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/plotly/plot_plane_resp_plotly.html">Plane Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/plotly/plot_brick_resp_plotly.html">Brick Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/pyvista/plot_model_pyvista.html">Model Geometry (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/pyvista/plot_eigen_pyvista.html">Eigen (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/pyvista/plot_nodal_resp_pyvista.html">Nodal Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/pyvista/plot_frame_resp_pyvista.html">Frame Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/pyvista/plot_truss_resp_pyvista.html">Truss Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/pyvista/plot_shell_resp_pyvista.html">Shell Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/pyvista/plot_plane_resp_pyvista.html">Plane Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vis/pyvista/plot_brick_resp_pyvista.html">Brick Responses (Pyvista)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../auto_examples/vis-guide/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/index.html">Plotyly-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Plotyly-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-01-model-plotly.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-02-eigen-plotly.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-03-nodal-resp-plotly.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-04-frame-resp-plotly.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-05-truss-resp-plotly.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-06-shell-resp-plotly.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-07-plane-resp-plotly.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-08-brick-resp-plotly.html">Solid Element Responses</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../analysis/index.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/index.html">Pyvista-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Pyvista-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-01-model-pyvista.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-02-eigen-pyvista.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-03-nodal-resp-pyvista.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-04-frame-resp-pyvista.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-05-truss-resp-pyvista.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-06-shell-resp-pyvista.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-07-plane-resp-pyvista.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-08-brick-resp-pyvista.html">Solid Element Responses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../analysis/index.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../analysis/smart_analysis.html">Smart Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis/mc_analysis.html">Moment Curvature Analysis of Section</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis/buckling_analysis_linear.html">Linear Buckling Analysis</a></li>
@@ -279,8 +284,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../auto_examples/examples/index.html">Post-Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../auto_examples/examples/index.html#pre-processing">Pre-Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../auto_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-ele-removal-add.html">Remove and Add Elements</a></li>
@@ -292,14 +298,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-ssi-Gu.html">Soil-Structure Interaction</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/preprocessing/ex-read-gmsh-1.html">Gmsh2OPS: Case 1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/preprocessing/ex-read-gmsh-2.html">Gmsh2OPS: Case 2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/preprocessing/ex-read-gmsh-3.html">3D Beam Element Example - A Dome Structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/preprocessing/ex-read-gmsh-4.html">Gmsh2OPS: Linear shell arch model</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/index.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/index.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/ex-bridge-deck.html">Bridge superstructure section</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/ex-cfst.html">Concrete-Filled Steel Tube (CFST) Section Meshing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/ex-composite.html">Steel-Concrete Composite Section Meshing</a></li>
@@ -307,7 +313,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/ex-sec-props.html">Interaction with sectionproperties</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/vis/ex-vis-megatall.html">606 m Mega-tall Building</a></li>
 </ul>
 </li>
@@ -316,15 +322,15 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.load_ops_examples.html">load_ops_examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.add_ops_hints_file.html">add_ops_hints_file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.run_model.html">run_model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.print_version.html">print_version</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../api/_autosummary/opstool.pre.section.FiberSecMesh.html">FiberSecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/_autosummary/opstool.pre.section.SecMesh.html">SecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/_autosummary/opstool.pre.section.create_material.html">create_material</a></li>
@@ -362,8 +368,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.pre.remove_void_nodes.html">remove_void_nodes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.set_odb_path.html">set_odb_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.set_odb_format.html">set_odb_format</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.update_unit_system.html">update_unit_system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.reset_unit_system.html">reset_unit_system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.save_model_data.html">save_model_data</a></li>
@@ -378,7 +385,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_sensitivity_responses.html">get_sensitivity_responses</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.vis.plotly.set_plot_props.html">set_plot_props</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.vis.plotly.set_plot_colors.html">set_plot_colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.vis.plotly.plot_model.html">plot_model</a></li>
@@ -410,11 +417,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.vis.pyvista.get_unstruct_responses_dataset.html">get_unstruct_responses_dataset</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.anlys.SmartAnalyze.html">SmartAnalyze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.anlys.MomentCurvature.html">MomentCurvature</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory/theory_stress_criteria.html">Stress and Strength Criteria</a></li>
 </ul>
 
 </div>
@@ -451,7 +462,7 @@
           d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
         />
       </svg>
-      <span class="gh-source--version-text"> 1.0.21 </span>
+      <span class="gh-source--version-text"> 1.0.22 </span>
     </span>
   </span>
 </a>
@@ -499,14 +510,19 @@
 <h1>Post-processing for fiber section responses<a class="headerlink" href="#Post-processing-for-fiber-section-responses" title="Link to this heading">¶</a></h1>
 <p>This example is adapted from:</p>
 <p><a class="reference external" href="https://openseespydoc.readthedocs.io/en/latest/src/RCFramePushOver.html">Reinforced Concrete Frame Pushover Analysis</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since fiber cross-sections typically have a large number of fiber points, it is not recommended to save the responses of all elements when the number of elements is large. It is recommended to save only the responses of critical elements.</p>
+</div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">openseespy.opensees</span> <span class="k">as</span> <span class="nn">ops</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ops</span>
 
-<span class="kn">import</span> <span class="nn">opstool</span> <span class="k">as</span> <span class="nn">opst</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">opstool</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">opst</span>
 <br/></pre></div>
 </div>
 </div>
@@ -527,42 +543,98 @@
 <span class="n">ops</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">ops</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-<span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s2">&quot;Concrete01&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">6.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.004</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.014</span><span class="p">)</span>
-<span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s2">&quot;Concrete01&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.002</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.006</span><span class="p">)</span>
+<span class="n">matTagConc1</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># CORE</span>
+<span class="n">matTagConc2</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># COVER</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s2">&quot;Concrete02&quot;</span><span class="p">,</span> <span class="n">matTagConc1</span><span class="p">,</span> <span class="o">-</span><span class="mf">6.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.004</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.014</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s2">&quot;Concrete02&quot;</span><span class="p">,</span> <span class="n">matTagConc2</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.002</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.006</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
 
 <span class="n">fy</span> <span class="o">=</span> <span class="mf">60.0</span>
 <span class="n">E</span> <span class="o">=</span> <span class="mf">30000.0</span>
-<span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s2">&quot;Steel01&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">E</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
-
-<span class="c1"># Define cross-section for nonlinear columns</span>
-<span class="c1"># ------------------------------------------</span>
-<span class="n">colWidth</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">matTagSteel</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s2">&quot;Steel01&quot;</span><span class="p">,</span> <span class="n">matTagSteel</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">E</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colWidth</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="n">colDepth</span> <span class="o">=</span> <span class="mi">24</span>
 <span class="n">cover</span> <span class="o">=</span> <span class="mf">1.5</span>
 <span class="n">As</span> <span class="o">=</span> <span class="mf">0.60</span>  <span class="c1"># area of no. 7 bars</span>
-<span class="c1"># some variables derived from the parameters</span>
+<span class="n">dia</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">As</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
 <span class="n">y1</span> <span class="o">=</span> <span class="n">colDepth</span> <span class="o">/</span> <span class="mf">2.0</span>
 <span class="n">z1</span> <span class="o">=</span> <span class="n">colWidth</span> <span class="o">/</span> <span class="mf">2.0</span>
 
-<span class="n">ops</span><span class="o">.</span><span class="n">section</span><span class="p">(</span><span class="s2">&quot;Fiber&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;-GJ&quot;</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">)</span>
-<span class="n">ops</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s2">&quot;rect&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">y1</span><span class="p">,</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">z1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">-</span> <span class="n">cover</span><span class="p">,</span> <span class="n">z1</span> <span class="o">-</span> <span class="n">cover</span><span class="p">)</span>
-<span class="c1"># Create the concrete cover fibers (top, bottom, left, right)</span>
-<span class="n">ops</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s2">&quot;rect&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="n">y1</span><span class="p">,</span> <span class="n">z1</span> <span class="o">-</span> <span class="n">cover</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">z1</span><span class="p">)</span>
-<span class="n">ops</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s2">&quot;rect&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="n">y1</span><span class="p">,</span> <span class="o">-</span><span class="n">z1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">z1</span><span class="p">)</span>
-<span class="n">ops</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s2">&quot;rect&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="n">y1</span><span class="p">,</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">z1</span><span class="p">,</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">y1</span><span class="p">,</span> <span class="n">z1</span> <span class="o">-</span> <span class="n">cover</span><span class="p">)</span>
-<span class="n">ops</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s2">&quot;rect&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">y1</span> <span class="o">-</span> <span class="n">cover</span><span class="p">,</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">z1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">z1</span> <span class="o">-</span> <span class="n">cover</span><span class="p">)</span>
-<span class="c1"># Create the reinforcing fibers (left, middle, right)</span>
-<span class="n">ops</span><span class="o">.</span><span class="n">layer</span><span class="p">(</span><span class="s2">&quot;straight&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">As</span><span class="p">,</span> <span class="n">y1</span> <span class="o">-</span> <span class="n">cover</span><span class="p">,</span> <span class="n">z1</span> <span class="o">-</span> <span class="n">cover</span><span class="p">,</span> <span class="n">y1</span> <span class="o">-</span> <span class="n">cover</span><span class="p">,</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">z1</span><span class="p">)</span>
-<span class="n">ops</span><span class="o">.</span><span class="n">layer</span><span class="p">(</span><span class="s2">&quot;straight&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">As</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">z1</span> <span class="o">-</span> <span class="n">cover</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">z1</span><span class="p">)</span>
-<span class="n">ops</span><span class="o">.</span><span class="n">layer</span><span class="p">(</span><span class="s2">&quot;straight&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">As</span><span class="p">,</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">y1</span><span class="p">,</span> <span class="n">z1</span> <span class="o">-</span> <span class="n">cover</span><span class="p">,</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">y1</span><span class="p">,</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">z1</span><span class="p">)</span>
+<span class="n">outer_points</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="n">y1</span><span class="p">,</span> <span class="o">-</span><span class="n">z1</span><span class="p">),</span> <span class="p">(</span><span class="n">y1</span><span class="p">,</span> <span class="o">-</span><span class="n">z1</span><span class="p">),</span> <span class="p">(</span><span class="n">y1</span><span class="p">,</span> <span class="n">z1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="n">y1</span><span class="p">,</span> <span class="n">z1</span><span class="p">)]</span>
+<span class="n">inner_points</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">pre</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="n">outer_points</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="n">cover</span><span class="p">)</span>
+<span class="n">cover_patch</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">pre</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">create_polygon_patch</span><span class="p">(</span><span class="n">outer_points</span><span class="p">,</span> <span class="n">holes</span><span class="o">=</span><span class="p">[</span><span class="n">inner_points</span><span class="p">])</span>
+<span class="n">core_patch</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">pre</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">create_polygon_patch</span><span class="p">(</span><span class="n">inner_points</span><span class="p">)</span>
+<span class="n">SEC</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">pre</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">SecMesh</span><span class="p">()</span>
+<span class="n">SEC</span><span class="o">.</span><span class="n">add_patch_group</span><span class="p">({</span><span class="s2">&quot;cover&quot;</span><span class="p">:</span> <span class="n">cover_patch</span><span class="p">,</span> <span class="s2">&quot;core&quot;</span><span class="p">:</span> <span class="n">core_patch</span><span class="p">})</span>
+<span class="n">SEC</span><span class="o">.</span><span class="n">set_ops_mat_tag</span><span class="p">({</span><span class="s2">&quot;cover&quot;</span><span class="p">:</span> <span class="n">matTagConc2</span><span class="p">,</span> <span class="s2">&quot;core&quot;</span><span class="p">:</span> <span class="n">matTagConc1</span><span class="p">})</span>
+<span class="n">SEC</span><span class="o">.</span><span class="n">set_mesh_size</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">SEC</span><span class="o">.</span><span class="n">add_rebar_line</span><span class="p">(</span>
+    <span class="n">points</span><span class="o">=</span><span class="p">[(</span><span class="n">y1</span> <span class="o">-</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">dia</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">z1</span> <span class="o">-</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">dia</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">y1</span> <span class="o">-</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">dia</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">z1</span> <span class="o">+</span> <span class="n">dia</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)],</span>
+    <span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">dia</span><span class="o">=</span><span class="n">dia</span><span class="p">,</span>
+    <span class="n">ops_mat_tag</span><span class="o">=</span><span class="n">matTagSteel</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">SEC</span><span class="o">.</span><span class="n">add_rebar_line</span><span class="p">(</span>
+    <span class="n">points</span><span class="o">=</span><span class="p">[(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">z1</span> <span class="o">-</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">dia</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">z1</span> <span class="o">+</span> <span class="n">dia</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)],</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">dia</span><span class="o">=</span><span class="n">dia</span><span class="p">,</span> <span class="n">ops_mat_tag</span><span class="o">=</span><span class="n">matTagSteel</span>
+<span class="p">)</span>
+<span class="n">SEC</span><span class="o">.</span><span class="n">add_rebar_line</span><span class="p">(</span>
+    <span class="n">points</span><span class="o">=</span><span class="p">[(</span><span class="n">cover</span> <span class="o">-</span> <span class="n">y1</span> <span class="o">+</span> <span class="n">dia</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">z1</span> <span class="o">-</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">dia</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">cover</span> <span class="o">-</span> <span class="n">y1</span> <span class="o">+</span> <span class="n">dia</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cover</span> <span class="o">-</span> <span class="n">z1</span> <span class="o">+</span> <span class="n">dia</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)],</span>
+    <span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">dia</span><span class="o">=</span><span class="n">dia</span><span class="p">,</span>
+    <span class="n">ops_mat_tag</span><span class="o">=</span><span class="n">matTagSteel</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">SEC</span><span class="o">.</span><span class="n">mesh</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">SEC</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span> The section <span style="color: #007cc0; text-decoration-color: #007cc0; font-weight: bold">My Section</span> has been successfully meshed!
+</pre></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/src_post_fiber_sec_resp_6_1.png" src="../../_images/src_post_fiber_sec_resp_6_1.png" />
+</div>
+</div>
+<p>We can save this section class:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data/my-section.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">SEC</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SEC</span><span class="o">.</span><span class="n">to_opspy_cmds</span><span class="p">(</span><span class="n">secTag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">GJ</span><span class="o">=</span><span class="mi">1000000</span><span class="p">)</span>  <span class="c1"># to OpenSeesPy commands</span>
 
 <span class="c1"># Define column elements</span>
 <span class="c1"># ----------------------</span>
 <span class="n">ops</span><span class="o">.</span><span class="n">geomTransf</span><span class="p">(</span><span class="s2">&quot;PDelta&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="c1"># Number of integration points along length of element</span>
-<span class="n">np</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">np_</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="c1"># Lobatto integratoin</span>
-<span class="n">ops</span><span class="o">.</span><span class="n">beamIntegration</span><span class="p">(</span><span class="s2">&quot;Lobatto&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">beamIntegration</span><span class="p">(</span><span class="s2">&quot;Lobatto&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np_</span><span class="p">)</span>
 <span class="n">eleType</span> <span class="o">=</span> <span class="s2">&quot;forceBeamColumn&quot;</span>
 <span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="n">eleType</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="n">eleType</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -575,7 +647,7 @@
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">opst</span><span class="o">.</span><span class="n">vis</span><span class="o">.</span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_props</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># you should not use</span>
@@ -589,14 +661,14 @@
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/src_post_fiber_sec_resp_5_0.png" src="../../_images/src_post_fiber_sec_resp_5_0.png" />
+<img alt="../../_images/src_post_fiber_sec_resp_10_0.png" src="../../_images/src_post_fiber_sec_resp_10_0.png" />
 </div>
 </div>
 </section>
 <section id="Gravity-analysis">
 <h2>Gravity analysis<a class="headerlink" href="#Gravity-analysis" title="Link to this heading">¶</a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define gravity loads</span>
@@ -628,7 +700,7 @@
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -641,7 +713,7 @@
 <h2>Pushover analysis<a class="headerlink" href="#Pushover-analysis" title="Link to this heading">¶</a></h2>
 <p>Define lateral loads</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">loadConst</span><span class="p">(</span><span class="s2">&quot;-time&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
@@ -658,7 +730,7 @@
 </div>
 <p>Start of modifications to analysis for push over</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set some parameters</span>
@@ -670,22 +742,22 @@
 <span class="n">ok</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="n">ops</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="s2">&quot;NormDispIncr&quot;</span><span class="p">,</span> <span class="mf">1.0e-6</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="n">ops</span><span class="o">.</span><span class="n">algorithm</span><span class="p">(</span><span class="s2">&quot;ModifiedNewton&quot;</span><span class="p">,</span> <span class="s2">&quot;-initial&quot;</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">algorithm</span><span class="p">(</span><span class="s2">&quot;KrylovNewton&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <p>Save the responses. Args see <a class="reference external" href="https://opstool.readthedocs.io/en/latest/src/api/_autosummary/opstool.post.CreateODB.html#opstool.post.CreateODB">CreateODB</a></p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ODB</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">CreateODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">save_fiber_sec_resp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fiber_ele_tags</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ODB</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">CreateODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">save_fiber_sec_resp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fiber_ele_tags</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="k">while</span> <span class="n">ok</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">currentDisp</span> <span class="o">&lt;</span> <span class="n">maxU</span><span class="p">:</span>
     <span class="n">ok</span> <span class="o">=</span> <span class="n">ops</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="c1"># if the analysis fails try initial tangent iteration</span>
     <span class="k">if</span> <span class="n">ok</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;modified newton failed&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;KrylovNewton failed&quot;</span><span class="p">)</span>
         <span class="k">break</span>
 
     <span class="n">ODB</span><span class="o">.</span><span class="n">fetch_response_step</span><span class="p">()</span>
@@ -701,7 +773,7 @@
 </div>
 <div class="output_area rendered_html docutils container">
 <pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  All responses data with _odb_tag = <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> saved in
-<span style="color: #ffc20e; text-decoration-color: #ffc20e; font-weight: bold">g:\opstool\docs\src\post\.opstool.output/RespStepData-</span><span style="color: #ffc20e; text-decoration-color: #ffc20e; font-weight: bold">1.</span><span style="color: #ffc20e; text-decoration-color: #ffc20e; font-weight: bold">nc</span>!
+<span style="color: #b84592; text-decoration-color: #b84592; font-weight: bold">g:\opstool\docs\src\post\.opstool.output/RespStepData-</span><span style="color: #b84592; text-decoration-color: #b84592; font-weight: bold">1.</span><span style="color: #b84592; text-decoration-color: #b84592; font-weight: bold">zarr</span>!
 </pre></div>
 </div>
 </section>
@@ -711,10 +783,10 @@
 <h3>Fiber Section<a class="headerlink" href="#Fiber-Section" title="Link to this heading">¶</a></h3>
 <p>Extracting fiber cross responses</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sec_resp</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">get_element_responses</span><span class="p">(</span><span class="n">odb_tag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ele_type</span><span class="o">=</span><span class="s2">&quot;FiberSection&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sec_resp</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">get_element_responses</span><span class="p">(</span><span class="n">odb_tag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ele_type</span><span class="o">=</span><span class="s2">&quot;FiberSection&quot;</span><span class="p">)</span>  <span class="c1"># odb_tag=1 as above</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sec_resp</span><span class="o">.</span><span class="n">data_vars</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sec_resp</span><span class="o">.</span><span class="n">dims</span><span class="p">)</span>
@@ -727,7 +799,8 @@
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading FiberSection response data from <span style="color: #ff4c4c; text-decoration-color: #ff4c4c; font-weight: bold">g:\opstool\docs\src\post\.opstool.output/RespStepData-</span><span style="color: #ff4c4c; text-decoration-color: #ff4c4c; font-weight: bold">1.</span><span style="color: #ff4c4c; text-decoration-color: #ff4c4c; font-weight: bold">nc</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading FiberSection response data from <span style="color: #ff4f81; text-decoration-color: #ff4f81; font-weight: bold">g:\opstool\docs\src\post\.opstool.output/RespStepData-</span><span style="color: #ff4f81; text-decoration-color: #ff4f81; font-weight: bold">1.</span><span style="color: #ff4f81; text-decoration-color: #ff4f81; font-weight: bold">zarr</span>
+<span style="color: #808000; text-decoration-color: #808000">...</span>
 </pre></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -736,51 +809,98 @@
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Data variables:
-    Stresses  (time, eleTags, secPoints, fiberPoints) float32 936kB -0.3583 ....
-    Strains   (time, eleTags, secPoints, fiberPoints) float32 936kB -0.000121...
+    areas     (eleTags, secPoints, fiberPoints) float64 90kB 0.3809 ... 0.6
     secDefo   (time, eleTags, secPoints, DOFs) float32 24kB -0.0001213 ... 1....
-    secForce  (time, eleTags, secPoints, DOFs) float32 24kB -180.0 ... 1.685e-15
-    ys        (eleTags, secPoints, fiberPoints) float64 12kB -9.45 ... -10.5
-    zs        (eleTags, secPoints, fiberPoints) float64 12kB -5.4 -5.4 ... -6.0
-    areas     (eleTags, secPoints, fiberPoints) float64 12kB 2.52 2.52 ... 0.6
-    matTags   (eleTags, secPoints, fiberPoints) float64 12kB 1.0 1.0 ... 3.0 3.0
+    matTags   (eleTags, secPoints, fiberPoints) float64 90kB 2.0 2.0 ... 3.0 3.0
+    secForce  (time, eleTags, secPoints, DOFs) float32 24kB -180.0 ... 0.1157
+    Strains   (time, eleTags, secPoints, fiberPoints) float32 7MB -0.0001213 ...
+    Stresses  (time, eleTags, secPoints, fiberPoints) float32 7MB -0.588 ... ...
+    zs        (eleTags, secPoints, fiberPoints) float64 90kB 3.354 ... -5.563
+    ys        (eleTags, secPoints, fiberPoints) float64 90kB -11.73 ... -10.06
 ----------------------------------------------------------------------------------------------------
-FrozenMappingWarningOnValuesAccess({&#39;time&#39;: 152, &#39;eleTags&#39;: 2, &#39;secPoints&#39;: 5, &#39;fiberPoints&#39;: 154, &#39;DOFs&#39;: 4})
+FrozenMappingWarningOnValuesAccess({&#39;eleTags&#39;: 2, &#39;secPoints&#39;: 5, &#39;fiberPoints&#39;: 1129, &#39;time&#39;: 152, &#39;DOFs&#39;: 4})
 ----------------------------------------------------------------------------------------------------
 Coordinates:
-  * time         (time) float32 608B 0.0 0.6715 1.179 ... 3.363 3.359 3.355
-  * eleTags      (eleTags) int32 8B 1 2
-  * secPoints    (secPoints) int32 20B 1 2 3 4 5
-  * fiberPoints  (fiberPoints) int32 616B 1 2 3 4 5 6 ... 150 151 152 153 154
   * DOFs         (DOFs) &lt;U2 32B &#39;P&#39; &#39;Mz&#39; &#39;My&#39; &#39;T&#39;
+  * eleTags      (eleTags) int32 8B 1 2
+  * fiberPoints  (fiberPoints) int32 5kB 1 2 3 4 5 ... 1125 1126 1127 1128 1129
+  * secPoints    (secPoints) int32 20B 1 2 3 4 5
+  * time         (time) float32 608B 0.0 0.6684 1.319 ... 3.097 3.091 3.086
 </pre></div></div>
 </div>
-<p>We can select the responses of element 1 and its first section.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<p>We can select the responses of element 1 and its first section, time=-1 means that the last time is used.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stress</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;Stresses&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">strain</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;Strains&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;ys&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">z</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;zs&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">y</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">z</span><span class="o">.</span><span class="n">values</span><span class="p">),</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># (num_fiber_points, 2), used for plotting response</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;strain</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">strain</span><span class="o">.</span><span class="n">coords</span><span class="p">)</span>  <span class="c1"># eleTags, time, secPoints are fixed by sel and isel above, fiberPoints remain</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">coords</span><span class="p">)</span>  <span class="c1"># eleTags, secPoints are fixed by sel and isel above, fiberPoints remain</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;points</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">points</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># (num_fiber_points, 2)</span>
 </pre></div>
 </div>
 </div>
-<p>Plotting the strain distribution</p>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+----------------------------------------------------------------------------------------------------
+strain
+ Coordinates:
+    eleTags      int32 4B 1
+  * fiberPoints  (fiberPoints) int32 5kB 1 2 3 4 5 ... 1125 1126 1127 1128 1129
+    secPoints    int32 4B 1
+    time         float32 4B 3.086
+----------------------------------------------------------------------------------------------------
+y
+ Coordinates:
+    eleTags      int32 4B 1
+  * fiberPoints  (fiberPoints) int32 5kB 1 2 3 4 5 ... 1125 1126 1127 1128 1129
+    secPoints    int32 4B 1
+----------------------------------------------------------------------------------------------------
+points
+ (1129, 2)
+</pre></div></div>
+</div>
+<p>Plotting the strain distribution:</p>
+<p>In version v1.0.21 and later, the <code class="docutils literal notranslate"><span class="pre">SecMesh</span></code> class added a function <code class="docutils literal notranslate"><span class="pre">plot_response</span></code> to visualize a given response, which automatically maps the response based on the coordinates of the triangular mesh.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data/my-section.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">SEC</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">scatter</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">strain</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Y Coordinate&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Z Coordinate&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Strain Distribution</span><span class="se">\n</span><span class="s2">(Element 1, Section 1)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Strain&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">,</span> <span class="n">cbar</span> <span class="o">=</span> <span class="n">SEC</span><span class="o">.</span><span class="n">plot_response</span><span class="p">(</span>
+    <span class="n">points</span><span class="o">=</span><span class="n">points</span><span class="p">,</span>  <span class="c1"># (num_fiber_points, 2)</span>
+    <span class="n">response</span><span class="o">=</span><span class="n">strain</span><span class="p">,</span>  <span class="c1"># (num_fiber_points,)</span>
+    <span class="n">mat_tag</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Strain&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Strain Distribution</span><span class="se">\n</span><span class="s2">(Element 1, Section 1)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -789,15 +909,95 @@ Coordinates:
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/src_post_fiber_sec_resp_22_0.png" src="../../_images/src_post_fiber_sec_resp_22_0.png" />
+<img alt="../../_images/src_post_fiber_sec_resp_28_0.png" src="../../_images/src_post_fiber_sec_resp_28_0.png" />
 </div>
 </div>
-<p>We can also extract stresses and strains for specific materials</p>
+<p>We can also use imageio to create animations for all moments.</p>
+<p>Here, we select concrete fibers (material tag with 1 and 2) using Boolean operations, and then specify a failure threshold for these two materials using a <code class="docutils literal notranslate"><span class="pre">threshold</span></code> parameter. Mesh elements exceeding the threshold are hollowed out to simulate failure.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stress</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;Stresses&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">imageio.v2</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">imageio</span>
+
+<span class="n">mat</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;matTags&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">cond</span> <span class="o">=</span> <span class="p">(</span><span class="n">mat</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">mat</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># concrete fibers only</span>
+<span class="c1"># overall min strain across all time steps</span>
+<span class="n">vmin</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;Strains&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fiberPoints</span><span class="o">=</span><span class="n">cond</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+<span class="c1"># overall max strain across all time steps</span>
+<span class="n">vmax</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;Strains&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fiberPoints</span><span class="o">=</span><span class="n">cond</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+
+<span class="k">with</span> <span class="n">imageio</span><span class="o">.</span><span class="n">get_writer</span><span class="p">(</span><span class="s2">&quot;images/fiber-section-strain.gif&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])):</span>
+        <span class="n">strain</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;Strains&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">t</span><span class="p">)</span>
+
+        <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+        <span class="n">ax</span><span class="p">,</span> <span class="n">cbar</span> <span class="o">=</span> <span class="n">SEC</span><span class="o">.</span><span class="n">plot_response</span><span class="p">(</span>
+            <span class="n">points</span><span class="o">=</span><span class="n">points</span><span class="p">,</span>
+            <span class="n">response</span><span class="o">=</span><span class="n">strain</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+            <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Spectral_r&quot;</span><span class="p">,</span>
+            <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+            <span class="n">mat_tag</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>  <span class="c1"># concrete fibers only</span>
+            <span class="n">thresholds</span><span class="o">=</span><span class="p">{</span><span class="mi">2</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.006</span><span class="p">,</span> <span class="mf">0.002</span><span class="p">),</span> <span class="mi">1</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.015</span><span class="p">,</span> <span class="mf">0.002</span><span class="p">)},</span>  <span class="c1"># failure thresholds, 2: cover, 1: core</span>
+        <span class="p">)</span>
+        <span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Strain&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+        <span class="n">cbar</span><span class="o">.</span><span class="n">mappable</span><span class="o">.</span><span class="n">set_clim</span><span class="p">(</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Strain Distribution</span><span class="se">\n</span><span class="s2">(Element 1, Section 1)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+        <span class="c1"># Convert Matplotlib figure to image and append to gif</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">buffer_rgba</span><span class="p">(),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">*</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">get_width_height</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">))</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">append_data</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><img alt="fiber-section-strain" src="../../_images/fiber-section-strain1.gif" /></p>
+<p>Similarly, we can also visualize stress.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mat</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;matTags&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">cond</span> <span class="o">=</span> <span class="p">(</span><span class="n">mat</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">mat</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># concrete fibers only</span>
+<span class="n">vmin</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;Stresses&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fiberPoints</span><span class="o">=</span><span class="n">cond</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+<span class="n">vmax</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;Stresses&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fiberPoints</span><span class="o">=</span><span class="n">cond</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+
+<span class="k">with</span> <span class="n">imageio</span><span class="o">.</span><span class="n">get_writer</span><span class="p">(</span><span class="s2">&quot;images/fiber-section-stress.gif&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])):</span>
+        <span class="n">stress</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;Stresses&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">t</span><span class="p">)</span>
+
+        <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+        <span class="n">ax</span><span class="p">,</span> <span class="n">cbar</span> <span class="o">=</span> <span class="n">SEC</span><span class="o">.</span><span class="n">plot_response</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">points</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="n">stress</span><span class="p">,</span> <span class="n">mat_tag</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+        <span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Stress&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+        <span class="n">cbar</span><span class="o">.</span><span class="n">mappable</span><span class="o">.</span><span class="n">set_clim</span><span class="p">(</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Concrete Stress Distribution</span><span class="se">\n</span><span class="s2">(Element 1, Section 1)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+        <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">buffer_rgba</span><span class="p">(),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">*</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">get_width_height</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">))</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">append_data</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><img alt="fiber-section-stress" src="../../_images/fiber-section-stress1.gif" /></p>
+<p>Of course, we can also handle it ourselves.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We can also extract stresses and strains for specific materials.</span>
+<span class="n">stress</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;Stresses&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">strain</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;Strains&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;ys&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">z</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;zs&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -809,7 +1009,7 @@ Coordinates:
 </div>
 <p>matTag = 3 for rebar:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
@@ -829,12 +1029,12 @@ Coordinates:
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/src_post_fiber_sec_resp_26_0.png" src="../../_images/src_post_fiber_sec_resp_26_0.png" />
+<img alt="../../_images/src_post_fiber_sec_resp_38_0.png" src="../../_images/src_post_fiber_sec_resp_38_0.png" />
 </div>
 </div>
 <p>mattag = [1, 2] for concrete:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
@@ -854,12 +1054,12 @@ Coordinates:
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/src_post_fiber_sec_resp_28_0.png" src="../../_images/src_post_fiber_sec_resp_28_0.png" />
+<img alt="../../_images/src_post_fiber_sec_resp_40_0.png" src="../../_images/src_post_fiber_sec_resp_40_0.png" />
 </div>
 </div>
 <p>We can also extract the force and deformation response at the cross-section level</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">defo</span> <span class="o">=</span> <span class="n">sec_resp</span><span class="p">[</span><span class="s2">&quot;secDefo&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">DOFs</span><span class="o">=</span><span class="s2">&quot;My&quot;</span><span class="p">)</span>
@@ -874,17 +1074,17 @@ Coordinates:
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 &lt;xarray.DataArray &#39;secDefo&#39; (time: 5)&gt; Size: 20B
-array([-2.5559136e-21,  2.1244754e-05,  5.3474883e-05,  8.3909188e-05,
-        1.1238630e-04], dtype=float32)
+array([1.5155445e-21, 2.0417334e-05, 4.3028922e-05, 7.2857343e-05,
+       1.1079801e-04], dtype=float32)
 Coordinates:
-  * time       (time) float32 20B 0.0 0.6715 1.179 1.568 1.901
+    DOFs       &lt;U2 8B &#39;My&#39;
     eleTags    int32 4B 1
     secPoints  int32 4B 1
-    DOFs       &lt;U2 8B &#39;My&#39;
+  * time       (time) float32 20B 0.0 0.6684 1.319 1.874 2.323
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">defo</span><span class="p">,</span> <span class="n">fo</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
@@ -896,14 +1096,14 @@ Coordinates:
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/src_post_fiber_sec_resp_31_0.png" src="../../_images/src_post_fiber_sec_resp_31_0.png" />
+<img alt="../../_images/src_post_fiber_sec_resp_43_0.png" src="../../_images/src_post_fiber_sec_resp_43_0.png" />
 </div>
 </div>
 </section>
 <section id="Frame-elements">
 <h3>Frame elements<a class="headerlink" href="#Frame-elements" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frame_resp</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">get_element_responses</span><span class="p">(</span><span class="n">odb_tag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ele_type</span><span class="o">=</span><span class="s2">&quot;Frame&quot;</span><span class="p">)</span>
@@ -915,7 +1115,7 @@ Coordinates:
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading Frame response data from <span style="color: #8e43e7; text-decoration-color: #8e43e7; font-weight: bold">g:\opstool\docs\src\post\.opstool.output/RespStepData-</span><span style="color: #8e43e7; text-decoration-color: #8e43e7; font-weight: bold">1.</span><span style="color: #8e43e7; text-decoration-color: #8e43e7; font-weight: bold">nc</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading Frame response data from <span style="color: #1cc7d0; text-decoration-color: #1cc7d0; font-weight: bold">g:\opstool\docs\src\post\.opstool.output/RespStepData-</span><span style="color: #1cc7d0; text-decoration-color: #1cc7d0; font-weight: bold">1.</span><span style="color: #1cc7d0; text-decoration-color: #1cc7d0; font-weight: bold">zarr</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
 </pre></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -924,20 +1124,20 @@ Coordinates:
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 &lt;xarray.Dataset&gt; Size: 260kB
-Dimensions:              (time: 152, eleTags: 3, localDofs: 12, basicDofs: 6,
+Dimensions:              (time: 152, eleTags: 3, basicDofs: 6, localDofs: 12,
                           secPoints: 7, secDofs: 6, locs: 4)
 Coordinates:
-  * time                 (time) float32 608B 0.0 0.6715 1.179 ... 3.359 3.355
+  * basicDofs            (basicDofs) &lt;U3 72B &#39;N&#39; &#39;MZ1&#39; &#39;MZ2&#39; &#39;MY1&#39; &#39;MY2&#39; &#39;T&#39;
   * eleTags              (eleTags) int32 12B 1 2 3
   * localDofs            (localDofs) &lt;U3 144B &#39;FX1&#39; &#39;FY1&#39; &#39;FZ1&#39; ... &#39;MY2&#39; &#39;MZ2&#39;
-  * basicDofs            (basicDofs) &lt;U3 72B &#39;N&#39; &#39;MZ1&#39; &#39;MZ2&#39; &#39;MY1&#39; &#39;MY2&#39; &#39;T&#39;
-  * secPoints            (secPoints) int32 28B 1 2 3 4 5 6 7
-  * secDofs              (secDofs) &lt;U2 48B &#39;N&#39; &#39;MZ&#39; &#39;VY&#39; &#39;MY&#39; &#39;VZ&#39; &#39;T&#39;
   * locs                 (locs) &lt;U5 80B &#39;alpha&#39; &#39;X&#39; &#39;Y&#39; &#39;Z&#39;
+  * secDofs              (secDofs) &lt;U2 48B &#39;N&#39; &#39;MZ&#39; &#39;VY&#39; &#39;MY&#39; &#39;VZ&#39; &#39;T&#39;
+  * secPoints            (secPoints) int32 28B 1 2 3 4 5 6 7
+  * time                 (time) float32 608B 0.0 0.6684 1.319 ... 3.091 3.086
 Data variables:
-    localForces          (time, eleTags, localDofs) float32 22kB -180.0 ... -...
-    basicForces          (time, eleTags, basicDofs) float32 11kB -180.0 ... -...
     basicDeformations    (time, eleTags, basicDofs) float32 11kB -0.01746 ......
+    basicForces          (time, eleTags, basicDofs) float32 11kB -180.0 ... -...
+    localForces          (time, eleTags, localDofs) float32 22kB -180.0 ... -...
     plasticDeformation   (time, eleTags, basicDofs) float32 11kB -0.0003215 ....
     sectionForces        (time, eleTags, secPoints, secDofs) float32 77kB -18...
     sectionDeformations  (time, eleTags, secPoints, secDofs) float32 77kB -0....
@@ -951,7 +1151,7 @@ Attributes:
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fo2</span> <span class="o">=</span> <span class="n">frame_resp</span><span class="p">[</span><span class="s2">&quot;sectionForces&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secPoints</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secDofs</span><span class="o">=</span><span class="s2">&quot;MY&quot;</span><span class="p">)</span>
@@ -960,7 +1160,7 @@ Attributes:
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">defo2</span><span class="p">,</span> <span class="n">fo2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
@@ -973,11 +1173,11 @@ Attributes:
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/src_post_fiber_sec_resp_35_0.png" src="../../_images/src_post_fiber_sec_resp_35_0.png" />
+<img alt="../../_images/src_post_fiber_sec_resp_47_0.png" src="../../_images/src_post_fiber_sec_resp_47_0.png" />
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fos</span> <span class="o">=</span> <span class="n">frame_resp</span><span class="p">[</span><span class="s2">&quot;sectionForces&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secDofs</span><span class="o">=</span><span class="s2">&quot;MY&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
@@ -986,7 +1186,7 @@ Attributes:
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sec_loc</span> <span class="o">=</span> <span class="n">frame_resp</span><span class="p">[</span><span class="s2">&quot;sectionLocs&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -997,7 +1197,7 @@ Attributes:
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xloc</span><span class="p">,</span> <span class="n">zloc</span><span class="p">,</span> <span class="s2">&quot;-k&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
@@ -1012,66 +1212,9 @@ Attributes:
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/src_post_fiber_sec_resp_38_0.png" src="../../_images/src_post_fiber_sec_resp_38_0.png" />
+<img alt="../../_images/src_post_fiber_sec_resp_50_0.png" src="../../_images/src_post_fiber_sec_resp_50_0.png" />
 </div>
 </div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.animation</span> <span class="k">as</span> <span class="nn">animation</span>
-
-
-<span class="n">fos</span> <span class="o">=</span> <span class="n">frame_resp</span><span class="p">[</span><span class="s2">&quot;sectionForces&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secDofs</span><span class="o">=</span><span class="s2">&quot;MY&quot;</span><span class="p">)</span>
-<span class="n">defos</span> <span class="o">=</span> <span class="n">frame_resp</span><span class="p">[</span><span class="s2">&quot;sectionDeformations&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">secDofs</span><span class="o">=</span><span class="s2">&quot;MY&quot;</span><span class="p">)</span>
-<span class="n">nsteps</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">defos</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;MY&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Z&quot;</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xloc</span><span class="p">,</span> <span class="n">zloc</span><span class="p">,</span> <span class="s2">&quot;-k&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Undeformed&quot;</span><span class="p">)</span>
-<span class="p">(</span><span class="n">line</span><span class="p">,)</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xloc</span> <span class="o">+</span> <span class="n">fos</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=-</span><span class="mi">1</span><span class="p">),</span> <span class="n">zloc</span><span class="p">,</span> <span class="s2">&quot;-o&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Force&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-
-
-<span class="k">def</span> <span class="nf">animate</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-    <span class="n">dx</span> <span class="o">=</span> <span class="n">fos</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
-    <span class="n">line</span><span class="o">.</span><span class="n">set_xdata</span><span class="p">(</span><span class="n">xloc</span> <span class="o">+</span> <span class="n">dx</span><span class="p">)</span>
-    <span class="n">line</span><span class="o">.</span><span class="n">set_ydata</span><span class="p">(</span><span class="n">zloc</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">line</span><span class="p">,)</span>
-
-
-<span class="c1"># 创建动画</span>
-<span class="n">ani</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">FuncAnimation</span><span class="p">(</span>
-    <span class="n">fig</span><span class="p">,</span>
-    <span class="n">animate</span><span class="p">,</span>
-    <span class="n">frames</span><span class="o">=</span><span class="n">nsteps</span><span class="p">,</span>
-    <span class="n">init_func</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="p">(</span><span class="n">line</span><span class="p">,),</span>
-    <span class="n">blit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">interval</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">ani</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;movie.gif&quot;</span><span class="p">)</span>
-<span class="c1"># plt.show()</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-MovieWriter ffmpeg unavailable; using Pillow instead.
-</pre></div></div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/src_post_fiber_sec_resp_39_1.png" src="../../_images/src_post_fiber_sec_resp_39_1.png" />
-</div>
-</div>
-<p><img alt="image1" src="../../_images/movie.gif" /></p>
 </section>
 </section>
 </section>
@@ -1151,7 +1294,7 @@ MovieWriter ffmpeg unavailable; using Pillow instead.
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=3e568265"></script>
+</div><script src="../../_static/documentation_options.js?v=09ae080f"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>

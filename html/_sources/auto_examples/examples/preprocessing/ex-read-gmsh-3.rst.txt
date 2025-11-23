@@ -289,7 +289,7 @@ Eigenvalue results visualization
 
  .. code-block:: none
 
-    OPSTOOL ::  Eigen data has been saved to G:\opstool\docs\.opstool.output/EigenData-Auto.nc!
+    OPSTOOL ::  Eigen data has been saved to G:\opstool\docs\.opstool.output/EigenData-Auto.zarr!
 
 
 
@@ -337,7 +337,8 @@ Gravity analysis and postprocessing
 
  .. code-block:: none
 
-    OPSTOOL ::  All responses data with _odb_tag = static saved in G:\opstool\docs\.opstool.output/RespStepData-static.nc!
+    OPSTOOL ::  All responses data with _odb_tag = static saved in 
+    G:\opstool\docs\.opstool.output/RespStepData-static.zarr!
 
 
 
@@ -362,24 +363,24 @@ For post-processing please see `Frame element Response <https://opstool.readthed
 
  .. code-block:: none
 
-    OPSTOOL ::  Loading Frame response data from G:\opstool\docs\.opstool.output/RespStepData-static.nc ...
+    OPSTOOL ::  Loading Frame response data from G:\opstool\docs\.opstool.output/RespStepData-static.zarr ...
     <xarray.Dataset> Size: 16MB
-    Dimensions:              (time: 11, eleTags: 2600, localDofs: 12, basicDofs: 6,
-                              secPoints: 7, secDofs: 6, locs: 4)
+    Dimensions:              (time: 11, eleTags: 2600, basicDofs: 6, secPoints: 7,
+                              secDofs: 6, localDofs: 12, locs: 4)
     Coordinates:
       * time                 (time) float32 44B 0.0 0.1 0.2 0.3 ... 0.7 0.8 0.9 1.0
-      * eleTags              (eleTags) int32 10kB 421 422 423 424 ... 3018 3019 3020
-      * localDofs            (localDofs) <U3 144B 'FX1' 'FY1' 'FZ1' ... 'MY2' 'MZ2'
+      * eleTags              (eleTags) int64 21kB 421 422 423 424 ... 3018 3019 3020
       * basicDofs            (basicDofs) <U3 72B 'N' 'MZ1' 'MZ2' 'MY1' 'MY2' 'T'
-      * secPoints            (secPoints) int32 28B 1 2 3 4 5 6 7
+      * secPoints            (secPoints) int64 56B 1 2 3 4 5 6 7
       * secDofs              (secDofs) <U2 48B 'N' 'MZ' 'VY' 'MY' 'VZ' 'T'
+      * localDofs            (localDofs) <U3 144B 'FX1' 'FY1' 'FZ1' ... 'MY2' 'MZ2'
       * locs                 (locs) <U5 80B 'alpha' 'X' 'Y' 'Z'
     Data variables:
-        localForces          (time, eleTags, localDofs) float32 1MB -0.0 ... 8.28...
-        basicForces          (time, eleTags, basicDofs) float32 686kB 0.0 ... 1.4...
         basicDeformations    (time, eleTags, basicDofs) float32 686kB 0.0 ... 6.8...
-        plasticDeformation   (time, eleTags, basicDofs) float32 686kB 0.0 ... 0.0
+        basicForces          (time, eleTags, basicDofs) float32 686kB 0.0 ... 1.4...
         sectionForces        (time, eleTags, secPoints, secDofs) float32 5MB -0.0...
+        localForces          (time, eleTags, localDofs) float32 1MB -0.0 ... 8.28...
+        plasticDeformation   (time, eleTags, basicDofs) float32 686kB 0.0 ... 0.0
         sectionDeformations  (time, eleTags, secPoints, secDofs) float32 5MB 0.0 ...
         sectionLocs          (time, eleTags, secPoints, locs) float32 3MB 0.0 ......
     Attributes:
@@ -439,7 +440,7 @@ Visualization of nodal displacements
 
  .. code-block:: none
 
-    OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-static.nc ...
+    OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-static.zarr ...
 
 
 
@@ -523,7 +524,7 @@ GMSH model finalization
     gmsh.option.setNumber("Mesh.SaveAll", 1)
     gmsh.model.mesh.generate(1)
 
-    gmsh.write("utils/dome.msh")
+    # gmsh.write("utils/dome.msh")
 
     # gmsh.fltk.run()  # Uncomment to visualize the mesh
 
@@ -539,7 +540,7 @@ GMSH model finalization
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 16.039 seconds)
+   **Total running time of the script:** (0 minutes 16.564 seconds)
 
 
 .. _sphx_glr_download_auto_examples_examples_preprocessing_ex-read-gmsh-3.py:

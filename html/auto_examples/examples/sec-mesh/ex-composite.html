@@ -6,8 +6,8 @@
 <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Hollow Rectangular RC Section" href="ex-rc-section.html" /><link rel="prev" title="Concrete-Filled Steel Tube (CFST) Section Meshing" href="ex-cfst.html" />
 
     <link rel="shortcut icon" href="../../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>Steel-Concrete Composite Section Meshing - opstool 1.0.21 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=85e76eac" />
+        <title>Steel-Concrete Composite Section Meshing - opstool 1.0.22 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5f771d8e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css?v=572af1d6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
@@ -176,7 +176,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">opstool 1.0.21 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">opstool 1.0.22 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -231,7 +231,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../src/pre/unit_system.html">Automatic Unit Conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/pre/model_data.html">Quickly apply gravity loads and obtain mass and stiffness matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/pre/loads.html">Loads Processing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/pre/model_mass.html">Model mass generation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/post/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -247,26 +246,32 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../src/post/unit_transform.html">Unit conversion in post-processing</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_model_plotly.html">Model Geometry (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_eigen_plotly.html">Eigen (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_nodal_resp_plotly.html">Nodal Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_frame_resp_plotly.html">Frame Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_truss_resp_plotly.html">Truss Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_shell_resp_plotly.html">Shell Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_plane_resp_plotly.html">Plane Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_brick_resp_plotly.html">Brick Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_model_pyvista.html">Model Geometry (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_eigen_pyvista.html">Eigen (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_nodal_resp_pyvista.html">Nodal Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_frame_resp_pyvista.html">Frame Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_truss_resp_pyvista.html">Truss Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_shell_resp_pyvista.html">Shell Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_plane_resp_pyvista.html">Plane Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_brick_resp_pyvista.html">Brick Responses (Pyvista)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../vis-guide/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../vis-guide/plotly/index.html">Plotyly-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Plotyly-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-01-model-plotly.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-02-eigen-plotly.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-03-nodal-resp-plotly.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-04-frame-resp-plotly.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-05-truss-resp-plotly.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-06-shell-resp-plotly.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-07-plane-resp-plotly.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-08-brick-resp-plotly.html">Solid Element Responses</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/analysis/index.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../vis-guide/pyvista/index.html">Pyvista-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Pyvista-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-01-model-pyvista.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-02-eigen-pyvista.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-03-nodal-resp-pyvista.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-04-frame-resp-pyvista.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-05-truss-resp-pyvista.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-06-shell-resp-pyvista.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-07-plane-resp-pyvista.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-08-brick-resp-pyvista.html">Solid Element Responses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/analysis/index.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/smart_analysis.html">Smart Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/mc_analysis.html">Moment Curvature Analysis of Section</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/buckling_analysis_linear.html">Linear Buckling Analysis</a></li>
@@ -278,8 +283,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Post-Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#pre-processing">Pre-Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#fiber-section-mesh">Fiber Section Mesh</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html#visualization">Visualization</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="../postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html#visualization">Visualization</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-ele-removal-add.html">Remove and Add Elements</a></li>
@@ -291,14 +297,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-ssi-Gu.html">Soil-Structure Interaction</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../preprocessing/ex-read-gmsh-1.html">Gmsh2OPS: Case 1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../preprocessing/ex-read-gmsh-2.html">Gmsh2OPS: Case 2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../preprocessing/ex-read-gmsh-3.html">3D Beam Element Example - A Dome Structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../preprocessing/ex-read-gmsh-4.html">Gmsh2OPS: Linear shell arch model</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Fiber Section Mesh</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Fiber Section Mesh</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ex-bridge-deck.html">Bridge superstructure section</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ex-cfst.html">Concrete-Filled Steel Tube (CFST) Section Meshing</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Steel-Concrete Composite Section Meshing</a></li>
@@ -306,7 +312,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ex-sec-props.html">Interaction with sectionproperties</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../vis/ex-vis-megatall.html">606 m Mega-tall Building</a></li>
 </ul>
 </li>
@@ -315,15 +321,15 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.load_ops_examples.html">load_ops_examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.add_ops_hints_file.html">add_ops_hints_file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.run_model.html">run_model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.print_version.html">print_version</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../src/api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../src/api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html">FiberSecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.SecMesh.html">SecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.create_material.html">create_material</a></li>
@@ -361,8 +367,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.remove_void_nodes.html">remove_void_nodes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.set_odb_path.html">set_odb_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.set_odb_format.html">set_odb_format</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.update_unit_system.html">update_unit_system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.reset_unit_system.html">reset_unit_system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.save_model_data.html">save_model_data</a></li>
@@ -377,7 +384,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.get_sensitivity_responses.html">get_sensitivity_responses</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.set_plot_props.html">set_plot_props</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.set_plot_colors.html">set_plot_colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.plot_model.html">plot_model</a></li>
@@ -409,11 +416,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.get_unstruct_responses_dataset.html">get_unstruct_responses_dataset</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.anlys.SmartAnalyze.html">SmartAnalyze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.anlys.MomentCurvature.html">MomentCurvature</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../src/theory/theory_stress_criteria.html">Stress and Strength Criteria</a></li>
 </ul>
 
 </div>
@@ -450,7 +461,7 @@
           d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
         />
       </svg>
-      <span class="gh-source--version-text"> 1.0.21 </span>
+      <span class="gh-source--version-text"> 1.0.22 </span>
     </span>
   </span>
 </a>
@@ -502,7 +513,7 @@ to download the full example code.</p>
 <section class="sphx-glr-example-title" id="steel-concrete-composite-section-meshing">
 <span id="sphx-glr-auto-examples-examples-sec-mesh-ex-composite-py"></span><h1>Steel-Concrete Composite Section Meshing<a class="headerlink" href="#steel-concrete-composite-section-meshing" title="Link to this heading">¶</a></h1>
 <p>This example demonstrates how to create a mesh for a steel-concrete composite section.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">opstool</span> <span class="k">as</span> <span class="nn">opst</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">opstool</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">opst</span>
 </pre></div>
 </div>
 <p>The following materials are intended for the purpose of calculating section properties and are not related to OpenSeesPy.</p>
@@ -571,7 +582,7 @@ to download the full example code.</p>
 │ centroid  │ (0.000E+00, 0.000E+00) │ Elastic centroid                       │
 │ Iy        │ 1.664E+00              │ Moment of inertia y-axis               │
 │ Iz        │ 1.495E+00              │ Moment of inertia z-axis               │
-│ Iyz       │ 0.000E+00              │ Product of inertia                     │
+│ Iyz       │ 4.319E-15              │ Product of inertia                     │
 │ Wyt       │ 1.664E+00              │ Section moduli of top fibres y-axis    │
 │ Wyb       │ 1.664E+00              │ Section moduli of bottom fibres y-axis │
 │ Wzt       │ 1.495E+00              │ Section moduli of top fibres z-axis    │
@@ -595,7 +606,7 @@ to download the full example code.</p>
 │ centroid  │ (0.000E+00, 0.000E+00) │ Elastic centroid                       │
 │ Iy        │ 1.664E+00              │ Moment of inertia y-axis               │
 │ Iz        │ 1.495E+00              │ Moment of inertia z-axis               │
-│ Iyz       │ 0.000E+00              │ Product of inertia                     │
+│ Iyz       │ 1.490E-07              │ Product of inertia                     │
 │ Wyt       │ 1.664E+00              │ Section moduli of top fibres y-axis    │
 │ Wyb       │ 1.664E+00              │ Section moduli of bottom fibres y-axis │
 │ Wzt       │ 1.495E+00              │ Section moduli of top fibres z-axis    │
@@ -609,7 +620,7 @@ to download the full example code.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">SEC_MESH</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_ex-composite_001.png" srcset="../../../_images/sphx_glr_ex-composite_001.png" alt="My Section" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.885 seconds)</p>
+<img src="../../../_images/sphx_glr_ex-composite_001.png" srcset="../../../_images/sphx_glr_ex-composite_001.png" alt="My Section" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.651 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-examples-sec-mesh-ex-composite-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/8676107200c459dc337b5dfbab352f57/ex-composite.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">ex-composite.ipynb</span></code></a></p>
@@ -673,7 +684,7 @@ to download the full example code.</p>
       
     </aside>
   </div>
-</div><script src="../../../_static/documentation_options.js?v=3e568265"></script>
+</div><script src="../../../_static/documentation_options.js?v=09ae080f"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>

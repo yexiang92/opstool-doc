@@ -124,7 +124,7 @@ The following materials are intended for the purpose of calculating section prop
     │ centroid  │ (0.000E+00, 0.000E+00) │ Elastic centroid                       │
     │ Iy        │ 9.112E-02              │ Moment of inertia y-axis               │
     │ Iz        │ 9.112E-02              │ Moment of inertia z-axis               │
-    │ Iyz       │ -6.676E-18             │ Product of inertia                     │
+    │ Iyz       │ -5.366E-18             │ Product of inertia                     │
     │ Wyt       │ 1.222E-01              │ Section moduli of top fibres y-axis    │
     │ Wyb       │ 1.222E-01              │ Section moduli of bottom fibres y-axis │
     │ Wzt       │ 1.215E-01              │ Section moduli of top fibres z-axis    │
@@ -160,7 +160,7 @@ The following materials are intended for the purpose of calculating section prop
     │ centroid  │ (0.000E+00, 0.000E+00) │ Elastic centroid                       │
     │ Iy        │ 9.112E-02              │ Moment of inertia y-axis               │
     │ Iz        │ 9.112E-02              │ Moment of inertia z-axis               │
-    │ Iyz       │ -1.335E-09             │ Product of inertia                     │
+    │ Iyz       │ -1.073E-09             │ Product of inertia                     │
     │ Wyt       │ 1.222E-01              │ Section moduli of top fibres y-axis    │
     │ Wyb       │ 1.222E-01              │ Section moduli of bottom fibres y-axis │
     │ Wzt       │ 1.215E-01              │ Section moduli of top fibres z-axis    │
@@ -193,7 +193,7 @@ The following materials are intended for the purpose of calculating section prop
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.577 seconds)
+   **Total running time of the script:** (0 minutes 0.400 seconds)
 
 
 .. _sphx_glr_download_auto_examples_examples_sec-mesh_ex-cfst.py:

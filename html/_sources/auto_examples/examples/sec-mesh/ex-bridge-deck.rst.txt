@@ -269,7 +269,7 @@ Combination and fiber meshing:
     │ centroid  │ (5.885E+00, 1.112E+00) │ Elastic centroid                       │
     │ Iy        │ 2.356E+00              │ Moment of inertia y-axis               │
     │ Iz        │ 8.743E+01              │ Moment of inertia z-axis               │
-    │ Iyz       │ 7.105E-15              │ Product of inertia                     │
+    │ Iyz       │ 1.421E-14              │ Product of inertia                     │
     │ Wyt       │ 3.663E+00              │ Section moduli of top fibres y-axis    │
     │ Wyb       │ 2.119E+00              │ Section moduli of bottom fibres y-axis │
     │ Wzt       │ 1.325E+01              │ Section moduli of top fibres z-axis    │
@@ -305,7 +305,7 @@ Combination and fiber meshing:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.849 seconds)
+   **Total running time of the script:** (0 minutes 0.934 seconds)
 
 
 .. _sphx_glr_download_auto_examples_examples_sec-mesh_ex-bridge-deck.py:
