@@ -203,7 +203,7 @@ This example demonstrates how to create a mesh for a hollow rectangular reinforc
     │ centroid  │ (0.000E+00, 0.000E+00) │ Elastic centroid                       │
     │ Iy        │ 6.935E+01              │ Moment of inertia y-axis               │
     │ Iz        │ 1.522E+02              │ Moment of inertia z-axis               │
-    │ Iyz       │ 5.684E-13              │ Product of inertia                     │
+    │ Iyz       │ 6.253E-13              │ Product of inertia                     │
     │ Wyt       │ 2.774E+01              │ Section moduli of top fibres y-axis    │
     │ Wyb       │ 2.774E+01              │ Section moduli of bottom fibres y-axis │
     │ Wzt       │ 3.806E+01              │ Section moduli of top fibres z-axis    │
@@ -267,7 +267,7 @@ This example demonstrates how to create a mesh for a hollow rectangular reinforc
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.202 seconds)
+   **Total running time of the script:** (0 minutes 0.727 seconds)
 
 
 .. _sphx_glr_download_auto_examples_examples_sec-mesh_ex-rc-section.py:

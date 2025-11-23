@@ -166,7 +166,7 @@ Since it is a composite section, we use the elastic modulus of concrete as the r
     │ centroid  │ (0.000E+00, 0.000E+00) │ Elastic centroid                       │
     │ Iy        │ 1.664E+00              │ Moment of inertia y-axis               │
     │ Iz        │ 1.495E+00              │ Moment of inertia z-axis               │
-    │ Iyz       │ 0.000E+00              │ Product of inertia                     │
+    │ Iyz       │ 4.319E-15              │ Product of inertia                     │
     │ Wyt       │ 1.664E+00              │ Section moduli of top fibres y-axis    │
     │ Wyb       │ 1.664E+00              │ Section moduli of bottom fibres y-axis │
     │ Wzt       │ 1.495E+00              │ Section moduli of top fibres z-axis    │
@@ -206,7 +206,7 @@ Or use the faster property calculation method for frame elements
     │ centroid  │ (0.000E+00, 0.000E+00) │ Elastic centroid                       │
     │ Iy        │ 1.664E+00              │ Moment of inertia y-axis               │
     │ Iz        │ 1.495E+00              │ Moment of inertia z-axis               │
-    │ Iyz       │ 0.000E+00              │ Product of inertia                     │
+    │ Iyz       │ 1.490E-07              │ Product of inertia                     │
     │ Wyt       │ 1.664E+00              │ Section moduli of top fibres y-axis    │
     │ Wyb       │ 1.664E+00              │ Section moduli of bottom fibres y-axis │
     │ Wzt       │ 1.495E+00              │ Section moduli of top fibres z-axis    │
@@ -239,7 +239,7 @@ Or use the faster property calculation method for frame elements
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.885 seconds)
+   **Total running time of the script:** (0 minutes 0.651 seconds)
 
 
 .. _sphx_glr_download_auto_examples_examples_sec-mesh_ex-composite.py:

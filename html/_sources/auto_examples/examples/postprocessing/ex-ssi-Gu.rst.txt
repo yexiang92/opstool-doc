@@ -191,7 +191,7 @@ Earthquake analysis
 
  .. code-block:: none
 
-    OPSTOOL ::  All responses data with _odb_tag = 1 saved in G:\opstool\docs\.opstool.output/RespStepData-1.nc!
+    OPSTOOL ::  All responses data with _odb_tag = 1 saved in G:\opstool\docs\.opstool.output/RespStepData-1.zarr!
 
 
 
@@ -218,7 +218,7 @@ Frame Element Response
 
  .. code-block:: none
 
-    OPSTOOL ::  Loading Frame response data from G:\opstool\docs\.opstool.output/RespStepData-1.nc ...
+    OPSTOOL ::  Loading Frame response data from G:\opstool\docs\.opstool.output/RespStepData-1.zarr ...
 
 
 
@@ -265,7 +265,7 @@ Nodal response
 
  .. code-block:: none
 
-    OPSTOOL ::  Loading all response data from G:\opstool\docs\.opstool.output/RespStepData-1.nc ...
+    OPSTOOL ::  Loading all response data from G:\opstool\docs\.opstool.output/RespStepData-1.zarr ...
 
 
 
@@ -313,15 +313,15 @@ Plane Soil Element
 
  .. code-block:: none
 
-    OPSTOOL ::  Loading Plane response data from G:\opstool\docs\.opstool.output/RespStepData-1.nc ...
+    OPSTOOL ::  Loading Plane response data from G:\opstool\docs\.opstool.output/RespStepData-1.zarr ...
     Coordinates:
       * time         (time) float32 10kB 0.0 3.005 3.01 3.015 ... 14.99 14.99 15.0
-      * eleTags      (eleTags) int32 288B 17 18 19 20 21 22 23 ... 83 84 85 86 87 88
-      * GaussPoints  (GaussPoints) int32 16B 1 2 3 4
-      * stressDOFs   (stressDOFs) <U7 84B 'sigma11' 'sigma22' 'sigma12'
+      * eleTags      (eleTags) int64 576B 17 18 19 20 21 22 23 ... 83 84 85 86 87 88
+      * GaussPoints  (GaussPoints) int64 32B 1 2 3 4
       * strainDOFs   (strainDOFs) <U5 60B 'eps11' 'eps22' 'eps12'
-      * nodeTags     (nodeTags) int32 380B 16 17 36 35 18 37 ... 106 107 108 109 110
-      * measures     (measures) <U8 128B 'p1' 'p2' 'sigma_vm' 'tau_max'
+      * nodeTags     (nodeTags) int64 760B 16 17 36 35 18 37 ... 106 107 108 109 110
+      * stressDOFs   (stressDOFs) <U7 84B 'sigma11' 'sigma22' 'sigma12'
+      * measures     (measures) <U9 288B 'p1' 'p2' 'p3' ... 'tau_oct' 'tau_max'
 
 
 
@@ -382,11 +382,11 @@ Plane Soil Element
              [-6.33080597e+01, -3.74379807e+01,  1.33412695e+00],
              [-2.97291107e+01,  1.95029926e+00, -3.60264039e+00],
              [ 8.35825825e+00,  3.75435410e+01, -1.00076556e+00]]]],
-          dtype=float32)
+          shape=(2401, 72, 4, 3), dtype=float32)
     Coordinates:
       * time         (time) float32 10kB 0.0 3.005 3.01 3.015 ... 14.99 14.99 15.0
-      * eleTags      (eleTags) int32 288B 17 18 19 20 21 22 23 ... 83 84 85 86 87 88
-      * GaussPoints  (GaussPoints) int32 16B 1 2 3 4
+      * eleTags      (eleTags) int64 576B 17 18 19 20 21 22 23 ... 83 84 85 86 87 88
+      * GaussPoints  (GaussPoints) int64 32B 1 2 3 4
       * stressDOFs   (stressDOFs) <U7 84B 'sigma11' 'sigma22' 'sigma12'
 
 
@@ -492,7 +492,7 @@ Plotting the nodal responses with deformed shape
 
  .. code-block:: none
 
-    OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-1.nc ...
+    OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-1.zarr ...
 
 
 
@@ -512,7 +512,7 @@ Plotting the plane element stresses
         step="absMax",
         ele_type="Plane",
         resp_type="StressesAtNodes",
-        resp_dof="sigma_vm",
+        resp_dof="sigma_oct",  # hydrostatic pressure
         show_defo=True,
         defo_scale="auto",
         show_model=True,
@@ -554,7 +554,7 @@ Plotting the plane element stresses
 
  .. code-block:: none
 
-    OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-1.nc ...
+    OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-1.zarr ...
 
 
 
@@ -615,7 +615,7 @@ Plotting the deformation animation
 
  .. code-block:: none
 
-    OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-1.nc ...
+    OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-1.zarr ...
     Animation has been saved to images/nodal_disp_animation_ssi.mp4!
 
 
@@ -647,7 +647,7 @@ Clean up
         framerate=50,  # Frames per second
         ele_type="Plane",
         resp_type="StressesAtNodes",
-        resp_dof="sigma_vm",
+        resp_dof="sigma_oct",
         show_defo=True,
         defo_scale=10,
         show_model=True,
@@ -690,7 +690,7 @@ Clean up
 
  .. code-block:: none
 
-    OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-1.nc ...
+    OPSTOOL ::  Loading response data from G:\opstool\docs\.opstool.output/RespStepData-1.zarr ...
     Animation has been saved as images/stress_animation_ssi.mp4!
 
 
@@ -715,7 +715,7 @@ Clean up
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (2 minutes 24.684 seconds)
+   **Total running time of the script:** (2 minutes 13.485 seconds)
 
 
 .. _sphx_glr_download_auto_examples_examples_postprocessing_ex-ssi-Gu.py:

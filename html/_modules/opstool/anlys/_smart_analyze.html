@@ -5,8 +5,8 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <link rel="shortcut icon" href="../../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>opstool.anlys._smart_analyze - opstool 1.0.20 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=85e76eac" />
+        <title>opstool.anlys._smart_analyze - opstool 1.0.22 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5f771d8e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
@@ -175,7 +175,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">opstool 1.0.20 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">opstool 1.0.22 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -230,7 +230,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../src/pre/unit_system.html">Automatic Unit Conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/pre/model_data.html">Quickly apply gravity loads and obtain mass and stiffness matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/pre/loads.html">Loads Processing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/pre/model_mass.html">Model mass generation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/post/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -246,26 +245,32 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../src/post/unit_transform.html">Unit conversion in post-processing</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_model_plotly.html">Model Geometry (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_eigen_plotly.html">Eigen (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_nodal_resp_plotly.html">Nodal Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_frame_resp_plotly.html">Frame Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_truss_resp_plotly.html">Truss Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_shell_resp_plotly.html">Shell Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_plane_resp_plotly.html">Plane Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/plotly/plot_brick_resp_plotly.html">Brick Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_model_pyvista.html">Model Geometry (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_eigen_pyvista.html">Eigen (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_nodal_resp_pyvista.html">Nodal Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_frame_resp_pyvista.html">Frame Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_truss_resp_pyvista.html">Truss Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_shell_resp_pyvista.html">Shell Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_plane_resp_pyvista.html">Plane Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../src/vis/pyvista/plot_brick_resp_pyvista.html">Brick Responses (Pyvista)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../auto_examples/vis-guide/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/index.html">Plotyly-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Plotyly-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-01-model-plotly.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-02-eigen-plotly.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-03-nodal-resp-plotly.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-04-frame-resp-plotly.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-05-truss-resp-plotly.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-06-shell-resp-plotly.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-07-plane-resp-plotly.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-08-brick-resp-plotly.html">Solid Element Responses</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/analysis/index.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/index.html">Pyvista-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Pyvista-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-01-model-pyvista.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-02-eigen-pyvista.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-03-nodal-resp-pyvista.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-04-frame-resp-pyvista.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-05-truss-resp-pyvista.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-06-shell-resp-pyvista.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-07-plane-resp-pyvista.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-08-brick-resp-pyvista.html">Solid Element Responses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/analysis/index.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/smart_analysis.html">Smart Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/mc_analysis.html">Moment Curvature Analysis of Section</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/buckling_analysis_linear.html">Linear Buckling Analysis</a></li>
@@ -277,8 +282,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/examples/index.html">Post-Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/examples/index.html#pre-processing">Pre-Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-ele-removal-add.html">Remove and Add Elements</a></li>
@@ -290,14 +296,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-ssi-Gu.html">Soil-Structure Interaction</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/preprocessing/ex-read-gmsh-1.html">Gmsh2OPS: Case 1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/preprocessing/ex-read-gmsh-2.html">Gmsh2OPS: Case 2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/preprocessing/ex-read-gmsh-3.html">3D Beam Element Example - A Dome Structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/preprocessing/ex-read-gmsh-4.html">Gmsh2OPS: Linear shell arch model</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/sec-mesh/index.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/sec-mesh/index.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/sec-mesh/ex-bridge-deck.html">Bridge superstructure section</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/sec-mesh/ex-cfst.html">Concrete-Filled Steel Tube (CFST) Section Meshing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/sec-mesh/ex-composite.html">Steel-Concrete Composite Section Meshing</a></li>
@@ -305,7 +311,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/sec-mesh/ex-sec-props.html">Interaction with sectionproperties</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/vis/ex-vis-megatall.html">606 m Mega-tall Building</a></li>
 </ul>
 </li>
@@ -314,15 +320,15 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.load_ops_examples.html">load_ops_examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.add_ops_hints_file.html">add_ops_hints_file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.run_model.html">run_model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.print_version.html">print_version</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../src/api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../src/api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html">FiberSecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.SecMesh.html">SecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.create_material.html">create_material</a></li>
@@ -360,8 +366,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.remove_void_nodes.html">remove_void_nodes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.set_odb_path.html">set_odb_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.set_odb_format.html">set_odb_format</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.update_unit_system.html">update_unit_system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.reset_unit_system.html">reset_unit_system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.save_model_data.html">save_model_data</a></li>
@@ -376,7 +383,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.get_sensitivity_responses.html">get_sensitivity_responses</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.set_plot_props.html">set_plot_props</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.set_plot_colors.html">set_plot_colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.plot_model.html">plot_model</a></li>
@@ -408,11 +415,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.get_unstruct_responses_dataset.html">get_unstruct_responses_dataset</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.anlys.SmartAnalyze.html">SmartAnalyze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.anlys.MomentCurvature.html">MomentCurvature</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../src/theory/theory_stress_criteria.html">Stress and Strength Criteria</a></li>
 </ul>
 
 </div>
@@ -449,7 +460,7 @@
           d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
         />
       </svg>
-      <span class="gh-source--version-text"> 1.0.20 </span>
+      <span class="gh-source--version-text"> 1.0.22 </span>
     </span>
   </span>
 </a>
@@ -484,24 +495,24 @@
         </div>
         <article role="main" id="furo-main-content">
           <h1>Source code for opstool.anlys._smart_analyze</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TypedDict</span><span class="p">,</span> <span class="n">Union</span>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">contextlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TypedDict</span><span class="p">,</span> <span class="n">Union</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">openseespy.opensees</span> <span class="k">as</span> <span class="nn">ops</span>
-<span class="kn">from</span> <span class="nn">rich</span> <span class="kn">import</span> <span class="nb">print</span> <span class="k">as</span> <span class="n">rprint</span>
-<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
-<span class="kn">from</span> <span class="nn">typing_extensions</span> <span class="kn">import</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Unpack</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ops</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rich</span><span class="w"> </span><span class="kn">import</span> <span class="nb">print</span> <span class="k">as</span> <span class="n">rprint</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing_extensions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Unpack</span>
 
-<span class="kn">from</span> <span class="nn">..utils</span> <span class="kn">import</span> <span class="n">get_random_color</span><span class="p">,</span> <span class="n">on_notebook</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_random_color</span><span class="p">,</span> <span class="n">on_notebook</span>
 
 <span class="n">LOG_FILE</span> <span class="o">=</span> <span class="s2">&quot;.SmartAnalyze-OpenSees.log&quot;</span>
 <span class="n">ON_NOTEBOOK</span> <span class="o">=</span> <span class="n">on_notebook</span><span class="p">()</span>
 
 
 <span class="nd">@contextmanager</span>
-<span class="k">def</span> <span class="nf">suppress_ops_print</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">suppress_ops_print</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">verbose</span><span class="p">:</span>
         <span class="n">ops</span><span class="o">.</span><span class="n">logFile</span><span class="p">(</span><span class="n">LOG_FILE</span><span class="p">,</span> <span class="s2">&quot;-noEcho&quot;</span><span class="p">)</span>
     <span class="c1"># else:</span>
@@ -509,7 +520,7 @@
     <span class="k">yield</span>
 
 
-<span class="k">class</span> <span class="nc">_kargs_types</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">_kargs_types</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="n">testType</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span>
         <span class="s2">&quot;EnergyIncr&quot;</span><span class="p">,</span>
         <span class="s2">&quot;NormDispIncr&quot;</span><span class="p">,</span>
@@ -540,7 +551,7 @@
 
 <div class="viewcode-block" id="SmartAnalyze">
 <a class="viewcode-back" href="../../../src/api/_autosummary/opstool.anlys.SmartAnalyze.html#opstool.anlys.SmartAnalyze">[docs]</a>
-<span class="k">class</span> <span class="nc">SmartAnalyze</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">SmartAnalyze</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;The SmartAnalyze is a class to provide OpenSeesPy users an easier</span>
 <span class="sd">    way to conduct analyses.</span>
 <span class="sd">    Original Tcl version Author: Dr. Dong Hanlin, see</span>
@@ -771,7 +782,7 @@
 <span class="sd">    &gt;&gt;&gt;)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">analysis_type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;Transient&quot;</span><span class="p">,</span> <span class="s2">&quot;Static&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Transient&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">:</span> <span class="n">Unpack</span><span class="p">[</span><span class="n">_kargs_types</span><span class="p">]):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">analysis_type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;Transient&quot;</span><span class="p">,</span> <span class="s2">&quot;Static&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Transient&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">:</span> <span class="n">Unpack</span><span class="p">[</span><span class="n">_kargs_types</span><span class="p">]):</span>
         <span class="k">if</span> <span class="n">analysis_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;Transient&quot;</span><span class="p">,</span> <span class="s2">&quot;Static&quot;</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;analysis_type must Transient or Static!&quot;</span><span class="p">)</span>  <span class="c1"># noqa: TRY003</span>
         <span class="c1"># default</span>
@@ -837,7 +848,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">progress</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="nf">_set_progress_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">npts</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_set_progress_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">npts</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">progress</span> <span class="o">=</span> <span class="n">tqdm</span><span class="p">(</span>
             <span class="n">total</span><span class="o">=</span><span class="n">npts</span><span class="p">,</span>
             <span class="n">desc</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;🚀 </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">logo_progress</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
@@ -845,7 +856,7 @@
             <span class="n">unit</span><span class="o">=</span><span class="s2">&quot; step&quot;</span><span class="p">,</span>
         <span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_stop_progress_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_stop_progress_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">progress</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">progress</span><span class="o">.</span><span class="n">total</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">progress</span><span class="o">.</span><span class="n">n</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">progress</span><span class="o">.</span><span class="n">refresh</span><span class="p">()</span>
@@ -855,7 +866,7 @@
 
 <div class="viewcode-block" id="SmartAnalyze.transient_split">
 <a class="viewcode-back" href="../../../src/api/_autosummary/opstool.anlys.SmartAnalyze.html#opstool.anlys.SmartAnalyze.transient_split">[docs]</a>
-    <span class="k">def</span> <span class="nf">transient_split</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">npts</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">transient_split</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">npts</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Step Segmentation for Transient Analysis.</span>
 <span class="sd">        The main purpose of this function is to tell the program the total number of analysis steps to show progress.</span>
 <span class="sd">        However, this is not necessary.</span>
@@ -877,7 +888,7 @@
 
 <div class="viewcode-block" id="SmartAnalyze.static_split">
 <a class="viewcode-back" href="../../../src/api/_autosummary/opstool.anlys.SmartAnalyze.html#opstool.anlys.SmartAnalyze.static_split">[docs]</a>
-    <span class="k">def</span> <span class="nf">static_split</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">targets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="n">maxStep</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">static_split</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">targets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="n">maxStep</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a sequence of substeps for static analysis.</span>
 
@@ -921,12 +932,12 @@
         <span class="k">return</span> <span class="n">segs</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_get_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_args</span><span class="p">[</span><span class="s2">&quot;startTime&quot;</span><span class="p">]</span>
 
 <div class="viewcode-block" id="SmartAnalyze.set_sensitivity_algorithm">
 <a class="viewcode-back" href="../../../src/api/_autosummary/opstool.anlys.SmartAnalyze.html#opstool.anlys.SmartAnalyze.set_sensitivity_algorithm">[docs]</a>
-    <span class="k">def</span> <span class="nf">set_sensitivity_algorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;-computeAtEachStep&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_sensitivity_algorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;-computeAtEachStep&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set analysis sensitivity algorithm. Since the Smart Static Analysis may reset the integrator,</span>
 <span class="sd">        the sensitivity analysis algorithm will need to be reset afterwards.</span>
 
@@ -944,13 +955,13 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">sensitivity_algorithm</span> <span class="o">=</span> <span class="n">algorithm</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_run_sensitivity_algorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_run_sensitivity_algorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sensitivity_algorithm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">ops</span><span class="o">.</span><span class="n">sensitivityAlgorithm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sensitivity_algorithm</span><span class="p">)</span>
 
 <div class="viewcode-block" id="SmartAnalyze.TransientAnalyze">
 <a class="viewcode-back" href="../../../src/api/_autosummary/opstool.anlys.SmartAnalyze.html#opstool.anlys.SmartAnalyze.TransientAnalyze">[docs]</a>
-    <span class="k">def</span> <span class="nf">TransientAnalyze</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dt</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">TransientAnalyze</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dt</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Single Step Transient Analysis.</span>
 
 <span class="sd">        Parameters</span>
@@ -973,7 +984,7 @@
 
 <div class="viewcode-block" id="SmartAnalyze.StaticAnalyze">
 <a class="viewcode-back" href="../../../src/api/_autosummary/opstool.anlys.SmartAnalyze.html#opstool.anlys.SmartAnalyze.StaticAnalyze">[docs]</a>
-    <span class="k">def</span> <span class="nf">StaticAnalyze</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dof</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">seg</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">StaticAnalyze</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dof</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">seg</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Single step static analysis and applies to displacement control only.</span>
 
 <span class="sd">        Parameters</span>
@@ -1005,7 +1016,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_analyze</span><span class="p">()</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_analyze</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_analyze</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">initial_step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">control_args</span><span class="p">[</span><span class="s2">&quot;initialStep&quot;</span><span class="p">]</span>
         <span class="n">verbose</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">debug_mode</span><span class="p">)</span>
 
@@ -1044,7 +1055,7 @@
 
         <span class="k">return</span> <span class="mi">0</span>
 
-    <span class="k">def</span> <span class="nf">_print_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">success</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_print_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">success</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">ON_NOTEBOOK</span><span class="p">:</span>
             <span class="n">time_val</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_time</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span>
             <span class="k">if</span> <span class="n">success</span><span class="p">:</span>
@@ -1061,7 +1072,7 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">rprint</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&gt;&gt;&gt; ❌ </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">logo</span><span class="si">}</span><span class="s2"> Analyze failed. Time consumption: </span><span class="si">{</span><span class="n">time_val</span><span class="si">}</span><span class="s2"> s.&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_print_progress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_print_progress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">prog</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_args</span><span class="p">[</span><span class="s2">&quot;progress&quot;</span><span class="p">]</span>
         <span class="n">total</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;npts&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">ON_NOTEBOOK</span><span class="p">:</span>
@@ -1082,7 +1093,7 @@
 
 <div class="viewcode-block" id="SmartAnalyze.close">
 <a class="viewcode-back" href="../../../src/api/_autosummary/opstool.anlys.SmartAnalyze.html#opstool.anlys.SmartAnalyze.close">[docs]</a>
-    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Close the class.</span>
 
 <span class="sd">        Returns:</span>
@@ -1091,7 +1102,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_stop_progress_bar</span><span class="p">()</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_analyze_one_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_analyze_one_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">analysis_type</span> <span class="o">==</span> <span class="s2">&quot;Static&quot;</span><span class="p">:</span>
             <span class="n">ops</span><span class="o">.</span><span class="n">integrator</span><span class="p">(</span><span class="s2">&quot;DisplacementControl&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_args</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_args</span><span class="p">[</span><span class="s2">&quot;dof&quot;</span><span class="p">],</span> <span class="n">step</span><span class="p">)</span>
 
@@ -1107,7 +1118,7 @@
 
         <span class="k">return</span> <span class="n">ok</span>
 
-    <span class="k">def</span> <span class="nf">_try_add_test_times</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_try_add_test_times</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">control_args</span><span class="p">[</span><span class="s2">&quot;tryAddTestTimes&quot;</span><span class="p">]:</span>
             <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
         <span class="n">times</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">control_args</span><span class="p">[</span><span class="s2">&quot;testIterTimesMore&quot;</span><span class="p">]</span>
@@ -1146,7 +1157,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_set_init_test</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">ok</span>
 
-    <span class="k">def</span> <span class="nf">_try_alter_algo_types</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_try_alter_algo_types</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">control_args</span><span class="p">[</span><span class="s2">&quot;tryAlterAlgoTypes&quot;</span><span class="p">]:</span>
             <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
 
@@ -1171,7 +1182,7 @@
             <span class="p">)</span>
         <span class="k">return</span> <span class="n">ok</span>
 
-    <span class="k">def</span> <span class="nf">_try_relax_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_try_relax_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
         <span class="n">alpha</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">control_args</span><span class="p">[</span><span class="s2">&quot;relaxation&quot;</span><span class="p">]</span>
         <span class="n">min_step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">control_args</span><span class="p">[</span><span class="s2">&quot;minStep&quot;</span><span class="p">]</span>
         <span class="n">step_try</span> <span class="o">=</span> <span class="n">step</span> <span class="o">*</span> <span class="n">alpha</span>  <span class="c1"># The current step size we&#39;re trying to use</span>
@@ -1243,7 +1254,7 @@
                         <span class="p">)</span>
         <span class="k">return</span> <span class="n">ok</span>
 
-    <span class="k">def</span> <span class="nf">_try_loose_test_tol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_try_loose_test_tol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">verbose</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">control_args</span><span class="p">[</span><span class="s2">&quot;tryLooseTestTol&quot;</span><span class="p">]:</span>
             <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
         <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
@@ -1268,7 +1279,7 @@
 
         <span class="k">return</span> <span class="n">ok</span>
 
-    <span class="k">def</span> <span class="nf">_set_init_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_set_init_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">ops</span><span class="o">.</span><span class="n">test</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">control_args</span><span class="p">[</span><span class="s2">&quot;testType&quot;</span><span class="p">],</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">control_args</span><span class="p">[</span><span class="s2">&quot;testTol&quot;</span><span class="p">],</span>
@@ -1276,11 +1287,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">control_args</span><span class="p">[</span><span class="s2">&quot;testPrintFlag&quot;</span><span class="p">],</span>
         <span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_setAlgorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">algotype</span><span class="p">,</span> <span class="n">user_algo_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_setAlgorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">algotype</span><span class="p">,</span> <span class="n">user_algo_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="n">color</span> <span class="o">=</span> <span class="n">get_random_color</span><span class="p">()</span>
         <span class="n">prefix</span> <span class="o">=</span> <span class="s2">&quot;&gt;&gt;&gt; ✳️ &quot;</span>
 
-        <span class="k">def</span> <span class="nf">log_and_call</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">log_and_call</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
                 <span class="n">arg_str</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">)</span>
                 <span class="k">if</span> <span class="n">ON_NOTEBOOK</span><span class="p">:</span>
@@ -1383,7 +1394,7 @@
       
     </aside>
   </div>
-</div><script src="../../../_static/documentation_options.js?v=9a2e067c"></script>
+</div><script src="../../../_static/documentation_options.js?v=09ae080f"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>

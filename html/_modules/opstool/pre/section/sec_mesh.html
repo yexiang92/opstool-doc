@@ -5,8 +5,8 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../../genindex.html" /><link rel="search" title="Search" href="../../../../search.html" />
 
     <link rel="shortcut icon" href="../../../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>opstool.pre.section.sec_mesh - opstool 1.0.20 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=85e76eac" />
+        <title>opstool.pre.section.sec_mesh - opstool 1.0.22 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=5f771d8e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/thebelab.css" />
@@ -175,7 +175,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../../index.html"><div class="brand">opstool 1.0.20 documentation</div></a>
+      <a href="../../../../index.html"><div class="brand">opstool 1.0.22 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -230,7 +230,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/pre/unit_system.html">Automatic Unit Conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/pre/model_data.html">Quickly apply gravity loads and obtain mass and stiffness matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/pre/loads.html">Loads Processing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/pre/model_mass.html">Model mass generation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/post/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -246,26 +245,32 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/post/unit_transform.html">Unit conversion in post-processing</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_model_plotly.html">Model Geometry (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_eigen_plotly.html">Eigen (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_nodal_resp_plotly.html">Nodal Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_frame_resp_plotly.html">Frame Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_truss_resp_plotly.html">Truss Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_shell_resp_plotly.html">Shell Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_plane_resp_plotly.html">Plane Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/plotly/plot_brick_resp_plotly.html">Brick Responses (Plotly)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_model_pyvista.html">Model Geometry (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_eigen_pyvista.html">Eigen (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_nodal_resp_pyvista.html">Nodal Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_frame_resp_pyvista.html">Frame Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_truss_resp_pyvista.html">Truss Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_shell_resp_pyvista.html">Shell Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_plane_resp_pyvista.html">Plane Responses (Pyvista)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/vis/pyvista/plot_brick_resp_pyvista.html">Brick Responses (Pyvista)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../auto_examples/vis-guide/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/index.html">Plotyly-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Plotyly-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-01-model-plotly.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-02-eigen-plotly.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-03-nodal-resp-plotly.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-04-frame-resp-plotly.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-05-truss-resp-plotly.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-06-shell-resp-plotly.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-07-plane-resp-plotly.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-08-brick-resp-plotly.html">Solid Element Responses</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/analysis/index.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/index.html">Pyvista-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Pyvista-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-01-model-pyvista.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-02-eigen-pyvista.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-03-nodal-resp-pyvista.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-04-frame-resp-pyvista.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-05-truss-resp-pyvista.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-06-shell-resp-pyvista.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-07-plane-resp-pyvista.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-08-brick-resp-pyvista.html">Solid Element Responses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/analysis/index.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/analysis/smart_analysis.html">Smart Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/analysis/mc_analysis.html">Moment Curvature Analysis of Section</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/analysis/buckling_analysis_linear.html">Linear Buckling Analysis</a></li>
@@ -277,8 +282,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../auto_examples/examples/index.html">Post-Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../auto_examples/examples/index.html#pre-processing">Pre-Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../auto_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-ele-removal-add.html">Remove and Add Elements</a></li>
@@ -290,14 +296,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-ssi-Gu.html">Soil-Structure Interaction</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/examples/preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/examples/preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/preprocessing/ex-read-gmsh-1.html">Gmsh2OPS: Case 1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/preprocessing/ex-read-gmsh-2.html">Gmsh2OPS: Case 2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/preprocessing/ex-read-gmsh-3.html">3D Beam Element Example - A Dome Structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/preprocessing/ex-read-gmsh-4.html">Gmsh2OPS: Linear shell arch model</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/examples/sec-mesh/index.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/examples/sec-mesh/index.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/sec-mesh/ex-bridge-deck.html">Bridge superstructure section</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/sec-mesh/ex-cfst.html">Concrete-Filled Steel Tube (CFST) Section Meshing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/sec-mesh/ex-composite.html">Steel-Concrete Composite Section Meshing</a></li>
@@ -305,7 +311,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/sec-mesh/ex-sec-props.html">Interaction with sectionproperties</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/examples/vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/examples/vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/vis/ex-vis-megatall.html">606 m Mega-tall Building</a></li>
 </ul>
 </li>
@@ -314,15 +320,15 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.load_ops_examples.html">load_ops_examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.add_ops_hints_file.html">add_ops_hints_file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.run_model.html">run_model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.print_version.html">print_version</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../src/api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../src/api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html">FiberSecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.SecMesh.html">SecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.create_material.html">create_material</a></li>
@@ -360,8 +366,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.remove_void_nodes.html">remove_void_nodes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.set_odb_path.html">set_odb_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.set_odb_format.html">set_odb_format</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.update_unit_system.html">update_unit_system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.reset_unit_system.html">reset_unit_system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.save_model_data.html">save_model_data</a></li>
@@ -376,7 +383,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_sensitivity_responses.html">get_sensitivity_responses</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.set_plot_props.html">set_plot_props</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.set_plot_colors.html">set_plot_colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.plot_model.html">plot_model</a></li>
@@ -408,11 +415,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.get_unstruct_responses_dataset.html">get_unstruct_responses_dataset</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.anlys.SmartAnalyze.html">SmartAnalyze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.anlys.MomentCurvature.html">MomentCurvature</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../src/theory/theory_stress_criteria.html">Stress and Strength Criteria</a></li>
 </ul>
 
 </div>
@@ -449,7 +460,7 @@
           d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
         />
       </svg>
-      <span class="gh-source--version-text"> 1.0.20 </span>
+      <span class="gh-source--version-text"> 1.0.22 </span>
     </span>
   </span>
 </a>
@@ -488,19 +499,21 @@
 <span class="sd">SecMesh: A module to mesh the cross-section with triangular fibers</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
 
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">openseespy.opensees</span> <span class="k">as</span> <span class="nn">ops</span>
-<span class="kn">from</span> <span class="nn">matplotlib.collections</span> <span class="kn">import</span> <span class="n">PatchCollection</span>
-<span class="kn">from</span> <span class="nn">rich.table</span> <span class="kn">import</span> <span class="n">Table</span>
-<span class="kn">from</span> <span class="nn">sectionproperties.analysis.section</span> <span class="kn">import</span> <span class="n">Section</span>
-<span class="kn">from</span> <span class="nn">sectionproperties.pre.geometry</span> <span class="kn">import</span> <span class="n">CompoundGeometry</span><span class="p">,</span> <span class="n">Geometry</span>
-<span class="kn">from</span> <span class="nn">sectionproperties.pre.pre</span> <span class="kn">import</span> <span class="n">DEFAULT_MATERIAL</span><span class="p">,</span> <span class="n">Material</span>
-<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">LineString</span><span class="p">,</span> <span class="n">Polygon</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.tri</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mtri</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ops</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.cm</span><span class="w"> </span><span class="kn">import</span> <span class="n">ScalarMappable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">PatchCollection</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rich.table</span><span class="w"> </span><span class="kn">import</span> <span class="n">Table</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sectionproperties.analysis.section</span><span class="w"> </span><span class="kn">import</span> <span class="n">Section</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sectionproperties.pre.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="n">CompoundGeometry</span><span class="p">,</span> <span class="n">Geometry</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sectionproperties.pre.pre</span><span class="w"> </span><span class="kn">import</span> <span class="n">DEFAULT_MATERIAL</span><span class="p">,</span> <span class="n">Material</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">shapely.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="n">LineString</span><span class="p">,</span> <span class="n">Polygon</span>
 
-<span class="kn">from</span> <span class="nn">...utils</span> <span class="kn">import</span> <span class="n">CONFIGS</span><span class="p">,</span> <span class="n">get_random_color</span><span class="p">,</span> <span class="n">get_random_color_rich</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">...utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">CONFIGS</span><span class="p">,</span> <span class="n">get_random_color</span><span class="p">,</span> <span class="n">get_random_color_rich</span>
 
 <span class="n">CONSOLE</span> <span class="o">=</span> <span class="n">CONFIGS</span><span class="o">.</span><span class="n">CONSOLE</span>
 <span class="n">PKG_PREFIX</span> <span class="o">=</span> <span class="n">CONFIGS</span><span class="o">.</span><span class="n">PKG_PREFIX</span>
@@ -508,7 +521,7 @@
 
 <div class="viewcode-block" id="create_polygon_points">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.create_polygon_points.html#opstool.pre.section.create_polygon_points">[docs]</a>
-<span class="k">def</span> <span class="nf">create_polygon_points</span><span class="p">(</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_polygon_points</span><span class="p">(</span>
     <span class="n">start</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span>
     <span class="n">incrs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">close</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -542,7 +555,7 @@
 
 <div class="viewcode-block" id="create_circle_points">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.create_circle_points.html#opstool.pre.section.create_circle_points">[docs]</a>
-<span class="k">def</span> <span class="nf">create_circle_points</span><span class="p">(</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_circle_points</span><span class="p">(</span>
     <span class="n">xo</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
     <span class="n">radius</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
     <span class="n">angles</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mi">360</span><span class="p">),</span>
@@ -578,7 +591,7 @@
 
 <div class="viewcode-block" id="offset">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.offset.html#opstool.pre.section.offset">[docs]</a>
-<span class="k">def</span> <span class="nf">offset</span><span class="p">(</span><span class="n">points</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">offset</span><span class="p">(</span><span class="n">points</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Offsets closed polygons.</span>
 
 <span class="sd">    Parameters</span>
@@ -608,7 +621,7 @@
 
 <div class="viewcode-block" id="poly_offset">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.poly_offset.html#opstool.pre.section.poly_offset">[docs]</a>
-<span class="k">def</span> <span class="nf">poly_offset</span><span class="p">(</span><span class="n">points</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">poly_offset</span><span class="p">(</span><span class="n">points</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Offsets closed polygons, same as :py:func:`opstool.pre.section.offset`</span>
 
 <span class="sd">    Parameters</span>
@@ -628,7 +641,7 @@
 
 <div class="viewcode-block" id="line_offset">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.line_offset.html#opstool.pre.section.line_offset">[docs]</a>
-<span class="k">def</span> <span class="nf">line_offset</span><span class="p">(</span><span class="n">points</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">line_offset</span><span class="p">(</span><span class="n">points</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Offset a distance from a non-closed line ring on its right or its left side.</span>
 
 <span class="sd">    Parameters</span>
@@ -660,7 +673,7 @@
 
 <div class="viewcode-block" id="create_material">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.create_material.html#opstool.pre.section.create_material">[docs]</a>
-<span class="k">def</span> <span class="nf">create_material</span><span class="p">(</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_material</span><span class="p">(</span>
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
     <span class="n">elastic_modulus</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
     <span class="n">poissons_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
@@ -703,7 +716,7 @@
 
 <div class="viewcode-block" id="create_polygon_patch">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.create_polygon_patch.html#opstool.pre.section.create_polygon_patch">[docs]</a>
-<span class="k">def</span> <span class="nf">create_polygon_patch</span><span class="p">(</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_polygon_patch</span><span class="p">(</span>
     <span class="n">outline</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
     <span class="n">holes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">material</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -744,7 +757,7 @@
 
 <div class="viewcode-block" id="create_circle_patch">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.create_circle_patch.html#opstool.pre.section.create_circle_patch">[docs]</a>
-<span class="k">def</span> <span class="nf">create_circle_patch</span><span class="p">(</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_circle_patch</span><span class="p">(</span>
     <span class="n">xo</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
     <span class="n">radius</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
     <span class="n">holes</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -793,7 +806,7 @@
 
 <div class="viewcode-block" id="create_patch_from_dxf">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.create_patch_from_dxf.html#opstool.pre.section.create_patch_from_dxf">[docs]</a>
-<span class="k">def</span> <span class="nf">create_patch_from_dxf</span><span class="p">(</span><span class="n">filepath</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">spline_delta</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">degrees_per_segment</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_patch_from_dxf</span><span class="p">(</span><span class="n">filepath</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">spline_delta</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">degrees_per_segment</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;An interface for the creation of Geometry objects from CAD .dxf files.</span>
 <span class="sd">    See</span>
 <span class="sd">    `sectionproperties docs &lt;https://sectionproperties.readthedocs.io/en/stable/examples/geometry/geometry_cad.html&gt;`_.</span>
@@ -831,7 +844,7 @@
 
 <div class="viewcode-block" id="set_patch_material">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.set_patch_material.html#opstool.pre.section.set_patch_material">[docs]</a>
-<span class="k">def</span> <span class="nf">set_patch_material</span><span class="p">(</span><span class="n">geom</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">DEFAULT_MATERIAL</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">set_patch_material</span><span class="p">(</span><span class="n">geom</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">DEFAULT_MATERIAL</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Assign material to a geom patch.</span>
 
 <span class="sd">    Parameters</span>
@@ -851,7 +864,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh">[docs]</a>
-<span class="k">class</span> <span class="nc">FiberSecMesh</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">FiberSecMesh</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A class to mesh the cross-section with triangular fibers.</span>
 
 <span class="sd">    Parameters</span>
@@ -860,7 +873,7 @@
 <span class="sd">        Assign a name to the section.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sec_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;My Section&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sec_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;My Section&quot;</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sec_name</span> <span class="o">=</span> <span class="n">sec_name</span>
 
         <span class="c1"># * mesh obj</span>
@@ -869,11 +882,19 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">section_geom</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">section_mesh_sizes</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="c1"># ------------------------</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">fibrt_points</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">fiber_cells_map</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">fiber_centers_map</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">fiber_areas_map</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">centroid</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># fiber points N x 2, triangles vertices</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fiber_centers</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># fiber cell centers Ncell x 2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fiber_areas</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># fiber cell areas Ncell x 1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fiber_cells</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># fiber cell connectivities Ncell x 3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fiber_mat_tags</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># fiber cell mat tags Ncell x 1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rebar_points</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># rebar points N x 2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rebar_areas</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># rebar areas N x 1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rebar_mat_tags</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># rebar mat tags N x 1</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">fiber_cells_map</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># key: geom name, value: fiber cells (i, j, k)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fiber_centers_map</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># key: geom name, value: fiber centers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fiber_areas_map</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># key: geom name, value: fiber areas</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">centroid</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># (cx, cy)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geom_area</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">area</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Iy</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -888,7 +909,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">geom_names</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="c1"># *rebar data</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">rebar_data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rebar_data</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># list of dict</span>
 
         <span class="c1"># * section geo props</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sec_props</span> <span class="o">=</span> <span class="p">{}</span>
@@ -898,7 +919,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.add_patch_group">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.add_patch_group">[docs]</a>
-    <span class="k">def</span> <span class="nf">add_patch_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">patches</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="n">Geometry</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">Geometry</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Geometry</span><span class="p">],</span> <span class="n">Geometry</span><span class="p">]):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_patch_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">patches</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="n">Geometry</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">Geometry</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Geometry</span><span class="p">],</span> <span class="n">Geometry</span><span class="p">]):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add the patches.</span>
 
 <span class="sd">        Parameters</span>
@@ -924,7 +945,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_patch_group">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_patch_group">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_patch_group</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_patch_group</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the group dict for each geometry obj.</span>
 
 <span class="sd">        Returns</span>
@@ -936,7 +957,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.rotate_section_geometry">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.rotate_section_geometry">[docs]</a>
-    <span class="k">def</span> <span class="nf">rotate_section_geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">rot_point</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;center&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rotate_section_geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">rot_point</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;center&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Rotate the patch group.</span>
 <span class="sd">        Rotates the patch and specified angle about a point.</span>
 <span class="sd">        If the rotation point is not provided,</span>
@@ -966,7 +987,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">geom_group_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">geom</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_centering_section_geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_centering_section_geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">section_geom</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_to_geometry</span><span class="p">()</span>
         <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">section_geom</span><span class="o">.</span><span class="n">calculate_centroid</span><span class="p">()</span>
@@ -979,7 +1000,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.set_mesh_size">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.set_mesh_size">[docs]</a>
-    <span class="k">def</span> <span class="nf">set_mesh_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_size</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="nb">float</span><span class="p">]):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_mesh_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_size</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="nb">float</span><span class="p">]):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Assign the mesh size dict for each mesh.</span>
 
 <span class="sd">        Parameters</span>
@@ -1014,7 +1035,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.set_ops_mat_tag">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.set_ops_mat_tag">[docs]</a>
-    <span class="k">def</span> <span class="nf">set_ops_mat_tag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mat_tag</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">]):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_ops_mat_tag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mat_tag</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">]):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Assign the opensees mat tag for each mesh.</span>
 
 <span class="sd">        Parameters</span>
@@ -1046,7 +1067,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.set_mesh_color">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.set_mesh_color">[docs]</a>
-    <span class="k">def</span> <span class="nf">set_mesh_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">colors</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_mesh_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">colors</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Assign the color to plot the section.</span>
 
 <span class="sd">        Parameters</span>
@@ -1071,7 +1092,7 @@
 
 
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">_set_geom_material</span><span class="p">(</span><span class="n">geom</span><span class="p">:</span> <span class="n">Geometry</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_set_geom_material</span><span class="p">(</span><span class="n">geom</span><span class="p">:</span> <span class="n">Geometry</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the material for a Geometry object.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">geom</span><span class="o">.</span><span class="n">material</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">geom</span><span class="o">.</span><span class="n">material</span> <span class="o">=</span> <span class="n">DEFAULT_MATERIAL</span>
@@ -1086,7 +1107,7 @@
             <span class="p">)</span>
         <span class="k">return</span> <span class="n">geom</span>
 
-    <span class="k">def</span> <span class="nf">_to_geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_to_geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">all_geoms</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">geom</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">geom_group_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">geom</span><span class="p">,</span> <span class="n">CompoundGeometry</span><span class="p">):</span>
@@ -1118,7 +1139,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_section_geometry">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_section_geometry">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_section_geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_section_geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the section geometry.</span>
 
 <span class="sd">        Returns</span>
@@ -1131,7 +1152,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">section_geom</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_to_mesh_section</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_to_mesh_section</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">section_geom</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_to_geometry</span><span class="p">()</span>
         <span class="n">mesh_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">section_geom</span><span class="o">.</span><span class="n">create_mesh</span><span class="p">(</span><span class="n">mesh_sizes</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">section_mesh_sizes</span><span class="p">)</span>
@@ -1141,7 +1162,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.mesh">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.mesh">[docs]</a>
-    <span class="k">def</span> <span class="nf">mesh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mesh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Mesh the section.</span>
 
 <span class="sd">        If set_mesh_size has not been invoked,</span>
@@ -1160,11 +1181,12 @@
         <span class="n">CONSOLE</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">PKG_PREFIX</span><span class="si">}</span><span class="s2">The section </span><span class="si">{</span><span class="n">txt</span><span class="si">}</span><span class="s2"> has been successfully meshed!&quot;</span><span class="p">)</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_get_mesh_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_mesh_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># * mesh data</span>
         <span class="n">vertices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mesh_obj</span><span class="p">[</span><span class="s2">&quot;vertices&quot;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">vertices</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">vertices</span><span class="p">)</span>
         <span class="n">triangles</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mesh_obj</span><span class="p">[</span><span class="s2">&quot;triangles&quot;</span><span class="p">][:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+        <span class="c1"># * fiber cells map</span>
         <span class="n">triangle_attributes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mesh_obj</span><span class="p">[</span><span class="s2">&quot;triangle_attributes&quot;</span><span class="p">]</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">triangle_attributes</span><span class="p">)</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">attributes</span><span class="p">)</span>
@@ -1208,7 +1230,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_fiber_data">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_fiber_data">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_fiber_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_fiber_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return fiber data.</span>
 
 <span class="sd">        Returns</span>
@@ -1231,7 +1253,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_section">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_section">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_section</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_section</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the section object.</span>
 
 <span class="sd">        Returns</span>
@@ -1243,7 +1265,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.add_rebar_points">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.add_rebar_points">[docs]</a>
-    <span class="k">def</span> <span class="nf">add_rebar_points</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_rebar_points</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">points</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
         <span class="n">dia</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
@@ -1278,7 +1300,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.add_rebar_line">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.add_rebar_line">[docs]</a>
-    <span class="k">def</span> <span class="nf">add_rebar_line</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_rebar_line</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">points</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
         <span class="n">dia</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
@@ -1334,7 +1356,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.add_rebar_circle">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.add_rebar_circle">[docs]</a>
-    <span class="k">def</span> <span class="nf">add_rebar_circle</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_rebar_circle</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">xo</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
         <span class="n">radius</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
@@ -1391,7 +1413,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_rebars_num">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_rebars_num">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_rebars_num</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_rebars_num</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the number of rebars.</span>
 
 <span class="sd">        Returns</span>
@@ -1406,7 +1428,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_rebars_area">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_rebars_area">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_rebars_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_rebars_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the total area of rebars.</span>
 
 <span class="sd">        Returns</span>
@@ -1427,7 +1449,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_centroid">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_centroid">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_centroid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_centroid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the centroid.</span>
 
 <span class="sd">        Returns</span>
@@ -1439,7 +1461,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_area">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_area">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return section area. For a single-material section, it is the geometric area,</span>
 <span class="sd">        and for a composite section, it is the equivalent area.</span>
 
@@ -1459,7 +1481,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_geom_area">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_geom_area">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_geom_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_geom_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the total geometric area of a section.</span>
 
 <span class="sd">        Returns</span>
@@ -1471,7 +1493,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_iy">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_iy">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_iy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_iy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return Moment of inertia of the section around the y-axis.</span>
 
 <span class="sd">        Returns</span>
@@ -1488,7 +1510,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_iz">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_iz">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_iz</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_iz</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return Moment of inertia of the section around the z-axis.</span>
 
 <span class="sd">        Returns</span>
@@ -1505,7 +1527,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_j">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_j">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_j</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_j</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return section torsion constant.</span>
 
 <span class="sd">        Returns</span>
@@ -1523,7 +1545,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_dist_from_centroid">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_dist_from_centroid">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_dist_from_centroid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_dist_from_centroid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the distance from section edge to the centroid.</span>
 
 <span class="sd">        Returns</span>
@@ -1531,10 +1553,10 @@
 <span class="sd">        list, [ztop, zbot, yright, yleft]</span>
 <span class="sd">            z axis top, z axis bottom, y-axis right, y-axis left</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">ymax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-        <span class="n">ymin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-        <span class="n">zmax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-        <span class="n">zmin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+        <span class="n">ymax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+        <span class="n">ymin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+        <span class="n">zmax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+        <span class="n">zmin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
         <span class="n">ztop</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">zmax</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">centroid</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
         <span class="n">zbot</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">zmin</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">centroid</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
         <span class="n">yleft</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">ymin</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">centroid</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -1542,7 +1564,7 @@
         <span class="k">return</span> <span class="p">[</span><span class="n">ztop</span><span class="p">,</span> <span class="n">zbot</span><span class="p">,</span> <span class="n">yright</span><span class="p">,</span> <span class="n">yleft</span><span class="p">]</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_run_sec_props</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Eref</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_run_sec_props</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Eref</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">calculate_geometric_properties</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">calculate_warping_properties</span><span class="p">()</span>
         <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_centring</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">get_c</span><span class="p">()</span>
@@ -1588,7 +1610,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_sec_props">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_sec_props">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_sec_props</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_sec_props</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">Eref</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
         <span class="n">display_results</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -1702,7 +1724,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_frame_props">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_frame_props">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_frame_props</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Eref</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">display_results</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">fmt</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;8.3E&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_frame_props</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Eref</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">display_results</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">fmt</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;8.3E&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculates and returns the properties required for a frame analysis.</span>
 <span class="sd">        See</span>
 <span class="sd">        `sectionproperties frame_properties &lt;https://sectionproperties.readthedocs.io/en/stable/gen/sectionproperties.</span>
@@ -1755,7 +1777,7 @@
         <span class="c1"># self.section.calculate_geometric_properties()</span>
         <span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="n">ixx_c</span><span class="p">,</span> <span class="n">iyy_c</span><span class="p">,</span> <span class="n">ixy_c</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">calculate_frame_properties</span><span class="p">(</span><span class="n">solver_type</span><span class="o">=</span><span class="s2">&quot;direct&quot;</span><span class="p">)</span>
         <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_centring</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">get_c</span><span class="p">()</span>
-        <span class="c1"># self.section.section_props.calculate_centroidal_properties(self.points)</span>
+        <span class="c1"># self.section.section_props.calculate_centroidal_properties(self.fiber_points)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">is_composite</span><span class="p">():</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">calculate_geometric_properties</span><span class="p">()</span>
             <span class="n">zxx_plus</span><span class="p">,</span> <span class="n">zxx_minus</span><span class="p">,</span> <span class="n">zyy_plus</span><span class="p">,</span> <span class="n">zyy_minus</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">get_ez</span><span class="p">(</span><span class="n">Eref</span><span class="p">)</span>
@@ -1835,7 +1857,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.display_all_results">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.display_all_results">[docs]</a>
-    <span class="k">def</span> <span class="nf">display_all_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Eref</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">fmt</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;8.6e&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">display_all_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Eref</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">fmt</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;8.6e&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Prints all results that have been calculated by ``sectionproperties`` to the terminal.</span>
 
 <span class="sd">        Parameters</span>
@@ -1854,7 +1876,7 @@
 
 
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">_plot_stress</span><span class="p">(</span><span class="n">stress_post</span><span class="p">,</span> <span class="n">plot_stress</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_plot_stress</span><span class="p">(</span><span class="n">stress_post</span><span class="p">,</span> <span class="n">plot_stress</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Plot stress contour based on the given stress key.&quot;&quot;&quot;</span>
         <span class="n">stress_map</span> <span class="o">=</span> <span class="p">{</span>
             <span class="c1"># Primary Stress</span>
@@ -1895,7 +1917,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.get_stress">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.get_stress">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_stress</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_stress</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">N</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
         <span class="n">Vy</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
@@ -1911,7 +1933,7 @@
         <span class="n">alpha</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.75</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kargs</span><span class="p">,</span>
     <span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculates the cross-section stress resulting from design actions and returns</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculates the cross-section elastic stress resulting from design actions and returns</span>
 <span class="sd">        a list of dictionaries containing the cross-section stresses for each region by</span>
 <span class="sd">        method :py:meth:`~opstool.preprocessing.SecMesh.assign_group`.</span>
 
@@ -2057,7 +2079,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.centring">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.centring">[docs]</a>
-    <span class="k">def</span> <span class="nf">centring</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">centring</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Move the section centroid to (0, 0).</span>
 
@@ -2065,7 +2087,7 @@
 <span class="sd">        ---------</span>
 <span class="sd">        None</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">points</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">centroid</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">centroid</span>
         <span class="n">names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_centers_map</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
         <span class="c1"># move fibers</span>
         <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
@@ -2080,7 +2102,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.rotate">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.rotate">[docs]</a>
-    <span class="k">def</span> <span class="nf">rotate</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rotate</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">theta</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
         <span class="n">rot_point</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span>
@@ -2112,8 +2134,8 @@
             <span class="n">xo</span><span class="p">,</span> <span class="n">yo</span> <span class="o">=</span> <span class="n">rot_point</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">remesh</span><span class="p">:</span>
-            <span class="n">x_rot</span><span class="p">,</span> <span class="n">y_rot</span> <span class="o">=</span> <span class="n">sec_rotation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">theta</span><span class="p">,</span> <span class="n">xo</span><span class="o">=</span><span class="n">xo</span><span class="p">,</span> <span class="n">yo</span><span class="o">=</span><span class="n">yo</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">x_rot</span><span class="p">,</span> <span class="n">y_rot</span>
+            <span class="n">x_rot</span><span class="p">,</span> <span class="n">y_rot</span> <span class="o">=</span> <span class="n">sec_rotation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">theta</span><span class="p">,</span> <span class="n">xo</span><span class="o">=</span><span class="n">xo</span><span class="p">,</span> <span class="n">yo</span><span class="o">=</span><span class="n">yo</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">x_rot</span><span class="p">,</span> <span class="n">y_rot</span>
 
             <span class="n">names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_centers_map</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
             <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
@@ -2145,7 +2167,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.to_opspy_cmds">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.to_opspy_cmds">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_opspy_cmds</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_opspy_cmds</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">secTag</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">GJ</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">G</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">is_thermal</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Generate openseespy fiber section command.</span>
@@ -2170,6 +2192,9 @@
 <span class="sd">        ----------</span>
 <span class="sd">        None</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_centring</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">centring</span><span class="p">()</span>
+
         <span class="k">if</span> <span class="n">GJ</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">G</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;GJ and G need to assign at least one!&quot;</span><span class="p">)</span>  <span class="c1"># noqa: TRY003</span>
@@ -2199,7 +2224,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.to_file">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.to_file">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_file</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_file</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">output_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">secTag</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
@@ -2239,6 +2264,9 @@
 <span class="sd">        ---------</span>
 <span class="sd">        None</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_centring</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">centring</span><span class="p">()</span>
+
         <span class="k">if</span> <span class="n">GJ</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">G</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;GJ and G need to assign at least one!&quot;</span><span class="p">)</span>  <span class="c1"># noqa: TRY003</span>
@@ -2256,7 +2284,7 @@
         <span class="n">CONSOLE</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">PKG_PREFIX</span><span class="si">}</span><span class="s2"> The file </span><span class="si">{</span><span class="n">txt</span><span class="si">}</span><span class="s2"> has been successfully written!&quot;</span><span class="p">)</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_to_tcl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_path</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">sec_tag</span><span class="p">,</span> <span class="n">gj</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;:.6E&quot;</span><span class="p">,</span> <span class="n">is_thermal</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_to_tcl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_path</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">sec_tag</span><span class="p">,</span> <span class="n">gj</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;:.6E&quot;</span><span class="p">,</span> <span class="n">is_thermal</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="s2">&quot;w+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">output</span><span class="p">:</span>
             <span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# This document was created from opstool.SecMesh</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# Author: Yexiang Yan  yexiang_yan@outlook.com</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -2284,7 +2312,7 @@
                     <span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">txt</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">xy</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xy</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">area</span><span class="p">,</span> <span class="n">mat_tag</span><span class="p">))</span>
             <span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;};    # end of fibersection definition</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_to_py</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_path</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">sec_tag</span><span class="p">,</span> <span class="n">gj</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;:.6E&quot;</span><span class="p">,</span> <span class="n">is_thermal</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_to_py</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_path</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">sec_tag</span><span class="p">,</span> <span class="n">gj</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;:.6E&quot;</span><span class="p">,</span> <span class="n">is_thermal</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="s2">&quot;w+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">output</span><span class="p">:</span>
             <span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# This document was created from opstool.SecMesh</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# Author: Yexiang Yan  yexiang_yan@outlook.com</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -2313,7 +2341,7 @@
 
 <div class="viewcode-block" id="FiberSecMesh.view">
 <a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.view">[docs]</a>
-    <span class="k">def</span> <span class="nf">view</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">view</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">fill</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">show_legend</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">aspect_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span>
     <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Display the section mesh.</span>
@@ -2340,26 +2368,17 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">color_map</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">geom_group_map</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">color_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_random_color</span><span class="p">()</span>
-        <span class="n">vertices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">points</span>
-        <span class="k">if</span> <span class="n">aspect_ratio</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">x</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
-            <span class="n">y</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
-            <span class="n">aspect_ratio</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-            <span class="k">if</span> <span class="n">aspect_ratio</span> <span class="o">&lt;=</span> <span class="mf">0.333</span><span class="p">:</span>
-                <span class="n">aspect_ratio</span> <span class="o">=</span> <span class="mf">0.333</span>
-            <span class="k">if</span> <span class="n">aspect_ratio</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
-                <span class="n">aspect_ratio</span> <span class="o">=</span> <span class="mi">3</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_mpl</span><span class="p">(</span><span class="n">fill</span><span class="p">,</span> <span class="n">aspect_ratio</span><span class="p">,</span> <span class="n">show_legend</span><span class="o">=</span><span class="n">show_legend</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_mpl</span><span class="p">(</span><span class="n">fill</span><span class="p">,</span> <span class="n">show_legend</span><span class="o">=</span><span class="n">show_legend</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_plot_mpl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fill</span><span class="p">,</span> <span class="n">aspect_ratio</span><span class="p">,</span> <span class="n">show_legend</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_plot_mpl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fill</span><span class="p">,</span> <span class="n">show_legend</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="c1"># matplotlib plot</span>
         <span class="n">figsize</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span>
         <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
 
         <span class="c1"># view the mesh</span>
-        <span class="n">vertices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">points</span>  <span class="c1"># the coords of each triangle vertex</span>
+        <span class="n">vertices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span>  <span class="c1"># the coords of each triangle vertex</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
         <span class="n">y</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">faces</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_cells_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -2410,7 +2429,7 @@
                 <span class="n">rebar_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
                 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([],</span> <span class="p">[],</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
 
-        <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="n">aspect_ratio</span><span class="p">,</span> <span class="n">adjustable</span><span class="o">=</span><span class="s1">&#39;datalim&#39;</span><span class="p">)</span>
+        <span class="c1"># ax.set_aspect(aspect_ratio, adjustable=&quot;datalim&quot;)</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sec_name</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">show_legend</span><span class="p">:</span>
             <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
@@ -2424,15 +2443,291 @@
             <span class="p">)</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">autoscale</span><span class="p">()</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s2">&quot;out&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">vertices</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">vertices</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
         <span class="c1"># plt.show()</span>
-        <span class="k">return</span> <span class="n">ax</span></div>
+        <span class="k">return</span> <span class="n">ax</span>
+
+    <span class="c1"># ---------------------------------------------------------------------------</span>
+    <span class="c1"># The following functions are used to process a given response visualization.</span>
+    <span class="c1"># ---------------------------------------------------------------------------</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_reshape_resp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_centers</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># fibers</span>
+            <span class="n">fiber_centers</span><span class="p">,</span> <span class="n">fiber_cells</span><span class="p">,</span> <span class="n">fiber_mat_tags</span><span class="p">,</span> <span class="n">fiber_areas</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_centers_map</span><span class="p">:</span>
+                <span class="n">matTag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mat_ops_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+                <span class="n">cells</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_cells_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+                <span class="n">fiber_centers</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fiber_centers_map</span><span class="p">[</span><span class="n">name</span><span class="p">])</span>
+                <span class="n">fiber_cells</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">cells</span><span class="p">)</span>
+                <span class="n">fiber_mat_tags</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">matTag</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">cells</span><span class="p">))</span>
+                <span class="n">fiber_areas</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fiber_areas_map</span><span class="p">[</span><span class="n">name</span><span class="p">])</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">fiber_centers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">fiber_centers</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fiber_areas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">fiber_areas</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fiber_cells</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">fiber_cells</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fiber_mat_tags</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">fiber_mat_tags</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rebar_points</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># rebars</span>
+            <span class="n">rebar_points</span><span class="p">,</span> <span class="n">rebar_mat_tags</span><span class="p">,</span> <span class="n">rebar_areas</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">rebar_data</span><span class="p">:</span>
+                <span class="n">rebar_xy</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;rebar_xy&quot;</span><span class="p">]</span>
+                <span class="n">dia</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;dia&quot;</span><span class="p">]</span>
+                <span class="n">matTag</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;matTag&quot;</span><span class="p">]</span>
+                <span class="n">rebar_points</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">rebar_xy</span><span class="p">)</span>
+                <span class="n">rebar_mat_tags</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">matTag</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">rebar_xy</span><span class="p">))</span>
+                <span class="n">rebar_areas</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">dia</span><span class="o">**</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">rebar_xy</span><span class="p">))</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">rebar_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rebar_points</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rebar_areas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rebar_areas</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rebar_mat_tags</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rebar_mat_tags</span><span class="p">)</span>
+
+        <span class="c1"># Find nearest neighbor indices</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">scipy.spatial</span><span class="w"> </span><span class="kn">import</span> <span class="n">cKDTree</span>
+
+        <span class="n">tree</span> <span class="o">=</span> <span class="n">cKDTree</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;idx_f&quot;</span><span class="p">):</span>
+            <span class="n">resp_fiber</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">idx_f</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fiber_centers</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">_</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">idx_f</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fiber_centers</span><span class="p">)</span>
+            <span class="n">resp_fiber</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">idx_f</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">resp_fiber</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;idx_r&quot;</span><span class="p">):</span>
+            <span class="n">resp_rebar</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">idx_r</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rebar_points</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">_</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">idx_r</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rebar_points</span><span class="p">)</span>
+            <span class="n">resp_rebar</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">idx_r</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">resp_rebar</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">return</span> <span class="n">resp_fiber</span><span class="p">,</span> <span class="n">resp_rebar</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_check_exceed_by_tag</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">thresholds</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return boolean mask where True = keep, False = remove</span>
+<span class="sd">        based on per-mat_tag tension/compression limits.</span>
+
+<span class="sd">        thresholds: dict[int, float or (neg_lim, pos_lim)]</span>
+<span class="sd">        - scalar thr: interpreted as (thr, -thr)</span>
+<span class="sd">        - tuple (neg_lim, pos_lim): tension/compression limits</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">keep</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">thresholds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">keep</span>
+
+        <span class="n">unique_tags</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">tags</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">unique_tags</span><span class="p">:</span>
+            <span class="n">thr</span> <span class="o">=</span> <span class="n">thresholds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">tag</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">thr</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="c1"># Convert scalar threshold to (pos_lim, neg_lim)</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isscalar</span><span class="p">(</span><span class="n">thr</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">thr</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">neg_lim</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">thr</span><span class="p">)</span>
+                    <span class="n">pos_lim</span> <span class="o">=</span> <span class="mf">1e16</span>  <span class="c1"># large positive number</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">pos_lim</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">thr</span><span class="p">)</span>
+                    <span class="n">neg_lim</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1e16</span>  <span class="c1"># large negative number</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">neg_lim</span><span class="p">,</span> <span class="n">pos_lim</span> <span class="o">=</span> <span class="n">thr</span>
+                <span class="n">pos_lim</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">pos_lim</span><span class="p">)</span>
+                <span class="n">neg_lim</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">neg_lim</span><span class="p">)</span>
+
+            <span class="n">tag_mask</span> <span class="o">=</span> <span class="n">tags</span> <span class="o">==</span> <span class="n">tag</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="n">tag_mask</span><span class="p">]</span>
+
+            <span class="c1"># Exceed conditions:</span>
+            <span class="c1">#   v &gt; pos_lim  (over-tension)</span>
+            <span class="c1">#   v &lt; neg_lim  (over-compression)</span>
+            <span class="n">exceed</span> <span class="o">=</span> <span class="p">(</span><span class="n">v</span> <span class="o">&gt;</span> <span class="n">pos_lim</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">v</span> <span class="o">&lt;</span> <span class="n">neg_lim</span><span class="p">)</span>
+
+            <span class="n">keep</span><span class="p">[</span><span class="n">tag_mask</span><span class="p">]</span> <span class="o">=</span> <span class="o">~</span><span class="n">exceed</span>
+
+        <span class="k">return</span> <span class="n">keep</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_filter_by_tag_and_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">mat_tag_set</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">thresholds</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return mask selecting elements after mat_tag + threshold filtering.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">values</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">mat_tag_set</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">mask</span> <span class="o">&amp;=</span> <span class="n">np</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">tags</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">mat_tag_set</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">thresholds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">mask</span> <span class="o">&amp;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_exceed_by_tag</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">thresholds</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mask</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_set_plot_props</span><span class="p">(</span><span class="n">fiber_points</span><span class="p">,</span> <span class="n">centers</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
+        <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">fiber_points</span><span class="o">.</span><span class="n">size</span><span class="p">:</span>
+            <span class="n">xs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fiber_points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+            <span class="n">ys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fiber_points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">centers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">xs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">centers</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+            <span class="n">ys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">centers</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">xs</span><span class="p">:</span>
+            <span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span>
+            <span class="n">ys</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">ys</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">xs</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">xs</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ys</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">ys</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s2">&quot;out&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<div class="viewcode-block" id="FiberSecMesh.plot_response">
+<a class="viewcode-back" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html#opstool.pre.section.FiberSecMesh.plot_response">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plot_response</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">points</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="nb">list</span><span class="p">],</span>
+        <span class="n">response</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="nb">list</span><span class="p">],</span>
+        <span class="n">mat_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">thresholds</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">ax</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">plt</span><span class="o">.</span><span class="n">Axes</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;coolwarm&quot;</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Plot the section response at given points.</span>
+<span class="sd">        The responses can be from results of OpenSees analysis.</span>
+
+<span class="sd">        Added in opstool 1.0.22+.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        points : np.ndarray or list</span>
+<span class="sd">            The coordinates of the points to plot the response at.</span>
+<span class="sd">            This is the center points of fibers.</span>
+<span class="sd">        response : np.ndarray or list</span>
+<span class="sd">            The response values at the given points.</span>
+<span class="sd">            It should be the same length as points.</span>
+<span class="sd">        mat_tag : int, optional</span>
+<span class="sd">            Material tag(s) to be visualized. If None, all material tags are visualized.</span>
+<span class="sd">            If int, only the specified material tag is visualized.</span>
+<span class="sd">            If list or tuple, only the specified material tags are visualized.</span>
+<span class="sd">        ax : matplotlib.axes.Axes, optional</span>
+<span class="sd">            The axes to plot the section response. If None, a new figure and axes are created.</span>
+<span class="sd">        cmap : str, optional</span>
+<span class="sd">            Matplotlib color map, by default &#39;coolwarm&#39;</span>
+<span class="sd">        thresholds: dict[int, float or (neg_lim, pos_lim)]</span>
+<span class="sd">            Per-material tag tension/compression limits for filtering the response.</span>
+<span class="sd">            Exceeding fibers/rebars are not plotted.</span>
+<span class="sd">            - scalar thr, compression(-) or tension(+) limits</span>
+<span class="sd">            - tuple (neg_lim, pos_lim): compression/tension limits</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        ax : matplotlib.axes.Axes</span>
+<span class="sd">            The axes with the section response plotted.</span>
+<span class="sd">        cbar : matplotlib.colorbar.Colorbar</span>
+<span class="sd">            The colorbar of the section response.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">resp_fiber</span><span class="p">,</span> <span class="n">resp_rebar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reshape_resp</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+
+        <span class="c1"># Determine the set of material tags to be visualized</span>
+        <span class="n">mat_tag_set</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">mat_tag</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">{</span><span class="nb">int</span><span class="p">(</span><span class="n">mat_tag</span><span class="p">)}</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isscalar</span><span class="p">(</span><span class="n">mat_tag</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span><span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">mat_tag</span><span class="p">}</span>
+
+        <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fig</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_figure</span><span class="p">()</span>
+
+        <span class="c1"># --------------------------------------------------</span>
+        <span class="c1"># 1. filter fiber mesh</span>
+        <span class="c1"># --------------------------------------------------</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_cells</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">fiber_mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filter_by_tag_and_threshold</span><span class="p">(</span><span class="n">resp_fiber</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_mat_tags</span><span class="p">,</span> <span class="n">mat_tag_set</span><span class="p">,</span> <span class="n">thresholds</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">fiber_mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">triangles</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_cells</span><span class="p">[</span><span class="n">fiber_mask</span><span class="p">]</span>
+                <span class="n">vals_cell</span> <span class="o">=</span> <span class="n">resp_fiber</span><span class="p">[</span><span class="n">fiber_mask</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">triangles</span><span class="p">,</span> <span class="n">vals_cell</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">triangles</span><span class="p">,</span> <span class="n">vals_cell</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+        <span class="c1"># --------------------------------------------------</span>
+        <span class="c1"># 2. filter rebar</span>
+        <span class="c1"># --------------------------------------------------</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rebar_points</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">rebar_mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filter_by_tag_and_threshold</span><span class="p">(</span><span class="n">resp_rebar</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rebar_mat_tags</span><span class="p">,</span> <span class="n">mat_tag_set</span><span class="p">,</span> <span class="n">thresholds</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">rebar_mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">centers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rebar_points</span><span class="p">[</span><span class="n">rebar_mask</span><span class="p">]</span>
+                <span class="n">radii</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rebar_areas</span><span class="p">[</span><span class="n">rebar_mask</span><span class="p">]</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+                <span class="n">vals_rebar</span> <span class="o">=</span> <span class="n">resp_rebar</span><span class="p">[</span><span class="n">rebar_mask</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">centers</span><span class="p">,</span> <span class="n">radii</span><span class="p">,</span> <span class="n">vals_rebar</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">centers</span><span class="p">,</span> <span class="n">radii</span><span class="p">,</span> <span class="n">vals_rebar</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+        <span class="c1"># --------------------------------------------------</span>
+        <span class="c1"># 3. build unified colormap</span>
+        <span class="c1"># --------------------------------------------------</span>
+        <span class="n">vals_all</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">arr</span> <span class="k">for</span> <span class="n">arr</span> <span class="ow">in</span> <span class="p">(</span><span class="n">vals_cell</span><span class="p">,</span> <span class="n">vals_rebar</span><span class="p">)</span> <span class="k">if</span> <span class="n">arr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">])</span>
+            <span class="k">if</span> <span class="p">((</span><span class="n">vals_cell</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">vals_rebar</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">))</span>
+            <span class="k">else</span> <span class="kc">None</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">vals_all</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">vals_all</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">vals_all</span><span class="p">)</span>
+            <span class="n">norm</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">vmax</span><span class="p">)</span>
+            <span class="n">cmap_obj</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="n">cmap</span><span class="p">)</span>
+            <span class="n">mappable</span> <span class="o">=</span> <span class="n">ScalarMappable</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_obj</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">norm</span><span class="p">,</span> <span class="n">cmap_obj</span><span class="p">,</span> <span class="n">mappable</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+        <span class="c1"># --------------------------------------------------</span>
+        <span class="c1"># 4. plot fibers</span>
+        <span class="c1"># --------------------------------------------------</span>
+        <span class="k">if</span> <span class="n">triangles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">vals_cell</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">norm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">triang</span> <span class="o">=</span> <span class="n">mtri</span><span class="o">.</span><span class="n">Triangulation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">triangles</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">tripcolor</span><span class="p">(</span><span class="n">triang</span><span class="p">,</span> <span class="n">facecolors</span><span class="o">=</span><span class="n">vals_cell</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap_obj</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">triplot</span><span class="p">(</span><span class="n">triang</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+        <span class="c1"># --------------------------------------------------</span>
+        <span class="c1"># 5. plot rebars</span>
+        <span class="c1"># --------------------------------------------------</span>
+        <span class="k">if</span> <span class="n">centers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">radii</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">vals_rebar</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">),</span> <span class="n">r</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">centers</span><span class="p">,</span> <span class="n">radii</span><span class="p">,</span> <span class="n">vals_rebar</span><span class="p">):</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">),</span> <span class="n">r</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap_obj</span><span class="p">(</span><span class="n">norm</span><span class="p">(</span><span class="n">v</span><span class="p">)),</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">))</span>
+
+        <span class="c1"># --------------------------------------------------</span>
+        <span class="c1"># 6. colorbar</span>
+        <span class="c1"># --------------------------------------------------</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">mpl_toolkits.axes_grid1</span><span class="w"> </span><span class="kn">import</span> <span class="n">make_axes_locatable</span>
+
+        <span class="n">divider</span> <span class="o">=</span> <span class="n">make_axes_locatable</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+        <span class="n">cax</span> <span class="o">=</span> <span class="n">divider</span><span class="o">.</span><span class="n">append_axes</span><span class="p">(</span><span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s2">&quot;4%&quot;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="s2">&quot;5%&quot;</span><span class="p">)</span>  <span class="c1"># 控制宽度和间距</span>
+        <span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">mappable</span><span class="p">,</span> <span class="n">cax</span><span class="o">=</span><span class="n">cax</span><span class="p">)</span>
+        <span class="c1"># cbar = fig.colorbar(mappable, ax=ax) if mappable is not None else None</span>
+
+        <span class="c1"># --------------------------------------------------</span>
+        <span class="c1"># 7. axis + labels</span>
+        <span class="c1"># --------------------------------------------------</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_plot_props</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fiber_points</span><span class="p">,</span> <span class="n">centers</span><span class="p">,</span> <span class="n">ax</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">ax</span><span class="p">,</span> <span class="n">cbar</span></div>
+</div>
 
 
 
-<span class="k">def</span> <span class="nf">sec_rotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">xo</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">yo</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sec_rotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">xo</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">yo</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Rotate the section coordinates counterclockwise by theta</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -2442,7 +2737,7 @@
     <span class="k">return</span> <span class="n">x_new</span><span class="p">,</span> <span class="n">y_new</span>
 
 
-<span class="k">def</span> <span class="nf">_lines_subdivide</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">gap</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_lines_subdivide</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">gap</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    The polylines consisting of coordinates x and y are divided by the gap.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -2495,7 +2790,7 @@
       
     </aside>
   </div>
-</div><script src="../../../../_static/documentation_options.js?v=9a2e067c"></script>
+</div><script src="../../../../_static/documentation_options.js?v=09ae080f"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/scripts/furo.js?v=5fa4622c"></script>
