@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Post-Processing" href="../../auto_examples/examples/index.html" /><link rel="prev" title="Moment Curvature Analysis of Section" href="mc_analysis.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Response Spectrum Analysis" href="responseSpectrumAnalysis.html" /><link rel="prev" title="Moment Curvature Analysis of Section" href="mc_analysis.html" />
 
     <link rel="shortcut icon" href="../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>Linear Buckling Analysis - opstool 1.0.23 documentation</title>
+        <title>Linear Buckling Analysis - opstool 1.0.24 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5f771d8e" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css?v=572af1d6" />
@@ -177,7 +177,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">opstool 1.0.23 documentation</div></a>
+      <a href="../../index.html"><div class="brand">opstool 1.0.24 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -276,6 +276,7 @@
 <li class="toctree-l2"><a class="reference internal" href="smart_analysis.html">Smart Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mc_analysis.html">Moment Curvature Analysis of Section</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Linear Buckling Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="responseSpectrumAnalysis.html">Response Spectrum Analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -286,6 +287,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../auto_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-2DFrame-Pushover.html">Reinforced Concrete Frame Pushover Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
@@ -462,7 +464,7 @@
           d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
         />
       </svg>
-      <span class="gh-source--version-text"> 1.0.23 </span>
+      <span class="gh-source--version-text"> 1.0.24 </span>
     </span>
   </span>
 </a>
@@ -667,7 +669,8 @@ When the model contains material nonlinearity, <strong>the reference load patter
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Linear Buckling data has been saved to <span style="color: #00aeff; text-decoration-color: #00aeff; font-weight: bold">.opstool.output/LinearBucklingData-linear_buckling_plate.nc</span>!
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Linear Buckling data has been saved to
+<span style="color: #ff4f81; text-decoration-color: #ff4f81; font-weight: bold">g:\opstool\docs\src\analysis\.opstool.output/LinearBucklingData-linear_buckling_plate.zarr</span>!
 </pre></div>
 </div>
 <p>Retrieving Buckling Analysis Data</p>
@@ -683,7 +686,8 @@ When the model contains material nonlinearity, <strong>the reference load patter
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading Linear Buckling data from <span style="color: #2dde98; text-decoration-color: #2dde98; font-weight: bold">.opstool.output/LinearBucklingData-linear_buckling_plate.nc</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading Linear Buckling data from
+<span style="color: #3369e7; text-decoration-color: #3369e7; font-weight: bold">g:\opstool\docs\src\analysis\.opstool.output/LinearBucklingData-linear_buckling_plate.zarr</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
 </pre></div>
 </div>
 <div class="nbinput docutils container">
@@ -700,8 +704,8 @@ When the model contains material nonlinearity, <strong>the reference load patter
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([  76.70466696,  311.01550611,  713.4311364 , 1296.96135758,
-       2075.34631271, 3063.52889254])
+array([  76.70429323,  311.01553245,  713.43112889, 1296.96132193,
+       2075.34624741, 3063.52894632])
 </pre></div></div>
 </div>
 </section>
@@ -712,7 +716,9 @@ array([  76.70466696,  311.01550611,  713.4311364 , 1296.96135758,
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">vis</span><span class="o">.</span><span class="n">pyvista</span><span class="o">.</span><span class="n">plot_eigen</span><span class="p">(</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">opst</span><span class="o">.</span><span class="n">vis</span><span class="o">.</span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_colors</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;spectral&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">vis</span><span class="o">.</span><span class="n">pyvista</span><span class="o">.</span><span class="n">plot_eigen</span><span class="p">(</span>
     <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;buckling&quot;</span><span class="p">,</span> <span class="n">mode_tags</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="n">odb_tag</span><span class="o">=</span><span class="s2">&quot;linear_buckling_plate&quot;</span><span class="p">,</span> <span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_bc</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">jupyter_backend</span><span class="o">=</span><span class="s2">&quot;static&quot;</span><span class="p">)</span>
@@ -723,7 +729,8 @@ array([  76.70466696,  311.01550611,  713.4311364 , 1296.96135758,
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading Linear Buckling data from <span style="color: #3369e7; text-decoration-color: #3369e7; font-weight: bold">.opstool.output/LinearBucklingData-linear_buckling_plate.nc</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading Linear Buckling data from
+<span style="color: #1cc7d0; text-decoration-color: #1cc7d0; font-weight: bold">g:\opstool\docs\src\analysis\.opstool.output/LinearBucklingData-linear_buckling_plate.zarr</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
 </pre></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -741,12 +748,12 @@ array([  76.70466696,  311.01550611,  713.4311364 , 1296.96135758,
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../../auto_examples/examples/index.html">
+          <a class="next-page" href="responseSpectrumAnalysis.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Post-Processing</div>
+                <div class="title">Response Spectrum Analysis</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -808,7 +815,7 @@ array([  76.70466696,  311.01550611,  713.4311364 , 1296.96135758,
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=add68c16"></script>
+</div><script src="../../_static/documentation_options.js?v=665f1cdb"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>

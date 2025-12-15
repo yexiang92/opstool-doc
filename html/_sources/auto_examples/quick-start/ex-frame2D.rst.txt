@@ -25,7 +25,7 @@ This is a complete example of frame analysis.
 Although it is a 2D case, it can be applied to more complex 3D models.
 While it demonstrates linear elastic analysis, it is also applicable to nonlinear elastoplastic analysis.
 
-.. GENERATED FROM PYTHON SOURCE LINES 11-19
+.. GENERATED FROM PYTHON SOURCE LINES 11-20
 
 .. code-block:: Python
 
@@ -33,6 +33,7 @@ While it demonstrates linear elastic analysis, it is also applicable to nonlinea
     import matplotlib.ticker as ticker
     import numpy as np
     import openseespy.opensees as ops
+    from matplotlib.colors import ListedColormap
 
     import opstool as opst
     import opstool.vis.pyvista as opsvis
@@ -44,12 +45,12 @@ While it demonstrates linear elastic analysis, it is also applicable to nonlinea
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 20-22
+.. GENERATED FROM PYTHON SOURCE LINES 21-23
 
 Create the model
 --------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 22-121
+.. GENERATED FROM PYTHON SOURCE LINES 23-122
 
 .. code-block:: Python
 
@@ -159,11 +160,11 @@ Create the model
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 122-123
+.. GENERATED FROM PYTHON SOURCE LINES 123-124
 
 Let's first visualize the geometry by ``Pyvista``:
 
-.. GENERATED FROM PYTHON SOURCE LINES 123-128
+.. GENERATED FROM PYTHON SOURCE LINES 124-129
 
 .. code-block:: Python
 
@@ -206,11 +207,11 @@ Let's first visualize the geometry by ``Pyvista``:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 129-130
+.. GENERATED FROM PYTHON SOURCE LINES 130-131
 
 You can also use the following code to visualize the model by using ``Plotly``:
 
-.. GENERATED FROM PYTHON SOURCE LINES 130-136
+.. GENERATED FROM PYTHON SOURCE LINES 131-137
 
 .. code-block:: Python
 
@@ -229,18 +230,18 @@ You can also use the following code to visualize the model by using ``Plotly``:
 
     <div class="output_subarea output_html rendered_html output_result">
     <div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-            <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.3.0.min.js" integrity="sha256-bO3dS6yCpk9aK4gUpNELtCiDeSYvGYnK7jFI58NQnHI=" crossorigin="anonymous"></script>                <div id="c43e0e79-2880-4e3d-b883-296fee210003" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("c43e0e79-2880-4e3d-b883-296fee210003")) {                    Plotly.newPlot(                        "c43e0e79-2880-4e3d-b883-296fee210003",                        [{"connectgaps":false,"hoverinfo":"skip","line":{"color":"#0652ff","width":4},"mode":"lines","name":"ElasticBeam2d","x":{"dtype":"f8","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAhkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAhkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAhkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAhkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAhkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAhkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAhkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002f"},"y":{"dtype":"f8","bdata":"AAAAAAAAAAAAAAAAAEBkQAAAAAAAAPh\u002fAAAAAABAZEAAAAAAAEB0QAAAAAAAAPh\u002fAAAAAABAdEAAAAAAAAB+QAAAAAAAAPh\u002fAAAAAAAAfkAAAAAAAOCDQAAAAAAAAPh\u002fAAAAAADgg0AAAAAAAMCIQAAAAAAAAPh\u002fAAAAAADAiEAAAAAAAKCNQAAAAAAAAPh\u002fAAAAAACgjUAAAAAAAECRQAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAEBkQAAAAAAAAPh\u002fAAAAAABAZEAAAAAAAEB0QAAAAAAAAPh\u002fAAAAAABAdEAAAAAAAAB+QAAAAAAAAPh\u002fAAAAAAAAfkAAAAAAAOCDQAAAAAAAAPh\u002fAAAAAADgg0AAAAAAAMCIQAAAAAAAAPh\u002fAAAAAADAiEAAAAAAAKCNQAAAAAAAAPh\u002fAAAAAACgjUAAAAAAAECRQAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAEBkQAAAAAAAAPh\u002fAAAAAABAZEAAAAAAAEB0QAAAAAAAAPh\u002fAAAAAABAdEAAAAAAAAB+QAAAAAAAAPh\u002fAAAAAAAAfkAAAAAAAOCDQAAAAAAAAPh\u002fAAAAAADgg0AAAAAAAMCIQAAAAAAAAPh\u002fAAAAAADAiEAAAAAAAKCNQAAAAAAAAPh\u002fAAAAAACgjUAAAAAAAECRQAAAAAAAAPh\u002fAAAAAABAZEAAAAAAAEBkQAAAAAAAAPh\u002fAAAAAABAdEAAAAAAAEB0QAAAAAAAAPh\u002fAAAAAAAAfkAAAAAAAAB+QAAAAAAAAPh\u002fAAAAAADgg0AAAAAAAOCDQAAAAAAAAPh\u002fAAAAAADAiEAAAAAAAMCIQAAAAAAAAPh\u002fAAAAAACgjUAAAAAAAKCNQAAAAAAAAPh\u002fAAAAAABAkUAAAAAAAECRQAAAAAAAAPh\u002fAAAAAABAZEAAAAAAAEBkQAAAAAAAAPh\u002fAAAAAABAdEAAAAAAAEB0QAAAAAAAAPh\u002fAAAAAAAAfkAAAAAAAAB+QAAAAAAAAPh\u002fAAAAAADgg0AAAAAAAOCDQAAAAAAAAPh\u002fAAAAAADAiEAAAAAAAMCIQAAAAAAAAPh\u002fAAAAAACgjUAAAAAAAKCNQAAAAAAAAPh\u002fAAAAAABAkUAAAAAAAECRQAAAAAAAAPh\u002f"},"z":{"dtype":"f8","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002f"},"type":"scatter3d"},{"customdata":["eleTag: 1\u003cbr\u003econnectedNodes:\u003cbr\u003e [1 4]","eleTag: 2\u003cbr\u003econnectedNodes:\u003cbr\u003e [4 7]","eleTag: 3\u003cbr\u003econnectedNodes:\u003cbr\u003e [ 7 10]","eleTag: 4\u003cbr\u003econnectedNodes:\u003cbr\u003e [10 13]","eleTag: 5\u003cbr\u003econnectedNodes:\u003cbr\u003e [13 16]","eleTag: 6\u003cbr\u003econnectedNodes:\u003cbr\u003e [16 19]","eleTag: 7\u003cbr\u003econnectedNodes:\u003cbr\u003e [19 22]","eleTag: 8\u003cbr\u003econnectedNodes:\u003cbr\u003e [2 5]","eleTag: 9\u003cbr\u003econnectedNodes:\u003cbr\u003e [5 8]","eleTag: 10\u003cbr\u003econnectedNodes:\u003cbr\u003e [ 8 11]","eleTag: 11\u003cbr\u003econnectedNodes:\u003cbr\u003e [11 14]","eleTag: 12\u003cbr\u003econnectedNodes:\u003cbr\u003e [14 17]","eleTag: 13\u003cbr\u003econnectedNodes:\u003cbr\u003e [17 20]","eleTag: 14\u003cbr\u003econnectedNodes:\u003cbr\u003e [20 23]","eleTag: 15\u003cbr\u003econnectedNodes:\u003cbr\u003e [3 6]","eleTag: 16\u003cbr\u003econnectedNodes:\u003cbr\u003e [6 9]","eleTag: 17\u003cbr\u003econnectedNodes:\u003cbr\u003e [ 9 12]","eleTag: 18\u003cbr\u003econnectedNodes:\u003cbr\u003e [12 15]","eleTag: 19\u003cbr\u003econnectedNodes:\u003cbr\u003e [15 18]","eleTag: 20\u003cbr\u003econnectedNodes:\u003cbr\u003e [18 21]","eleTag: 21\u003cbr\u003econnectedNodes:\u003cbr\u003e [21 24]","eleTag: 22\u003cbr\u003econnectedNodes:\u003cbr\u003e [4 5]","eleTag: 23\u003cbr\u003econnectedNodes:\u003cbr\u003e [7 8]","eleTag: 24\u003cbr\u003econnectedNodes:\u003cbr\u003e [10 11]","eleTag: 25\u003cbr\u003econnectedNodes:\u003cbr\u003e [13 14]","eleTag: 26\u003cbr\u003econnectedNodes:\u003cbr\u003e [16 17]","eleTag: 27\u003cbr\u003econnectedNodes:\u003cbr\u003e [19 20]","eleTag: 28\u003cbr\u003econnectedNodes:\u003cbr\u003e [22 23]","eleTag: 29\u003cbr\u003econnectedNodes:\u003cbr\u003e [5 6]","eleTag: 30\u003cbr\u003econnectedNodes:\u003cbr\u003e [8 9]","eleTag: 31\u003cbr\u003econnectedNodes:\u003cbr\u003e [11 12]","eleTag: 32\u003cbr\u003econnectedNodes:\u003cbr\u003e [14 15]","eleTag: 33\u003cbr\u003econnectedNodes:\u003cbr\u003e [17 18]","eleTag: 34\u003cbr\u003econnectedNodes:\u003cbr\u003e [20 21]","eleTag: 35\u003cbr\u003econnectedNodes:\u003cbr\u003e [23 24]"],"hovertemplate":"%{customdata}","marker":{"color":"#0652ff","size":2,"symbol":"diamond-open"},"mode":"markers","name":"ElasticBeam2d","x":{"dtype":"f4","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtEMAALRDAAC0QwAAtEMAALRDAAC0QwAAtEMAADREAAA0RAAANEQAADREAAA0RAAANEQAADREAAA0QwAANEMAADRDAAA0QwAANEMAADRDAAA0QwAAB0QAAAdEAAAHRAAAB0QAAAdEAAAHRAAAB0Q="},"y":{"dtype":"f4","bdata":"AACiQgAAc0MAAMlDAIALRACAMkQAgFlEAECARAAAokIAAHNDAADJQwCAC0QAgDJEAIBZRABAgEQAAKJCAABzQwAAyUMAgAtEAIAyRACAWUQAQIBEAAAiQwAAokMAAPBDAAAfRAAARkQAAG1EAACKRAAAIkMAAKJDAADwQwAAH0QAAEZEAABtRAAAikQ="},"z":{"dtype":"f4","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="},"type":"scatter3d"},{"customdata":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"],"hovertemplate":"x: %{x}\u003cbr\u003ey: %{y}\u003cbr\u003ez: %{z} \u003cbr\u003enodeTag: %{customdata}","marker":{"color":"#580f41","size":2,"symbol":"circle"},"mode":"markers","name":"Nodes","x":{"dtype":"f4","bdata":"AAAAAAAAtEMAADREAAAAAAAAtEMAADREAAAAAAAAtEMAADREAAAAAAAAtEMAADREAAAAAAAAtEMAADREAAAAAAAAtEMAADREAAAAAAAAtEMAADREAAAAAAAAtEMAADRE"},"y":{"dtype":"f4","bdata":"AAAAAAAAAAAAAAAAAAAiQwAAIkMAACJDAACiQwAAokMAAKJDAADwQwAA8EMAAPBDAAAfRAAAH0QAAB9EAABGRAAARkQAAEZEAABtRAAAbUQAAG1EAACKRAAAikQAAIpE"},"z":{"dtype":"f4","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"type":"scatter3d"},{"connectgaps":false,"hoverinfo":"skip","line":{"color":"#15b01a","width":1.0},"mode":"lines","name":"BC","x":{"dtype":"f8","bdata":"AAAA4HoUFsAAAADgehQWQAAAAOB6FBZAAAAA4HoUFsAAAADgehQWwAAAAAAAAPh\u002fAACAFK4ndkAAAIDrUdh2QAAAgOtR2HZAAACAFK4ndkAAAIAUrid2QAAAAAAAAPh\u002fAABACtdThkAAAMD1KKyGQAAAwPUorIZAAABACtdThkAAAEAK11OGQAAAAAAAAPh\u002f"},"y":{"dtype":"f8","bdata":"AAAA4HoUJsAAAADgehQmwAAAAAAAAAAAAAAAAAAAAAAAAADgehQmwAAAAAAAAPh\u002fAAAA4HoUJsAAAADgehQmwAAAAAAAAAAAAAAAAAAAAAAAAADgehQmwAAAAAAAAPh\u002fAAAA4HoUJsAAAADgehQmwAAAAAAAAAAAAAAAAAAAAAAAAADgehQmwAAAAAAAAPh\u002f"},"z":{"dtype":"f8","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002f"},"type":"scatter3d"},{"connectgaps":false,"hoverinfo":"skip","line":{"color":"#FF1493","width":2.0},"mode":"lines","name":"mp constraint","x":{"dtype":"f8","bdata":"AAAAAACAdkAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002f"},"y":{"dtype":"f8","bdata":"AAAAAABAZEAAAAAAAEBkQAAAAAAAAPh\u002fAAAAAABAZEAAAAAAAEBkQAAAAAAAAPh\u002fAAAAAABAdEAAAAAAAEB0QAAAAAAAAPh\u002fAAAAAABAdEAAAAAAAEB0QAAAAAAAAPh\u002fAAAAAAAAfkAAAAAAAAB+QAAAAAAAAPh\u002fAAAAAAAAfkAAAAAAAAB+QAAAAAAAAPh\u002fAAAAAADgg0AAAAAAAOCDQAAAAAAAAPh\u002fAAAAAADgg0AAAAAAAOCDQAAAAAAAAPh\u002fAAAAAADAiEAAAAAAAMCIQAAAAAAAAPh\u002fAAAAAADAiEAAAAAAAMCIQAAAAAAAAPh\u002fAAAAAACgjUAAAAAAAKCNQAAAAAAAAPh\u002fAAAAAACgjUAAAAAAAKCNQAAAAAAAAPh\u002fAAAAAABAkUAAAAAAAECRQAAAAAAAAPh\u002fAAAAAABAkUAAAAAAAECRQAAAAAAAAPh\u002f"},"z":{"dtype":"f8","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002f"},"type":"scatter3d"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"scene":{"camera":{"eye":{"x":0,"y":-0.1,"z":1104.0}},"xaxis":{"showbackground":false},"yaxis":{"showbackground":false},"zaxis":{"showbackground":true,"showticklabels":false,"showgrid":true,"title":{"text":""},"ticks":"","visible":true},"aspectmode":"data","dragmode":"pan"},"title":{"font":{"family":"courier","size":18},"text":"\u003cb\u003eOPSTOOL\u003c\u002fb\u003e:: Num. Node: \u003cb\u003e24\u003c\u002fb\u003e Num. Ele: \u003cb\u003e35\u003c\u002fb\u003e"},"font":{"family":"Arial, sans-serif"},"autosize":true,"showlegend":false},                        {"responsive": true}                    )                };            </script>        </div>
+            <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.3.0.min.js" integrity="sha256-bO3dS6yCpk9aK4gUpNELtCiDeSYvGYnK7jFI58NQnHI=" crossorigin="anonymous"></script>                <div id="7b3c7942-9b70-4c6e-a8e5-cc680f587e11" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("7b3c7942-9b70-4c6e-a8e5-cc680f587e11")) {                    Plotly.newPlot(                        "7b3c7942-9b70-4c6e-a8e5-cc680f587e11",                        [{"connectgaps":false,"hoverinfo":"skip","line":{"color":"#0652ff","width":4},"mode":"lines","name":"ElasticBeam2d","x":{"dtype":"f8","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAhkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAhkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAhkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAhkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAhkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAhkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAhkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAIB2QAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002f"},"y":{"dtype":"f8","bdata":"AAAAAAAAAAAAAAAAAEBkQAAAAAAAAPh\u002fAAAAAABAZEAAAAAAAEB0QAAAAAAAAPh\u002fAAAAAABAdEAAAAAAAAB+QAAAAAAAAPh\u002fAAAAAAAAfkAAAAAAAOCDQAAAAAAAAPh\u002fAAAAAADgg0AAAAAAAMCIQAAAAAAAAPh\u002fAAAAAADAiEAAAAAAAKCNQAAAAAAAAPh\u002fAAAAAACgjUAAAAAAAECRQAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAEBkQAAAAAAAAPh\u002fAAAAAABAZEAAAAAAAEB0QAAAAAAAAPh\u002fAAAAAABAdEAAAAAAAAB+QAAAAAAAAPh\u002fAAAAAAAAfkAAAAAAAOCDQAAAAAAAAPh\u002fAAAAAADgg0AAAAAAAMCIQAAAAAAAAPh\u002fAAAAAADAiEAAAAAAAKCNQAAAAAAAAPh\u002fAAAAAACgjUAAAAAAAECRQAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAEBkQAAAAAAAAPh\u002fAAAAAABAZEAAAAAAAEB0QAAAAAAAAPh\u002fAAAAAABAdEAAAAAAAAB+QAAAAAAAAPh\u002fAAAAAAAAfkAAAAAAAOCDQAAAAAAAAPh\u002fAAAAAADgg0AAAAAAAMCIQAAAAAAAAPh\u002fAAAAAADAiEAAAAAAAKCNQAAAAAAAAPh\u002fAAAAAACgjUAAAAAAAECRQAAAAAAAAPh\u002fAAAAAABAZEAAAAAAAEBkQAAAAAAAAPh\u002fAAAAAABAdEAAAAAAAEB0QAAAAAAAAPh\u002fAAAAAAAAfkAAAAAAAAB+QAAAAAAAAPh\u002fAAAAAADgg0AAAAAAAOCDQAAAAAAAAPh\u002fAAAAAADAiEAAAAAAAMCIQAAAAAAAAPh\u002fAAAAAACgjUAAAAAAAKCNQAAAAAAAAPh\u002fAAAAAABAkUAAAAAAAECRQAAAAAAAAPh\u002fAAAAAABAZEAAAAAAAEBkQAAAAAAAAPh\u002fAAAAAABAdEAAAAAAAEB0QAAAAAAAAPh\u002fAAAAAAAAfkAAAAAAAAB+QAAAAAAAAPh\u002fAAAAAADgg0AAAAAAAOCDQAAAAAAAAPh\u002fAAAAAADAiEAAAAAAAMCIQAAAAAAAAPh\u002fAAAAAACgjUAAAAAAAKCNQAAAAAAAAPh\u002fAAAAAABAkUAAAAAAAECRQAAAAAAAAPh\u002f"},"z":{"dtype":"f8","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002f"},"type":"scatter3d"},{"customdata":["eleTag: 1\u003cbr\u003econnectedNodes:\u003cbr\u003e [1 4]","eleTag: 2\u003cbr\u003econnectedNodes:\u003cbr\u003e [4 7]","eleTag: 3\u003cbr\u003econnectedNodes:\u003cbr\u003e [ 7 10]","eleTag: 4\u003cbr\u003econnectedNodes:\u003cbr\u003e [10 13]","eleTag: 5\u003cbr\u003econnectedNodes:\u003cbr\u003e [13 16]","eleTag: 6\u003cbr\u003econnectedNodes:\u003cbr\u003e [16 19]","eleTag: 7\u003cbr\u003econnectedNodes:\u003cbr\u003e [19 22]","eleTag: 8\u003cbr\u003econnectedNodes:\u003cbr\u003e [2 5]","eleTag: 9\u003cbr\u003econnectedNodes:\u003cbr\u003e [5 8]","eleTag: 10\u003cbr\u003econnectedNodes:\u003cbr\u003e [ 8 11]","eleTag: 11\u003cbr\u003econnectedNodes:\u003cbr\u003e [11 14]","eleTag: 12\u003cbr\u003econnectedNodes:\u003cbr\u003e [14 17]","eleTag: 13\u003cbr\u003econnectedNodes:\u003cbr\u003e [17 20]","eleTag: 14\u003cbr\u003econnectedNodes:\u003cbr\u003e [20 23]","eleTag: 15\u003cbr\u003econnectedNodes:\u003cbr\u003e [3 6]","eleTag: 16\u003cbr\u003econnectedNodes:\u003cbr\u003e [6 9]","eleTag: 17\u003cbr\u003econnectedNodes:\u003cbr\u003e [ 9 12]","eleTag: 18\u003cbr\u003econnectedNodes:\u003cbr\u003e [12 15]","eleTag: 19\u003cbr\u003econnectedNodes:\u003cbr\u003e [15 18]","eleTag: 20\u003cbr\u003econnectedNodes:\u003cbr\u003e [18 21]","eleTag: 21\u003cbr\u003econnectedNodes:\u003cbr\u003e [21 24]","eleTag: 22\u003cbr\u003econnectedNodes:\u003cbr\u003e [4 5]","eleTag: 23\u003cbr\u003econnectedNodes:\u003cbr\u003e [7 8]","eleTag: 24\u003cbr\u003econnectedNodes:\u003cbr\u003e [10 11]","eleTag: 25\u003cbr\u003econnectedNodes:\u003cbr\u003e [13 14]","eleTag: 26\u003cbr\u003econnectedNodes:\u003cbr\u003e [16 17]","eleTag: 27\u003cbr\u003econnectedNodes:\u003cbr\u003e [19 20]","eleTag: 28\u003cbr\u003econnectedNodes:\u003cbr\u003e [22 23]","eleTag: 29\u003cbr\u003econnectedNodes:\u003cbr\u003e [5 6]","eleTag: 30\u003cbr\u003econnectedNodes:\u003cbr\u003e [8 9]","eleTag: 31\u003cbr\u003econnectedNodes:\u003cbr\u003e [11 12]","eleTag: 32\u003cbr\u003econnectedNodes:\u003cbr\u003e [14 15]","eleTag: 33\u003cbr\u003econnectedNodes:\u003cbr\u003e [17 18]","eleTag: 34\u003cbr\u003econnectedNodes:\u003cbr\u003e [20 21]","eleTag: 35\u003cbr\u003econnectedNodes:\u003cbr\u003e [23 24]"],"hovertemplate":"%{customdata}","marker":{"color":"#0652ff","size":2,"symbol":"diamond-open"},"mode":"markers","name":"ElasticBeam2d","x":{"dtype":"f4","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtEMAALRDAAC0QwAAtEMAALRDAAC0QwAAtEMAADREAAA0RAAANEQAADREAAA0RAAANEQAADREAAA0QwAANEMAADRDAAA0QwAANEMAADRDAAA0QwAAB0QAAAdEAAAHRAAAB0QAAAdEAAAHRAAAB0Q="},"y":{"dtype":"f4","bdata":"AACiQgAAc0MAAMlDAIALRACAMkQAgFlEAECARAAAokIAAHNDAADJQwCAC0QAgDJEAIBZRABAgEQAAKJCAABzQwAAyUMAgAtEAIAyRACAWUQAQIBEAAAiQwAAokMAAPBDAAAfRAAARkQAAG1EAACKRAAAIkMAAKJDAADwQwAAH0QAAEZEAABtRAAAikQ="},"z":{"dtype":"f4","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="},"type":"scatter3d"},{"customdata":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"],"hovertemplate":"x: %{x}\u003cbr\u003ey: %{y}\u003cbr\u003ez: %{z} \u003cbr\u003enodeTag: %{customdata}","marker":{"color":"#580f41","size":2,"symbol":"circle"},"mode":"markers","name":"Nodes","x":{"dtype":"f4","bdata":"AAAAAAAAtEMAADREAAAAAAAAtEMAADREAAAAAAAAtEMAADREAAAAAAAAtEMAADREAAAAAAAAtEMAADREAAAAAAAAtEMAADREAAAAAAAAtEMAADREAAAAAAAAtEMAADRE"},"y":{"dtype":"f4","bdata":"AAAAAAAAAAAAAAAAAAAiQwAAIkMAACJDAACiQwAAokMAAKJDAADwQwAA8EMAAPBDAAAfRAAAH0QAAB9EAABGRAAARkQAAEZEAABtRAAAbUQAAG1EAACKRAAAikQAAIpE"},"z":{"dtype":"f4","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"type":"scatter3d"},{"connectgaps":false,"hoverinfo":"skip","line":{"color":"#15b01a","width":1.0},"mode":"lines","name":"BC","x":{"dtype":"f8","bdata":"AAAA4HoUFsAAAADgehQWQAAAAOB6FBZAAAAA4HoUFsAAAADgehQWwAAAAAAAAPh\u002fAACAFK4ndkAAAIDrUdh2QAAAgOtR2HZAAACAFK4ndkAAAIAUrid2QAAAAAAAAPh\u002fAABACtdThkAAAMD1KKyGQAAAwPUorIZAAABACtdThkAAAEAK11OGQAAAAAAAAPh\u002f"},"y":{"dtype":"f8","bdata":"AAAA4HoUJsAAAADgehQmwAAAAAAAAAAAAAAAAAAAAAAAAADgehQmwAAAAAAAAPh\u002fAAAA4HoUJsAAAADgehQmwAAAAAAAAAAAAAAAAAAAAAAAAADgehQmwAAAAAAAAPh\u002fAAAA4HoUJsAAAADgehQmwAAAAAAAAAAAAAAAAAAAAAAAAADgehQmwAAAAAAAAPh\u002f"},"z":{"dtype":"f8","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002f"},"type":"scatter3d"},{"connectgaps":false,"hoverinfo":"skip","line":{"color":"#FF1493","width":2.0},"mode":"lines","name":"mp constraint","x":{"dtype":"f8","bdata":"AAAAAACAdkAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAACAdkAAAAAAAICGQAAAAAAAAPh\u002f"},"y":{"dtype":"f8","bdata":"AAAAAABAZEAAAAAAAEBkQAAAAAAAAPh\u002fAAAAAABAZEAAAAAAAEBkQAAAAAAAAPh\u002fAAAAAABAdEAAAAAAAEB0QAAAAAAAAPh\u002fAAAAAABAdEAAAAAAAEB0QAAAAAAAAPh\u002fAAAAAAAAfkAAAAAAAAB+QAAAAAAAAPh\u002fAAAAAAAAfkAAAAAAAAB+QAAAAAAAAPh\u002fAAAAAADgg0AAAAAAAOCDQAAAAAAAAPh\u002fAAAAAADgg0AAAAAAAOCDQAAAAAAAAPh\u002fAAAAAADAiEAAAAAAAMCIQAAAAAAAAPh\u002fAAAAAADAiEAAAAAAAMCIQAAAAAAAAPh\u002fAAAAAACgjUAAAAAAAKCNQAAAAAAAAPh\u002fAAAAAACgjUAAAAAAAKCNQAAAAAAAAPh\u002fAAAAAABAkUAAAAAAAECRQAAAAAAAAPh\u002fAAAAAABAkUAAAAAAAECRQAAAAAAAAPh\u002f"},"z":{"dtype":"f8","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPh\u002f"},"type":"scatter3d"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"scene":{"camera":{"eye":{"x":0,"y":-0.1,"z":1104.0}},"xaxis":{"showbackground":false},"yaxis":{"showbackground":false},"zaxis":{"showbackground":true,"showticklabels":false,"showgrid":true,"title":{"text":""},"ticks":"","visible":true},"aspectmode":"data","dragmode":"pan"},"title":{"font":{"family":"courier","size":18},"text":"\u003cb\u003eOPSTOOL\u003c\u002fb\u003e:: Num. Node: \u003cb\u003e24\u003c\u002fb\u003e Num. Ele: \u003cb\u003e35\u003c\u002fb\u003e"},"font":{"family":"Arial, sans-serif"},"autosize":true,"showlegend":false},                        {"responsive": true}                    )                };            </script>        </div>
     </div>
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 137-140
+.. GENERATED FROM PYTHON SOURCE LINES 138-141
 
 Eigenvalue analysis
 --------------------
 solver="-fullGenLapack" is intended to extract all seventh-order modes. This solver should be avoided in actual large models.
 
-.. GENERATED FROM PYTHON SOURCE LINES 140-142
+.. GENERATED FROM PYTHON SOURCE LINES 141-143
 
 .. code-block:: Python
 
@@ -260,16 +261,17 @@ solver="-fullGenLapack" is intended to extract all seventh-order modes. This sol
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 143-144
+.. GENERATED FROM PYTHON SOURCE LINES 144-145
 
 odb_tag = "eigen" is used to indentify the output database for eigenvalue analysis.
 
-.. GENERATED FROM PYTHON SOURCE LINES 144-148
+.. GENERATED FROM PYTHON SOURCE LINES 145-150
 
 .. code-block:: Python
 
-    opsvis.set_plot_props(cmap="jet", line_width=4, point_size=5, font_size=12)
-    plotter = opsvis.plot_eigen(mode_tags=[1, 6], odb_tag="eigen", subplots=True, bc_scale=3)
+    cmap = ListedColormap(["blue"])
+    opsvis.set_plot_props(cmap=cmap, line_width=4, point_size=5, font_size=12)
+    plotter = opsvis.plot_eigen(mode_tags=[1, 6], odb_tag="eigen", subplots=True, bc_scale=3, show_mp_constraint=False)
     plotter.show()  # for auto
 
 
@@ -312,11 +314,11 @@ odb_tag = "eigen" is used to indentify the output database for eigenvalue analys
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 149-150
+.. GENERATED FROM PYTHON SOURCE LINES 151-152
 
 We can also retrieve the data of eigenvalue analysis:
 
-.. GENERATED FROM PYTHON SOURCE LINES 150-154
+.. GENERATED FROM PYTHON SOURCE LINES 152-156
 
 .. code-block:: Python
 
@@ -344,7 +346,7 @@ We can also retrieve the data of eigenvalue analysis:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 155-161
+.. GENERATED FROM PYTHON SOURCE LINES 157-163
 
 .. code-block:: Python
 
@@ -392,12 +394,12 @@ We can also retrieve the data of eigenvalue analysis:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-164
+.. GENERATED FROM PYTHON SOURCE LINES 164-166
 
 Static analysis
 --------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 164-178
+.. GENERATED FROM PYTHON SOURCE LINES 166-180
 
 .. code-block:: Python
 
@@ -422,11 +424,11 @@ Static analysis
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 179-180
+.. GENERATED FROM PYTHON SOURCE LINES 181-182
 
 Re-examine the model:
 
-.. GENERATED FROM PYTHON SOURCE LINES 180-184
+.. GENERATED FROM PYTHON SOURCE LINES 182-186
 
 .. code-block:: Python
 
@@ -468,11 +470,11 @@ Re-examine the model:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 185-186
+.. GENERATED FROM PYTHON SOURCE LINES 187-188
 
 To perform the analysis:
 
-.. GENERATED FROM PYTHON SOURCE LINES 186-196
+.. GENERATED FROM PYTHON SOURCE LINES 188-198
 
 .. code-block:: Python
 
@@ -493,11 +495,11 @@ To perform the analysis:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 197-198
+.. GENERATED FROM PYTHON SOURCE LINES 199-200
 
 Save the results
 
-.. GENERATED FROM PYTHON SOURCE LINES 198-205
+.. GENERATED FROM PYTHON SOURCE LINES 200-207
 
 .. code-block:: Python
 
@@ -516,18 +518,17 @@ Save the results
 
  .. code-block:: none
 
-    OPSTOOL ::  All responses data with _odb_tag = static saved in 
-    G:\opstool\docs\.opstool.output/RespStepData-static.zarr!
+    OPSTOOL ::  All responses data with _odb_tag = static saved in G:\opstool\docs\.opstool.output/RespStepData-static.zarr!
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 206-208
+.. GENERATED FROM PYTHON SOURCE LINES 208-210
 
 Retrieve the nodal displacements:
 *************************************
 
-.. GENERATED FROM PYTHON SOURCE LINES 208-214
+.. GENERATED FROM PYTHON SOURCE LINES 210-216
 
 .. code-block:: Python
 
@@ -551,12 +552,12 @@ Retrieve the nodal displacements:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 215-217
+.. GENERATED FROM PYTHON SOURCE LINES 217-219
 
 Retrieve element response:
 *************************************
 
-.. GENERATED FROM PYTHON SOURCE LINES 217-220
+.. GENERATED FROM PYTHON SOURCE LINES 219-222
 
 .. code-block:: Python
 
@@ -573,18 +574,18 @@ Retrieve element response:
 
     OPSTOOL ::  Loading Frame response data from G:\opstool\docs\.opstool.output/RespStepData-static.zarr ...
     Data variables:
-        basicDeformations    (time, eleTags, basicDofs) float32 9kB 0.0 -0.0 ... 0.0
         basicForces          (time, eleTags, basicDofs) float32 9kB 0.0 -0.0 ... 0.0
+        basicDeformations    (time, eleTags, basicDofs) float32 9kB 0.0 -0.0 ... 0.0
+        localForces          (time, eleTags, localDofs) float32 18kB -0.0 ... -527.7
         plasticDeformation   (time, eleTags, basicDofs) float32 9kB 0.0 -0.0 ... 0.0
         sectionDeformations  (time, eleTags, secPoints, secDofs) float32 65kB 0.0...
-        localForces          (time, eleTags, localDofs) float32 18kB -0.0 ... -527.7
         sectionLocs          (time, eleTags, secPoints, locs) float32 32kB 0.0 .....
         sectionForces        (time, eleTags, secPoints, secDofs) float32 65kB -0....
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 221-226
+.. GENERATED FROM PYTHON SOURCE LINES 223-228
 
 .. code-block:: Python
 
@@ -611,12 +612,12 @@ Retrieve element response:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 227-229
+.. GENERATED FROM PYTHON SOURCE LINES 229-231
 
 Visualize node responses:
 *************************************
 
-.. GENERATED FROM PYTHON SOURCE LINES 229-235
+.. GENERATED FROM PYTHON SOURCE LINES 231-237
 
 .. code-block:: Python
 
@@ -666,12 +667,12 @@ Visualize node responses:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 236-238
+.. GENERATED FROM PYTHON SOURCE LINES 238-240
 
 Visualizing Element Response:
 *************************************
 
-.. GENERATED FROM PYTHON SOURCE LINES 238-253
+.. GENERATED FROM PYTHON SOURCE LINES 240-255
 
 .. code-block:: Python
 
@@ -730,11 +731,11 @@ Visualizing Element Response:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 254-255
+.. GENERATED FROM PYTHON SOURCE LINES 256-257
 
 Axial response
 
-.. GENERATED FROM PYTHON SOURCE LINES 255-265
+.. GENERATED FROM PYTHON SOURCE LINES 257-267
 
 .. code-block:: Python
 
@@ -788,7 +789,7 @@ Axial response
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 266-271
+.. GENERATED FROM PYTHON SOURCE LINES 268-273
 
 Seismic response analysis
 --------------------------
@@ -796,7 +797,7 @@ Load the ground motion data.
 All files can be downloaded here:
 `click <https://github.com/yexiang1992/opstool/tree/master/docs/examples/post/Frame2D>`_
 
-.. GENERATED FROM PYTHON SOURCE LINES 271-280
+.. GENERATED FROM PYTHON SOURCE LINES 273-282
 
 .. code-block:: Python
 
@@ -827,11 +828,11 @@ All files can be downloaded here:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 281-282
+.. GENERATED FROM PYTHON SOURCE LINES 283-284
 
 Create the ground motion load pattern
 
-.. GENERATED FROM PYTHON SOURCE LINES 282-286
+.. GENERATED FROM PYTHON SOURCE LINES 284-288
 
 .. code-block:: Python
 
@@ -846,11 +847,11 @@ Create the ground motion load pattern
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 287-288
+.. GENERATED FROM PYTHON SOURCE LINES 289-290
 
 Create the Rayleigh damping
 
-.. GENERATED FROM PYTHON SOURCE LINES 288-309
+.. GENERATED FROM PYTHON SOURCE LINES 290-311
 
 .. code-block:: Python
 
@@ -882,11 +883,11 @@ Create the Rayleigh damping
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 310-311
+.. GENERATED FROM PYTHON SOURCE LINES 312-313
 
 Perform analysis and save results
 
-.. GENERATED FROM PYTHON SOURCE LINES 311-320
+.. GENERATED FROM PYTHON SOURCE LINES 313-322
 
 .. code-block:: Python
 
@@ -906,7 +907,7 @@ Perform analysis and save results
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 321-329
+.. GENERATED FROM PYTHON SOURCE LINES 323-331
 
 .. code-block:: Python
 
@@ -932,12 +933,12 @@ Perform analysis and save results
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 330-332
+.. GENERATED FROM PYTHON SOURCE LINES 332-334
 
 Retrieve Node Responses
 *************************************
 
-.. GENERATED FROM PYTHON SOURCE LINES 332-337
+.. GENERATED FROM PYTHON SOURCE LINES 334-339
 
 .. code-block:: Python
 
@@ -959,7 +960,7 @@ Retrieve Node Responses
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 338-374
+.. GENERATED FROM PYTHON SOURCE LINES 340-376
 
 .. code-block:: Python
 
@@ -1011,7 +1012,7 @@ Retrieve Node Responses
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 375-383
+.. GENERATED FROM PYTHON SOURCE LINES 377-385
 
 .. code-block:: Python
 
@@ -1042,12 +1043,12 @@ Retrieve Node Responses
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 384-386
+.. GENERATED FROM PYTHON SOURCE LINES 386-388
 
 Retrieve Element Responses
 *************************************
 
-.. GENERATED FROM PYTHON SOURCE LINES 386-391
+.. GENERATED FROM PYTHON SOURCE LINES 388-393
 
 .. code-block:: Python
 
@@ -1064,13 +1065,12 @@ Retrieve Element Responses
 
  .. code-block:: none
 
-    OPSTOOL ::  Loading Frame sectionForces response data from 
-    G:\opstool\docs\.opstool.output/RespStepData-seismic.zarr ...
+    OPSTOOL ::  Loading Frame sectionForces response data from G:\opstool\docs\.opstool.output/RespStepData-seismic.zarr ...
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 392-428
+.. GENERATED FROM PYTHON SOURCE LINES 394-430
 
 .. code-block:: Python
 
@@ -1122,7 +1122,7 @@ Retrieve Element Responses
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 429-437
+.. GENERATED FROM PYTHON SOURCE LINES 431-439
 
 .. code-block:: Python
 
@@ -1153,11 +1153,11 @@ Retrieve Element Responses
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 438-439
+.. GENERATED FROM PYTHON SOURCE LINES 440-441
 
 Creating an .MP4 animation
 
-.. GENERATED FROM PYTHON SOURCE LINES 439-451
+.. GENERATED FROM PYTHON SOURCE LINES 441-453
 
 .. code-block:: Python
 
@@ -1198,7 +1198,7 @@ Creating an .MP4 animation
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (1 minutes 50.325 seconds)
+   **Total running time of the script:** (1 minutes 51.709 seconds)
 
 
 .. _sphx_glr_download_auto_examples_quick-start_ex-frame2D.py:

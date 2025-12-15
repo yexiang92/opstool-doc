@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <link rel="shortcut icon" href="../../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>opstool.post.linear_buckling_data - opstool 1.0.22 documentation</title>
+        <title>opstool.post.linear_buckling_data - opstool 1.0.23 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5f771d8e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css?v=572af1d6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
@@ -175,7 +175,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">opstool 1.0.22 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">opstool 1.0.23 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -274,6 +274,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/smart_analysis.html">Smart Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/mc_analysis.html">Moment Curvature Analysis of Section</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/buckling_analysis_linear.html">Linear Buckling Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/responseSpectrumAnalysis.html">Response Spectrum Analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -284,6 +285,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-2DFrame-Pushover.html">Reinforced Concrete Frame Pushover Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
@@ -460,7 +462,7 @@
           d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
         />
       </svg>
-      <span class="gh-source--version-text"> 1.0.22 </span>
+      <span class="gh-source--version-text"> 1.0.23 </span>
     </span>
   </span>
 </a>
@@ -500,6 +502,7 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ops</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">scipy.linalg</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">slin</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.sparse</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">..utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">CONFIGS</span><span class="p">,</span> <span class="n">get_random_color</span>
@@ -519,14 +522,37 @@
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_get_linear_buckling_data</span><span class="p">(</span><span class="n">kmat</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">kgeo</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">n_modes</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Compute linear buckling eigenvalues and vectors.&quot;&quot;&quot;</span>
-    <span class="c1"># symmetric = _is_symmetric(kmat) and _is_symmetric(kgeo)</span>
+    <span class="n">symmetric</span> <span class="o">=</span> <span class="n">_is_symmetric</span><span class="p">(</span><span class="n">kmat</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_is_symmetric</span><span class="p">(</span><span class="n">kgeo</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">symmetric</span><span class="p">:</span>
+        <span class="c1"># use sparse solver for large systems</span>
+        <span class="n">kmat_sparse</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">csr_matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">kmat</span><span class="p">))</span>
+        <span class="n">kgeo_sparse</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">csr_matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">kgeo</span><span class="p">))</span>
+        <span class="n">k_request</span> <span class="o">=</span> <span class="n">n_modes</span> <span class="o">*</span> <span class="mi">2</span>  <span class="c1"># request more to account for possible complex pairs</span>
+        <span class="n">eigvals</span><span class="p">,</span> <span class="n">eigvecs</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigsh</span><span class="p">(</span>
+            <span class="n">A</span><span class="o">=</span><span class="n">kmat_sparse</span><span class="p">,</span>
+            <span class="n">k</span><span class="o">=</span><span class="n">k_request</span><span class="p">,</span>
+            <span class="n">M</span><span class="o">=</span><span class="n">kgeo_sparse</span><span class="p">,</span>
+            <span class="n">sigma</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span>
+            <span class="n">which</span><span class="o">=</span><span class="s2">&quot;LA&quot;</span><span class="p">,</span>
+            <span class="n">return_eigenvectors</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">maxiter</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
+            <span class="n">tol</span><span class="o">=</span><span class="mf">1e-12</span><span class="p">,</span>
+            <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;buckling&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># use dense solver for non-symmetric systems, may be slower for large systems</span>
+        <span class="n">eigvals</span><span class="p">,</span> <span class="n">eigvecs</span> <span class="o">=</span> <span class="n">slin</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">kmat</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">kgeo</span><span class="p">))</span>
 
-    <span class="n">eigvals</span><span class="p">,</span> <span class="n">eigvecs</span> <span class="o">=</span> <span class="n">slin</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">kmat</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">kgeo</span><span class="p">))</span>
+    <span class="c1"># to real</span>
     <span class="n">eigvals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">eigvals</span><span class="p">)</span>
     <span class="n">eigvecs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">eigvecs</span><span class="p">)</span>
-    <span class="n">mask</span> <span class="o">=</span> <span class="n">eigvals</span> <span class="o">&gt;</span> <span class="mi">0</span>
+
+    <span class="c1"># filter positive eigenvalues</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">eigvals</span> <span class="o">&gt;</span> <span class="mf">1e-10</span>  <span class="c1"># use a small positive threshold to avoid numerical errors</span>
     <span class="n">eigvals</span> <span class="o">=</span> <span class="n">eigvals</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
     <span class="n">eigvecs</span> <span class="o">=</span> <span class="n">eigvecs</span><span class="p">[:,</span> <span class="n">mask</span><span class="p">]</span>
+
+    <span class="c1"># sort</span>
     <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">eigvals</span><span class="p">)[:</span><span class="n">n_modes</span><span class="p">]</span>
     <span class="n">eigvals</span> <span class="o">=</span> <span class="n">eigvals</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
     <span class="n">eigvecs</span> <span class="o">=</span> <span class="n">eigvecs</span><span class="p">[:,</span> <span class="n">idx</span><span class="p">]</span>
@@ -586,7 +612,8 @@
 
 <span class="sd">    .. Note::</span>
 <span class="sd">        * Currently you must use the matrix returned by :func:`opstool.pre.get_mck` to input `kmat` and `kgeo`.</span>
-<span class="sd">        * Currently `scipy.linalg.eig &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eig.html&gt;`_ is called to solve the eigenvalue analysis, which can be slow for models with large degrees of freedom.</span>
+<span class="sd">        * Currently `scipy.sparse.linalg.eigsh &lt;https://scipy.github.io/devdocs/reference/generated/scipy.sparse.linalg.eigsh.html#scipy.sparse.linalg.eigsh&gt;`_ is used to solve the eigenvalue analysis for symmetric systems, which is more efficient for large models.</span>
+<span class="sd">        * Currently `scipy.linalg.eig &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eig.html&gt;`_ is called to solve the eigenvalue analysis for non-symmetric systems, which can be slow for models with large degrees of freedom.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -649,6 +676,7 @@
             <span class="n">model_info</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
         <span class="n">eigenvalues</span> <span class="o">=</span> <span class="n">dt</span><span class="p">[</span><span class="s2">&quot;LinearBuckling/BucklingValues&quot;</span><span class="p">][</span><span class="s2">&quot;BucklingValues&quot;</span><span class="p">]</span>
         <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">dt</span><span class="p">[</span><span class="s2">&quot;LinearBuckling/BucklingVectors&quot;</span><span class="p">][</span><span class="s2">&quot;BucklingVectors&quot;</span><span class="p">]</span>
+        <span class="n">dt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span><span class="p">,</span> <span class="n">model_info</span>
 
 
@@ -704,7 +732,7 @@
       
     </aside>
   </div>
-</div><script src="../../../_static/documentation_options.js?v=09ae080f"></script>
+</div><script src="../../../_static/documentation_options.js?v=add68c16"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>

@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <link rel="shortcut icon" href="../../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>opstool.post.responses_data - opstool 1.0.22 documentation</title>
+        <title>opstool.post.responses_data - opstool 1.0.23 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5f771d8e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css?v=572af1d6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
@@ -175,7 +175,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">opstool 1.0.22 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">opstool 1.0.23 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -274,6 +274,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/smart_analysis.html">Smart Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/mc_analysis.html">Moment Curvature Analysis of Section</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/buckling_analysis_linear.html">Linear Buckling Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/responseSpectrumAnalysis.html">Response Spectrum Analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -284,6 +285,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-2DFrame-Pushover.html">Reinforced Concrete Frame Pushover Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
@@ -460,7 +462,7 @@
           d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
         />
       </svg>
-      <span class="gh-source--version-text"> 1.0.22 </span>
+      <span class="gh-source--version-text"> 1.0.23 </span>
     </span>
   </span>
 </a>
@@ -527,7 +529,7 @@
     <span class="n">elastic_frame_sec_points</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">compute_mechanical_measures</span><span class="p">:</span> <span class="nb">bool</span>
     <span class="n">project_gauss_to_nodes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
-    <span class="n">nd_material_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">section_response_dof</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span>
     <span class="n">dtype</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">]</span>
     <span class="c1"># -------------------------------------------</span>
     <span class="n">save_nodal_resp</span><span class="p">:</span> <span class="nb">bool</span>
@@ -556,6 +558,7 @@
 
 <span class="n">_POST_ARGS</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
     <span class="n">elastic_frame_sec_points</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+    <span class="n">section_response_dof</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">compute_mechanical_measures</span><span class="o">=</span><span class="s2">&quot;All&quot;</span><span class="p">,</span>
     <span class="n">project_gauss_to_nodes</span><span class="o">=</span><span class="s2">&quot;copy&quot;</span><span class="p">,</span>
     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;int&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="s2">&quot;float&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">},</span>
@@ -610,6 +613,17 @@
 <span class="sd">        * elastic_frame_sec_points: int, default: 7</span>
 <span class="sd">            The number of elastic frame elements section points.</span>
 <span class="sd">            A larger number may result in a larger file size.</span>
+<span class="sd">        * section_response_dof: Optional[dict], default: None</span>
+<span class="sd">            A dictionary to specify the section response type for different section types.</span>
+<span class="sd">            The keys are the section types, and the values are the response types.</span>
+<span class="sd">            For example, to specify the response type for &quot;SectionAggregator&quot;, you can set:</span>
+<span class="sd">            ..  code-block:: python</span>
+
+<span class="sd">                {</span>
+<span class="sd">                    &quot;SectionAggregator&quot;: [&quot;P&quot;, &quot;MZ&quot;, &quot;MY&quot;, &quot;T&quot;, &quot;VY&quot;, &quot;VZ&quot;]  # means you use the section &quot;P&quot;, &quot;MZ&quot;, &quot;MY&quot;, &quot;T&quot; and addtional &quot;VY&quot;, &quot;VZ&quot; dof.</span>
+<span class="sd">                }</span>
+<span class="sd">            This is because for some section types, such as ``Aggregator``, the number and order of the degrees of freedom are specified by the user.</span>
+<span class="sd">            For other sections, the program can determine them automatically.</span>
 <span class="sd">        * compute_mechanical_measures: Union[bool, str, dict], default: &quot;All&quot;</span>
 <span class="sd">            Whether to compute mechanical measures for ``solid and planar elements``,</span>
 <span class="sd">            including principal stresses, principal strains, von Mises stresses, etc.</span>
@@ -744,6 +758,20 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_set_resp</span><span class="p">()</span>
 
+        <span class="bp">self</span><span class="o">.</span><span class="n">_RESPS</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_ModelInfo</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_NodalResp</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_FrameResp</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_TrussResp</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_LinkResp</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_ShellResp</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_FiberSecResp</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_PlaneResp</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_BrickResp</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_ContactResp</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_SensitivityResp</span><span class="p">,</span>
+        <span class="p">]</span>
+
     <span class="k">def</span><span class="w"> </span><span class="nf">_set_resp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_set_model_info</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_set_node_resp</span><span class="p">()</span>
@@ -758,20 +786,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_set_sensitivity_resp</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_get_resp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">output</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_ModelInfo</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_NodalResp</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_FrameResp</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_TrussResp</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_LinkResp</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_ShellResp</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_FiberSecResp</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_PlaneResp</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_BrickResp</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_ContactResp</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_SensitivityResp</span><span class="p">,</span>
-        <span class="p">]</span>
-        <span class="k">return</span> <span class="n">output</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_RESPS</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_set_model_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ModelInfo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -805,6 +820,7 @@
                     <span class="n">frame_load_data</span><span class="p">,</span>
                     <span class="n">elastic_frame_sec_points</span><span class="o">=</span><span class="n">_POST_ARGS</span><span class="o">.</span><span class="n">elastic_frame_sec_points</span><span class="p">,</span>
                     <span class="n">model_update</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_model_update</span><span class="p">,</span>
+                    <span class="n">section_response_dof</span><span class="o">=</span><span class="n">_POST_ARGS</span><span class="o">.</span><span class="n">section_response_dof</span><span class="p">,</span>
                     <span class="n">dtype</span><span class="o">=</span><span class="n">_POST_ARGS</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span>
                 <span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
@@ -975,6 +991,46 @@
             <span class="n">time</span> <span class="o">=</span> <span class="n">ops</span><span class="o">.</span><span class="n">getTime</span><span class="p">()</span>
             <span class="n">color</span> <span class="o">=</span> <span class="n">get_random_color</span><span class="p">()</span>
             <span class="n">CONSOLE</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">PKG_PREFIX</span><span class="si">}</span><span class="s2"> The responses data at time [bold </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">]</span><span class="si">{</span><span class="n">time</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">[/] has been fetched!&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="CreateODB.combine_response_spectrum">
+<a class="viewcode-back" href="../../../src/api/_autosummary/opstool.post.CreateODB.html#opstool.post.CreateODB.combine_response_spectrum">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">combine_response_spectrum</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;srss&quot;</span><span class="p">,</span>
+        <span class="n">lambdas</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">damping</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span>
+        <span class="n">scale</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Combine modal responses data, only for response spectrum analysis.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        method : {&quot;srss&quot;, &quot;cqc&quot;}</span>
+<span class="sd">            Combination method.</span>
+<span class="sd">        lambdas : array-like, optional</span>
+<span class="sd">            Modal frequencies. Required for CQC.</span>
+<span class="sd">        damping : float or array-like</span>
+<span class="sd">            Modal damping ratios. Optional for CQC.</span>
+<span class="sd">        scale : array-like or None</span>
+<span class="sd">            Modal scaling factors. Optional for CQC.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">._combine_response_spectrum</span><span class="w"> </span><span class="kn">import</span> <span class="n">combine_response_spectrum</span>
+
+        <span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_resp</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]:</span>  <span class="c1"># Skip ModelInfo</span>
+            <span class="k">if</span> <span class="n">resp</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">resp_dataset</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+                <span class="n">exclude_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ys&quot;</span><span class="p">,</span> <span class="s2">&quot;zs&quot;</span><span class="p">,</span> <span class="s2">&quot;areas&quot;</span><span class="p">,</span> <span class="s2">&quot;matTags&quot;</span><span class="p">,</span> <span class="s2">&quot;sectionLocs&quot;</span><span class="p">,</span> <span class="s2">&quot;lambdas&quot;</span><span class="p">]</span>
+                <span class="n">rcombined</span> <span class="o">=</span> <span class="n">combine_response_spectrum</span><span class="p">(</span>
+                    <span class="n">resp_dataset</span><span class="p">,</span>
+                    <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span>
+                    <span class="n">lambdas</span><span class="o">=</span><span class="n">lambdas</span><span class="p">,</span>
+                    <span class="n">damping</span><span class="o">=</span><span class="n">damping</span><span class="p">,</span>
+                    <span class="n">scale</span><span class="o">=</span><span class="n">scale</span><span class="p">,</span>
+                    <span class="n">time_dim</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">,</span>
+                    <span class="n">exclude_vars</span><span class="o">=</span><span class="n">exclude_vars</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="n">resp</span><span class="o">.</span><span class="n">update_data</span><span class="p">(</span><span class="n">rcombined</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="CreateODB.save_response">
@@ -1178,12 +1234,14 @@
         <span class="n">filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">RESULTS_DIR</span><span class="si">}</span><span class="s2">/&quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">RESP_FILE_NAME</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">odb_tag</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="k">with</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_datatree</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">()</span> <span class="k">as</span> <span class="n">dt</span><span class="p">:</span>
             <span class="n">data</span> <span class="o">=</span> <span class="n">ModelInfoStepData</span><span class="o">.</span><span class="n">read_data</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">data_type</span><span class="p">)</span>
+            <span class="n">dt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">RESULTS_DIR</span><span class="si">}</span><span class="s2">/&quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">MODEL_FILE_NAME</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">odb_tag</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="k">with</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_datatree</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">()</span> <span class="k">as</span> <span class="n">dt</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">data_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dt</span><span class="p">[</span><span class="s2">&quot;ModelInfo&quot;</span><span class="p">]:</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Data type </span><span class="si">{</span><span class="n">data_type</span><span class="si">}</span><span class="s2"> not found in model data.&quot;</span><span class="p">)</span>  <span class="c1"># noqa: TRY003</span>
             <span class="n">data</span> <span class="o">=</span> <span class="n">dt</span><span class="p">[</span><span class="s2">&quot;ModelInfo&quot;</span><span class="p">][</span><span class="n">data_type</span><span class="p">][</span><span class="n">data_type</span><span class="p">]</span>
+            <span class="n">dt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="n">color</span> <span class="o">=</span> <span class="n">get_random_color</span><span class="p">()</span>
     <span class="n">CONSOLE</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">PKG_PREFIX</span><span class="si">}</span><span class="s2"> Loading </span><span class="si">{</span><span class="n">data_type</span><span class="si">}</span><span class="s2"> data from [bold </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">]</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">[/] ...&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">data</span></div>
@@ -1587,7 +1645,7 @@
       
     </aside>
   </div>
-</div><script src="../../../_static/documentation_options.js?v=09ae080f"></script>
+</div><script src="../../../_static/documentation_options.js?v=add68c16"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>

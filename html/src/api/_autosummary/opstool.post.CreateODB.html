@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="get_model_data" href="opstool.post.get_model_data.html" /><link rel="prev" title="save_linear_buckling_data" href="opstool.post.save_linear_buckling_data.html" />
 
     <link rel="shortcut icon" href="../../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>CreateODB - opstool 1.0.23 documentation</title>
+        <title>CreateODB - opstool 1.0.24 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5f771d8e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css?v=572af1d6" />
@@ -176,7 +176,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">opstool 1.0.23 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">opstool 1.0.24 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -275,6 +275,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../analysis/smart_analysis.html">Smart Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../analysis/mc_analysis.html">Moment Curvature Analysis of Section</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../analysis/buckling_analysis_linear.html">Linear Buckling Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../analysis/responseSpectrumAnalysis.html">Response Spectrum Analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -285,6 +286,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-2DFrame-Pushover.html">Reinforced Concrete Frame Pushover Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
@@ -461,7 +463,7 @@
           d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
         />
       </svg>
-      <span class="gh-source--version-text"> 1.0.23 </span>
+      <span class="gh-source--version-text"> 1.0.24 </span>
     </span>
   </span>
 </a>
@@ -532,6 +534,23 @@ If some nodes or elements are deleted during the analysis, you should set this p
 <li><dl class="simple">
 <dt>elastic_frame_sec_points: int, default: 7</dt><dd><p>The number of elastic frame elements section points.
 A larger number may result in a larger file size.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>section_response_dof: Optional[dict], default: None</dt><dd><p>A dictionary to specify the section response type for different section types.
+The keys are the section types, and the values are the response types.
+For example, to specify the response type for “SectionAggregator”, you can set:
+..  code-block:: python</p>
+<blockquote>
+<div><dl class="simple">
+<dt>{</dt><dd><p>“SectionAggregator”: [“P”, “MZ”, “MY”, “T”, “VY”, “VZ”]  # means you use the section “P”, “MZ”, “MY”, “T” and addtional “VY”, “VZ” dof.</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>This is because for some section types, such as <code class="docutils literal notranslate"><span class="pre">Aggregator</span></code>, the number and order of the degrees of freedom are specified by the user.
+For other sections, the program can determine them automatically.</p>
 </dd>
 </dl>
 </li>
@@ -724,19 +743,22 @@ Otherwise, unexpected behavior may occur.</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#opstool.post.CreateODB.fetch_response_step" title="opstool.post.CreateODB.fetch_response_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fetch_response_step</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#opstool.post.CreateODB.combine_response_spectrum" title="opstool.post.CreateODB.combine_response_spectrum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">combine_response_spectrum</span></code></a></p></td>
+<td><p>Combine modal responses data, only for response spectrum analysis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#opstool.post.CreateODB.fetch_response_step" title="opstool.post.CreateODB.fetch_response_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fetch_response_step</span></code></a></p></td>
 <td><p>Extract response data for the current analysis step.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#opstool.post.CreateODB.reset" title="opstool.post.CreateODB.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#opstool.post.CreateODB.reset" title="opstool.post.CreateODB.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a></p></td>
 <td><p>Reset the ODB model.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#opstool.post.CreateODB.save_eigen_data" title="opstool.post.CreateODB.save_eigen_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_eigen_data</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#opstool.post.CreateODB.save_eigen_data" title="opstool.post.CreateODB.save_eigen_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_eigen_data</span></code></a></p></td>
 <td><p>Save modal analysis data.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#opstool.post.CreateODB.save_model_data" title="opstool.post.CreateODB.save_model_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_model_data</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#opstool.post.CreateODB.save_model_data" title="opstool.post.CreateODB.save_model_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_model_data</span></code></a></p></td>
 <td><p>Save the model data from the current domain.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#opstool.post.CreateODB.save_response" title="opstool.post.CreateODB.save_response"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_response</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#opstool.post.CreateODB.save_response" title="opstool.post.CreateODB.save_response"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_response</span></code></a></p></td>
 <td><p>Save all response data to a file name <code class="docutils literal notranslate"><span class="pre">RespStepData-{odb_tag}.nc</span></code>.</p></td>
 </tr>
 </tbody>
@@ -764,11 +786,32 @@ Otherwise, unexpected behavior may occur.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="opstool.post.CreateODB.combine_response_spectrum">
+<span class="sig-name descname"><span class="pre">combine_response_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'srss'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambdas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/opstool/post/responses_data.html#CreateODB.combine_response_spectrum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opstool.post.CreateODB.combine_response_spectrum" title="Link to this definition">¶</a></dt>
+<dd><p>Combine modal responses data, only for response spectrum analysis.</p>
+<section id="id2">
+<h3>Parameters<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>method<span class="classifier">{“srss”, “cqc”}</span></dt><dd><p>Combination method.</p>
+</dd>
+<dt>lambdas<span class="classifier">array-like, optional</span></dt><dd><p>Modal frequencies. Required for CQC.</p>
+</dd>
+<dt>damping<span class="classifier">float or array-like</span></dt><dd><p>Modal damping ratios. Optional for CQC.</p>
+</dd>
+<dt>scale<span class="classifier">array-like or None</span></dt><dd><p>Modal scaling factors. Optional for CQC.</p>
+</dd>
+</dl>
+</section>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="opstool.post.CreateODB.save_response">
 <span class="sig-name descname"><span class="pre">save_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zlib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/opstool/post/responses_data.html#CreateODB.save_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opstool.post.CreateODB.save_response" title="Link to this definition">¶</a></dt>
 <dd><p>Save all response data to a file name <code class="docutils literal notranslate"><span class="pre">RespStepData-{odb_tag}.nc</span></code>.</p>
-<section id="id2">
-<h3>Parameters<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<section id="id3">
+<h3>Parameters<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
 <dl class="simple">
 <dt>zlib: bool, optional, default: False</dt><dd><p>If True, the data is saved compressed,
 which is useful when your result files are expected to be large,
@@ -785,8 +828,8 @@ This option is only valid when <code class="docutils literal notranslate"><span 
 <dt class="sig sig-object py" id="opstool.post.CreateODB.save_eigen_data">
 <span class="sig-name descname"><span class="pre">save_eigen_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode_tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'-genBandArpack'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/opstool/post/responses_data.html#CreateODB.save_eigen_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opstool.post.CreateODB.save_eigen_data" title="Link to this definition">¶</a></dt>
 <dd><p>Save modal analysis data.</p>
-<section id="id3">
-<h3>Parameters<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<section id="id4">
+<h3>Parameters<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
 <dl class="simple">
 <dt>mode_tag<span class="classifier">int, optional,</span></dt><dd><p>Modal tag, all modal data smaller than this modal tag will be saved, by default 1</p>
 </dd>
@@ -870,6 +913,7 @@ This option is only valid when <code class="docutils literal notranslate"><span 
 <li><a class="reference internal" href="#opstool.post.CreateODB"><code class="docutils literal notranslate"><span class="pre">CreateODB</span></code></a><ul>
 <li><a class="reference internal" href="#opstool.post.CreateODB.reset"><code class="docutils literal notranslate"><span class="pre">CreateODB.reset()</span></code></a></li>
 <li><a class="reference internal" href="#opstool.post.CreateODB.fetch_response_step"><code class="docutils literal notranslate"><span class="pre">CreateODB.fetch_response_step()</span></code></a></li>
+<li><a class="reference internal" href="#opstool.post.CreateODB.combine_response_spectrum"><code class="docutils literal notranslate"><span class="pre">CreateODB.combine_response_spectrum()</span></code></a></li>
 <li><a class="reference internal" href="#opstool.post.CreateODB.save_response"><code class="docutils literal notranslate"><span class="pre">CreateODB.save_response()</span></code></a></li>
 <li><a class="reference internal" href="#opstool.post.CreateODB.save_eigen_data"><code class="docutils literal notranslate"><span class="pre">CreateODB.save_eigen_data()</span></code></a></li>
 <li><a class="reference internal" href="#opstool.post.CreateODB.save_model_data"><code class="docutils literal notranslate"><span class="pre">CreateODB.save_model_data()</span></code></a></li>
@@ -886,7 +930,7 @@ This option is only valid when <code class="docutils literal notranslate"><span 
       
     </aside>
   </div>
-</div><script src="../../../_static/documentation_options.js?v=add68c16"></script>
+</div><script src="../../../_static/documentation_options.js?v=665f1cdb"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>

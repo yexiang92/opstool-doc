@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <link rel="shortcut icon" href="../../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>opstool.post.eigen_data - opstool 1.0.22 documentation</title>
+        <title>opstool.post.eigen_data - opstool 1.0.23 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5f771d8e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css?v=572af1d6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
@@ -175,7 +175,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">opstool 1.0.22 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">opstool 1.0.23 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -274,6 +274,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/smart_analysis.html">Smart Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/mc_analysis.html">Moment Curvature Analysis of Section</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/buckling_analysis_linear.html">Linear Buckling Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/responseSpectrumAnalysis.html">Response Spectrum Analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -284,6 +285,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-2DFrame-Pushover.html">Reinforced Concrete Frame Pushover Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
@@ -460,7 +462,7 @@
           d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
         />
       </svg>
-      <span class="gh-source--version-text"> 1.0.22 </span>
+      <span class="gh-source--version-text"> 1.0.23 </span>
     </span>
   </span>
 </a>
@@ -495,15 +497,17 @@
         </div>
         <article role="main" id="furo-main-content">
           <h1>Source code for opstool.post.eigen_data</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Literal</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ops</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">..utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">CONFIGS</span><span class="p">,</span> <span class="n">get_random_color</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">._post_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">generate_chunk_encoding_for_datatree</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._post_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">Beam3DDispInterpolator</span><span class="p">,</span> <span class="n">generate_chunk_encoding_for_datatree</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">.model_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">GetFEMData</span>
 
 
@@ -554,6 +558,33 @@
     <span class="k">return</span> <span class="n">data</span>
 
 
+<span class="k">def</span><span class="w"> </span><span class="nf">_get_eigen_vectors</span><span class="p">(</span><span class="n">mode_tag</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">node_tags</span><span class="p">:</span> <span class="nb">list</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="n">eigenvectors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">mode_tag_i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">mode_tag</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">eigen_vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">node_tags</span><span class="p">),</span> <span class="mi">6</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">Tag</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">node_tags</span><span class="p">):</span>
+            <span class="n">coord</span> <span class="o">=</span> <span class="n">ops</span><span class="o">.</span><span class="n">nodeCoord</span><span class="p">(</span><span class="n">Tag</span><span class="p">)</span>
+            <span class="n">eigen</span> <span class="o">=</span> <span class="n">ops</span><span class="o">.</span><span class="n">nodeEigenvector</span><span class="p">(</span><span class="n">Tag</span><span class="p">,</span> <span class="n">mode_tag_i</span><span class="p">)</span>
+            <span class="n">ndm</span><span class="p">,</span> <span class="n">ndf</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">coord</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">eigen</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">ndm</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">eigen</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">ndm</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">ndf</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">eigen</span> <span class="o">=</span> <span class="p">[</span><span class="n">eigen</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">eigen</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">eigen</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="n">ndm</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">ndf</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">eigen</span> <span class="o">=</span> <span class="p">[</span><span class="n">eigen</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">eigen</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="n">ndm</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">ndf</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">eigen</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">ndm</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">ndf</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">eigen</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">ndm</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">ndf</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+                <span class="n">eigen</span> <span class="o">=</span> <span class="p">[</span><span class="n">eigen</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">eigen</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">eigen</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="n">ndm</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">ndf</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">:</span>
+                <span class="n">eigen</span> <span class="o">=</span> <span class="n">eigen</span><span class="p">[:</span><span class="mi">6</span><span class="p">]</span>
+            <span class="n">eigen_vector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">eigen</span>
+        <span class="n">eigenvectors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">eigen_vector</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">eigenvectors</span><span class="p">)</span>
+
+
 <span class="k">def</span><span class="w"> </span><span class="nf">_get_eigen_info</span><span class="p">(</span>
     <span class="n">mode_tag</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
     <span class="n">solver</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;-genBandArpack&quot;</span><span class="p">,</span>
@@ -576,31 +607,9 @@
 <span class="sd">        Eigen vectors data.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">modal_props</span> <span class="o">=</span> <span class="n">_get_modal_properties</span><span class="p">(</span><span class="n">mode_tag</span><span class="p">,</span> <span class="n">solver</span><span class="p">)</span>
-    <span class="n">eigenvectors</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">node_tags</span> <span class="o">=</span> <span class="n">ops</span><span class="o">.</span><span class="n">getNodeTags</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">mode_tag_i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">mode_tag</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="n">eigen_vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">node_tags</span><span class="p">),</span> <span class="mi">6</span><span class="p">))</span>
-        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">Tag</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">node_tags</span><span class="p">):</span>
-            <span class="n">coord</span> <span class="o">=</span> <span class="n">ops</span><span class="o">.</span><span class="n">nodeCoord</span><span class="p">(</span><span class="n">Tag</span><span class="p">)</span>
-            <span class="n">eigen</span> <span class="o">=</span> <span class="n">ops</span><span class="o">.</span><span class="n">nodeEigenvector</span><span class="p">(</span><span class="n">Tag</span><span class="p">,</span> <span class="n">mode_tag_i</span><span class="p">)</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">coord</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="n">coord</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
-                <span class="n">eigen</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
-            <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">coord</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-                <span class="n">coord</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
-                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">eigen</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-                    <span class="n">eigen</span> <span class="o">=</span> <span class="p">[</span><span class="n">eigen</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">eigen</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">eigen</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
-                <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">eigen</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-                    <span class="n">eigen</span> <span class="o">=</span> <span class="p">[</span><span class="n">eigen</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">eigen</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
-                <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">eigen</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                    <span class="n">eigen</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">eigen</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-                    <span class="n">eigen</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
-                <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">eigen</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">:</span>
-                    <span class="n">eigen</span> <span class="o">=</span> <span class="n">eigen</span><span class="p">[:</span><span class="mi">6</span><span class="p">]</span>
-            <span class="n">eigen_vector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">eigen</span>
-        <span class="n">eigenvectors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">eigen_vector</span><span class="p">)</span>
+    <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">_get_eigen_vectors</span><span class="p">(</span><span class="n">mode_tag</span><span class="p">,</span> <span class="n">node_tags</span><span class="p">)</span>
+
     <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
         <span class="n">eigenvectors</span><span class="p">,</span>
         <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;modeTags&quot;</span><span class="p">,</span> <span class="s2">&quot;nodeTags&quot;</span><span class="p">,</span> <span class="s2">&quot;DOFs&quot;</span><span class="p">],</span>
@@ -614,12 +623,67 @@
     <span class="k">return</span> <span class="n">modal_props</span><span class="p">,</span> <span class="n">eigenvectors</span>
 
 
+<span class="k">def</span><span class="w"> </span><span class="nf">_interpolator_eigenvectors</span><span class="p">(</span><span class="n">model_info</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">eigen_vectors</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
+    <span class="n">node_coord</span> <span class="o">=</span> <span class="n">model_info</span><span class="p">[</span><span class="s2">&quot;NodalData&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">node_tags</span> <span class="o">=</span> <span class="n">model_info</span><span class="p">[</span><span class="s2">&quot;NodalData&quot;</span><span class="p">][</span><span class="s2">&quot;nodeTags&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">axs</span><span class="p">,</span> <span class="n">ays</span><span class="p">,</span> <span class="n">azs</span><span class="p">,</span> <span class="n">cells</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="n">beam_data</span> <span class="o">=</span> <span class="n">model_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;BeamData&quot;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">beam_data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+    <span class="n">link_data</span> <span class="o">=</span> <span class="n">model_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LinkData&quot;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="p">[</span><span class="n">beam_data</span><span class="p">,</span> <span class="n">link_data</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">cell</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">info</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;nodeI&quot;</span><span class="p">,</span> <span class="s2">&quot;nodeJ&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span>
+            <span class="n">ax</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">info</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;xaxis-x&quot;</span><span class="p">,</span> <span class="s2">&quot;xaxis-y&quot;</span><span class="p">,</span> <span class="s2">&quot;xaxis-z&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span>
+            <span class="n">ay</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">info</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;yaxis-x&quot;</span><span class="p">,</span> <span class="s2">&quot;yaxis-y&quot;</span><span class="p">,</span> <span class="s2">&quot;yaxis-z&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span>
+            <span class="n">az</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">info</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;zaxis-x&quot;</span><span class="p">,</span> <span class="s2">&quot;zaxis-y&quot;</span><span class="p">,</span> <span class="s2">&quot;zaxis-z&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span>
+            <span class="n">cells</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
+            <span class="n">axs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+            <span class="n">ays</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ay</span><span class="p">)</span>
+            <span class="n">azs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">az</span><span class="p">)</span>
+    <span class="n">truss_data</span> <span class="o">=</span> <span class="n">model_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;TrussData&quot;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">truss_data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">cell</span> <span class="o">=</span> <span class="n">truss_data</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">cells</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;nodeI&quot;</span><span class="p">,</span> <span class="s2">&quot;nodeJ&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">cell</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="n">ay</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">cell</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="n">az</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">cell</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="n">cells</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
+        <span class="n">axs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+        <span class="n">ays</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ay</span><span class="p">)</span>
+        <span class="n">azs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">az</span><span class="p">)</span>
+    <span class="n">cells</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">cells</span><span class="p">)</span>
+    <span class="n">axs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">axs</span><span class="p">)</span>
+    <span class="n">ays</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">ays</span><span class="p">)</span>
+    <span class="n">azs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">azs</span><span class="p">)</span>
+    <span class="n">eigen_vec</span> <span class="o">=</span> <span class="n">eigen_vectors</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">nodeTags</span><span class="o">=</span><span class="n">node_tags</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">interp</span> <span class="o">=</span> <span class="n">Beam3DDispInterpolator</span><span class="p">(</span><span class="n">node_coord</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="n">axs</span><span class="p">,</span> <span class="n">ays</span><span class="p">,</span> <span class="n">azs</span><span class="p">,</span> <span class="n">one_based_node_id</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">local_eigen_vec</span> <span class="o">=</span> <span class="n">interp</span><span class="o">.</span><span class="n">global_to_local_ends</span><span class="p">(</span><span class="n">eigen_vec</span><span class="p">)</span>
+    <span class="n">points</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">cells</span> <span class="o">=</span> <span class="n">interp</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">local_eigen_vec</span><span class="p">,</span> <span class="n">npts_per_ele</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;points&quot;</span><span class="p">:</span> <span class="p">((</span><span class="s2">&quot;pointID&quot;</span><span class="p">,</span> <span class="s2">&quot;coords&quot;</span><span class="p">),</span> <span class="n">points</span><span class="p">),</span>
+            <span class="s2">&quot;eigenVectors&quot;</span><span class="p">:</span> <span class="p">((</span><span class="s2">&quot;modeTags&quot;</span><span class="p">,</span> <span class="s2">&quot;pointID&quot;</span><span class="p">,</span> <span class="s2">&quot;DOFs&quot;</span><span class="p">),</span> <span class="n">response</span><span class="p">),</span>
+            <span class="s2">&quot;cells&quot;</span><span class="p">:</span> <span class="p">((</span><span class="s2">&quot;lines&quot;</span><span class="p">,</span> <span class="s2">&quot;info&quot;</span><span class="p">),</span> <span class="n">cells</span><span class="p">),</span>
+        <span class="p">},</span>
+        <span class="n">coords</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&quot;modeTags&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">eigen_vectors</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="s2">&quot;pointID&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">points</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+            <span class="s2">&quot;coords&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;z&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;DOFs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;UX&quot;</span><span class="p">,</span> <span class="s2">&quot;UY&quot;</span><span class="p">,</span> <span class="s2">&quot;UZ&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;lines&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">cells</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+            <span class="s2">&quot;info&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;numNodes&quot;</span><span class="p">,</span> <span class="s2">&quot;nodeI&quot;</span><span class="p">,</span> <span class="s2">&quot;nodeJ&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">ds</span>
+
+
 <div class="viewcode-block" id="save_eigen_data">
 <a class="viewcode-back" href="../../../src/api/_autosummary/opstool.post.save_eigen_data.html#opstool.post.save_eigen_data">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">save_eigen_data</span><span class="p">(</span>
-    <span class="n">odb_tag</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">odb_tag</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
     <span class="n">mode_tag</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
     <span class="n">solver</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;-genBandArpack&quot;</span><span class="p">,</span> <span class="s2">&quot;-fullGenLapack&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;-genBandArpack&quot;</span><span class="p">,</span>
+    <span class="n">interpolate_beam</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Save modal analysis data.</span>
 
@@ -629,6 +693,10 @@
 <span class="sd">        Output database tag, the data will be saved in ``EigenData-{odb_tag}.nc``.</span>
 <span class="sd">    mode_tag : int, optional,</span>
 <span class="sd">        Modal tag, all modal data smaller than this modal tag will be saved, by default 1</span>
+<span class="sd">    interpolate_beam : bool, optional,</span>
+<span class="sd">        Whether to interpolate beam eigenvectors for better visualization, by default True</span>
+<span class="sd">        If True, the eigenvectors of beam elements will be interpolated by shape functions,</span>
+<span class="sd">        i.e., more points will be generated along the beam elements.</span>
 <span class="sd">    solver : str, optional,</span>
 <span class="sd">       OpenSees&#39; eigenvalue analysis solver, by default &quot;-genBandArpack&quot;.</span>
 <span class="sd">       See `eigen Command &lt;https://opensees.github.io/OpenSeesDocumentation/user/manual/analysis/eigen.html&gt;`_</span>
@@ -650,6 +718,12 @@
         <span class="n">eigen_data</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;ModelInfo/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">({</span><span class="n">key</span><span class="p">:</span> <span class="n">model_info</span><span class="p">[</span><span class="n">key</span><span class="p">]})</span>
     <span class="n">eigen_data</span><span class="p">[</span><span class="s2">&quot;Eigen/ModalProps&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">({</span><span class="n">modal_props</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">modal_props</span><span class="p">})</span>
     <span class="n">eigen_data</span><span class="p">[</span><span class="s2">&quot;Eigen/EigenVectors&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">({</span><span class="n">eigen_vectors</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">eigen_vectors</span><span class="p">})</span>
+    <span class="c1"># interpolated beam eigenvectors</span>
+    <span class="k">if</span> <span class="n">interpolate_beam</span><span class="p">:</span>
+        <span class="n">interp_eigenvectors</span> <span class="o">=</span> <span class="n">_interpolator_eigenvectors</span><span class="p">(</span><span class="n">model_info</span><span class="p">,</span> <span class="n">eigen_vectors</span><span class="p">)</span>
+        <span class="n">eigen_data</span><span class="p">[</span><span class="s2">&quot;Eigen/InterpolatedEigenVectors&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">interp_eigenvectors</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">eigen_data</span><span class="p">[</span><span class="s2">&quot;Eigen/InterpolatedEigenVectors&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
     <span class="n">dt</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataTree</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">eigen_data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">EIGEN_FILE_NAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">odb_format</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;zarr&quot;</span><span class="p">:</span>
         <span class="n">encoding</span> <span class="o">=</span> <span class="n">generate_chunk_encoding_for_datatree</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">target_chunk_mb</span><span class="o">=</span><span class="mf">10.0</span><span class="p">)</span>
@@ -663,7 +737,7 @@
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">load_eigen_data</span><span class="p">(</span>
-    <span class="n">odb_tag</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">odb_tag</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
     <span class="n">mode_tag</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
     <span class="n">solver</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;-genBandArpack&quot;</span><span class="p">,</span>
     <span class="n">resave</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -692,14 +766,16 @@
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No model data found, please check your model!&quot;</span><span class="p">)</span>  <span class="c1"># noqa: TRY003</span>
         <span class="n">model_props</span> <span class="o">=</span> <span class="n">dt</span><span class="p">[</span><span class="s2">&quot;Eigen/ModalProps&quot;</span><span class="p">][</span><span class="s2">&quot;ModalProps&quot;</span><span class="p">]</span>
         <span class="n">eigen_vectors</span> <span class="o">=</span> <span class="n">dt</span><span class="p">[</span><span class="s2">&quot;Eigen/EigenVectors&quot;</span><span class="p">][</span><span class="s2">&quot;EigenVectors&quot;</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">model_props</span><span class="p">,</span> <span class="n">eigen_vectors</span><span class="p">,</span> <span class="n">model_info</span>
+        <span class="n">interp_eigenvectors</span> <span class="o">=</span> <span class="n">dt</span><span class="p">[</span><span class="s2">&quot;Eigen/InterpolatedEigenVectors&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">interp_eigenvectors</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">interp_eigenvectors</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">dt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">model_props</span><span class="p">,</span> <span class="n">eigen_vectors</span><span class="p">,</span> <span class="n">interp_eigenvectors</span><span class="p">,</span> <span class="n">model_info</span>
 
 
 <div class="viewcode-block" id="get_eigen_data">
 <a class="viewcode-back" href="../../../src/api/_autosummary/opstool.post.get_eigen_data.html#opstool.post.get_eigen_data">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">get_eigen_data</span><span class="p">(</span>
-    <span class="n">odb_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_eigen_data</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the eigenvalue data from the saved file.</span>
 
 <span class="sd">    Parameters</span>
@@ -714,7 +790,7 @@
 <span class="sd">    eigenvectors: xr.DataArray</span>
 <span class="sd">        Eigen vectors data.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">model_props</span><span class="p">,</span> <span class="n">eigen_vectors</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">load_eigen_data</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">resave</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">model_props</span><span class="p">,</span> <span class="n">eigen_vectors</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">load_eigen_data</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">resave</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">model_props</span><span class="p">,</span> <span class="n">eigen_vectors</span></div>
 
 </pre></div>
@@ -749,7 +825,7 @@
       
     </aside>
   </div>
-</div><script src="../../../_static/documentation_options.js?v=09ae080f"></script>
+</div><script src="../../../_static/documentation_options.js?v=add68c16"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
