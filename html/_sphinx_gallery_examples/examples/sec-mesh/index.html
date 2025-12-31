@@ -1,0 +1,594 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Bridge superstructure section" href="ex-bridge-deck.html" /><link rel="prev" title="Gmsh2OPS: Linear shell arch model" href="../preprocessing/ex-read-gmsh-4.html" />
+
+    <link rel="shortcut icon" href="../../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
+        <title>Fiber Section Mesh - opstool 1.0.25 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css?v=572af1d6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/_css/shared.css?v=e989f5d6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/_css/furo.css?v=75230d29" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack--monospace: Monaco, monospace;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #1d2331;
+  --color-code-foreground: #d4d2c8;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">opstool 1.0.25 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../../_static/logo-light.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../../_static/logo-dark.png" alt="Dark Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Quick Start</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../known_issues.html">Known Issues</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../quick_start.html">Quick Start</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Quick Start</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../quick-start/ex-frame2D.html">Two-Dimensional Moment Frame Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quick-start/ex-quick-plot-model.html">Quick Model and Eigen Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../quick-start/vis-megatall.html">606 m Mega-tall Building</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quick_start.html#features">Features</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/pre/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/pre/sec_mesh.html">Fiber Section Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/pre/read_gmsh.html">Converting GMSH to OpenSeesPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/pre/tcl2py.html">Convert Tcl code to OpenSeesPy commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/pre/unit_system.html">Automatic Unit Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/pre/model_data.html">Quickly apply gravity loads and obtain mass and stiffness matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/pre/loads.html">Loads Processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/post/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/post/eigen.html">Eigenvalue Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/post/nodal_resp.html">Node Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/post/frame_resp.html">Frame element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/post/fiber_sec_resp.html">Post-processing for fiber section responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/post/truss_resp.html">Truss element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/post/shell_resp.html">Shell element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/post/plane_up_resp.html">Planar element response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/post/brick_resp.html">Brick element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/post/sensitivity_resp.html">Simple cantilever for load-controlled sensitivity analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/post/unit_transform.html">Unit conversion in post-processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../vis-guide/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../vis-guide/plotly/index.html">Plotyly-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Plotyly-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-01-model-plotly.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-02-eigen-plotly.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-03-nodal-resp-plotly.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-04-frame-resp-plotly.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-05-truss-resp-plotly.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-06-shell-resp-plotly.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-07-plane-resp-plotly.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/plotly/ex-08-brick-resp-plotly.html">Solid Element Responses</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../vis-guide/pyvista/index.html">Pyvista-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Pyvista-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-01-model-pyvista.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-02-eigen-pyvista.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-03-nodal-resp-pyvista.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-04-frame-resp-pyvista.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-05-truss-resp-pyvista.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-06-shell-resp-pyvista.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-07-plane-resp-pyvista.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vis-guide/pyvista/ex-08-brick-resp-pyvista.html">Solid Element Responses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/analysis/index.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/smart_analysis.html">Smart Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/mc_analysis.html">Moment Curvature Analysis of Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/buckling_analysis_linear.html">Linear Buckling Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/analysis/responseSpectrumAnalysis.html">Response Spectrum Analysis</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Post-Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#pre-processing">Pre-Processing</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html#fiber-section-mesh">Fiber Section Mesh</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-2DFrame-Pushover.html">Reinforced Concrete Frame Pushover Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-ele-removal-add.html">Remove and Add Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-excavation.html">Excavation Supported by Cantilevered Sheet Pile Wall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-forma11c.html">Modal analysis of a cooling tower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-fsi-gu.html">Fluid-structure interaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-nonlinear-frame-transient.html">3D Nonlinear beam-column elements Gravity load analysis followed by transient analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-sensitivity2.html">Two storey steel moment frame with W-sections for displacement-controlled sensitivity analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../postprocessing/ex-ssi-Gu.html">Soil-Structure Interaction</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../preprocessing/ex-read-gmsh-1.html">Gmsh2OPS: Case 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preprocessing/ex-read-gmsh-2.html">Gmsh2OPS: Case 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preprocessing/ex-read-gmsh-3.html">3D Beam Element Example - A Dome Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../preprocessing/ex-read-gmsh-4.html">Gmsh2OPS: Linear shell arch model</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#">Fiber Section Mesh</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ex-bridge-deck.html">Bridge superstructure section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ex-cfst.html">Concrete-Filled Steel Tube (CFST) Section Meshing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ex-composite.html">Steel-Concrete Composite Section Meshing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ex-rc-section.html">Hollow Rectangular RC Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ex-sec-props.html">Interaction with sectionproperties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.set_opensees_module.html">set_opensees_module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.load_ops_examples.html">load_ops_examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.add_ops_hints_file.html">add_ops_hints_file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.run_model.html">run_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.print_version.html">print_version</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../src/api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html">FiberSecMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.SecMesh.html">SecMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.create_material.html">create_material</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.create_polygon_patch.html">create_polygon_patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.create_circle_patch.html">create_circle_patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.create_patch_from_dxf.html">create_patch_from_dxf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.create_polygon_points.html">create_polygon_points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.create_circle_points.html">create_circle_points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.offset.html">offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.line_offset.html">line_offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.poly_offset.html">poly_offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.set_patch_material.html">set_patch_material</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.vis_fiber_sec_real.html">vis_fiber_sec_real</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.section.html">opstool.pre.section.section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.fiber.html">opstool.pre.section.fiber</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.patch.html">opstool.pre.section.patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.layer.html">opstool.pre.section.layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.section.plot_fiber_sec_cmds.html">opstool.pre.section.plot_fiber_sec_cmds</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.tcl2py.html">tcl2py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.Gmsh2OPS.html">Gmsh2OPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.UnitSystem.html">UnitSystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.create_gravity_load.html">create_gravity_load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.gen_grav_load.html">gen_grav_load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.transform_beam_uniform_load.html">transform_beam_uniform_load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.transform_beam_point_load.html">transform_beam_point_load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.transform_surface_uniform_load.html">transform_surface_uniform_load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.apply_load_distribution.html">apply_load_distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.get_node_coord.html">get_node_coord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.get_node_mass.html">get_node_mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.get_mck.html">get_mck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.ModelMass.html">ModelMass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.find_void_nodes.html">find_void_nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.pre.remove_void_nodes.html">remove_void_nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.get_nodal_responses_info.html">get_nodal_responses_info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.get_element_responses_info.html">get_element_responses_info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.set_odb_path.html">set_odb_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.set_odb_format.html">set_odb_format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.update_unit_system.html">update_unit_system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.reset_unit_system.html">reset_unit_system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.plot_nodal_responses.html">plot_nodal_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.plot_element_responses.html">plot_element_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.save_model_data.html">save_model_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.save_eigen_data.html">save_eigen_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.save_linear_buckling_data.html">save_linear_buckling_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.CreateODB.html">CreateODB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.get_nodal_responses.html">get_nodal_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.get_element_responses.html">get_element_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.get_sensitivity_responses.html">get_sensitivity_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.get_model_data.html">get_model_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.get_eigen_data.html">get_eigen_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.post.get_linear_buckling_data.html">get_linear_buckling_data</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.set_plot_props.html">set_plot_props</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.set_plot_colors.html">set_plot_colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.plot_model.html">plot_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.plot_eigen.html">plot_eigen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.plot_eigen_animation.html">plot_eigen_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.plot_eigen_table.html">plot_eigen_table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.plot_nodal_responses.html">plot_nodal_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.plot_nodal_responses_animation.html">plot_nodal_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.plot_truss_responses.html">plot_truss_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.plot_truss_responses_animation.html">plot_truss_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.plot_frame_responses.html">plot_frame_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.plot_frame_responses_animation.html">plot_frame_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.plot_unstruct_responses.html">plot_unstruct_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.plotly.plot_unstruct_responses_animation.html">plot_unstruct_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.set_plot_props.html">set_plot_props</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.set_plot_colors.html">set_plot_colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.plot_model.html">plot_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.plot_eigen.html">plot_eigen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.plot_eigen_animation.html">plot_eigen_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.plot_nodal_responses.html">plot_nodal_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.plot_nodal_responses_animation.html">plot_nodal_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.plot_truss_responses.html">plot_truss_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.plot_truss_responses_animation.html">plot_truss_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.plot_frame_responses.html">plot_frame_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.plot_frame_responses_animation.html">plot_frame_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.plot_unstruct_responses.html">plot_unstruct_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.plot_unstruct_responses_animation.html">plot_unstruct_responses_animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.get_nodal_responses_dataset.html">get_nodal_responses_dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.vis.pyvista.get_unstruct_responses_dataset.html">get_unstruct_responses_dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../src/api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.anlys.SmartAnalyze.html">SmartAnalyze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../src/api/_autosummary/opstool.anlys.MomentCurvature.html">MomentCurvature</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../src/theory/theory_stress_criteria.html">Stress and Strength Criteria</a></li>
+</ul>
+
+</div>
+</div><a
+  class="gh-source"
+  href="https://github.com/yexiang92/opstool"
+  aria-label="On GitHub"
+  target="_blank"
+>
+  <svg
+    stroke="currentColor"
+    fill="currentColor"
+    stroke-width="0"
+    viewBox="0 0 16 16"
+    class="gh-source--icon"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+    ></path>
+  </svg>
+  <span class="gh-source--info">
+    <span class="gh-source--repo-text"> yexiang92/opstool </span>
+    <span class="gh-source--version">
+      <svg
+        stroke="currentColor"
+        fill="currentColor"
+        stroke-width="0"
+        viewBox="0 0 16 16"
+        class="gh-source--version-icon"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+        />
+      </svg>
+      <span class="gh-source--version-text"> 1.0.25 </span>
+    </span>
+  </span>
+</a>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="https://github.com/yexiang92/opstool/blob/master/docs/_sphinx_gallery_examples/examples/sec-mesh/index.rst?plain=true" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div><div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/yexiang92/opstool/edit/master/docs/_sphinx_gallery_examples/examples/sec-mesh/index.rst" title="Edit this page">
+    <svg><use href="#svg-pencil"></use></svg>
+    <span class="visually-hidden">Edit this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="fiber-section-mesh">
+<span id="sphx-glr-sphinx-gallery-examples-examples-sec-mesh"></span><h1>Fiber Section Mesh<a class="headerlink" href="#fiber-section-mesh" title="Link to this heading">¶</a></h1>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="Bridge superstructure section"><img alt="" src="../../../_images/sphx_glr_ex-bridge-deck_thumb.png" />
+<p><a class="reference internal" href="ex-bridge-deck.html#sphx-glr-sphinx-gallery-examples-examples-sec-mesh-ex-bridge-deck-py"><span class="std std-ref">Bridge superstructure section</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Bridge superstructure section</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Concrete-Filled Steel Tube (CFST) Section Meshing"><img alt="" src="../../../_images/sphx_glr_ex-cfst_thumb.png" />
+<p><a class="reference internal" href="ex-cfst.html#sphx-glr-sphinx-gallery-examples-examples-sec-mesh-ex-cfst-py"><span class="std std-ref">Concrete-Filled Steel Tube (CFST) Section Meshing</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Concrete-Filled Steel Tube (CFST) Section Meshing</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Steel-Concrete Composite Section Meshing"><img alt="" src="../../../_images/sphx_glr_ex-composite_thumb.png" />
+<p><a class="reference internal" href="ex-composite.html#sphx-glr-sphinx-gallery-examples-examples-sec-mesh-ex-composite-py"><span class="std std-ref">Steel-Concrete Composite Section Meshing</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Steel-Concrete Composite Section Meshing</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates how to create a mesh for a hollow rectangular reinforced concrete section."><img alt="" src="../../../_images/sphx_glr_ex-rc-section_thumb.png" />
+<p><a class="reference internal" href="ex-rc-section.html#sphx-glr-sphinx-gallery-examples-examples-sec-mesh-ex-rc-section-py"><span class="std std-ref">Hollow Rectangular RC Section</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Hollow Rectangular RC Section</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Interaction with sectionproperties"><img alt="" src="../../../_images/sphx_glr_ex-sec-props_thumb.png" />
+<p><a class="reference internal" href="ex-sec-props.html#sphx-glr-sphinx-gallery-examples-examples-sec-mesh-ex-sec-props-py"><span class="std std-ref">Interaction with sectionproperties</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Interaction with sectionproperties</div>
+</div></div><div class="toctree-wrapper compound">
+</div>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="ex-bridge-deck.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Bridge superstructure section</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../preprocessing/ex-read-gmsh-4.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Gmsh2OPS: Linear shell arch model</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, Yexiang Yan
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../_static/documentation_options.js?v=c22798c2"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../../_static/thebelab-helper.js"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    </body>
+</html>

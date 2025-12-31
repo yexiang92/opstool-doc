@@ -6,8 +6,8 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Post-processing for fiber section responses" href="fiber_sec_resp.html" /><link rel="prev" title="Node Response" href="nodal_resp.html" />
 
     <link rel="shortcut icon" href="../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>Frame element Response - opstool 1.0.24 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5f771d8e" />
+        <title>Frame element Response - opstool 1.0.25 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css?v=572af1d6" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="../../_static/_css/shared.css?v=165b944a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/_css/shared.css?v=e989f5d6" />
     <link rel="stylesheet" type="text/css" href="../../_static/_css/furo.css?v=75230d29" />
     
     
@@ -27,8 +27,9 @@
 
 <style>
   body {
-    --color-code-background: #fbf1c7;
+    --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --font-stack--monospace: Monaco, monospace;
   
   }
   @media not print {
@@ -177,7 +178,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">opstool 1.0.24 documentation</div></a>
+      <a href="../../index.html"><div class="brand">opstool 1.0.25 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -217,8 +218,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../known_issues.html">Known Issues</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../quick_start.html">Quick Start</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Quick Start</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../auto_examples/quick-start/ex-frame2D.html">Two-Dimensional Moment Frame Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../auto_examples/quick-start/ex-quick-plot-model.html">Quick Model and Eigen Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_sphinx_gallery_examples/quick-start/ex-frame2D.html">Two-Dimensional Moment Frame Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_sphinx_gallery_examples/quick-start/ex-quick-plot-model.html">Quick Model and Eigen Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quick-start/vis-megatall.html">606 m Mega-tall Building</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../quick_start.html#features">Features</a></li>
@@ -235,39 +237,39 @@
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Post-Processing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="eigen.html">Eigenvalue Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nodal_resp.html">Node Responses</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Frame Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fiber_sec_resp.html">Fiber Section Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="truss_resp.html">Truss Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shell_resp.html">Shell Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plane_up_resp.html">Plane response</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brick_resp.html">Brick Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sensitivity_resp.html">Sensitivity Analysis Responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigen.html">Eigenvalue Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodal_resp.html">Node Response</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Frame element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fiber_sec_resp.html">Post-processing for fiber section responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="truss_resp.html">Truss element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell_resp.html">Shell element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plane_up_resp.html">Planar element response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="brick_resp.html">Brick element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensitivity_resp.html">Simple cantilever for load-controlled sensitivity analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unit_transform.html">Unit conversion in post-processing</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../auto_examples/vis-guide/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/index.html">Plotyly-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Plotyly-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-01-model-plotly.html">Model Geometry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-02-eigen-plotly.html">Eigen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-03-nodal-resp-plotly.html">Nodal Responses Visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-04-frame-resp-plotly.html">Frame Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-05-truss-resp-plotly.html">Truss Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-06-shell-resp-plotly.html">Shell Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-07-plane-resp-plotly.html">Plane stress quad model visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-08-brick-resp-plotly.html">Solid Element Responses</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/index.html">Plotyly-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Plotyly-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-01-model-plotly.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-02-eigen-plotly.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-03-nodal-resp-plotly.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-04-frame-resp-plotly.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-05-truss-resp-plotly.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-06-shell-resp-plotly.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-07-plane-resp-plotly.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-08-brick-resp-plotly.html">Solid Element Responses</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/index.html">Pyvista-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Pyvista-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-01-model-pyvista.html">Model Geometry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-02-eigen-pyvista.html">Eigen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-03-nodal-resp-pyvista.html">Nodal Responses Visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-04-frame-resp-pyvista.html">Frame Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-05-truss-resp-pyvista.html">Truss Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-06-shell-resp-pyvista.html">Shell Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-07-plane-resp-pyvista.html">Plane stress quad model visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-08-brick-resp-pyvista.html">Solid Element Responses</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/index.html">Pyvista-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Pyvista-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-01-model-pyvista.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-02-eigen-pyvista.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-03-nodal-resp-pyvista.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-04-frame-resp-pyvista.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-05-truss-resp-pyvista.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-06-shell-resp-pyvista.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-07-plane-resp-pyvista.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-08-brick-resp-pyvista.html">Solid Element Responses</a></li>
 </ul>
 </li>
 </ul>
@@ -282,41 +284,36 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../auto_examples/examples/index.html">Post-Processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../auto_examples/examples/index.html#pre-processing">Pre-Processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../auto_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-2DFrame-Pushover.html">Reinforced Concrete Frame Pushover Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-ele-removal-add.html">Remove and Add Elements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-excavation.html">Excavation Supported by Cantilevered Sheet Pile Wall</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-forma11c.html">Modal analysis of a cooling tower</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-fsi-gu.html">Fluid-structure interaction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-nonlinear-frame-transient.html">3D Nonlinear beam-column elements Gravity load analysis followed by transient analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-sensitivity2.html">Two storey steel moment frame with W-sections for displacement-controlled sensitivity analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-ssi-Gu.html">Soil-Structure Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/index.html">Post-Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/index.html#pre-processing">Pre-Processing</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-2DFrame-Pushover.html">Reinforced Concrete Frame Pushover Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-ele-removal-add.html">Remove and Add Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-excavation.html">Excavation Supported by Cantilevered Sheet Pile Wall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-forma11c.html">Modal analysis of a cooling tower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-fsi-gu.html">Fluid-structure interaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-nonlinear-frame-transient.html">3D Nonlinear beam-column elements Gravity load analysis followed by transient analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-sensitivity2.html">Two storey steel moment frame with W-sections for displacement-controlled sensitivity analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-ssi-Gu.html">Soil-Structure Interaction</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/preprocessing/ex-read-gmsh-1.html">Gmsh2OPS: Case 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/preprocessing/ex-read-gmsh-2.html">Gmsh2OPS: Case 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/preprocessing/ex-read-gmsh-3.html">3D Beam Element Example - A Dome Structure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/preprocessing/ex-read-gmsh-4.html">Gmsh2OPS: Linear shell arch model</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-1.html">Gmsh2OPS: Case 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-2.html">Gmsh2OPS: Case 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-3.html">3D Beam Element Example - A Dome Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-4.html">Gmsh2OPS: Linear shell arch model</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/index.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/ex-bridge-deck.html">Bridge superstructure section</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/ex-cfst.html">Concrete-Filled Steel Tube (CFST) Section Meshing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/ex-composite.html">Steel-Concrete Composite Section Meshing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/ex-rc-section.html">Hollow Rectangular RC Section</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/ex-sec-props.html">Interaction with sectionproperties</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/vis/ex-vis-megatall.html">606 m Mega-tall Building</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/sec-mesh/index.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/sec-mesh/ex-bridge-deck.html">Bridge superstructure section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/sec-mesh/ex-cfst.html">Concrete-Filled Steel Tube (CFST) Section Meshing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/sec-mesh/ex-composite.html">Steel-Concrete Composite Section Meshing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/sec-mesh/ex-rc-section.html">Hollow Rectangular RC Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/sec-mesh/ex-sec-props.html">Interaction with sectionproperties</a></li>
 </ul>
 </li>
 </ul>
@@ -324,15 +321,16 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.set_opensees_module.html">set_opensees_module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.load_ops_examples.html">load_ops_examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.add_ops_hints_file.html">add_ops_hints_file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.run_model.html">run_model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.print_version.html">print_version</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../api/_autosummary/opstool.pre.section.FiberSecMesh.html">FiberSecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/_autosummary/opstool.pre.section.SecMesh.html">SecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/_autosummary/opstool.pre.section.create_material.html">create_material</a></li>
@@ -370,24 +368,28 @@
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.pre.remove_void_nodes.html">remove_void_nodes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_nodal_responses_info.html">get_nodal_responses_info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_element_responses_info.html">get_element_responses_info</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.set_odb_path.html">set_odb_path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.set_odb_format.html">set_odb_format</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.update_unit_system.html">update_unit_system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.reset_unit_system.html">reset_unit_system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.plot_nodal_responses.html">plot_nodal_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.plot_element_responses.html">plot_element_responses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.save_model_data.html">save_model_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.save_eigen_data.html">save_eigen_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.save_linear_buckling_data.html">save_linear_buckling_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.CreateODB.html">CreateODB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_model_data.html">get_model_data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_eigen_data.html">get_eigen_data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_linear_buckling_data.html">get_linear_buckling_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_nodal_responses.html">get_nodal_responses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_element_responses.html">get_element_responses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_sensitivity_responses.html">get_sensitivity_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_model_data.html">get_model_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_eigen_data.html">get_eigen_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_linear_buckling_data.html">get_linear_buckling_data</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.vis.plotly.set_plot_props.html">set_plot_props</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.vis.plotly.set_plot_colors.html">set_plot_colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.vis.plotly.plot_model.html">plot_model</a></li>
@@ -419,7 +421,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.vis.pyvista.get_unstruct_responses_dataset.html">get_unstruct_responses_dataset</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.anlys.SmartAnalyze.html">SmartAnalyze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.anlys.MomentCurvature.html">MomentCurvature</a></li>
 </ul>
@@ -464,7 +466,7 @@
           d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
         />
       </svg>
-      <span class="gh-source--version-text"> 1.0.24 </span>
+      <span class="gh-source--version-text"> 1.0.25 </span>
     </span>
   </span>
 </a>
@@ -601,8 +603,8 @@ Once all the analysis steps are completed, we use the <code class="docutils lite
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  All responses data with _odb_tag = <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> saved in
-<span style="color: #ffc168; text-decoration-color: #ffc168; font-weight: bold">g:\opstool\docs\src\post\.opstool.output/RespStepData-</span><span style="color: #ffc168; text-decoration-color: #ffc168; font-weight: bold">1.</span><span style="color: #ffc168; text-decoration-color: #ffc168; font-weight: bold">zarr</span>!
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL™</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  All responses data with _odb_tag = <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> saved in
+<span style="color: #3369e7; text-decoration-color: #3369e7; font-weight: bold">g:\opstool\docs\src\post\.opstool.output\RespStepData-</span><span style="color: #3369e7; text-decoration-color: #3369e7; font-weight: bold">1.</span><span style="color: #3369e7; text-decoration-color: #3369e7; font-weight: bold">odb</span>!
 </pre></div>
 </div>
 </section>
@@ -614,6 +616,45 @@ Once all the analysis steps are completed, we use the <code class="docutils lite
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">get_element_responses_info</span><span class="p">(</span><span class="n">ele_type</span><span class="o">=</span><span class="s2">&quot;Frame&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+ele_type: Frame
+Available Response Types (resp_type):
+  - localForces
+    resp_dim: [&#39;time&#39;, &#39;eleTags&#39;, &#39;localDofs&#39;]
+    resp_dof: [&#39;FX1&#39;, &#39;FY1&#39;, &#39;FZ1&#39;, &#39;MX1&#39;, &#39;MY1&#39;, &#39;MZ1&#39;, &#39;FX2&#39;, &#39;FY2&#39;, &#39;FZ2&#39;, &#39;MX2&#39;, &#39;MY2&#39;, &#39;MZ2&#39;]
+  - basicForces
+    resp_dim: [&#39;time&#39;, &#39;eleTags&#39;, &#39;basicDofs&#39;]
+    resp_dof: [&#39;N&#39;, &#39;MZ1&#39;, &#39;MZ2&#39;, &#39;MY1&#39;, &#39;MY2&#39;, &#39;T&#39;]
+  - basicDeformations
+    resp_dim: [&#39;time&#39;, &#39;eleTags&#39;, &#39;basicDofs&#39;]
+    resp_dof: [&#39;N&#39;, &#39;MZ1&#39;, &#39;MZ2&#39;, &#39;MY1&#39;, &#39;MY2&#39;, &#39;T&#39;]
+  - plasticDeformation
+    resp_dim: [&#39;time&#39;, &#39;eleTags&#39;, &#39;basicDofs&#39;]
+    resp_dof: [&#39;N&#39;, &#39;MZ1&#39;, &#39;MZ2&#39;, &#39;MY1&#39;, &#39;MY2&#39;, &#39;T&#39;]
+  - sectionForces
+    resp_dim: [&#39;time&#39;, &#39;eleTags&#39;, &#39;secPoints&#39;, &#39;secDofs&#39;]
+    resp_dof: [&#39;N&#39;, &#39;MZ&#39;, &#39;VY&#39;, &#39;MY&#39;, &#39;VZ&#39;, &#39;T&#39;]
+  - sectionDeformations
+    resp_dim: [&#39;time&#39;, &#39;eleTags&#39;, &#39;secPoints&#39;, &#39;secDofs&#39;]
+    resp_dof: [&#39;N&#39;, &#39;MZ&#39;, &#39;VY&#39;, &#39;MY&#39;, &#39;VZ&#39;, &#39;T&#39;]
+  - sectionLocs
+    resp_dim: [&#39;time&#39;, &#39;eleTags&#39;, &#39;secPoints&#39;, &#39;locs&#39;]
+    resp_dof: [&#39;alpha&#39;, &#39;X&#39;, &#39;Y&#39;, &#39;Z&#39;]
+
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_resp</span> <span class="o">=</span> <span class="n">opst</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">get_element_responses</span><span class="p">(</span><span class="n">odb_tag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ele_type</span><span class="o">=</span><span class="s2">&quot;Frame&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -622,12 +663,12 @@ Once all the analysis steps are completed, we use the <code class="docutils lite
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading Frame response data from <span style="color: #ffc168; text-decoration-color: #ffc168; font-weight: bold">g:\opstool\docs\src\post\.opstool.output/RespStepData-</span><span style="color: #ffc168; text-decoration-color: #ffc168; font-weight: bold">1.</span><span style="color: #ffc168; text-decoration-color: #ffc168; font-weight: bold">zarr</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL™</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading Frame response data from <span style="color: #007cc0; text-decoration-color: #007cc0; font-weight: bold">g:\opstool\docs\src\post\.opstool.output\RespStepData-</span><span style="color: #007cc0; text-decoration-color: #007cc0; font-weight: bold">1.</span><span style="color: #007cc0; text-decoration-color: #007cc0; font-weight: bold">odb</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
 </pre></div>
 </div>
 <p>The result is an <code class="docutils literal notranslate"><span class="pre">xarray</span> <span class="pre">DataSet</span></code> object, and we can access the associated DataArray objects through <code class="docutils literal notranslate"><span class="pre">.data_vars</span></code>.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_resp</span><span class="o">.</span><span class="n">data_vars</span>
@@ -635,7 +676,7 @@ Once all the analysis steps are completed, we use the <code class="docutils lite
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -644,8 +685,8 @@ Data variables:
     basicDeformations    (time, eleTags, basicDofs) float32 12kB 0.0 ... -2.0...
     basicForces          (time, eleTags, basicDofs) float32 12kB 0.0 ... -1.6...
     localForces          (time, eleTags, localDofs) float32 25kB -0.0 ... 89.87
-    sectionDeformations  (time, eleTags, secPoints, secDofs) float32 112kB 0....
     plasticDeformation   (time, eleTags, basicDofs) float32 12kB 0.0 ... 0.0
+    sectionDeformations  (time, eleTags, secPoints, secDofs) float32 112kB 0....
     sectionForces        (time, eleTags, secPoints, secDofs) float32 112kB -0...
     sectionLocs          (time, eleTags, secPoints, locs) float32 74kB 0.0 .....
 </pre></div></div>
@@ -656,7 +697,7 @@ Data variables:
 <p>The element local coordinate system resistance in opstool follows the following sign convention:</p>
 <p><img alt="frame_force_sign" class="no-scaled-link" src="../../_images/frame_force_sign.png" style="width: 600px;" /></p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">all_resp</span><span class="p">[</span><span class="s2">&quot;localForces&quot;</span><span class="p">])</span>
@@ -709,16 +750,16 @@ array([[[-0.00000000e+00, -0.00000000e+00, -0.00000000e+00, ...,
          -2.80661726e-11,  2.94505594e+05, -6.98935303e+02],
         [-6.53120117e+02,  2.95017340e-15,  1.04773788e-13, ...,
          -1.66642897e-11,  1.66837250e+05,  8.98687515e+01]]],
-      dtype=float32)
+      shape=(11, 47, 12), dtype=float32)
 Coordinates:
-  * eleTags    (eleTags) int32 188B 1 2 3 4 5 6 7 8 ... 40 41 42 43 44 45 46 47
-  * localDofs  (localDofs) &lt;U3 144B &#39;FX1&#39; &#39;FY1&#39; &#39;FZ1&#39; ... &#39;MX2&#39; &#39;MY2&#39; &#39;MZ2&#39;
   * time       (time) float32 44B 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
+  * eleTags    (eleTags) int64 376B 1 2 3 4 5 6 7 8 ... 40 41 42 43 44 45 46 47
+  * localDofs  (localDofs) &lt;U3 144B &#39;FX1&#39; &#39;FY1&#39; &#39;FZ1&#39; ... &#39;MX2&#39; &#39;MY2&#39; &#39;MZ2&#39;
 </pre></div></div>
 </div>
 <p>The basic forces are a subset of the local resistance forces and are used to represent the independent components that need to be solved, while the remaining components can be obtained from the equilibrium equations.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">all_resp</span><span class="p">[</span><span class="s2">&quot;basicForces&quot;</span><span class="p">])</span>
@@ -752,7 +793,6 @@ array([[[ 0.0000000e+00, -0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
         [-4.7497407e+03,  1.0138817e+06, -1.2830152e+06, -5.8649788e+05,
           1.1346128e+06,  1.1537070e+02],
 ...
-        [-4.4569095e+02, -7.6647453e+01, -7.6647453e+01,  1.5637914e+05,
           1.5637914e+05,  3.5082716e-12],
         [-1.0546251e+03, -6.2904175e+02, -6.2904175e+02,  2.6505503e+05,
           2.6505503e+05,  4.2099258e-11],
@@ -771,16 +811,17 @@ array([[[ 0.0000000e+00, -0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
         [-1.1718057e+03, -6.9893530e+02, -6.9893530e+02,  2.9450559e+05,
           2.9450559e+05, -2.8066173e-11],
         [-6.5312012e+02,  8.9868752e+01,  8.9868752e+01,  1.6683725e+05,
-          1.6683725e+05, -1.6664290e-11]]], dtype=float32)
+          1.6683725e+05, -1.6664290e-11]]],
+      shape=(11, 47, 6), dtype=float32)
 Coordinates:
-  * basicDofs  (basicDofs) &lt;U3 72B &#39;N&#39; &#39;MZ1&#39; &#39;MZ2&#39; &#39;MY1&#39; &#39;MY2&#39; &#39;T&#39;
-  * eleTags    (eleTags) int32 188B 1 2 3 4 5 6 7 8 ... 40 41 42 43 44 45 46 47
   * time       (time) float32 44B 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
+  * eleTags    (eleTags) int64 376B 1 2 3 4 5 6 7 8 ... 40 41 42 43 44 45 46 47
+  * basicDofs  (basicDofs) &lt;U3 72B &#39;N&#39; &#39;MZ1&#39; &#39;MZ2&#39; &#39;MY1&#39; &#39;MY2&#39; &#39;T&#39;
 </pre></div></div>
 </div>
 <p>We can also get the properties:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_resp</span><span class="o">.</span><span class="n">attrs</span>
@@ -788,7 +829,7 @@ Coordinates:
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -805,7 +846,7 @@ Coordinates:
 <h3>Section response<a class="headerlink" href="#Section-response" title="Link to this heading">¶</a></h3>
 <p>Sometimes we are more concerned with the response at the section level, which can be easily extracted. For example, extracting section forces involves four dimensions: <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">(time)</span></code>, <code class="docutils literal notranslate"><span class="pre">element</span> <span class="pre">IDs</span> <span class="pre">(eleTags)</span></code>, <code class="docutils literal notranslate"><span class="pre">section</span> <span class="pre">locations</span> <span class="pre">(secLocs)</span></code>, and <code class="docutils literal notranslate"><span class="pre">degrees</span> <span class="pre">of</span> <span class="pre">freedom</span> <span class="pre">(secDoFs)</span></code>.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sec_forces</span> <span class="o">=</span> <span class="n">all_resp</span><span class="p">[</span><span class="s2">&quot;sectionForces&quot;</span><span class="p">]</span>
@@ -814,7 +855,7 @@ Coordinates:
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sec_locs</span> <span class="o">=</span> <span class="n">all_resp</span><span class="p">[</span><span class="s2">&quot;sectionLocs&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -823,7 +864,7 @@ Coordinates:
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -842,39 +883,86 @@ Coordinates:
 </symbol>
 </defs>
 </svg>
-<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
- *
- */
+<style>/* CSS stylesheet for displaying xarray objects in notebooks */
 
 :root {
-  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-  --xr-border-color: var(--jp-border-color2, #e0e0e0);
-  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-  --xr-background-color: var(--jp-layout-color0, white);
-  --xr-background-color-row-even: var(--jp-layout-color1, white);
-  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
 }
 
-html[theme=dark],
-html[data-theme=dark],
-body[data-theme=dark],
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
 body.vscode-dark {
-  --xr-font-color0: rgba(255, 255, 255, 1);
-  --xr-font-color2: rgba(255, 255, 255, 0.54);
-  --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
-  --xr-disabled-color: #515151;
-  --xr-background-color: #111111;
-  --xr-background-color-row-even: #111111;
-  --xr-background-color-row-odd: #313131;
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
 }
 
 .xr-wrap {
   display: block !important;
   min-width: 300px;
   max-width: 700px;
+  line-height: 1.6;
 }
 
 .xr-text-repr-fallback {
@@ -897,11 +985,18 @@ body.vscode-dark {
 }
 
 .xr-obj-type,
-.xr-array-name {
+.xr-obj-name,
+.xr-group-name {
   margin-left: 2px;
   margin-right: 10px;
 }
 
+.xr-group-name::before {
+  content: "📁";
+  padding-right: 0.3em;
+}
+
+.xr-group-name,
 .xr-obj-type {
   color: var(--xr-font-color2);
 }
@@ -910,6 +1005,8 @@ body.vscode-dark {
   padding-left: 0 !important;
   display: grid;
   grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .xr-section-item {
@@ -919,10 +1016,13 @@ body.vscode-dark {
 .xr-section-item input {
   display: inline-block;
   opacity: 0;
+  height: 0;
+  margin: 0;
 }
 
 .xr-section-item input + label {
   color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
 }
 
 .xr-section-item input:enabled + label {
@@ -931,7 +1031,7 @@ body.vscode-dark {
 }
 
 .xr-section-item input:focus + label {
-  border: 2px solid var(--xr-font-color0);
+  border: 2px solid var(--xr-font-color0) !important;
 }
 
 .xr-section-item input:enabled + label:hover {
@@ -955,7 +1055,7 @@ body.vscode-dark {
 
 .xr-section-summary-in + label:before {
   display: inline-block;
-  content: '►';
+  content: "►";
   font-size: 11px;
   width: 15px;
   text-align: center;
@@ -966,7 +1066,7 @@ body.vscode-dark {
 }
 
 .xr-section-summary-in:checked + label:before {
-  content: '▼';
+  content: "▼";
 }
 
 .xr-section-summary-in:checked + label > span {
@@ -976,7 +1076,6 @@ body.vscode-dark {
 .xr-section-summary,
 .xr-section-inline-details {
   padding-top: 4px;
-  padding-bottom: 4px;
 }
 
 .xr-section-inline-details {
@@ -986,11 +1085,38 @@ body.vscode-dark {
 .xr-section-details {
   display: none;
   grid-column: 1 / -1;
+  margin-top: 4px;
   margin-bottom: 5px;
 }
 
 .xr-section-summary-in:checked ~ .xr-section-details {
   display: contents;
+}
+
+.xr-group-box {
+  display: inline-grid;
+  grid-template-columns: 0px 20px auto;
+  width: 100%;
+}
+
+.xr-group-box-vline {
+  grid-column-start: 1;
+  border-right: 0.2em solid;
+  border-color: var(--xr-border-color);
+  width: 0px;
+}
+
+.xr-group-box-hline {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  height: 1em;
+  width: 20px;
+  border-bottom: 0.2em solid;
+  border-color: var(--xr-border-color);
+}
+
+.xr-group-box-contents {
+  grid-column-start: 3;
 }
 
 .xr-array-wrap {
@@ -1038,15 +1164,15 @@ body.vscode-dark {
 }
 
 .xr-dim-list:before {
-  content: '(';
+  content: "(";
 }
 
 .xr-dim-list:after {
-  content: ')';
+  content: ")";
 }
 
 .xr-dim-list li:not(:last-child):after {
-  content: ',';
+  content: ",";
   padding-right: 5px;
 }
 
@@ -1063,7 +1189,9 @@ body.vscode-dark {
 .xr-var-item label,
 .xr-var-item > .xr-var-name span {
   background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
   margin-bottom: 0;
+  padding-top: 2px;
 }
 
 .xr-var-item > .xr-var-name:hover span {
@@ -1074,6 +1202,7 @@ body.vscode-dark {
 .xr-var-list > li:nth-child(odd) > label,
 .xr-var-list > li:nth-child(odd) > .xr-var-name span {
   background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
 }
 
 .xr-var-name {
@@ -1123,8 +1252,15 @@ body.vscode-dark {
 .xr-var-data,
 .xr-index-data {
   display: none;
-  background-color: var(--xr-background-color) !important;
-  padding-bottom: 5px !important;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
 }
 
 .xr-var-attrs-in:checked ~ .xr-var-attrs,
@@ -1135,6 +1271,12 @@ body.vscode-dark {
 
 .xr-var-data > table {
   float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
 }
 
 .xr-var-name span,
@@ -1196,6 +1338,14 @@ dl.xr-attrs {
   stroke: currentColor;
   fill: currentColor;
 }
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
 </style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;sectionLocs&#x27; (secPoints: 9, locs: 4)&gt; Size: 144B
 array([[0.000e+00, 4.500e+03, 0.000e+00, 1.350e+04],
        [1.250e-01, 4.500e+03, 6.250e+02, 1.350e+04],
@@ -1207,10 +1357,10 @@ array([[0.000e+00, 4.500e+03, 0.000e+00, 1.350e+04],
        [8.750e-01, 4.500e+03, 4.375e+03, 1.350e+04],
        [1.000e+00, 4.500e+03, 5.000e+03, 1.350e+04]], dtype=float32)
 Coordinates:
-    eleTags    int32 4B 6
+  * secPoints  (secPoints) int64 72B 1 2 3 4 5 6 7 8 9
   * locs       (locs) &lt;U5 80B &#x27;alpha&#x27; &#x27;X&#x27; &#x27;Y&#x27; &#x27;Z&#x27;
-  * secPoints  (secPoints) int32 36B 1 2 3 4 5 6 7 8 9
-    time       float32 4B 0.0</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'sectionLocs'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>secPoints</span>: 9</li><li><span class='xr-has-index'>locs</span>: 4</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-5c73dd63-7f3e-4563-a8bc-3b2008c849e9' class='xr-array-in' type='checkbox' checked><label for='section-5c73dd63-7f3e-4563-a8bc-3b2008c849e9' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>0.0 4.5e+03 0.0 1.35e+04 0.125 ... 1.35e+04 1.0 4.5e+03 5e+03 1.35e+04</span></div><div class='xr-array-data'><pre>array([[0.000e+00, 4.500e+03, 0.000e+00, 1.350e+04],
+    eleTags    int64 8B 6
+    time       float32 4B 0.0</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-obj-name'>&#x27;sectionLocs&#x27;</div><ul class='xr-dim-list'><li><span class='xr-has-index'>secPoints</span>: 9</li><li><span class='xr-has-index'>locs</span>: 4</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-b1be40ee-b8b1-4b34-ad91-47bc11087088' class='xr-array-in' type='checkbox' checked><label for='section-b1be40ee-b8b1-4b34-ad91-47bc11087088' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>0.0 4.5e+03 0.0 1.35e+04 0.125 ... 1.35e+04 1.0 4.5e+03 5e+03 1.35e+04</span></div><div class='xr-array-data'><pre>array([[0.000e+00, 4.500e+03, 0.000e+00, 1.350e+04],
        [1.250e-01, 4.500e+03, 6.250e+02, 1.350e+04],
        [2.500e-01, 4.500e+03, 1.250e+03, 1.350e+04],
        [3.750e-01, 4.500e+03, 1.875e+03, 1.350e+04],
@@ -1218,11 +1368,11 @@ Coordinates:
        [6.250e-01, 4.500e+03, 3.125e+03, 1.350e+04],
        [7.500e-01, 4.500e+03, 3.750e+03, 1.350e+04],
        [8.750e-01, 4.500e+03, 4.375e+03, 1.350e+04],
-       [1.000e+00, 4.500e+03, 5.000e+03, 1.350e+04]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-5336157a-35e8-43b2-9e26-16427bd666e0' class='xr-section-summary-in' type='checkbox'  checked><label for='section-5336157a-35e8-43b2-9e26-16427bd666e0' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>eleTags</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>6</div><input id='attrs-c92ea16b-00c7-4836-8e16-923c057f1bd6' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-c92ea16b-00c7-4836-8e16-923c057f1bd6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f99b56c3-47a7-47fb-8442-dd9419419584' class='xr-var-data-in' type='checkbox'><label for='data-f99b56c3-47a7-47fb-8442-dd9419419584' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(6)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>locs</span></div><div class='xr-var-dims'>(locs)</div><div class='xr-var-dtype'>&lt;U5</div><div class='xr-var-preview xr-preview'>&#x27;alpha&#x27; &#x27;X&#x27; &#x27;Y&#x27; &#x27;Z&#x27;</div><input id='attrs-7cc8c987-5f21-40bb-85b6-fa4d0a28c4a7' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-7cc8c987-5f21-40bb-85b6-fa4d0a28c4a7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5371ed9f-c823-4820-9093-7e24ad432d05' class='xr-var-data-in' type='checkbox'><label for='data-5371ed9f-c823-4820-9093-7e24ad432d05' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;alpha&#x27;, &#x27;X&#x27;, &#x27;Y&#x27;, &#x27;Z&#x27;], dtype=&#x27;&lt;U5&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>secPoints</span></div><div class='xr-var-dims'>(secPoints)</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>1 2 3 4 5 6 7 8 9</div><input id='attrs-0a285b42-5402-4a01-a413-77919c3b98d4' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-0a285b42-5402-4a01-a413-77919c3b98d4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c8288240-2117-4ae0-ac6b-6be154a37386' class='xr-var-data-in' type='checkbox'><label for='data-c8288240-2117-4ae0-ac6b-6be154a37386' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1, 2, 3, 4, 5, 6, 7, 8, 9])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0</div><input id='attrs-d65c8084-bc8e-466a-9d71-15af8af055b5' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-d65c8084-bc8e-466a-9d71-15af8af055b5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1500003c-3e63-49f7-8d27-2cc752ecbc8e' class='xr-var-data-in' type='checkbox'><label for='data-1500003c-3e63-49f7-8d27-2cc752ecbc8e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(0., dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-5be91d85-32ed-4faf-8015-7b857f7229b9' class='xr-section-summary-in' type='checkbox'  ><label for='section-5be91d85-32ed-4faf-8015-7b857f7229b9' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>locs</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-9468acb0-8e9e-46cb-a24b-48b4770dad21' class='xr-index-data-in' type='checkbox'/><label for='index-9468acb0-8e9e-46cb-a24b-48b4770dad21' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([&#x27;alpha&#x27;, &#x27;X&#x27;, &#x27;Y&#x27;, &#x27;Z&#x27;], dtype=&#x27;object&#x27;, name=&#x27;locs&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>secPoints</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-bd69c765-76d1-4c87-b417-9acec2300641' class='xr-index-data-in' type='checkbox'/><label for='index-bd69c765-76d1-4c87-b417-9acec2300641' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([1, 2, 3, 4, 5, 6, 7, 8, 9], dtype=&#x27;int32&#x27;, name=&#x27;secPoints&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-c6c484de-101b-4593-952a-8b513183322b' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-c6c484de-101b-4593-952a-8b513183322b' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div>
+       [1.000e+00, 4.500e+03, 5.000e+03, 1.350e+04]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-b080fe0a-cafc-4a05-84e4-3875befe96c5' class='xr-section-summary-in' type='checkbox'  checked><label for='section-b080fe0a-cafc-4a05-84e4-3875befe96c5' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>secPoints</span></div><div class='xr-var-dims'>(secPoints)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>1 2 3 4 5 6 7 8 9</div><input id='attrs-96cc2ec9-dc0f-479f-aaab-329309ed6415' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-96cc2ec9-dc0f-479f-aaab-329309ed6415' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d1096946-7873-4353-983a-f7b0aefb810e' class='xr-var-data-in' type='checkbox'><label for='data-d1096946-7873-4353-983a-f7b0aefb810e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1, 2, 3, 4, 5, 6, 7, 8, 9])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>locs</span></div><div class='xr-var-dims'>(locs)</div><div class='xr-var-dtype'>&lt;U5</div><div class='xr-var-preview xr-preview'>&#x27;alpha&#x27; &#x27;X&#x27; &#x27;Y&#x27; &#x27;Z&#x27;</div><input id='attrs-a5a0cc30-ed22-4449-bc0f-fc57b32c80b7' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-a5a0cc30-ed22-4449-bc0f-fc57b32c80b7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ea26b6a7-e532-4919-985d-6c8d6e0f8f11' class='xr-var-data-in' type='checkbox'><label for='data-ea26b6a7-e532-4919-985d-6c8d6e0f8f11' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;alpha&#x27;, &#x27;X&#x27;, &#x27;Y&#x27;, &#x27;Z&#x27;], dtype=&#x27;&lt;U5&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>eleTags</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>6</div><input id='attrs-c46eeeb3-10d9-405d-8681-fd91e80c8439' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-c46eeeb3-10d9-405d-8681-fd91e80c8439' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9f916f96-2ae5-445c-86a7-174b5c4c8cbe' class='xr-var-data-in' type='checkbox'><label for='data-9f916f96-2ae5-445c-86a7-174b5c4c8cbe' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(6)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0</div><input id='attrs-df4df2fa-3677-445d-be0b-978c5d94ddad' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-df4df2fa-3677-445d-be0b-978c5d94ddad' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-fe9ceb32-da10-4455-9d7c-72f5f8ba5705' class='xr-var-data-in' type='checkbox'><label for='data-fe9ceb32-da10-4455-9d7c-72f5f8ba5705' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(0., dtype=float32)</pre></div></li></ul></div></li></ul></div></div></div>
 </div>
 <p>We can select the response of multiple elements. <code class="docutils literal notranslate"><span class="pre">.isel(time=-1)</span></code> is used to retrieve the data at the last time step, where <code class="docutils literal notranslate"><span class="pre">.isel</span></code> means indexing by position.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sec_forces_my</span> <span class="o">=</span> <span class="n">sec_forces</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span>
@@ -1241,13 +1391,13 @@ Coordinates:
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/src_post_frame_resp_27_0.png" src="../../_images/src_post_frame_resp_27_0.png" />
+<img alt="../../_images/src_post_frame_resp_28_0.png" src="../../_images/src_post_frame_resp_28_0.png" />
 </div>
 </div>
 <p>Here, we retrieve the moment about the local y-axis for element 6:</p>
 <p>Note: <code class="docutils literal notranslate"><span class="pre">.sel</span></code> is the abbreviation for “select”.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sec_forces_my</span> <span class="o">=</span> <span class="n">sec_forces</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">eleTags</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">secDofs</span><span class="o">=</span><span class="s2">&quot;MY&quot;</span><span class="p">)</span>
@@ -1262,49 +1412,49 @@ Coordinates:
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 &lt;xarray.DataArray &#39;sectionForces&#39; (time: 11, secPoints: 9)&gt; Size: 396B
-array([[        0.  ,         0.  ,         0.  ,         0.  ,
-                0.  ,         0.  ,         0.  ,         0.  ,
-                0.  ],
-       [  1302830.2 ,    -64357.25,  -1040919.75,  -1626857.2 ,
-         -1822169.8 ,  -1626857.2 ,  -1040919.75,    -64357.25,
-          1302830.2 ],
-       [  2605660.5 ,   -128714.5 ,  -2081839.5 ,  -3253714.5 ,
-         -3644339.5 ,  -3253714.5 ,  -2081839.5 ,   -128714.5 ,
-          2605660.5 ],
-       [  3908490.8 ,   -193071.75,  -3122759.2 ,  -4880571.5 ,
-         -5466509.  ,  -4880571.5 ,  -3122759.2 ,   -193071.75,
-          3908490.8 ],
-       [  5211321.  ,   -257429.  ,  -4163679.  ,  -6507429.  ,
-         -7288679.  ,  -6507429.  ,  -4163679.  ,   -257429.  ,
-          5211321.  ],
-       [  6514151.5 ,   -321786.  ,  -5204598.5 ,  -8134286.  ,
-         -9110848.  ,  -8134286.  ,  -5204598.5 ,   -321786.  ,
-          6514151.5 ],
-       [  7816981.5 ,   -386143.5 ,  -6245518.5 ,  -9761144.  ,
-        -10933018.  ,  -9761144.  ,  -6245518.5 ,   -386143.5 ,
-          7816981.5 ],
-       [  9119812.  ,   -450500.5 ,  -7286438.  , -11388000.  ,
-        -12755188.  , -11388000.  ,  -7286438.  ,   -450500.5 ,
-          9119812.  ],
-       [ 10422642.  ,   -514858.  ,  -8327358.  , -13014858.  ,
-        -14577358.  , -13014858.  ,  -8327358.  ,   -514858.  ,
-         10422642.  ],
-       [ 11725472.  ,   -579215.5 ,  -9368278.  , -14641716.  ,
-        -16399528.  , -14641716.  ,  -9368278.  ,   -579215.5 ,
-         11725472.  ],
-       [ 13028303.  ,   -643572.  , -10409197.  , -16268572.  ,
-        -18221698.  , -16268572.  , -10409197.  ,   -643572.  ,
-         13028303.  ]], dtype=float32)
+array([[ 0.00000000e+00,  0.00000000e+00,  0.00000000e+00,
+         0.00000000e+00,  0.00000000e+00,  0.00000000e+00,
+         0.00000000e+00,  0.00000000e+00,  0.00000000e+00],
+       [ 1.30283025e+06, -6.43572500e+04, -1.04091975e+06,
+        -1.62685725e+06, -1.82216975e+06, -1.62685725e+06,
+        -1.04091975e+06, -6.43572500e+04,  1.30283025e+06],
+       [ 2.60566050e+06, -1.28714500e+05, -2.08183950e+06,
+        -3.25371450e+06, -3.64433950e+06, -3.25371450e+06,
+        -2.08183950e+06, -1.28714500e+05,  2.60566050e+06],
+       [ 3.90849075e+06, -1.93071750e+05, -3.12275925e+06,
+        -4.88057150e+06, -5.46650900e+06, -4.88057150e+06,
+        -3.12275925e+06, -1.93071750e+05,  3.90849075e+06],
+       [ 5.21132100e+06, -2.57429000e+05, -4.16367900e+06,
+        -6.50742900e+06, -7.28867900e+06, -6.50742900e+06,
+        -4.16367900e+06, -2.57429000e+05,  5.21132100e+06],
+       [ 6.51415150e+06, -3.21786000e+05, -5.20459850e+06,
+        -8.13428600e+06, -9.11084800e+06, -8.13428600e+06,
+        -5.20459850e+06, -3.21786000e+05,  6.51415150e+06],
+       [ 7.81698150e+06, -3.86143500e+05, -6.24551850e+06,
+        -9.76114400e+06, -1.09330180e+07, -9.76114400e+06,
+        -6.24551850e+06, -3.86143500e+05,  7.81698150e+06],
+       [ 9.11981200e+06, -4.50500500e+05, -7.28643800e+06,
+        -1.13880000e+07, -1.27551880e+07, -1.13880000e+07,
+        -7.28643800e+06, -4.50500500e+05,  9.11981200e+06],
+       [ 1.04226420e+07, -5.14858000e+05, -8.32735800e+06,
+        -1.30148580e+07, -1.45773580e+07, -1.30148580e+07,
+        -8.32735800e+06, -5.14858000e+05,  1.04226420e+07],
+       [ 1.17254720e+07, -5.79215500e+05, -9.36827800e+06,
+        -1.46417160e+07, -1.63995280e+07, -1.46417160e+07,
+        -9.36827800e+06, -5.79215500e+05,  1.17254720e+07],
+       [ 1.30283030e+07, -6.43572000e+05, -1.04091970e+07,
+        -1.62685720e+07, -1.82216980e+07, -1.62685720e+07,
+        -1.04091970e+07, -6.43572000e+05,  1.30283030e+07]], dtype=float32)
 Coordinates:
-    eleTags    int32 4B 6
-  * secPoints  (secPoints) int32 36B 1 2 3 4 5 6 7 8 9
-    secDofs    &lt;U2 8B &#39;MY&#39;
   * time       (time) float32 44B 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
+  * secPoints  (secPoints) int64 72B 1 2 3 4 5 6 7 8 9
+    eleTags    int64 8B 6
+    secDofs    &lt;U2 8B &#39;MY&#39;
 </pre></div></div>
 </div>
 <p>We can plot the moment at different section locations for various time steps.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sec_locs</span>
@@ -1312,7 +1462,7 @@ Coordinates:
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1331,39 +1481,86 @@ Coordinates:
 </symbol>
 </defs>
 </svg>
-<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
- *
- */
+<style>/* CSS stylesheet for displaying xarray objects in notebooks */
 
 :root {
-  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-  --xr-border-color: var(--jp-border-color2, #e0e0e0);
-  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-  --xr-background-color: var(--jp-layout-color0, white);
-  --xr-background-color-row-even: var(--jp-layout-color1, white);
-  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
 }
 
-html[theme=dark],
-html[data-theme=dark],
-body[data-theme=dark],
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
 body.vscode-dark {
-  --xr-font-color0: rgba(255, 255, 255, 1);
-  --xr-font-color2: rgba(255, 255, 255, 0.54);
-  --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
-  --xr-disabled-color: #515151;
-  --xr-background-color: #111111;
-  --xr-background-color-row-even: #111111;
-  --xr-background-color-row-odd: #313131;
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
 }
 
 .xr-wrap {
   display: block !important;
   min-width: 300px;
   max-width: 700px;
+  line-height: 1.6;
 }
 
 .xr-text-repr-fallback {
@@ -1386,11 +1583,18 @@ body.vscode-dark {
 }
 
 .xr-obj-type,
-.xr-array-name {
+.xr-obj-name,
+.xr-group-name {
   margin-left: 2px;
   margin-right: 10px;
 }
 
+.xr-group-name::before {
+  content: "📁";
+  padding-right: 0.3em;
+}
+
+.xr-group-name,
 .xr-obj-type {
   color: var(--xr-font-color2);
 }
@@ -1399,6 +1603,8 @@ body.vscode-dark {
   padding-left: 0 !important;
   display: grid;
   grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .xr-section-item {
@@ -1408,10 +1614,13 @@ body.vscode-dark {
 .xr-section-item input {
   display: inline-block;
   opacity: 0;
+  height: 0;
+  margin: 0;
 }
 
 .xr-section-item input + label {
   color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
 }
 
 .xr-section-item input:enabled + label {
@@ -1420,7 +1629,7 @@ body.vscode-dark {
 }
 
 .xr-section-item input:focus + label {
-  border: 2px solid var(--xr-font-color0);
+  border: 2px solid var(--xr-font-color0) !important;
 }
 
 .xr-section-item input:enabled + label:hover {
@@ -1444,7 +1653,7 @@ body.vscode-dark {
 
 .xr-section-summary-in + label:before {
   display: inline-block;
-  content: '►';
+  content: "►";
   font-size: 11px;
   width: 15px;
   text-align: center;
@@ -1455,7 +1664,7 @@ body.vscode-dark {
 }
 
 .xr-section-summary-in:checked + label:before {
-  content: '▼';
+  content: "▼";
 }
 
 .xr-section-summary-in:checked + label > span {
@@ -1465,7 +1674,6 @@ body.vscode-dark {
 .xr-section-summary,
 .xr-section-inline-details {
   padding-top: 4px;
-  padding-bottom: 4px;
 }
 
 .xr-section-inline-details {
@@ -1475,11 +1683,38 @@ body.vscode-dark {
 .xr-section-details {
   display: none;
   grid-column: 1 / -1;
+  margin-top: 4px;
   margin-bottom: 5px;
 }
 
 .xr-section-summary-in:checked ~ .xr-section-details {
   display: contents;
+}
+
+.xr-group-box {
+  display: inline-grid;
+  grid-template-columns: 0px 20px auto;
+  width: 100%;
+}
+
+.xr-group-box-vline {
+  grid-column-start: 1;
+  border-right: 0.2em solid;
+  border-color: var(--xr-border-color);
+  width: 0px;
+}
+
+.xr-group-box-hline {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  height: 1em;
+  width: 20px;
+  border-bottom: 0.2em solid;
+  border-color: var(--xr-border-color);
+}
+
+.xr-group-box-contents {
+  grid-column-start: 3;
 }
 
 .xr-array-wrap {
@@ -1527,15 +1762,15 @@ body.vscode-dark {
 }
 
 .xr-dim-list:before {
-  content: '(';
+  content: "(";
 }
 
 .xr-dim-list:after {
-  content: ')';
+  content: ")";
 }
 
 .xr-dim-list li:not(:last-child):after {
-  content: ',';
+  content: ",";
   padding-right: 5px;
 }
 
@@ -1552,7 +1787,9 @@ body.vscode-dark {
 .xr-var-item label,
 .xr-var-item > .xr-var-name span {
   background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
   margin-bottom: 0;
+  padding-top: 2px;
 }
 
 .xr-var-item > .xr-var-name:hover span {
@@ -1563,6 +1800,7 @@ body.vscode-dark {
 .xr-var-list > li:nth-child(odd) > label,
 .xr-var-list > li:nth-child(odd) > .xr-var-name span {
   background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
 }
 
 .xr-var-name {
@@ -1612,8 +1850,15 @@ body.vscode-dark {
 .xr-var-data,
 .xr-index-data {
   display: none;
-  background-color: var(--xr-background-color) !important;
-  padding-bottom: 5px !important;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
 }
 
 .xr-var-attrs-in:checked ~ .xr-var-attrs,
@@ -1624,6 +1869,12 @@ body.vscode-dark {
 
 .xr-var-data > table {
   float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
 }
 
 .xr-var-name span,
@@ -1685,6 +1936,14 @@ dl.xr-attrs {
   stroke: currentColor;
   fill: currentColor;
 }
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
 </style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;sectionLocs&#x27; (secPoints: 9, locs: 4)&gt; Size: 144B
 array([[0.000e+00, 4.500e+03, 0.000e+00, 1.350e+04],
        [1.250e-01, 4.500e+03, 6.250e+02, 1.350e+04],
@@ -1696,10 +1955,10 @@ array([[0.000e+00, 4.500e+03, 0.000e+00, 1.350e+04],
        [8.750e-01, 4.500e+03, 4.375e+03, 1.350e+04],
        [1.000e+00, 4.500e+03, 5.000e+03, 1.350e+04]], dtype=float32)
 Coordinates:
-    eleTags    int32 4B 6
+  * secPoints  (secPoints) int64 72B 1 2 3 4 5 6 7 8 9
   * locs       (locs) &lt;U5 80B &#x27;alpha&#x27; &#x27;X&#x27; &#x27;Y&#x27; &#x27;Z&#x27;
-  * secPoints  (secPoints) int32 36B 1 2 3 4 5 6 7 8 9
-    time       float32 4B 0.0</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'sectionLocs'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>secPoints</span>: 9</li><li><span class='xr-has-index'>locs</span>: 4</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-f4498dd1-456c-41a8-9c1f-c1b5ca5a500e' class='xr-array-in' type='checkbox' checked><label for='section-f4498dd1-456c-41a8-9c1f-c1b5ca5a500e' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>0.0 4.5e+03 0.0 1.35e+04 0.125 ... 1.35e+04 1.0 4.5e+03 5e+03 1.35e+04</span></div><div class='xr-array-data'><pre>array([[0.000e+00, 4.500e+03, 0.000e+00, 1.350e+04],
+    eleTags    int64 8B 6
+    time       float32 4B 0.0</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-obj-name'>&#x27;sectionLocs&#x27;</div><ul class='xr-dim-list'><li><span class='xr-has-index'>secPoints</span>: 9</li><li><span class='xr-has-index'>locs</span>: 4</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-bcd4fec2-841a-42de-a0c0-ce3e56d04ea4' class='xr-array-in' type='checkbox' checked><label for='section-bcd4fec2-841a-42de-a0c0-ce3e56d04ea4' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>0.0 4.5e+03 0.0 1.35e+04 0.125 ... 1.35e+04 1.0 4.5e+03 5e+03 1.35e+04</span></div><div class='xr-array-data'><pre>array([[0.000e+00, 4.500e+03, 0.000e+00, 1.350e+04],
        [1.250e-01, 4.500e+03, 6.250e+02, 1.350e+04],
        [2.500e-01, 4.500e+03, 1.250e+03, 1.350e+04],
        [3.750e-01, 4.500e+03, 1.875e+03, 1.350e+04],
@@ -1707,10 +1966,10 @@ Coordinates:
        [6.250e-01, 4.500e+03, 3.125e+03, 1.350e+04],
        [7.500e-01, 4.500e+03, 3.750e+03, 1.350e+04],
        [8.750e-01, 4.500e+03, 4.375e+03, 1.350e+04],
-       [1.000e+00, 4.500e+03, 5.000e+03, 1.350e+04]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-4430eeab-6c6e-41c7-b493-84d49e6228cb' class='xr-section-summary-in' type='checkbox'  checked><label for='section-4430eeab-6c6e-41c7-b493-84d49e6228cb' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>eleTags</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>6</div><input id='attrs-99788841-661e-4334-bcd1-f717430930bf' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-99788841-661e-4334-bcd1-f717430930bf' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-aca1e7eb-5d6a-4ae1-aca4-34ac19b1efd0' class='xr-var-data-in' type='checkbox'><label for='data-aca1e7eb-5d6a-4ae1-aca4-34ac19b1efd0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(6)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>locs</span></div><div class='xr-var-dims'>(locs)</div><div class='xr-var-dtype'>&lt;U5</div><div class='xr-var-preview xr-preview'>&#x27;alpha&#x27; &#x27;X&#x27; &#x27;Y&#x27; &#x27;Z&#x27;</div><input id='attrs-1fdfdbc9-040b-4b36-a50a-6728bf45e775' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-1fdfdbc9-040b-4b36-a50a-6728bf45e775' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0de18a37-c42e-4efa-b0cf-a7b8dbcc414f' class='xr-var-data-in' type='checkbox'><label for='data-0de18a37-c42e-4efa-b0cf-a7b8dbcc414f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;alpha&#x27;, &#x27;X&#x27;, &#x27;Y&#x27;, &#x27;Z&#x27;], dtype=&#x27;&lt;U5&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>secPoints</span></div><div class='xr-var-dims'>(secPoints)</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>1 2 3 4 5 6 7 8 9</div><input id='attrs-3b9dd656-fec4-4318-be13-3e5c8cca1622' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-3b9dd656-fec4-4318-be13-3e5c8cca1622' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-263fdf03-52f0-40c5-af47-ef0ca9af132c' class='xr-var-data-in' type='checkbox'><label for='data-263fdf03-52f0-40c5-af47-ef0ca9af132c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1, 2, 3, 4, 5, 6, 7, 8, 9])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0</div><input id='attrs-62586c31-ba52-4146-85a6-6a0e41dd1c41' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-62586c31-ba52-4146-85a6-6a0e41dd1c41' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-21f70bc8-8eef-472b-a177-1fd2b6588036' class='xr-var-data-in' type='checkbox'><label for='data-21f70bc8-8eef-472b-a177-1fd2b6588036' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(0., dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-5775a7a9-fa51-4b37-afc4-f380ef1f5091' class='xr-section-summary-in' type='checkbox'  ><label for='section-5775a7a9-fa51-4b37-afc4-f380ef1f5091' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>locs</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-676dfcbe-eea9-41e0-a800-4097751c8ad5' class='xr-index-data-in' type='checkbox'/><label for='index-676dfcbe-eea9-41e0-a800-4097751c8ad5' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([&#x27;alpha&#x27;, &#x27;X&#x27;, &#x27;Y&#x27;, &#x27;Z&#x27;], dtype=&#x27;object&#x27;, name=&#x27;locs&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>secPoints</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-abb5a6c2-3b6b-4615-9f4a-fe3265fd7d0f' class='xr-index-data-in' type='checkbox'/><label for='index-abb5a6c2-3b6b-4615-9f4a-fe3265fd7d0f' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([1, 2, 3, 4, 5, 6, 7, 8, 9], dtype=&#x27;int32&#x27;, name=&#x27;secPoints&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-e3f5c5af-6f1f-49df-920a-a514c4e24e70' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-e3f5c5af-6f1f-49df-920a-a514c4e24e70' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div>
+       [1.000e+00, 4.500e+03, 5.000e+03, 1.350e+04]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-5416616b-df73-44c9-bc86-2301cd423663' class='xr-section-summary-in' type='checkbox'  checked><label for='section-5416616b-df73-44c9-bc86-2301cd423663' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>secPoints</span></div><div class='xr-var-dims'>(secPoints)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>1 2 3 4 5 6 7 8 9</div><input id='attrs-ef9aef76-5cfa-404d-907a-fe818f2a1eaa' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-ef9aef76-5cfa-404d-907a-fe818f2a1eaa' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7e3cd1f1-df43-430e-abfc-b98d32f4cfcc' class='xr-var-data-in' type='checkbox'><label for='data-7e3cd1f1-df43-430e-abfc-b98d32f4cfcc' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1, 2, 3, 4, 5, 6, 7, 8, 9])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>locs</span></div><div class='xr-var-dims'>(locs)</div><div class='xr-var-dtype'>&lt;U5</div><div class='xr-var-preview xr-preview'>&#x27;alpha&#x27; &#x27;X&#x27; &#x27;Y&#x27; &#x27;Z&#x27;</div><input id='attrs-497a311a-4437-4c70-b138-5a8002c1b5a1' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-497a311a-4437-4c70-b138-5a8002c1b5a1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6ea1f912-a70f-4e82-93e8-502fa30d5f01' class='xr-var-data-in' type='checkbox'><label for='data-6ea1f912-a70f-4e82-93e8-502fa30d5f01' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;alpha&#x27;, &#x27;X&#x27;, &#x27;Y&#x27;, &#x27;Z&#x27;], dtype=&#x27;&lt;U5&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>eleTags</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>6</div><input id='attrs-bd12de45-ab19-43ac-95e6-09b7e483c36c' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-bd12de45-ab19-43ac-95e6-09b7e483c36c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ec3fc79b-8911-4500-9ef1-7e93bdef106e' class='xr-var-data-in' type='checkbox'><label for='data-ec3fc79b-8911-4500-9ef1-7e93bdef106e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(6)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>time</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0</div><input id='attrs-64bc81da-e54e-4e35-94e9-1b6556c6c00f' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-64bc81da-e54e-4e35-94e9-1b6556c6c00f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-77b954ef-25cd-406b-84d9-743f16eb472a' class='xr-var-data-in' type='checkbox'><label for='data-77b954ef-25cd-406b-84d9-743f16eb472a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(0., dtype=float32)</pre></div></li></ul></div></li></ul></div></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">times</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
@@ -1728,11 +1987,11 @@ Coordinates:
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/src_post_frame_resp_32_0.png" src="../../_images/src_post_frame_resp_32_0.png" />
+<img alt="../../_images/src_post_frame_resp_33_0.png" src="../../_images/src_post_frame_resp_33_0.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">times</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
@@ -1750,7 +2009,7 @@ Coordinates:
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/src_post_frame_resp_33_0.png" src="../../_images/src_post_frame_resp_33_0.png" />
+<img alt="../../_images/src_post_frame_resp_34_0.png" src="../../_images/src_post_frame_resp_34_0.png" />
 </div>
 </div>
 </section>
@@ -1830,7 +2089,7 @@ Coordinates:
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=665f1cdb"></script>
+</div><script src="../../_static/documentation_options.js?v=c22798c2"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>

@@ -5,8 +5,8 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../../genindex.html" /><link rel="search" title="Search" href="../../../../search.html" />
 
     <link rel="shortcut icon" href="../../../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>opstool.vis.pyvista.vis_unstru_resp - opstool 1.0.22 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=5f771d8e" />
+        <title>opstool.vis.pyvista.vis_unstru_resp - opstool 1.0.25 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/jupyter-sphinx.css?v=572af1d6" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/thebelab.css" />
@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/_css/shared.css?v=165b944a" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/_css/shared.css?v=e989f5d6" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/_css/furo.css?v=75230d29" />
     
     
@@ -25,8 +25,9 @@
 
 <style>
   body {
-    --color-code-background: #fbf1c7;
+    --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --font-stack--monospace: Monaco, monospace;
   
   }
   @media not print {
@@ -175,7 +176,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../../index.html"><div class="brand">opstool 1.0.22 documentation</div></a>
+      <a href="../../../../index.html"><div class="brand">opstool 1.0.25 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -215,8 +216,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../known_issues.html">Known Issues</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../../quick_start.html">Quick Start</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Quick Start</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../auto_examples/quick-start/ex-frame2D.html">Two-Dimensional Moment Frame Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../auto_examples/quick-start/ex-quick-plot-model.html">Quick Model and Eigen Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../_sphinx_gallery_examples/quick-start/ex-frame2D.html">Two-Dimensional Moment Frame Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../_sphinx_gallery_examples/quick-start/ex-quick-plot-model.html">Quick Model and Eigen Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../quick-start/vis-megatall.html">606 m Mega-tall Building</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../quick_start.html#features">Features</a></li>
@@ -233,39 +235,39 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/post/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/eigen.html">Eigenvalue Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/nodal_resp.html">Node Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/frame_resp.html">Frame Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/fiber_sec_resp.html">Fiber Section Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/truss_resp.html">Truss Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/shell_resp.html">Shell Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/plane_up_resp.html">Plane response</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/brick_resp.html">Brick Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/sensitivity_resp.html">Sensitivity Analysis Responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/eigen.html">Eigenvalue Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/nodal_resp.html">Node Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/frame_resp.html">Frame element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/fiber_sec_resp.html">Post-processing for fiber section responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/truss_resp.html">Truss element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/shell_resp.html">Shell element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/plane_up_resp.html">Planar element response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/brick_resp.html">Brick element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/post/sensitivity_resp.html">Simple cantilever for load-controlled sensitivity analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/post/unit_transform.html">Unit conversion in post-processing</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../auto_examples/vis-guide/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/index.html">Plotyly-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Plotyly-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-01-model-plotly.html">Model Geometry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-02-eigen-plotly.html">Eigen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-03-nodal-resp-plotly.html">Nodal Responses Visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-04-frame-resp-plotly.html">Frame Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-05-truss-resp-plotly.html">Truss Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-06-shell-resp-plotly.html">Shell Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-07-plane-resp-plotly.html">Plane stress quad model visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/plotly/ex-08-brick-resp-plotly.html">Solid Element Responses</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/plotly/index.html">Plotyly-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Plotyly-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/plotly/ex-01-model-plotly.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/plotly/ex-02-eigen-plotly.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/plotly/ex-03-nodal-resp-plotly.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/plotly/ex-04-frame-resp-plotly.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/plotly/ex-05-truss-resp-plotly.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/plotly/ex-06-shell-resp-plotly.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/plotly/ex-07-plane-resp-plotly.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/plotly/ex-08-brick-resp-plotly.html">Solid Element Responses</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/index.html">Pyvista-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Pyvista-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-01-model-pyvista.html">Model Geometry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-02-eigen-pyvista.html">Eigen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-03-nodal-resp-pyvista.html">Nodal Responses Visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-04-frame-resp-pyvista.html">Frame Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-05-truss-resp-pyvista.html">Truss Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-06-shell-resp-pyvista.html">Shell Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-07-plane-resp-pyvista.html">Plane stress quad model visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/vis-guide/pyvista/ex-08-brick-resp-pyvista.html">Solid Element Responses</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/pyvista/index.html">Pyvista-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Pyvista-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-01-model-pyvista.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-02-eigen-pyvista.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-03-nodal-resp-pyvista.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-04-frame-resp-pyvista.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-05-truss-resp-pyvista.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-06-shell-resp-pyvista.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-07-plane-resp-pyvista.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-08-brick-resp-pyvista.html">Solid Element Responses</a></li>
 </ul>
 </li>
 </ul>
@@ -274,45 +276,42 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/analysis/smart_analysis.html">Smart Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/analysis/mc_analysis.html">Moment Curvature Analysis of Section</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/analysis/buckling_analysis_linear.html">Linear Buckling Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/analysis/responseSpectrumAnalysis.html">Response Spectrum Analysis</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../auto_examples/examples/index.html">Post-Processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../auto_examples/examples/index.html#pre-processing">Pre-Processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../auto_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-ele-removal-add.html">Remove and Add Elements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-excavation.html">Excavation Supported by Cantilevered Sheet Pile Wall</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-forma11c.html">Modal analysis of a cooling tower</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-fsi-gu.html">Fluid-structure interaction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-nonlinear-frame-transient.html">3D Nonlinear beam-column elements Gravity load analysis followed by transient analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-sensitivity2.html">Two storey steel moment frame with W-sections for displacement-controlled sensitivity analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/postprocessing/ex-ssi-Gu.html">Soil-Structure Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/index.html">Post-Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/index.html#pre-processing">Pre-Processing</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/postprocessing/ex-2DFrame-Pushover.html">Reinforced Concrete Frame Pushover Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/postprocessing/ex-ele-removal-add.html">Remove and Add Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/postprocessing/ex-excavation.html">Excavation Supported by Cantilevered Sheet Pile Wall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/postprocessing/ex-forma11c.html">Modal analysis of a cooling tower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/postprocessing/ex-fsi-gu.html">Fluid-structure interaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/postprocessing/ex-nonlinear-frame-transient.html">3D Nonlinear beam-column elements Gravity load analysis followed by transient analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/postprocessing/ex-sensitivity2.html">Two storey steel moment frame with W-sections for displacement-controlled sensitivity analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/postprocessing/ex-ssi-Gu.html">Soil-Structure Interaction</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/examples/preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/preprocessing/ex-read-gmsh-1.html">Gmsh2OPS: Case 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/preprocessing/ex-read-gmsh-2.html">Gmsh2OPS: Case 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/preprocessing/ex-read-gmsh-3.html">3D Beam Element Example - A Dome Structure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/preprocessing/ex-read-gmsh-4.html">Gmsh2OPS: Linear shell arch model</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-1.html">Gmsh2OPS: Case 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-2.html">Gmsh2OPS: Case 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-3.html">3D Beam Element Example - A Dome Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-4.html">Gmsh2OPS: Linear shell arch model</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/examples/sec-mesh/index.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/sec-mesh/ex-bridge-deck.html">Bridge superstructure section</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/sec-mesh/ex-cfst.html">Concrete-Filled Steel Tube (CFST) Section Meshing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/sec-mesh/ex-composite.html">Steel-Concrete Composite Section Meshing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/sec-mesh/ex-rc-section.html">Hollow Rectangular RC Section</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/sec-mesh/ex-sec-props.html">Interaction with sectionproperties</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../auto_examples/examples/vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../auto_examples/examples/vis/ex-vis-megatall.html">606 m Mega-tall Building</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/sec-mesh/index.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/sec-mesh/ex-bridge-deck.html">Bridge superstructure section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/sec-mesh/ex-cfst.html">Concrete-Filled Steel Tube (CFST) Section Meshing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/sec-mesh/ex-composite.html">Steel-Concrete Composite Section Meshing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/sec-mesh/ex-rc-section.html">Hollow Rectangular RC Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_sphinx_gallery_examples/examples/sec-mesh/ex-sec-props.html">Interaction with sectionproperties</a></li>
 </ul>
 </li>
 </ul>
@@ -320,15 +319,16 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.set_opensees_module.html">set_opensees_module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.load_ops_examples.html">load_ops_examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.add_ops_hints_file.html">add_ops_hints_file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.run_model.html">run_model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.print_version.html">print_version</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../src/api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../src/api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.FiberSecMesh.html">FiberSecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.SecMesh.html">SecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.section.create_material.html">create_material</a></li>
@@ -366,24 +366,28 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.pre.remove_void_nodes.html">remove_void_nodes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_nodal_responses_info.html">get_nodal_responses_info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_element_responses_info.html">get_element_responses_info</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.set_odb_path.html">set_odb_path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.set_odb_format.html">set_odb_format</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.update_unit_system.html">update_unit_system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.reset_unit_system.html">reset_unit_system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.plot_nodal_responses.html">plot_nodal_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.plot_element_responses.html">plot_element_responses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.save_model_data.html">save_model_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.save_eigen_data.html">save_eigen_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.save_linear_buckling_data.html">save_linear_buckling_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.CreateODB.html">CreateODB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_model_data.html">get_model_data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_eigen_data.html">get_eigen_data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_linear_buckling_data.html">get_linear_buckling_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_nodal_responses.html">get_nodal_responses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_element_responses.html">get_element_responses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_sensitivity_responses.html">get_sensitivity_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_model_data.html">get_model_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_eigen_data.html">get_eigen_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.post.get_linear_buckling_data.html">get_linear_buckling_data</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.set_plot_props.html">set_plot_props</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.set_plot_colors.html">set_plot_colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.plotly.plot_model.html">plot_model</a></li>
@@ -415,7 +419,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.vis.pyvista.get_unstruct_responses_dataset.html">get_unstruct_responses_dataset</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../src/api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.anlys.SmartAnalyze.html">SmartAnalyze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../src/api/_autosummary/opstool.anlys.MomentCurvature.html">MomentCurvature</a></li>
 </ul>
@@ -460,7 +464,7 @@
           d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
         />
       </svg>
-      <span class="gh-source--version-text"> 1.0.22 </span>
+      <span class="gh-source--version-text"> 1.0.25 </span>
     </span>
   </span>
 </a>
@@ -501,15 +505,14 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">...post</span><span class="w"> </span><span class="kn">import</span> <span class="n">loadODB</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">.._plot_unstru_resp_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlotUnstruResponseBase</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">.plot_resp_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlotResponsePyvistaBase</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">.plot_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">PLOT_ARGS</span><span class="p">,</span> <span class="n">_plot_unstru_cmap</span><span class="p">,</span> <span class="n">_update_point_label_actor</span>
 
 
 <span class="k">class</span><span class="w"> </span><span class="nc">PlotUnstruResponse</span><span class="p">(</span><span class="n">PlotUnstruResponseBase</span><span class="p">,</span> <span class="n">PlotResponsePyvistaBase</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_info_steps</span><span class="p">,</span> <span class="n">resp_step</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">nodal_resp_steps</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">model_info_steps</span><span class="p">,</span> <span class="n">resp_step</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">nodal_resp_steps</span><span class="o">=</span><span class="n">nodal_resp_steps</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">odb_tag</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">lazy_load</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">lazy_load</span><span class="o">=</span><span class="n">lazy_load</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_make_title</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scalars</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">resp_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;stressmeasures&quot;</span><span class="p">,</span> <span class="s2">&quot;stressmeasuresatnodes&quot;</span><span class="p">]:</span>
@@ -536,20 +539,21 @@
             <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="n">time</span><span class="p">,</span>
         <span class="p">}</span>
         <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="sa">f</span><span class="s2">&quot;* </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> Responses&quot;</span><span class="p">,</span>
-            <span class="sa">f</span><span class="s2">&quot;* </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;resp_type&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
-            <span class="sa">f</span><span class="s2">&quot;* </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;dof&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (DOF)&quot;</span><span class="p">,</span>
-            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3E</span><span class="si">}</span><span class="s2"> (min)&quot;</span><span class="p">,</span>
-            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3E</span><span class="si">}</span><span class="s2"> (max)&quot;</span><span class="p">,</span>
             <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;step&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (step)&quot;</span><span class="p">,</span>
             <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> (time)&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3E</span><span class="si">}</span><span class="s2"> (min)&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3E</span><span class="si">}</span><span class="s2"> (max)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> Responses&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;resp_type&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;dof&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (DOF)&quot;</span><span class="p">,</span>
         <span class="p">]</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit_symbol</span><span class="p">:</span>
-            <span class="n">info</span><span class="p">[</span><span class="s2">&quot;unit&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit_symbol</span>
-            <span class="n">lines</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;unit&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (unit)&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_point</span> <span class="ow">and</span> <span class="s2">&quot;Sec&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">resp_type</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">ele_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;shell&quot;</span><span class="p">:</span>
             <span class="n">info</span><span class="p">[</span><span class="s2">&quot;fiber_point&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fiber_point</span>
-            <span class="n">lines</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;* </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;fiber_point&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (Fiber)&quot;</span><span class="p">)</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;fiber_point&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (Fiber)&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit_symbol</span><span class="p">:</span>
+            <span class="n">info</span><span class="p">[</span><span class="s2">&quot;unit&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit_symbol</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;unit&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (unit)&quot;</span><span class="p">)</span>
 
         <span class="n">max_len</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">)</span>
         <span class="n">padded_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="n">max_len</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
@@ -636,6 +640,7 @@
                 <span class="n">max_min_label_grid</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_point_labels</span><span class="p">(</span>
                     <span class="n">ps</span><span class="p">,</span>
                     <span class="n">labels</span><span class="p">,</span>
+                    <span class="n">show_points</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                     <span class="n">point_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pargs</span><span class="o">.</span><span class="n">point_size</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span>
                     <span class="n">font_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pargs</span><span class="o">.</span><span class="n">font_size</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span>
                     <span class="n">shape_color</span><span class="o">=</span><span class="s2">&quot;#c0fb2d&quot;</span><span class="p">,</span>
@@ -901,6 +906,7 @@
     <span class="n">cpos</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;iso&quot;</span><span class="p">,</span>
     <span class="n">show_model</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">show_max_min</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">lazy_load</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Visualizing unstructured element (Shell, Plane, Brick) Response.</span>
 
@@ -1018,6 +1024,12 @@
 <span class="sd">        Whether to plot the all model or not.</span>
 <span class="sd">    show_max_min: bool, default: True</span>
 <span class="sd">        Whether to show the maximum and minimum response value labels.</span>
+<span class="sd">    lazy_load: bool, default: False</span>
+<span class="sd">        Whether to lazily load the response data.</span>
+<span class="sd">        If True, the response data will be loaded on demand when needed for plotting.</span>
+<span class="sd">        This can save memory when dealing with large datasets.</span>
+<span class="sd">        If False, all response data will be loaded into memory at once.</span>
+<span class="sd">        If you encounter memory issues, consider setting this parameter to True, elsewise, set it to False for plotting in safety.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
@@ -1032,15 +1044,13 @@
 <span class="sd">    `Plotter.export_html &lt;https://docs.pyvista.org/api/plotting/_autosummary/pyvista.plotter.export_html#pyvista.Plotter.export_html&gt;`_.</span>
 <span class="sd">    to export this plotter as an interactive scene to an HTML file.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">model_info_steps</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">resp_step</span> <span class="o">=</span> <span class="n">loadODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="n">ele_type</span><span class="p">)</span>
-    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">node_resp_steps</span> <span class="o">=</span> <span class="n">loadODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="s2">&quot;Nodal&quot;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span>
         <span class="n">notebook</span><span class="o">=</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">notebook</span><span class="p">,</span>
         <span class="n">line_smoothing</span><span class="o">=</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">line_smoothing</span><span class="p">,</span>
         <span class="n">polygon_smoothing</span><span class="o">=</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">polygon_smoothing</span><span class="p">,</span>
         <span class="n">off_screen</span><span class="o">=</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">off_screen</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="n">plotbase</span> <span class="o">=</span> <span class="n">PlotUnstruResponse</span><span class="p">(</span><span class="n">model_info_steps</span><span class="p">,</span> <span class="n">resp_step</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">nodal_resp_steps</span><span class="o">=</span><span class="n">node_resp_steps</span><span class="p">)</span>
+    <span class="n">plotbase</span> <span class="o">=</span> <span class="n">PlotUnstruResponse</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">lazy_load</span><span class="o">=</span><span class="n">lazy_load</span><span class="p">)</span>
     <span class="n">plotbase</span><span class="o">.</span><span class="n">set_unit</span><span class="p">(</span><span class="n">symbol</span><span class="o">=</span><span class="n">unit_symbol</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="n">unit_factor</span><span class="p">)</span>
     <span class="n">plotbase</span><span class="o">.</span><span class="n">refactor_resp_step</span><span class="p">(</span>
         <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span> <span class="n">ele_type</span><span class="o">=</span><span class="n">ele_type</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="n">resp_type</span><span class="p">,</span> <span class="n">component</span><span class="o">=</span><span class="n">resp_dof</span><span class="p">,</span> <span class="n">fiber_point</span><span class="o">=</span><span class="n">shell_fiber_loc</span>
@@ -1106,6 +1116,7 @@
     <span class="n">cpos</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;iso&quot;</span><span class="p">,</span>
     <span class="n">show_model</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">show_max_min</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">lazy_load</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Unstructured element (Shell, Plane, Brick) response animation.</span>
 
@@ -1222,6 +1233,12 @@
 <span class="sd">        Whether to plot the all model or not.</span>
 <span class="sd">    show_max_min: bool, default: True</span>
 <span class="sd">        Whether to show the maximum and minimum response value labels.</span>
+<span class="sd">    lazy_load: bool, default: False</span>
+<span class="sd">        Whether to lazily load the response data.</span>
+<span class="sd">        If True, the response data will be loaded on demand when needed for plotting.</span>
+<span class="sd">        This can save memory when dealing with large datasets.</span>
+<span class="sd">        If False, all response data will be loaded into memory at once.</span>
+<span class="sd">        If you encounter memory issues, consider setting this parameter to True, elsewise, set it to False for plotting in safety.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
@@ -1238,15 +1255,13 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">savefig</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">savefig</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ele_type</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span><span class="si">}</span><span class="s2">RespAnimation.gif&quot;</span>
-    <span class="n">model_info_steps</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">resp_step</span> <span class="o">=</span> <span class="n">loadODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="n">ele_type</span><span class="p">)</span>
-    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">node_resp_steps</span> <span class="o">=</span> <span class="n">loadODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="s2">&quot;Nodal&quot;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span>
         <span class="n">notebook</span><span class="o">=</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">notebook</span><span class="p">,</span>
         <span class="n">line_smoothing</span><span class="o">=</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">line_smoothing</span><span class="p">,</span>
         <span class="n">polygon_smoothing</span><span class="o">=</span><span class="n">PLOT_ARGS</span><span class="o">.</span><span class="n">polygon_smoothing</span><span class="p">,</span>
         <span class="n">off_screen</span><span class="o">=</span><span class="n">off_screen</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="n">plotbase</span> <span class="o">=</span> <span class="n">PlotUnstruResponse</span><span class="p">(</span><span class="n">model_info_steps</span><span class="p">,</span> <span class="n">resp_step</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">nodal_resp_steps</span><span class="o">=</span><span class="n">node_resp_steps</span><span class="p">)</span>
+    <span class="n">plotbase</span> <span class="o">=</span> <span class="n">PlotUnstruResponse</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">lazy_load</span><span class="o">=</span><span class="n">lazy_load</span><span class="p">)</span>
     <span class="n">plotbase</span><span class="o">.</span><span class="n">set_unit</span><span class="p">(</span><span class="n">symbol</span><span class="o">=</span><span class="n">unit_symbol</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="n">unit_factor</span><span class="p">)</span>
     <span class="n">plotbase</span><span class="o">.</span><span class="n">refactor_resp_step</span><span class="p">(</span>
         <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span> <span class="n">ele_type</span><span class="o">=</span><span class="n">ele_type</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="n">resp_type</span><span class="p">,</span> <span class="n">component</span><span class="o">=</span><span class="n">resp_dof</span><span class="p">,</span> <span class="n">fiber_point</span><span class="o">=</span><span class="n">shell_fiber_loc</span>
@@ -1285,6 +1300,7 @@
     <span class="n">resp_dof</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;MXX&quot;</span><span class="p">,</span>
     <span class="n">shell_fiber_loc</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;top&quot;</span><span class="p">,</span>
     <span class="n">defo_scale</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">lazy_load</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pv</span><span class="o">.</span><span class="n">UnstructuredGrid</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get unstructured element (Shell, Plane, Brick) Dataset (Pyvista).</span>
 <span class="sd">    Data Model in PyVista can be found at `PyVista Data Model &lt;https://docs.pyvista.org/user-guide/data_model&gt;`_.</span>
@@ -1365,6 +1381,12 @@
 <span class="sd">        If set to False or 0.0, the deformed shape will not be scaled (original deformation).</span>
 <span class="sd">        If set to True or &quot;auto&quot;, the deformed shape will be scaled by the default scale (i.e., 1/20 of the maximum model dimensions).</span>
 <span class="sd">        If set to a float or int, it will scale the deformed shape by that factor.</span>
+<span class="sd">    lazy_load: bool, default: False</span>
+<span class="sd">        Whether to lazily load the response data.</span>
+<span class="sd">        If True, the response data will be loaded on demand when needed for plotting.</span>
+<span class="sd">        This can save memory when dealing with large datasets.</span>
+<span class="sd">        If False, all response data will be loaded into memory at once.</span>
+<span class="sd">        If you encounter memory issues, consider setting this parameter to True, elsewise, set it to False for plotting in safety.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
@@ -1374,9 +1396,7 @@
 
 <span class="sd">        Data Model in PyVista can be found at `PyVista Data Model &lt;https://docs.pyvista.org/user-guide/data_model&gt;`_.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">model_info_steps</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">resp_step</span> <span class="o">=</span> <span class="n">loadODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="n">ele_type</span><span class="p">)</span>
-    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">node_resp_steps</span> <span class="o">=</span> <span class="n">loadODB</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="s2">&quot;Nodal&quot;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="n">plotbase</span> <span class="o">=</span> <span class="n">PlotUnstruResponse</span><span class="p">(</span><span class="n">model_info_steps</span><span class="p">,</span> <span class="n">resp_step</span><span class="p">,</span> <span class="n">model_update</span><span class="p">,</span> <span class="n">nodal_resp_steps</span><span class="o">=</span><span class="n">node_resp_steps</span><span class="p">)</span>
+    <span class="n">plotbase</span> <span class="o">=</span> <span class="n">PlotUnstruResponse</span><span class="p">(</span><span class="n">odb_tag</span><span class="p">,</span> <span class="n">lazy_load</span><span class="o">=</span><span class="n">lazy_load</span><span class="p">)</span>
     <span class="n">plotbase</span><span class="o">.</span><span class="n">refactor_resp_step</span><span class="p">(</span>
         <span class="n">ele_tags</span><span class="o">=</span><span class="n">ele_tags</span><span class="p">,</span> <span class="n">ele_type</span><span class="o">=</span><span class="n">ele_type</span><span class="p">,</span> <span class="n">resp_type</span><span class="o">=</span><span class="n">resp_type</span><span class="p">,</span> <span class="n">component</span><span class="o">=</span><span class="n">resp_dof</span><span class="p">,</span> <span class="n">fiber_point</span><span class="o">=</span><span class="n">shell_fiber_loc</span>
     <span class="p">)</span>
@@ -1414,7 +1434,7 @@
       
     </aside>
   </div>
-</div><script src="../../../../_static/documentation_options.js?v=09ae080f"></script>
+</div><script src="../../../../_static/documentation_options.js?v=c22798c2"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/scripts/furo.js?v=5fa4622c"></script>

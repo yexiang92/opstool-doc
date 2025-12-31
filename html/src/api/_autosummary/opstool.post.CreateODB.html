@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="get_model_data" href="opstool.post.get_model_data.html" /><link rel="prev" title="save_linear_buckling_data" href="opstool.post.save_linear_buckling_data.html" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="get_nodal_responses" href="opstool.post.get_nodal_responses.html" /><link rel="prev" title="save_linear_buckling_data" href="opstool.post.save_linear_buckling_data.html" />
 
     <link rel="shortcut icon" href="../../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>CreateODB - opstool 1.0.24 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5f771d8e" />
+        <title>CreateODB - opstool 1.0.25 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css?v=572af1d6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/_css/shared.css?v=165b944a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/_css/shared.css?v=e989f5d6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/_css/furo.css?v=75230d29" />
     
     
@@ -26,8 +26,9 @@
 
 <style>
   body {
-    --color-code-background: #fbf1c7;
+    --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --font-stack--monospace: Monaco, monospace;
   
   }
   @media not print {
@@ -176,7 +177,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">opstool 1.0.24 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">opstool 1.0.25 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -216,8 +217,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../known_issues.html">Known Issues</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../quick_start.html">Quick Start</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Quick Start</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../auto_examples/quick-start/ex-frame2D.html">Two-Dimensional Moment Frame Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../auto_examples/quick-start/ex-quick-plot-model.html">Quick Model and Eigen Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../_sphinx_gallery_examples/quick-start/ex-frame2D.html">Two-Dimensional Moment Frame Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../_sphinx_gallery_examples/quick-start/ex-quick-plot-model.html">Quick Model and Eigen Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../quick-start/vis-megatall.html">606 m Mega-tall Building</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../quick_start.html#features">Features</a></li>
@@ -234,39 +236,39 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../post/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../post/eigen.html">Eigenvalue Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../post/nodal_resp.html">Node Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../post/frame_resp.html">Frame Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../post/fiber_sec_resp.html">Fiber Section Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../post/truss_resp.html">Truss Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../post/shell_resp.html">Shell Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../post/plane_up_resp.html">Plane response</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../post/brick_resp.html">Brick Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../post/sensitivity_resp.html">Sensitivity Analysis Responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post/eigen.html">Eigenvalue Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post/nodal_resp.html">Node Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post/frame_resp.html">Frame element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post/fiber_sec_resp.html">Post-processing for fiber section responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post/truss_resp.html">Truss element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post/shell_resp.html">Shell element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post/plane_up_resp.html">Planar element response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post/brick_resp.html">Brick element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post/sensitivity_resp.html">Simple cantilever for load-controlled sensitivity analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../post/unit_transform.html">Unit conversion in post-processing</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../auto_examples/vis-guide/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/index.html">Plotyly-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Plotyly-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-01-model-plotly.html">Model Geometry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-02-eigen-plotly.html">Eigen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-03-nodal-resp-plotly.html">Nodal Responses Visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-04-frame-resp-plotly.html">Frame Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-05-truss-resp-plotly.html">Truss Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-06-shell-resp-plotly.html">Shell Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-07-plane-resp-plotly.html">Plane stress quad model visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/plotly/ex-08-brick-resp-plotly.html">Solid Element Responses</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/plotly/index.html">Plotyly-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Plotyly-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/plotly/ex-01-model-plotly.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/plotly/ex-02-eigen-plotly.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/plotly/ex-03-nodal-resp-plotly.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/plotly/ex-04-frame-resp-plotly.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/plotly/ex-05-truss-resp-plotly.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/plotly/ex-06-shell-resp-plotly.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/plotly/ex-07-plane-resp-plotly.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/plotly/ex-08-brick-resp-plotly.html">Solid Element Responses</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/index.html">Pyvista-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Pyvista-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-01-model-pyvista.html">Model Geometry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-02-eigen-pyvista.html">Eigen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-03-nodal-resp-pyvista.html">Nodal Responses Visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-04-frame-resp-pyvista.html">Frame Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-05-truss-resp-pyvista.html">Truss Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-06-shell-resp-pyvista.html">Shell Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-07-plane-resp-pyvista.html">Plane stress quad model visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/vis-guide/pyvista/ex-08-brick-resp-pyvista.html">Solid Element Responses</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/pyvista/index.html">Pyvista-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Pyvista-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-01-model-pyvista.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-02-eigen-pyvista.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-03-nodal-resp-pyvista.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-04-frame-resp-pyvista.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-05-truss-resp-pyvista.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-06-shell-resp-pyvista.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-07-plane-resp-pyvista.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/vis-guide/pyvista/ex-08-brick-resp-pyvista.html">Solid Element Responses</a></li>
 </ul>
 </li>
 </ul>
@@ -281,41 +283,36 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/examples/index.html">Post-Processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/examples/index.html#pre-processing">Pre-Processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-2DFrame-Pushover.html">Reinforced Concrete Frame Pushover Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-ele-removal-add.html">Remove and Add Elements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-excavation.html">Excavation Supported by Cantilevered Sheet Pile Wall</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-forma11c.html">Modal analysis of a cooling tower</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-fsi-gu.html">Fluid-structure interaction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-nonlinear-frame-transient.html">3D Nonlinear beam-column elements Gravity load analysis followed by transient analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-sensitivity2.html">Two storey steel moment frame with W-sections for displacement-controlled sensitivity analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/postprocessing/ex-ssi-Gu.html">Soil-Structure Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/index.html">Post-Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/index.html#pre-processing">Pre-Processing</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/postprocessing/ex-2DFrame-Pushover.html">Reinforced Concrete Frame Pushover Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/postprocessing/ex-ele-removal-add.html">Remove and Add Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/postprocessing/ex-excavation.html">Excavation Supported by Cantilevered Sheet Pile Wall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/postprocessing/ex-forma11c.html">Modal analysis of a cooling tower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/postprocessing/ex-fsi-gu.html">Fluid-structure interaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/postprocessing/ex-nonlinear-frame-transient.html">3D Nonlinear beam-column elements Gravity load analysis followed by transient analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/postprocessing/ex-sensitivity2.html">Two storey steel moment frame with W-sections for displacement-controlled sensitivity analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/postprocessing/ex-ssi-Gu.html">Soil-Structure Interaction</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/preprocessing/ex-read-gmsh-1.html">Gmsh2OPS: Case 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/preprocessing/ex-read-gmsh-2.html">Gmsh2OPS: Case 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/preprocessing/ex-read-gmsh-3.html">3D Beam Element Example - A Dome Structure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/preprocessing/ex-read-gmsh-4.html">Gmsh2OPS: Linear shell arch model</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-1.html">Gmsh2OPS: Case 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-2.html">Gmsh2OPS: Case 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-3.html">3D Beam Element Example - A Dome Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-4.html">Gmsh2OPS: Linear shell arch model</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/sec-mesh/index.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/sec-mesh/ex-bridge-deck.html">Bridge superstructure section</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/sec-mesh/ex-cfst.html">Concrete-Filled Steel Tube (CFST) Section Meshing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/sec-mesh/ex-composite.html">Steel-Concrete Composite Section Meshing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/sec-mesh/ex-rc-section.html">Hollow Rectangular RC Section</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/sec-mesh/ex-sec-props.html">Interaction with sectionproperties</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../auto_examples/examples/vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../auto_examples/examples/vis/ex-vis-megatall.html">606 m Mega-tall Building</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/sec-mesh/index.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/sec-mesh/ex-bridge-deck.html">Bridge superstructure section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/sec-mesh/ex-cfst.html">Concrete-Filled Steel Tube (CFST) Section Meshing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/sec-mesh/ex-composite.html">Steel-Concrete Composite Section Meshing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/sec-mesh/ex-rc-section.html">Hollow Rectangular RC Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_sphinx_gallery_examples/examples/sec-mesh/ex-sec-props.html">Interaction with sectionproperties</a></li>
 </ul>
 </li>
 </ul>
@@ -323,15 +320,16 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul class="current">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="opstool.set_opensees_module.html">set_opensees_module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.load_ops_examples.html">load_ops_examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.add_ops_hints_file.html">add_ops_hints_file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.run_model.html">run_model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.print_version.html">print_version</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="opstool.pre.section.FiberSecMesh.html">FiberSecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="opstool.pre.section.SecMesh.html">SecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="opstool.pre.section.create_material.html">create_material</a></li>
@@ -369,24 +367,28 @@
 <li class="toctree-l2"><a class="reference internal" href="opstool.pre.remove_void_nodes.html">remove_void_nodes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../post.html">Postprocessing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../post.html">Postprocessing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="opstool.post.get_nodal_responses_info.html">get_nodal_responses_info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opstool.post.get_element_responses_info.html">get_element_responses_info</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.post.set_odb_path.html">set_odb_path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.post.set_odb_format.html">set_odb_format</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.post.update_unit_system.html">update_unit_system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.post.reset_unit_system.html">reset_unit_system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opstool.post.plot_nodal_responses.html">plot_nodal_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opstool.post.plot_element_responses.html">plot_element_responses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.post.save_model_data.html">save_model_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.post.save_eigen_data.html">save_eigen_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.post.save_linear_buckling_data.html">save_linear_buckling_data</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">CreateODB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opstool.post.get_model_data.html">get_model_data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opstool.post.get_eigen_data.html">get_eigen_data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opstool.post.get_linear_buckling_data.html">get_linear_buckling_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.post.get_nodal_responses.html">get_nodal_responses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.post.get_element_responses.html">get_element_responses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.post.get_sensitivity_responses.html">get_sensitivity_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opstool.post.get_model_data.html">get_model_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opstool.post.get_eigen_data.html">get_eigen_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opstool.post.get_linear_buckling_data.html">get_linear_buckling_data</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="opstool.vis.plotly.set_plot_props.html">set_plot_props</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.vis.plotly.set_plot_colors.html">set_plot_colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.vis.plotly.plot_model.html">plot_model</a></li>
@@ -418,7 +420,7 @@
 <li class="toctree-l2"><a class="reference internal" href="opstool.vis.pyvista.get_unstruct_responses_dataset.html">get_unstruct_responses_dataset</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="opstool.anlys.SmartAnalyze.html">SmartAnalyze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="opstool.anlys.MomentCurvature.html">MomentCurvature</a></li>
 </ul>
@@ -463,7 +465,7 @@
           d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
         />
       </svg>
-      <span class="gh-source--version-text"> 1.0.24 </span>
+      <span class="gh-source--version-text"> 1.0.25 </span>
     </span>
   </span>
 </a>
@@ -511,7 +513,7 @@
 <h1>CreateODB<a class="headerlink" href="#createodb" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="opstool.post.CreateODB">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opstool.post.</span></span><span class="sig-name descname"><span class="pre">CreateODB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">odb_tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/opstool/post/responses_data.html#CreateODB"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opstool.post.CreateODB" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opstool.post.</span></span><span class="sig-name descname"><span class="pre">CreateODB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">odb_tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_every</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zlib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/opstool/post/responses_data.html#CreateODB"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opstool.post.CreateODB" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Create an output database (ODB) to save response data.</p>
 <section id="parameters">
@@ -530,6 +532,25 @@ Enabling model updates unnecessarily can increase memory usage and slow down per
 If some nodes or elements are deleted during the analysis, you should set this parameter to <cite>True</cite>.</p>
 </div>
 </dd>
+<dt>save_every: Optional[int], default: None</dt><dd><p>Save response data at a fixed interval of analysis steps.</p>
+<p>Added since version 1.0.25.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If set to an integer value, response data will be written to disk every save_every steps.
+This is particularly useful for large models with many analysis steps, as it allows responses to be flushed periodically into multiple ODB files, significantly reducing peak memory usage.</p>
+<p>If set to None, all response data are accumulated in memory and written to a single ODB file at the end of the analysis.
+This option provides the best runtime performance due to minimal I/O overhead, but may require substantial memory for large-scale models.</p>
+<p>In practice, this parameter should be chosen based on the model size and available system memory.
+If sufficient memory is available, it is recommended to keep <code class="docutils literal notranslate"><span class="pre">save_every=None</span></code>.
+Smaller values of save_every increase the frequency of disk writes, leading to higher disk usage and potentially slower data loading in subsequent post-processing stages.</p>
+</div>
+</dd>
+<dt>dtype: dict, default: dict(int=np.int32, float=np.float32)</dt><dd><p>Set integer and floating point precision types.</p>
+</dd>
+<dt>zlib: bool, default: False</dt><dd><p>Whether to compress the response data file.
+Only works when odb_format is set to “nc” in <cite>opstool.post.set_odb_format()</cite>.
+Added since version 1.0.25.</p>
+</dd>
 <dt>kwargs: Other post-processing parameters, optional:</dt><dd><ul>
 <li><dl class="simple">
 <dt>elastic_frame_sec_points: int, default: 7</dt><dd><p>The number of elastic frame elements section points.
@@ -537,18 +558,25 @@ A larger number may result in a larger file size.</p>
 </dd>
 </dl>
 </li>
+<li><dl class="simple">
+<dt>interpolate_beam_disp: Union[bool, int], default: False, added since version 1.0.25</dt><dd><p>Whether to interpolate beam displacements for nodal response of beam elements.
+If True, shape functions will be used to interpolate the displacements of beam elements for a smoother visualization.
+If an integer n is provided, it specifies the number of interpolation points along each beam element.
+If you have a large number of beam elements, enabling this option may slow down the plotting process, and it is recommended to disable it.
+Interpolation will not have a significant effect when applied to sufficiently subdivided beam elements; instead,
+it will increase the data size and slow down the speed.</p>
+</dd>
+</dl>
+</li>
 <li><dl>
 <dt>section_response_dof: Optional[dict], default: None</dt><dd><p>A dictionary to specify the section response type for different section types.
 The keys are the section types, and the values are the response types.
-For example, to specify the response type for “SectionAggregator”, you can set:
-..  code-block:: python</p>
-<blockquote>
-<div><dl class="simple">
-<dt>{</dt><dd><p>“SectionAggregator”: [“P”, “MZ”, “MY”, “T”, “VY”, “VZ”]  # means you use the section “P”, “MZ”, “MY”, “T” and addtional “VY”, “VZ” dof.</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
+For example, to specify the response type for “SectionAggregator”, you can set:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;SectionAggregator&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="s2">&quot;MZ&quot;</span><span class="p">,</span> <span class="s2">&quot;MY&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;VY&quot;</span><span class="p">,</span> <span class="s2">&quot;VZ&quot;</span><span class="p">]</span>  <span class="c1"># means you use the section &quot;P&quot;, &quot;MZ&quot;, &quot;MY&quot;, &quot;T&quot; and addtional &quot;VY&quot;, &quot;VZ&quot; dof.</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p>This is because for some section types, such as <code class="docutils literal notranslate"><span class="pre">Aggregator</span></code>, the number and order of the degrees of freedom are specified by the user.
 For other sections, the program can determine them automatically.</p>
 </dd>
@@ -601,11 +629,6 @@ If you want to compute the Mohr-Coulomb or Drucker-Prager equivalent stress with
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;extrapolate&quot;</span></code>: Extrapolate Gauss point responses to nodes by element shape function.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">None</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>: Do not project Gauss point responses to nodes.</p></li>
 </ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>dtype: dict, default: dict(int=np.int32, float=np.float32)</dt><dd><p>Set integer and floating point precision types.</p>
 </dd>
 </dl>
 </li>
@@ -759,7 +782,7 @@ Otherwise, unexpected behavior may occur.</p>
 <td><p>Save the model data from the current domain.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#opstool.post.CreateODB.save_response" title="opstool.post.CreateODB.save_response"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_response</span></code></a></p></td>
-<td><p>Save all response data to a file name <code class="docutils literal notranslate"><span class="pre">RespStepData-{odb_tag}.nc</span></code>.</p></td>
+<td><p>Save all response data.</p></td>
 </tr>
 </tbody>
 </table>
@@ -789,6 +812,10 @@ Otherwise, unexpected behavior may occur.</p>
 <dt class="sig sig-object py" id="opstool.post.CreateODB.combine_response_spectrum">
 <span class="sig-name descname"><span class="pre">combine_response_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'srss'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambdas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/opstool/post/responses_data.html#CreateODB.combine_response_spectrum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opstool.post.CreateODB.combine_response_spectrum" title="Link to this definition">¶</a></dt>
 <dd><p>Combine modal responses data, only for response spectrum analysis.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method only works when <code class="docutils literal notranslate"><span class="pre">save_every=None</span></code> in <a class="reference internal" href="#opstool.post.CreateODB" title="opstool.post.CreateODB"><code class="xref py py-func docutils literal notranslate"><span class="pre">opstool.post.CreateODB()</span></code></a>.</p>
+</div>
 <section id="id2">
 <h3>Parameters<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
 <dl class="simple">
@@ -808,18 +835,8 @@ Otherwise, unexpected behavior may occur.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="opstool.post.CreateODB.save_response">
-<span class="sig-name descname"><span class="pre">save_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zlib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/opstool/post/responses_data.html#CreateODB.save_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opstool.post.CreateODB.save_response" title="Link to this definition">¶</a></dt>
-<dd><p>Save all response data to a file name <code class="docutils literal notranslate"><span class="pre">RespStepData-{odb_tag}.nc</span></code>.</p>
-<section id="id3">
-<h3>Parameters<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>zlib: bool, optional, default: False</dt><dd><p>If True, the data is saved compressed,
-which is useful when your result files are expected to be large,
-especially if model updating is turned on.
-This option is only valid when <code class="docutils literal notranslate"><span class="pre">odb_format</span></code> is set to “nc” in <a class="reference internal" href="opstool.post.set_odb_format.html#opstool.post.set_odb_format" title="opstool.post.set_odb_format"><code class="xref py py-func docutils literal notranslate"><span class="pre">opstool.post.set_odb_format()</span></code></a>.</p>
-</dd>
-</dl>
-</section>
+<span class="sig-name descname"><span class="pre">save_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zlib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/opstool/post/responses_data.html#CreateODB.save_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opstool.post.CreateODB.save_response" title="Link to this definition">¶</a></dt>
+<dd><p>Save all response data.</p>
 <dl class="field-list simple">
 </dl>
 </dd></dl>
@@ -828,8 +845,8 @@ This option is only valid when <code class="docutils literal notranslate"><span 
 <dt class="sig sig-object py" id="opstool.post.CreateODB.save_eigen_data">
 <span class="sig-name descname"><span class="pre">save_eigen_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode_tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'-genBandArpack'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/opstool/post/responses_data.html#CreateODB.save_eigen_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#opstool.post.CreateODB.save_eigen_data" title="Link to this definition">¶</a></dt>
 <dd><p>Save modal analysis data.</p>
-<section id="id4">
-<h3>Parameters<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<section id="id3">
+<h3>Parameters<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
 <dl class="simple">
 <dt>mode_tag<span class="classifier">int, optional,</span></dt><dd><p>Modal tag, all modal data smaller than this modal tag will be saved, by default 1</p>
 </dd>
@@ -859,12 +876,12 @@ This option is only valid when <code class="docutils literal notranslate"><span 
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="opstool.post.get_model_data.html">
+          <a class="next-page" href="opstool.post.get_nodal_responses.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">get_model_data</div>
+                <div class="title">get_nodal_responses</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -930,7 +947,7 @@ This option is only valid when <code class="docutils literal notranslate"><span 
       
     </aside>
   </div>
-</div><script src="../../../_static/documentation_options.js?v=665f1cdb"></script>
+</div><script src="../../../_static/documentation_options.js?v=c22798c2"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>

@@ -6,8 +6,8 @@
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Moment Curvature Analysis of Section" href="mc_analysis.html" /><link rel="prev" title="Analysis" href="index.html" />
 
     <link rel="shortcut icon" href="../../_static/logo.png"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>Smart Analysis - opstool 1.0.24 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5f771d8e" />
+        <title>Smart Analysis - opstool 1.0.25 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css?v=572af1d6" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="../../_static/_css/shared.css?v=165b944a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/_css/shared.css?v=e989f5d6" />
     <link rel="stylesheet" type="text/css" href="../../_static/_css/furo.css?v=75230d29" />
     
     
@@ -27,8 +27,9 @@
 
 <style>
   body {
-    --color-code-background: #fbf1c7;
+    --color-code-background: #f8f8f8;
   --color-code-foreground: black;
+  --font-stack--monospace: Monaco, monospace;
   
   }
   @media not print {
@@ -177,7 +178,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">opstool 1.0.24 documentation</div></a>
+      <a href="../../index.html"><div class="brand">opstool 1.0.25 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -217,8 +218,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../known_issues.html">Known Issues</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../quick_start.html">Quick Start</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Quick Start</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../auto_examples/quick-start/ex-frame2D.html">Two-Dimensional Moment Frame Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../auto_examples/quick-start/ex-quick-plot-model.html">Quick Model and Eigen Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_sphinx_gallery_examples/quick-start/ex-frame2D.html">Two-Dimensional Moment Frame Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_sphinx_gallery_examples/quick-start/ex-quick-plot-model.html">Quick Model and Eigen Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quick-start/vis-megatall.html">606 m Mega-tall Building</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../quick_start.html#features">Features</a></li>
@@ -235,39 +237,39 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../post/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../post/eigen.html">Eigenvalue Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post/nodal_resp.html">Node Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post/frame_resp.html">Frame Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post/fiber_sec_resp.html">Fiber Section Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post/truss_resp.html">Truss Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post/shell_resp.html">Shell Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post/plane_up_resp.html">Plane response</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post/brick_resp.html">Brick Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../post/sensitivity_resp.html">Sensitivity Analysis Responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post/eigen.html">Eigenvalue Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post/nodal_resp.html">Node Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post/frame_resp.html">Frame element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post/fiber_sec_resp.html">Post-processing for fiber section responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post/truss_resp.html">Truss element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post/shell_resp.html">Shell element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post/plane_up_resp.html">Planar element response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post/brick_resp.html">Brick element Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post/sensitivity_resp.html">Simple cantilever for load-controlled sensitivity analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../post/unit_transform.html">Unit conversion in post-processing</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../auto_examples/vis-guide/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/index.html">Plotyly-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Plotyly-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-01-model-plotly.html">Model Geometry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-02-eigen-plotly.html">Eigen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-03-nodal-resp-plotly.html">Nodal Responses Visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-04-frame-resp-plotly.html">Frame Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-05-truss-resp-plotly.html">Truss Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-06-shell-resp-plotly.html">Shell Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-07-plane-resp-plotly.html">Plane stress quad model visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/plotly/ex-08-brick-resp-plotly.html">Solid Element Responses</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/index.html">Plotyly-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Plotyly-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-01-model-plotly.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-02-eigen-plotly.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-03-nodal-resp-plotly.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-04-frame-resp-plotly.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-05-truss-resp-plotly.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-06-shell-resp-plotly.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-07-plane-resp-plotly.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/plotly/ex-08-brick-resp-plotly.html">Solid Element Responses</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/index.html">Pyvista-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Pyvista-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-01-model-pyvista.html">Model Geometry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-02-eigen-pyvista.html">Eigen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-03-nodal-resp-pyvista.html">Nodal Responses Visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-04-frame-resp-pyvista.html">Frame Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-05-truss-resp-pyvista.html">Truss Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-06-shell-resp-pyvista.html">Shell Element Responses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-07-plane-resp-pyvista.html">Plane stress quad model visualization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/vis-guide/pyvista/ex-08-brick-resp-pyvista.html">Solid Element Responses</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/index.html">Pyvista-Based Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Pyvista-Based Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-01-model-pyvista.html">Model Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-02-eigen-pyvista.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-03-nodal-resp-pyvista.html">Nodal Responses Visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-04-frame-resp-pyvista.html">Frame Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-05-truss-resp-pyvista.html">Truss Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-06-shell-resp-pyvista.html">Shell Element Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-07-plane-resp-pyvista.html">Plane stress quad model visualization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/vis-guide/pyvista/ex-08-brick-resp-pyvista.html">Solid Element Responses</a></li>
 </ul>
 </li>
 </ul>
@@ -282,41 +284,36 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../auto_examples/examples/index.html">Post-Processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../auto_examples/examples/index.html#pre-processing">Pre-Processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../auto_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../auto_examples/examples/index.html#visualization">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-2DFrame-Pushover.html">Reinforced Concrete Frame Pushover Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-ele-removal-add.html">Remove and Add Elements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-excavation.html">Excavation Supported by Cantilevered Sheet Pile Wall</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-forma11c.html">Modal analysis of a cooling tower</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-fsi-gu.html">Fluid-structure interaction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-nonlinear-frame-transient.html">3D Nonlinear beam-column elements Gravity load analysis followed by transient analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-sensitivity2.html">Two storey steel moment frame with W-sections for displacement-controlled sensitivity analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/postprocessing/ex-ssi-Gu.html">Soil-Structure Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/index.html">Post-Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/index.html#pre-processing">Pre-Processing</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/index.html#fiber-section-mesh">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/index.html">Post-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Post-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-2DFrame-Pushover.html">Reinforced Concrete Frame Pushover Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-PressureDependMultiYield-6.html">Dry single BbarBrick element with pressure dependent material</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-cantilever-roll-up.html">Cantilever Bending Roll-up (corotational)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-double-layer-shallow-dome.html">Double-Layer Shallow Dome</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-ele-removal-add.html">Remove and Add Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-excavation.html">Excavation Supported by Cantilevered Sheet Pile Wall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-forma11c.html">Modal analysis of a cooling tower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-fsi-gu.html">Fluid-structure interaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-nonlinear-frame-transient.html">3D Nonlinear beam-column elements Gravity load analysis followed by transient analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-sensitivity2.html">Two storey steel moment frame with W-sections for displacement-controlled sensitivity analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/postprocessing/ex-ssi-Gu.html">Soil-Structure Interaction</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/preprocessing/ex-read-gmsh-1.html">Gmsh2OPS: Case 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/preprocessing/ex-read-gmsh-2.html">Gmsh2OPS: Case 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/preprocessing/ex-read-gmsh-3.html">3D Beam Element Example - A Dome Structure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/preprocessing/ex-read-gmsh-4.html">Gmsh2OPS: Linear shell arch model</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/preprocessing/index.html">Pre-Processing</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Pre-Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-1.html">Gmsh2OPS: Case 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-2.html">Gmsh2OPS: Case 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-3.html">3D Beam Element Example - A Dome Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/preprocessing/ex-read-gmsh-4.html">Gmsh2OPS: Linear shell arch model</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/index.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/ex-bridge-deck.html">Bridge superstructure section</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/ex-cfst.html">Concrete-Filled Steel Tube (CFST) Section Meshing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/ex-composite.html">Steel-Concrete Composite Section Meshing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/ex-rc-section.html">Hollow Rectangular RC Section</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/sec-mesh/ex-sec-props.html">Interaction with sectionproperties</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/examples/vis/index.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/examples/vis/ex-vis-megatall.html">606 m Mega-tall Building</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/sec-mesh/index.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/sec-mesh/ex-bridge-deck.html">Bridge superstructure section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/sec-mesh/ex-cfst.html">Concrete-Filled Steel Tube (CFST) Section Meshing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/sec-mesh/ex-composite.html">Steel-Concrete Composite Section Meshing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/sec-mesh/ex-rc-section.html">Hollow Rectangular RC Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_sphinx_gallery_examples/examples/sec-mesh/ex-sec-props.html">Interaction with sectionproperties</a></li>
 </ul>
 </li>
 </ul>
@@ -324,15 +321,16 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/global.html">Global Functions</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Global Functions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.set_opensees_module.html">set_opensees_module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.load_ops_examples.html">load_ops_examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.add_ops_hints_file.html">add_ops_hints_file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.run_model.html">run_model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.print_version.html">print_version</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/pre.html">Preprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Preprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api/pre.section.html">Fiber Section Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Fiber Section Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../api/_autosummary/opstool.pre.section.FiberSecMesh.html">FiberSecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/_autosummary/opstool.pre.section.SecMesh.html">SecMesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/_autosummary/opstool.pre.section.create_material.html">create_material</a></li>
@@ -370,24 +368,28 @@
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.pre.remove_void_nodes.html">remove_void_nodes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/post.html">Postprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Postprocessing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_nodal_responses_info.html">get_nodal_responses_info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_element_responses_info.html">get_element_responses_info</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.set_odb_path.html">set_odb_path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.set_odb_format.html">set_odb_format</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.update_unit_system.html">update_unit_system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.reset_unit_system.html">reset_unit_system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.plot_nodal_responses.html">plot_nodal_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.plot_element_responses.html">plot_element_responses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.save_model_data.html">save_model_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.save_eigen_data.html">save_eigen_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.save_linear_buckling_data.html">save_linear_buckling_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.CreateODB.html">CreateODB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_model_data.html">get_model_data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_eigen_data.html">get_eigen_data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_linear_buckling_data.html">get_linear_buckling_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_nodal_responses.html">get_nodal_responses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_element_responses.html">get_element_responses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_sensitivity_responses.html">get_sensitivity_responses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_model_data.html">get_model_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_eigen_data.html">get_eigen_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.post.get_linear_buckling_data.html">get_linear_buckling_data</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/vis.html">Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.vis.plotly.set_plot_props.html">set_plot_props</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.vis.plotly.set_plot_colors.html">set_plot_colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.vis.plotly.plot_model.html">plot_model</a></li>
@@ -419,7 +421,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.vis.pyvista.get_unstruct_responses_dataset.html">get_unstruct_responses_dataset</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.anlys.SmartAnalyze.html">SmartAnalyze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/_autosummary/opstool.anlys.MomentCurvature.html">MomentCurvature</a></li>
 </ul>
@@ -464,7 +466,7 @@
           d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
         />
       </svg>
-      <span class="gh-source--version-text"> 1.0.24 </span>
+      <span class="gh-source--version-text"> 1.0.25 </span>
     </span>
   </span>
 </a>
@@ -725,10 +727,11 @@
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 &gt;&gt;&gt; ✳️ OPSTOOL::SmartAnalyze:: Setting algorithm to KrylovNewton ...
-&gt;&gt;&gt; ✅ OPSTOOL::SmartAnalyze:: progress 100 steps. Time consumption: 0.128 s.
-&gt;&gt;&gt; ✅ OPSTOOL::SmartAnalyze:: progress 200 steps. Time consumption: 0.222 s.
+&gt;&gt;&gt; ✅ OPSTOOL::SmartAnalyze:: progress 100 steps. Time consumption: 0.051 s.
+&gt;&gt;&gt; ✅ OPSTOOL::SmartAnalyze:: progress 200 steps. Time consumption: 0.099 s.
 &gt;&gt;&gt; ✳️ OPSTOOL::SmartAnalyze:: Adding test times to 50.
-&gt;&gt;&gt; ✅ OPSTOOL::SmartAnalyze:: progress 300 steps. Time consumption: 0.348 s.
+&gt;&gt;&gt; ✅ OPSTOOL::SmartAnalyze:: progress 300 steps. Time consumption: 0.143 s.
+&gt;&gt;&gt; ✅ OPSTOOL::SmartAnalyze:: progress 400 steps. Time consumption: 0.201 s.
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -755,7 +758,6 @@ OpenSees &gt; analyze failed, returned: -3 error flag
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&gt;&gt;&gt; ✅ OPSTOOL::SmartAnalyze:: progress 400 steps. Time consumption: 0.442 s.
 &gt;&gt;&gt; ✳️ OPSTOOL::SmartAnalyze:: Adding test times to 50.
 </pre></div></div>
 </div>
@@ -763,7 +765,8 @@ OpenSees &gt; analyze failed, returned: -3 error flag
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  All responses data with _odb_tag = <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> saved in <span style="color: #ff6c5f; text-decoration-color: #ff6c5f; font-weight: bold">.opstool.output/RespStepData-</span><span style="color: #ff6c5f; text-decoration-color: #ff6c5f; font-weight: bold">1.</span><span style="color: #ff6c5f; text-decoration-color: #ff6c5f; font-weight: bold">nc</span>!
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL™</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  All responses data with _odb_tag = <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1</span> saved in
+<span style="color: #ffc20e; text-decoration-color: #ffc20e; font-weight: bold">g:\opstool\docs\src\analysis\.opstool.output\RespStepData-</span><span style="color: #ffc20e; text-decoration-color: #ffc20e; font-weight: bold">1.</span><span style="color: #ffc20e; text-decoration-color: #ffc20e; font-weight: bold">odb</span>!
 </pre></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -822,7 +825,7 @@ OpenSees &gt; analyze failed, returned: -3 error flag
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-magenta-intense-fg">OPSTOOL::SmartAnalyze</span>: 100%|<span style="color: rgb(81,112,215)">██████████</span>| 450/450 [00:00&lt;00:00, 625.35 step/s]
+🚀 <span class="ansi-magenta-intense-fg">OPSTOOL::SmartAnalyze</span>: 100%|<span style="color: rgb(81,112,215)">██████████</span>| 450/450 [00:00&lt;00:00, 1138.52 step/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -831,14 +834,15 @@ OpenSees &gt; analyze failed, returned: -3 error flag
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Note: OpenSees LogFile has been generated in .SmartAnalyze-OpenSees.log.
-&gt;&gt;&gt; 🎉 OPSTOOL::SmartAnalyze:: Successfully finished! Time consumption: 0.733 s. 🎉
+&gt;&gt;&gt; 🎉 OPSTOOL::SmartAnalyze:: Successfully finished! Time consumption: 0.397 s. 🎉
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  All responses data with _odb_tag = <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> saved in <span style="color: #34bf49; text-decoration-color: #34bf49; font-weight: bold">.opstool.output/RespStepData-</span><span style="color: #34bf49; text-decoration-color: #34bf49; font-weight: bold">2.</span><span style="color: #34bf49; text-decoration-color: #34bf49; font-weight: bold">nc</span>!
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL™</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  All responses data with _odb_tag = <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> saved in
+<span style="color: #8e43e7; text-decoration-color: #8e43e7; font-weight: bold">g:\opstool\docs\src\analysis\.opstool.output\RespStepData-</span><span style="color: #8e43e7; text-decoration-color: #8e43e7; font-weight: bold">2.</span><span style="color: #8e43e7; text-decoration-color: #8e43e7; font-weight: bold">odb</span>!
 </pre></div>
 </div>
 <div class="admonition note">
@@ -874,7 +878,7 @@ Note: OpenSees LogFile has been generated in .SmartAnalyze-OpenSees.log.
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading all response data from <span style="color: #2dde98; text-decoration-color: #2dde98; font-weight: bold">.opstool.output/RespStepData-</span><span style="color: #2dde98; text-decoration-color: #2dde98; font-weight: bold">1.</span><span style="color: #2dde98; text-decoration-color: #2dde98; font-weight: bold">nc</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL™</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading all response data from <span style="color: #b84592; text-decoration-color: #b84592; font-weight: bold">g:\opstool\docs\src\analysis\.opstool.output\RespStepData-</span><span style="color: #b84592; text-decoration-color: #b84592; font-weight: bold">1.</span><span style="color: #b84592; text-decoration-color: #b84592; font-weight: bold">odb</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
 </pre></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -882,20 +886,20 @@ Note: OpenSees LogFile has been generated in .SmartAnalyze-OpenSees.log.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;xarray.Dataset&gt; Size: 269kB
+&lt;xarray.DatasetView&gt; Size: 269kB
 Dimensions:             (time: 451, nodeTags: 4, DOFs: 6)
 Coordinates:
   * time                (time) float32 2kB 0.0 0.6715 1.179 ... 1.536 1.519
-  * nodeTags            (nodeTags) int32 16B 1 2 3 4
+  * nodeTags            (nodeTags) int64 32B 1 2 3 4
   * DOFs                (DOFs) &lt;U2 48B &#39;UX&#39; &#39;UY&#39; &#39;UZ&#39; &#39;RX&#39; &#39;RY&#39; &#39;RZ&#39;
 Data variables:
-    disp                (time, nodeTags, DOFs) float32 43kB 0.0 ... 6.499e-15
-    vel                 (time, nodeTags, DOFs) float32 43kB 0.0 0.0 ... 0.0 0.0
     accel               (time, nodeTags, DOFs) float32 43kB 0.0 0.0 ... 0.0 0.0
+    disp                (time, nodeTags, DOFs) float32 43kB 0.0 ... 6.499e-15
+    pressure            (time, nodeTags) float32 7kB 0.0 0.0 0.0 ... 0.0 0.0 0.0
+    rayleighForces      (time, nodeTags, DOFs) float32 43kB 0.0 0.0 ... 0.0 0.0
     reaction            (time, nodeTags, DOFs) float32 43kB 1.08e-15 ... -4.9...
     reactionIncInertia  (time, nodeTags, DOFs) float32 43kB 1.08e-15 ... -4.9...
-    rayleighForces      (time, nodeTags, DOFs) float32 43kB 0.0 0.0 ... 0.0 0.0
-    pressure            (time, nodeTags) float32 7kB 0.0 0.0 0.0 ... 0.0 0.0 0.0
+    vel                 (time, nodeTags, DOFs) float32 43kB 0.0 0.0 ... 0.0 0.0
 Attributes:
     UX:       Displacement in X direction
     UY:       Displacement in Y direction
@@ -950,7 +954,7 @@ Attributes:
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading Frame response data from <span style="color: #b84592; text-decoration-color: #b84592; font-weight: bold">.opstool.output/RespStepData-</span><span style="color: #b84592; text-decoration-color: #b84592; font-weight: bold">1.</span><span style="color: #b84592; text-decoration-color: #b84592; font-weight: bold">nc</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #cf6275; text-decoration-color: #cf6275; font-weight: bold">OPSTOOL™</span> <span style="color: #12e193; text-decoration-color: #12e193; font-weight: bold">::</span>  Loading Frame response data from <span style="color: #8e43e7; text-decoration-color: #8e43e7; font-weight: bold">g:\opstool\docs\src\analysis\.opstool.output\RespStepData-</span><span style="color: #8e43e7; text-decoration-color: #8e43e7; font-weight: bold">1.</span><span style="color: #8e43e7; text-decoration-color: #8e43e7; font-weight: bold">odb</span> <span style="color: #808000; text-decoration-color: #808000">...</span>
 </pre></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -973,39 +977,86 @@ Attributes:
 </symbol>
 </defs>
 </svg>
-<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
- *
- */
+<style>/* CSS stylesheet for displaying xarray objects in notebooks */
 
 :root {
-  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-  --xr-border-color: var(--jp-border-color2, #e0e0e0);
-  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-  --xr-background-color: var(--jp-layout-color0, white);
-  --xr-background-color-row-even: var(--jp-layout-color1, white);
-  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
 }
 
-html[theme=dark],
-html[data-theme=dark],
-body[data-theme=dark],
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
 body.vscode-dark {
-  --xr-font-color0: rgba(255, 255, 255, 1);
-  --xr-font-color2: rgba(255, 255, 255, 0.54);
-  --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
-  --xr-disabled-color: #515151;
-  --xr-background-color: #111111;
-  --xr-background-color-row-even: #111111;
-  --xr-background-color-row-odd: #313131;
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
 }
 
 .xr-wrap {
   display: block !important;
   min-width: 300px;
   max-width: 700px;
+  line-height: 1.6;
 }
 
 .xr-text-repr-fallback {
@@ -1028,11 +1079,18 @@ body.vscode-dark {
 }
 
 .xr-obj-type,
-.xr-array-name {
+.xr-obj-name,
+.xr-group-name {
   margin-left: 2px;
   margin-right: 10px;
 }
 
+.xr-group-name::before {
+  content: "📁";
+  padding-right: 0.3em;
+}
+
+.xr-group-name,
 .xr-obj-type {
   color: var(--xr-font-color2);
 }
@@ -1041,6 +1099,8 @@ body.vscode-dark {
   padding-left: 0 !important;
   display: grid;
   grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .xr-section-item {
@@ -1050,10 +1110,13 @@ body.vscode-dark {
 .xr-section-item input {
   display: inline-block;
   opacity: 0;
+  height: 0;
+  margin: 0;
 }
 
 .xr-section-item input + label {
   color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
 }
 
 .xr-section-item input:enabled + label {
@@ -1062,7 +1125,7 @@ body.vscode-dark {
 }
 
 .xr-section-item input:focus + label {
-  border: 2px solid var(--xr-font-color0);
+  border: 2px solid var(--xr-font-color0) !important;
 }
 
 .xr-section-item input:enabled + label:hover {
@@ -1086,7 +1149,7 @@ body.vscode-dark {
 
 .xr-section-summary-in + label:before {
   display: inline-block;
-  content: '►';
+  content: "►";
   font-size: 11px;
   width: 15px;
   text-align: center;
@@ -1097,7 +1160,7 @@ body.vscode-dark {
 }
 
 .xr-section-summary-in:checked + label:before {
-  content: '▼';
+  content: "▼";
 }
 
 .xr-section-summary-in:checked + label > span {
@@ -1107,7 +1170,6 @@ body.vscode-dark {
 .xr-section-summary,
 .xr-section-inline-details {
   padding-top: 4px;
-  padding-bottom: 4px;
 }
 
 .xr-section-inline-details {
@@ -1117,11 +1179,38 @@ body.vscode-dark {
 .xr-section-details {
   display: none;
   grid-column: 1 / -1;
+  margin-top: 4px;
   margin-bottom: 5px;
 }
 
 .xr-section-summary-in:checked ~ .xr-section-details {
   display: contents;
+}
+
+.xr-group-box {
+  display: inline-grid;
+  grid-template-columns: 0px 20px auto;
+  width: 100%;
+}
+
+.xr-group-box-vline {
+  grid-column-start: 1;
+  border-right: 0.2em solid;
+  border-color: var(--xr-border-color);
+  width: 0px;
+}
+
+.xr-group-box-hline {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  height: 1em;
+  width: 20px;
+  border-bottom: 0.2em solid;
+  border-color: var(--xr-border-color);
+}
+
+.xr-group-box-contents {
+  grid-column-start: 3;
 }
 
 .xr-array-wrap {
@@ -1169,15 +1258,15 @@ body.vscode-dark {
 }
 
 .xr-dim-list:before {
-  content: '(';
+  content: "(";
 }
 
 .xr-dim-list:after {
-  content: ')';
+  content: ")";
 }
 
 .xr-dim-list li:not(:last-child):after {
-  content: ',';
+  content: ",";
   padding-right: 5px;
 }
 
@@ -1194,7 +1283,9 @@ body.vscode-dark {
 .xr-var-item label,
 .xr-var-item > .xr-var-name span {
   background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
   margin-bottom: 0;
+  padding-top: 2px;
 }
 
 .xr-var-item > .xr-var-name:hover span {
@@ -1205,6 +1296,7 @@ body.vscode-dark {
 .xr-var-list > li:nth-child(odd) > label,
 .xr-var-list > li:nth-child(odd) > .xr-var-name span {
   background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
 }
 
 .xr-var-name {
@@ -1254,8 +1346,15 @@ body.vscode-dark {
 .xr-var-data,
 .xr-index-data {
   display: none;
-  background-color: var(--xr-background-color) !important;
-  padding-bottom: 5px !important;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
 }
 
 .xr-var-attrs-in:checked ~ .xr-var-attrs,
@@ -1266,6 +1365,12 @@ body.vscode-dark {
 
 .xr-var-data > table {
   float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
 }
 
 .xr-var-name span,
@@ -1327,113 +1432,41 @@ dl.xr-attrs {
   stroke: currentColor;
   fill: currentColor;
 }
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt; Size: 771kB
-Dimensions:              (time: 451, eleTags: 3, localDofs: 12, basicDofs: 6,
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DatasetView&gt; Size: 771kB
+Dimensions:              (time: 451, eleTags: 3, basicDofs: 6, localDofs: 12,
                           secPoints: 7, secDofs: 6, locs: 4)
 Coordinates:
   * time                 (time) float32 2kB 0.0 0.6715 1.179 ... 1.536 1.519
-  * eleTags              (eleTags) int32 12B 1 2 3
-  * localDofs            (localDofs) &lt;U3 144B &#x27;FX1&#x27; &#x27;FY1&#x27; &#x27;FZ1&#x27; ... &#x27;MY2&#x27; &#x27;MZ2&#x27;
+  * eleTags              (eleTags) int64 24B 1 2 3
   * basicDofs            (basicDofs) &lt;U3 72B &#x27;N&#x27; &#x27;MZ1&#x27; &#x27;MZ2&#x27; &#x27;MY1&#x27; &#x27;MY2&#x27; &#x27;T&#x27;
-  * secPoints            (secPoints) int32 28B 1 2 3 4 5 6 7
+  * localDofs            (localDofs) &lt;U3 144B &#x27;FX1&#x27; &#x27;FY1&#x27; &#x27;FZ1&#x27; ... &#x27;MY2&#x27; &#x27;MZ2&#x27;
+  * secPoints            (secPoints) int64 56B 1 2 3 4 5 6 7
   * secDofs              (secDofs) &lt;U2 48B &#x27;N&#x27; &#x27;MZ&#x27; &#x27;VY&#x27; &#x27;MY&#x27; &#x27;VZ&#x27; &#x27;T&#x27;
   * locs                 (locs) &lt;U5 80B &#x27;alpha&#x27; &#x27;X&#x27; &#x27;Y&#x27; &#x27;Z&#x27;
 Data variables:
-    localForces          (time, eleTags, localDofs) float32 65kB -180.0 ... -...
-    basicForces          (time, eleTags, basicDofs) float32 32kB -180.0 ... 4...
     basicDeformations    (time, eleTags, basicDofs) float32 32kB -0.01746 ......
+    basicForces          (time, eleTags, basicDofs) float32 32kB -180.0 ... 4...
+    localForces          (time, eleTags, localDofs) float32 65kB -180.0 ... -...
     plasticDeformation   (time, eleTags, basicDofs) float32 32kB -0.0003215 ....
-    sectionForces        (time, eleTags, secPoints, secDofs) float32 227kB -1...
     sectionDeformations  (time, eleTags, secPoints, secDofs) float32 227kB -0...
+    sectionForces        (time, eleTags, secPoints, secDofs) float32 227kB -1...
     sectionLocs          (time, eleTags, secPoints, locs) float32 152kB 0.0 ....
 Attributes:
     localDofs:  local coord system dofs at end 1 and end 2
     basicDofs:  basic coord system dofs at end 1 and end 2
     secPoints:  section points No.
     secDofs:    section forces and deformations Dofs. Note that the section D...
-    Notes:      Note that the deformations are displacements and rotations in...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-f543c24c-dac3-47e0-846b-213fd534648a' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-f543c24c-dac3-47e0-846b-213fd534648a' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 451</li><li><span class='xr-has-index'>eleTags</span>: 3</li><li><span class='xr-has-index'>localDofs</span>: 12</li><li><span class='xr-has-index'>basicDofs</span>: 6</li><li><span class='xr-has-index'>secPoints</span>: 7</li><li><span class='xr-has-index'>secDofs</span>: 6</li><li><span class='xr-has-index'>locs</span>: 4</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-5600c427-98bd-4f02-8ba1-38f03c1bf6be' class='xr-section-summary-in' type='checkbox'  checked><label for='section-5600c427-98bd-4f02-8ba1-38f03c1bf6be' class='xr-section-summary' >Coordinates: <span>(7)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 0.6715 1.179 ... 1.536 1.519</div><input id='attrs-df622f59-f5c5-4636-8185-91ac5a60efea' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-df622f59-f5c5-4636-8185-91ac5a60efea' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-12e120ca-dfed-4dfa-ac09-dfe32327bb60' class='xr-var-data-in' type='checkbox'><label for='data-12e120ca-dfed-4dfa-ac09-dfe32327bb60' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0.      , 0.671543, 1.179153, ..., 1.551336, 1.535522, 1.518841],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>eleTags</span></div><div class='xr-var-dims'>(eleTags)</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>1 2 3</div><input id='attrs-f82a428f-66c2-4df4-9667-596bb856a287' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-f82a428f-66c2-4df4-9667-596bb856a287' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2a31949b-0b8d-40a3-887d-d2ac68b34b6c' class='xr-var-data-in' type='checkbox'><label for='data-2a31949b-0b8d-40a3-887d-d2ac68b34b6c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1, 2, 3])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>localDofs</span></div><div class='xr-var-dims'>(localDofs)</div><div class='xr-var-dtype'>&lt;U3</div><div class='xr-var-preview xr-preview'>&#x27;FX1&#x27; &#x27;FY1&#x27; &#x27;FZ1&#x27; ... &#x27;MY2&#x27; &#x27;MZ2&#x27;</div><input id='attrs-8f7786a2-01a5-46e4-9218-1818c9807c1d' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-8f7786a2-01a5-46e4-9218-1818c9807c1d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6e1ac939-9e83-4d65-b918-af3600c85ec4' class='xr-var-data-in' type='checkbox'><label for='data-6e1ac939-9e83-4d65-b918-af3600c85ec4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;FX1&#x27;, &#x27;FY1&#x27;, &#x27;FZ1&#x27;, &#x27;MX1&#x27;, &#x27;MY1&#x27;, &#x27;MZ1&#x27;, &#x27;FX2&#x27;, &#x27;FY2&#x27;, &#x27;FZ2&#x27;, &#x27;MX2&#x27;,
-       &#x27;MY2&#x27;, &#x27;MZ2&#x27;], dtype=&#x27;&lt;U3&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>basicDofs</span></div><div class='xr-var-dims'>(basicDofs)</div><div class='xr-var-dtype'>&lt;U3</div><div class='xr-var-preview xr-preview'>&#x27;N&#x27; &#x27;MZ1&#x27; &#x27;MZ2&#x27; &#x27;MY1&#x27; &#x27;MY2&#x27; &#x27;T&#x27;</div><input id='attrs-28d41ea3-e54c-4010-91e8-c4ece6dfadcf' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-28d41ea3-e54c-4010-91e8-c4ece6dfadcf' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b4d1742e-460c-442d-aa06-751cec9b7431' class='xr-var-data-in' type='checkbox'><label for='data-b4d1742e-460c-442d-aa06-751cec9b7431' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;N&#x27;, &#x27;MZ1&#x27;, &#x27;MZ2&#x27;, &#x27;MY1&#x27;, &#x27;MY2&#x27;, &#x27;T&#x27;], dtype=&#x27;&lt;U3&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>secPoints</span></div><div class='xr-var-dims'>(secPoints)</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>1 2 3 4 5 6 7</div><input id='attrs-161de744-3f79-425c-863b-477309457e91' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-161de744-3f79-425c-863b-477309457e91' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-60a35c3c-817e-4ca3-a4c5-435eb880d211' class='xr-var-data-in' type='checkbox'><label for='data-60a35c3c-817e-4ca3-a4c5-435eb880d211' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1, 2, 3, 4, 5, 6, 7])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>secDofs</span></div><div class='xr-var-dims'>(secDofs)</div><div class='xr-var-dtype'>&lt;U2</div><div class='xr-var-preview xr-preview'>&#x27;N&#x27; &#x27;MZ&#x27; &#x27;VY&#x27; &#x27;MY&#x27; &#x27;VZ&#x27; &#x27;T&#x27;</div><input id='attrs-9eec9879-2da3-47ad-8f39-75fb47176935' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-9eec9879-2da3-47ad-8f39-75fb47176935' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b07af6de-833c-41ec-b273-39a97907d1d7' class='xr-var-data-in' type='checkbox'><label for='data-b07af6de-833c-41ec-b273-39a97907d1d7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;N&#x27;, &#x27;MZ&#x27;, &#x27;VY&#x27;, &#x27;MY&#x27;, &#x27;VZ&#x27;, &#x27;T&#x27;], dtype=&#x27;&lt;U2&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>locs</span></div><div class='xr-var-dims'>(locs)</div><div class='xr-var-dtype'>&lt;U5</div><div class='xr-var-preview xr-preview'>&#x27;alpha&#x27; &#x27;X&#x27; &#x27;Y&#x27; &#x27;Z&#x27;</div><input id='attrs-889583e2-494c-4e84-9ecf-90fa642eb756' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-889583e2-494c-4e84-9ecf-90fa642eb756' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-45f22ada-3477-47b3-a268-6dc0652a4b7a' class='xr-var-data-in' type='checkbox'><label for='data-45f22ada-3477-47b3-a268-6dc0652a4b7a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;alpha&#x27;, &#x27;X&#x27;, &#x27;Y&#x27;, &#x27;Z&#x27;], dtype=&#x27;&lt;U5&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-624e6a06-210d-4bd0-9b43-811ce2439d92' class='xr-section-summary-in' type='checkbox'  checked><label for='section-624e6a06-210d-4bd0-9b43-811ce2439d92' class='xr-section-summary' >Data variables: <span>(7)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>localForces</span></div><div class='xr-var-dims'>(time, eleTags, localDofs)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-180.0 1.879e-16 ... -4.513e-11</div><input id='attrs-69358a4b-2b91-47b9-a2b7-1dd216436443' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-69358a4b-2b91-47b9-a2b7-1dd216436443' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-cdb3c803-cb1f-4911-9bf9-d2c3606e79cf' class='xr-var-data-in' type='checkbox'><label for='data-cdb3c803-cb1f-4911-9bf9-d2c3606e79cf' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[-1.8000000e+02,  1.8788935e-16,  1.0863392e-15, ...,
-          9.9573276e-17, -1.2880312e-13, -2.3278259e-14],
-        [-1.8000000e+02, -5.7714713e-16,  2.8373550e-16, ...,
-          9.9573276e-17, -5.7791662e-14,  9.5022934e-14],
-        [-7.3809928e-17,  8.6757805e-21, -2.2839963e-16, ...,
-          1.5925481e-15,  3.7167057e-14, -1.5616405e-18]],
-
-       [[-1.7799983e+02, -8.5493934e-17, -6.8400741e+00, ...,
-          1.0823641e-17,  3.6003781e+02,  3.2014180e-15],
-        [-1.8200020e+02,  7.5994197e-16, -6.8407135e+00, ...,
-          1.0823641e-17,  3.6003235e+02, -9.3078797e-14],
-        [ 1.0735852e-03,  6.0126020e-20,  2.0001962e+00, ...,
-         -9.3722766e-16, -3.6003235e+02, -1.0822684e-17]],
-
-       [[-1.7623271e+02, -3.5659261e-16, -1.1987104e+01, ...,
-          1.3002627e-16,  6.7730713e+02, -8.4591097e-15],
-        [-1.8376733e+02, -7.9052275e-17, -1.2095934e+01, ...,
-          1.3002627e-16,  6.7891357e+02, -2.8953151e-14],
-        [-4.9197290e-02,  7.2236820e-19,  3.7672827e+00, ...,
-         -6.5545074e-15, -6.7891486e+02, -1.3002627e-16]],
-...
-       [[-1.5140665e+02, -1.5603766e-12, -7.0112534e+01, ...,
-          4.4913327e-11,  5.0711177e+03, -4.5096854e-10],
-        [-2.0859335e+02,  6.3300271e-13, -7.2916878e+01, ...,
-          4.4913327e-11,  5.2224907e+03,  4.4678619e-10],
-        [ 7.4948821e+00,  2.4951848e-13,  2.8593357e+01, ...,
-          4.4739160e-10, -5.2224907e+03, -4.4913327e-11]],
-
-       [[-1.5141882e+02, -1.5908590e-12, -6.9972496e+01, ...,
-          4.5011182e-11,  5.0623965e+03, -4.4300869e-10],
-        [-2.0858118e+02,  6.0677944e-13, -7.2975555e+01, ...,
-          4.5011182e-11,  5.2268247e+03,  4.4568940e-10],
-        [ 7.4194026e+00,  2.5006212e-13,  2.8581171e+01, ...,
-          4.4340609e-10, -5.2268247e+03, -4.5011182e-11]],
-
-       [[-1.5143214e+02, -1.5893732e-12, -6.9826416e+01, ...,
-          4.5128928e-11,  5.0532764e+03, -4.4036894e-10],
-        [-2.0856786e+02,  6.3759696e-13, -7.3034149e+01, ...,
-          4.5128928e-11,  5.2311514e+03,  4.3810691e-10],
-        [ 7.3347249e+00,  2.5071628e-13,  2.8567856e+01, ...,
-          4.3909706e-10, -5.2311514e+03, -4.5128928e-11]]], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>basicForces</span></div><div class='xr-var-dims'>(time, eleTags, basicDofs)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-180.0 3.778e-15 ... 4.391e-10</div><input id='attrs-000e7862-419a-4842-b494-81812a348f04' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-000e7862-419a-4842-b494-81812a348f04' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f98ae23c-a0ae-4c34-b7ed-e4c653e0343e' class='xr-var-data-in' type='checkbox'><label for='data-f98ae23c-a0ae-4c34-b7ed-e4c653e0343e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[-1.8000000e+02,  3.7778084e-15, -2.3278259e-14,  2.7629727e-14,
-         -1.2880312e-13,  9.9573276e-17],
-        [-1.8000000e+02,  1.1913748e-14,  9.5022934e-14, -1.6933751e-14,
-         -5.7791662e-14,  9.9573276e-17],
-        [-7.3809928e-17,  1.5616405e-18, -1.5616405e-18, -4.5056813e-14,
-          3.7167057e-14,  1.5925481e-15]],
-
-       [[-1.7799983e+02, -9.1097081e-15,  3.2014180e-15, -6.2493286e+02,
-          3.6003781e+02,  1.0823641e-17],
-        [-1.8200020e+02,  1.6352852e-14, -9.3078797e-14, -6.2503040e+02,
-          3.6003235e+02,  1.0823641e-17],
-        [ 1.0735852e-03,  1.0822684e-17, -1.0822684e-17,  3.6003824e+02,
-         -3.6003235e+02, -9.3722766e-16]],
-
-       [[-1.7623271e+02, -5.9808448e-14, -8.4591097e-15, -1.0488359e+03,
-          6.7730713e+02,  1.3002627e-16],
-        [-1.8376733e+02, -4.0336681e-14, -2.8953151e-14, -1.0629009e+03,
-          6.7891357e+02,  1.3002627e-16],
-        [-4.9197290e-02,  1.3002627e-16, -1.3002627e-16,  6.7730688e+02,
-         -6.7891486e+02, -6.5545074e-15]],
-...
-       [[-1.5140665e+02, -6.7566275e-10, -4.5096854e-10, -5.0250864e+03,
-          5.0711177e+03,  4.4913327e-11],
-        [-2.0859335e+02,  5.3793858e-10,  4.4678619e-10, -5.2775405e+03,
-          5.2224907e+03,  4.4913327e-11],
-        [ 7.4948821e+00,  4.4913327e-11, -4.4913327e-11,  5.0711177e+03,
-         -5.2224907e+03,  4.4739160e-10]],
-
-       [[-1.5141882e+02, -6.7209238e-10, -4.4300869e-10, -5.0136431e+03,
-          5.0623965e+03,  4.5011182e-11],
-        [-2.0858118e+02,  5.3306565e-10,  4.4568940e-10, -5.2816553e+03,
-          5.2268247e+03,  4.5011182e-11],
-        [ 7.4194026e+00,  4.5011182e-11, -4.5011182e-11,  5.0623965e+03,
-         -5.2268247e+03,  4.4340609e-10]],
-
-       [[-1.5143214e+02, -6.6923866e-10, -4.4036894e-10, -5.0017280e+03,
-          5.0532764e+03,  4.5128928e-11],
-        [-2.0856786e+02,  5.2992088e-10,  4.3810691e-10, -5.2857661e+03,
-          5.2311514e+03,  4.5128928e-11],
-        [ 7.3347249e+00,  4.5128928e-11, -4.5128928e-11,  5.0532764e+03,
-         -5.2311514e+03,  4.3909706e-10]]], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>basicDeformations</span></div><div class='xr-var-dims'>(time, eleTags, basicDofs)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-0.01746 6.208e-21 ... 7.845e-15</div><input id='attrs-1bfa5326-3379-479d-bf2c-ff3fa8fac952' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-1bfa5326-3379-479d-bf2c-ff3fa8fac952' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f8a80809-6c40-452e-bcd7-f955b579e525' class='xr-var-data-in' type='checkbox'><label for='data-f8a80809-6c40-452e-bcd7-f955b579e525' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[-1.74643509e-02,  6.20808784e-21,  2.64218371e-20,
+    Notes:      Note that the deformations are displacements and rotations in...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DatasetView</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-57fd656c-24e9-4db5-9f20-ecd3f87ecb5b' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-57fd656c-24e9-4db5-9f20-ecd3f87ecb5b' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 451</li><li><span class='xr-has-index'>eleTags</span>: 3</li><li><span class='xr-has-index'>basicDofs</span>: 6</li><li><span class='xr-has-index'>localDofs</span>: 12</li><li><span class='xr-has-index'>secPoints</span>: 7</li><li><span class='xr-has-index'>secDofs</span>: 6</li><li><span class='xr-has-index'>locs</span>: 4</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-cedc9723-7382-4d7f-88e2-4b62d2e7450e' class='xr-section-summary-in' type='checkbox'  checked><label for='section-cedc9723-7382-4d7f-88e2-4b62d2e7450e' class='xr-section-summary' >Coordinates: <span>(7)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 0.6715 1.179 ... 1.536 1.519</div><input id='attrs-6a8afc15-23ab-4fde-b7ca-4be7a52b7557' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-6a8afc15-23ab-4fde-b7ca-4be7a52b7557' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-72ac2a87-45cb-4673-8987-bf596741e645' class='xr-var-data-in' type='checkbox'><label for='data-72ac2a87-45cb-4673-8987-bf596741e645' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0.      , 0.671543, 1.179153, ..., 1.551336, 1.535522, 1.518841],
+      shape=(451,), dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>eleTags</span></div><div class='xr-var-dims'>(eleTags)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>1 2 3</div><input id='attrs-d21e2562-0887-44d7-8a3e-551caf9a2b23' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-d21e2562-0887-44d7-8a3e-551caf9a2b23' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a1f7a658-970e-42f3-8d83-7ac859c3d0d1' class='xr-var-data-in' type='checkbox'><label for='data-a1f7a658-970e-42f3-8d83-7ac859c3d0d1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1, 2, 3])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>basicDofs</span></div><div class='xr-var-dims'>(basicDofs)</div><div class='xr-var-dtype'>&lt;U3</div><div class='xr-var-preview xr-preview'>&#x27;N&#x27; &#x27;MZ1&#x27; &#x27;MZ2&#x27; &#x27;MY1&#x27; &#x27;MY2&#x27; &#x27;T&#x27;</div><input id='attrs-01d828ce-de3b-4fbd-985a-ce9cb81096b1' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-01d828ce-de3b-4fbd-985a-ce9cb81096b1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c2ddfce1-6400-4d0a-89d7-9916a1394da2' class='xr-var-data-in' type='checkbox'><label for='data-c2ddfce1-6400-4d0a-89d7-9916a1394da2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;N&#x27;, &#x27;MZ1&#x27;, &#x27;MZ2&#x27;, &#x27;MY1&#x27;, &#x27;MY2&#x27;, &#x27;T&#x27;], dtype=&#x27;&lt;U3&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>localDofs</span></div><div class='xr-var-dims'>(localDofs)</div><div class='xr-var-dtype'>&lt;U3</div><div class='xr-var-preview xr-preview'>&#x27;FX1&#x27; &#x27;FY1&#x27; &#x27;FZ1&#x27; ... &#x27;MY2&#x27; &#x27;MZ2&#x27;</div><input id='attrs-e85b1f6d-76c4-40ad-a5db-5bf38a9fc294' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-e85b1f6d-76c4-40ad-a5db-5bf38a9fc294' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-63395646-edf0-4455-89c2-7c3ae9a0a86e' class='xr-var-data-in' type='checkbox'><label for='data-63395646-edf0-4455-89c2-7c3ae9a0a86e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;FX1&#x27;, &#x27;FY1&#x27;, &#x27;FZ1&#x27;, &#x27;MX1&#x27;, &#x27;MY1&#x27;, &#x27;MZ1&#x27;, &#x27;FX2&#x27;, &#x27;FY2&#x27;, &#x27;FZ2&#x27;, &#x27;MX2&#x27;,
+       &#x27;MY2&#x27;, &#x27;MZ2&#x27;], dtype=&#x27;&lt;U3&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>secPoints</span></div><div class='xr-var-dims'>(secPoints)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>1 2 3 4 5 6 7</div><input id='attrs-fb6f3890-b111-41e9-97e8-4bb0aadd99ea' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-fb6f3890-b111-41e9-97e8-4bb0aadd99ea' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9cd692a2-025c-4394-8cc3-6f6b8ef5cccf' class='xr-var-data-in' type='checkbox'><label for='data-9cd692a2-025c-4394-8cc3-6f6b8ef5cccf' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1, 2, 3, 4, 5, 6, 7])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>secDofs</span></div><div class='xr-var-dims'>(secDofs)</div><div class='xr-var-dtype'>&lt;U2</div><div class='xr-var-preview xr-preview'>&#x27;N&#x27; &#x27;MZ&#x27; &#x27;VY&#x27; &#x27;MY&#x27; &#x27;VZ&#x27; &#x27;T&#x27;</div><input id='attrs-c8ddf850-afe5-44fb-a9d9-8fc0cb711e57' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-c8ddf850-afe5-44fb-a9d9-8fc0cb711e57' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d0fe7ee0-f994-46f1-a940-8613420b3899' class='xr-var-data-in' type='checkbox'><label for='data-d0fe7ee0-f994-46f1-a940-8613420b3899' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;N&#x27;, &#x27;MZ&#x27;, &#x27;VY&#x27;, &#x27;MY&#x27;, &#x27;VZ&#x27;, &#x27;T&#x27;], dtype=&#x27;&lt;U2&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>locs</span></div><div class='xr-var-dims'>(locs)</div><div class='xr-var-dtype'>&lt;U5</div><div class='xr-var-preview xr-preview'>&#x27;alpha&#x27; &#x27;X&#x27; &#x27;Y&#x27; &#x27;Z&#x27;</div><input id='attrs-d1be8b56-f1bf-4a8f-9748-da1591da1e1c' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-d1be8b56-f1bf-4a8f-9748-da1591da1e1c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f01d9af9-fd19-48b0-b87f-e6ab595508b6' class='xr-var-data-in' type='checkbox'><label for='data-f01d9af9-fd19-48b0-b87f-e6ab595508b6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;alpha&#x27;, &#x27;X&#x27;, &#x27;Y&#x27;, &#x27;Z&#x27;], dtype=&#x27;&lt;U5&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-ff8a5694-8b25-4474-8354-2b59eeed538e' class='xr-section-summary-in' type='checkbox'  checked><label for='section-ff8a5694-8b25-4474-8354-2b59eeed538e' class='xr-section-summary' >Data variables: <span>(7)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>basicDeformations</span></div><div class='xr-var-dims'>(time, eleTags, basicDofs)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-0.01746 6.208e-21 ... 7.845e-15</div><input id='attrs-72653e15-7b73-48af-bd66-a6dcf6b75528' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-72653e15-7b73-48af-bd66-a6dcf6b75528' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-cc575444-e189-4d34-8fb8-57c1889a90a0' class='xr-var-data-in' type='checkbox'><label for='data-cc575444-e189-4d34-8fb8-57c1889a90a0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[-1.74643509e-02,  6.20808784e-21,  2.64218371e-20,
           3.63978566e-20,  8.37510483e-20,  2.24876224e-22],
         [-1.74643509e-02,  6.77700594e-21, -2.59955422e-21,
           3.65250453e-20,  4.28372832e-20,  2.24876224e-22],
@@ -1473,7 +1506,87 @@ Attributes:
          -3.12512636e-01,  3.02249640e-01,  6.49856594e-15],
         [ 1.82003097e-03,  7.77655920e-17, -7.77655920e-17,
           8.40122998e-03, -9.32076480e-03,  7.84491084e-15]]],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>plasticDeformation</span></div><div class='xr-var-dims'>(time, eleTags, basicDofs)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-0.0003215 -2.377e-20 ... -0.0 0.0</div><input id='attrs-c4afd568-f5e5-4edf-9649-97a9a5c422ce' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-c4afd568-f5e5-4edf-9649-97a9a5c422ce' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2190858d-dd06-47ed-b38d-8ed71684deeb' class='xr-var-data-in' type='checkbox'><label for='data-2190858d-dd06-47ed-b38d-8ed71684deeb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[-3.21494328e-04, -2.37705422e-20,  3.88397608e-21,
+      shape=(451, 3, 6), dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>basicForces</span></div><div class='xr-var-dims'>(time, eleTags, basicDofs)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-180.0 3.778e-15 ... 4.391e-10</div><input id='attrs-d403f85f-0a2d-45d3-a4e3-e2cd765b3e2b' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-d403f85f-0a2d-45d3-a4e3-e2cd765b3e2b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0828f7ce-9bb8-476f-85c8-20ebd5c66aad' class='xr-var-data-in' type='checkbox'><label for='data-0828f7ce-9bb8-476f-85c8-20ebd5c66aad' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[-1.8000000e+02,  3.7778084e-15, -2.3278259e-14,  2.7629727e-14,
+         -1.2880312e-13,  9.9573276e-17],
+        [-1.8000000e+02,  1.1913748e-14,  9.5022934e-14, -1.6933751e-14,
+         -5.7791662e-14,  9.9573276e-17],
+        [-7.3809928e-17,  1.5616405e-18, -1.5616405e-18, -4.5056813e-14,
+          3.7167057e-14,  1.5925481e-15]],
+
+       [[-1.7799983e+02, -9.1097081e-15,  3.2014180e-15, -6.2493286e+02,
+          3.6003781e+02,  1.0823641e-17],
+        [-1.8200020e+02,  1.6352852e-14, -9.3078797e-14, -6.2503040e+02,
+          3.6003235e+02,  1.0823641e-17],
+        [ 1.0735852e-03,  1.0822684e-17, -1.0822684e-17,  3.6003824e+02,
+         -3.6003235e+02, -9.3722766e-16]],
+
+       [[-1.7623271e+02, -5.9808448e-14, -8.4591097e-15, -1.0488359e+03,
+          6.7730713e+02,  1.3002627e-16],
+        [-1.8376733e+02, -4.0336681e-14, -2.8953151e-14, -1.0629009e+03,
+          6.7891357e+02,  1.3002627e-16],
+        [-4.9197290e-02,  1.3002627e-16, -1.3002627e-16,  6.7730688e+02,
+         -6.7891486e+02, -6.5545074e-15]],
+...
+          5.0711177e+03,  4.4913327e-11],
+        [-2.0859335e+02,  5.3793858e-10,  4.4678619e-10, -5.2775405e+03,
+          5.2224907e+03,  4.4913327e-11],
+        [ 7.4948821e+00,  4.4913327e-11, -4.4913327e-11,  5.0711177e+03,
+         -5.2224907e+03,  4.4739160e-10]],
+
+       [[-1.5141882e+02, -6.7209238e-10, -4.4300869e-10, -5.0136431e+03,
+          5.0623965e+03,  4.5011182e-11],
+        [-2.0858118e+02,  5.3306565e-10,  4.4568940e-10, -5.2816553e+03,
+          5.2268247e+03,  4.5011182e-11],
+        [ 7.4194026e+00,  4.5011182e-11, -4.5011182e-11,  5.0623965e+03,
+         -5.2268247e+03,  4.4340609e-10]],
+
+       [[-1.5143214e+02, -6.6923866e-10, -4.4036894e-10, -5.0017280e+03,
+          5.0532764e+03,  4.5128928e-11],
+        [-2.0856786e+02,  5.2992088e-10,  4.3810691e-10, -5.2857661e+03,
+          5.2311514e+03,  4.5128928e-11],
+        [ 7.3347249e+00,  4.5128928e-11, -4.5128928e-11,  5.0532764e+03,
+         -5.2311514e+03,  4.3909706e-10]]],
+      shape=(451, 3, 6), dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>localForces</span></div><div class='xr-var-dims'>(time, eleTags, localDofs)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-180.0 1.879e-16 ... -4.513e-11</div><input id='attrs-387dfb98-fce8-4ea5-8d5e-9e3bac8710e9' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-387dfb98-fce8-4ea5-8d5e-9e3bac8710e9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a2ecef52-d3d7-4705-aade-5a1b927f80de' class='xr-var-data-in' type='checkbox'><label for='data-a2ecef52-d3d7-4705-aade-5a1b927f80de' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[-1.8000000e+02,  1.8788935e-16,  1.0863392e-15, ...,
+          9.9573276e-17, -1.2880312e-13, -2.3278259e-14],
+        [-1.8000000e+02, -5.7714713e-16,  2.8373550e-16, ...,
+          9.9573276e-17, -5.7791662e-14,  9.5022934e-14],
+        [-7.3809928e-17,  8.6757805e-21, -2.2839963e-16, ...,
+          1.5925481e-15,  3.7167057e-14, -1.5616405e-18]],
+
+       [[-1.7799983e+02, -8.5493934e-17, -6.8400741e+00, ...,
+          1.0823641e-17,  3.6003781e+02,  3.2014180e-15],
+        [-1.8200020e+02,  7.5994197e-16, -6.8407135e+00, ...,
+          1.0823641e-17,  3.6003235e+02, -9.3078797e-14],
+        [ 1.0735852e-03,  6.0126020e-20,  2.0001962e+00, ...,
+         -9.3722766e-16, -3.6003235e+02, -1.0822684e-17]],
+
+       [[-1.7623271e+02, -3.5659261e-16, -1.1987104e+01, ...,
+          1.3002627e-16,  6.7730713e+02, -8.4591097e-15],
+        [-1.8376733e+02, -7.9052275e-17, -1.2095934e+01, ...,
+          1.3002627e-16,  6.7891357e+02, -2.8953151e-14],
+        [-4.9197290e-02,  7.2236820e-19,  3.7672827e+00, ...,
+         -6.5545074e-15, -6.7891486e+02, -1.3002627e-16]],
+...
+          4.4913327e-11,  5.0711177e+03, -4.5096854e-10],
+        [-2.0859335e+02,  6.3300271e-13, -7.2916878e+01, ...,
+          4.4913327e-11,  5.2224907e+03,  4.4678619e-10],
+        [ 7.4948821e+00,  2.4951848e-13,  2.8593357e+01, ...,
+          4.4739160e-10, -5.2224907e+03, -4.4913327e-11]],
+
+       [[-1.5141882e+02, -1.5908590e-12, -6.9972496e+01, ...,
+          4.5011182e-11,  5.0623965e+03, -4.4300869e-10],
+        [-2.0858118e+02,  6.0677944e-13, -7.2975555e+01, ...,
+          4.5011182e-11,  5.2268247e+03,  4.4568940e-10],
+        [ 7.4194026e+00,  2.5006212e-13,  2.8581171e+01, ...,
+          4.4340609e-10, -5.2268247e+03, -4.5011182e-11]],
+
+       [[-1.5143214e+02, -1.5893732e-12, -6.9826416e+01, ...,
+          4.5128928e-11,  5.0532764e+03, -4.4036894e-10],
+        [-2.0856786e+02,  6.3759696e-13, -7.3034149e+01, ...,
+          4.5128928e-11,  5.2311514e+03,  4.3810691e-10],
+        [ 7.3347249e+00,  2.5071628e-13,  2.8567856e+01, ...,
+          4.3909706e-10, -5.2311514e+03, -4.5128928e-11]]],
+      shape=(451, 3, 12), dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>plasticDeformation</span></div><div class='xr-var-dims'>(time, eleTags, basicDofs)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-0.0003215 -2.377e-20 ... -0.0 0.0</div><input id='attrs-5e8c36e5-35fd-4b21-a556-370eb31603a6' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-5e8c36e5-35fd-4b21-a556-370eb31603a6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b14cdb53-40f1-415e-b9fa-a77e0c777598' class='xr-var-data-in' type='checkbox'><label for='data-b14cdb53-40f1-415e-b9fa-a77e0c777598' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[-3.21494328e-04, -2.37705422e-20,  3.88397608e-21,
           4.47663782e-20,  2.09231278e-19, -1.41136755e-20],
         [-3.21494328e-04, -6.02109679e-20, -9.24436308e-20,
           5.84555291e-20,  9.53555845e-20, -1.41136755e-20],
@@ -1513,47 +1626,7 @@ Attributes:
          -3.08514625e-01,  2.98374295e-01, -7.88860905e-31],
         [ 0.00000000e+00, -0.00000000e+00,  0.00000000e+00,
           0.00000000e+00, -0.00000000e+00,  0.00000000e+00]]],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>sectionForces</span></div><div class='xr-var-dims'>(time, eleTags, secPoints, secDofs)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-180.0 7.105e-15 ... 4.391e-10</div><input id='attrs-a653aec3-449a-4262-a273-977c0ce1fea8' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-a653aec3-449a-4262-a273-977c0ce1fea8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-60e2f957-bcfd-44fa-8d9b-a90fa882160f' class='xr-var-data-in' type='checkbox'><label for='data-60e2f957-bcfd-44fa-8d9b-a90fa882160f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[[-1.80000000e+02,  7.10542736e-15, -0.00000000e+00,
-          -5.68434189e-14,  0.00000000e+00,  9.95732758e-17],
-         [-1.80000000e+02, -0.00000000e+00, -0.00000000e+00,
-          -1.95399252e-14,  0.00000000e+00,  9.95732758e-17],
-         [-1.80000000e+02,  7.10542736e-15, -0.00000000e+00,
-           8.52651283e-14,  0.00000000e+00,  9.95732758e-17],
-         ...,
-         [-1.80000000e+02,  2.13162821e-14, -0.00000000e+00,
-           6.57252031e-14,  0.00000000e+00,  9.95732758e-17],
-         [            nan,             nan,             nan,
-                      nan,             nan,             nan],
-         [            nan,             nan,             nan,
-                      nan,             nan,             nan]],
-
-        [[-1.80000000e+02, -3.55271368e-14, -0.00000000e+00,
-           6.39488462e-14,  0.00000000e+00,  9.95732758e-17],
-         [-1.80000000e+02,  3.55271368e-15, -0.00000000e+00,
-           2.13162821e-14,  0.00000000e+00,  9.95732758e-17],
-         [-1.80000000e+02, -8.52651283e-14, -0.00000000e+00,
-           2.30926389e-14,  0.00000000e+00,  9.95732758e-17],
-...
-          -5.23115137e+03,  0.00000000e+00,  4.51286647e-11],
-         [            nan,             nan,             nan,
-                      nan,             nan,             nan],
-         [            nan,             nan,             nan,
-                      nan,             nan,             nan]],
-
-        [[ 7.33472490e+00, -4.51289284e-11,  2.50716277e-13,
-          -5.05327637e+03,  2.85678558e+01,  4.39097064e-10],
-         [ 7.33472490e+00, -3.00859511e-11,  2.50716277e-13,
-          -3.33920508e+03,  2.85678558e+01,  4.39097064e-10],
-         [ 7.33472490e+00, -1.50429755e-11,  2.50716277e-13,
-          -1.62513367e+03,  2.85678558e+01,  4.39097064e-10],
-         ...,
-         [ 7.33472490e+00,  1.50429773e-11,  2.50716277e-13,
-           1.80300903e+03,  2.85678558e+01,  4.39097064e-10],
-         [ 7.33472490e+00,  3.00859546e-11,  2.50716277e-13,
-           3.51708032e+03,  2.85678558e+01,  4.39097064e-10],
-         [ 7.33472490e+00,  4.51289318e-11,  2.50716277e-13,
-           5.23115186e+03,  2.85678558e+01,  4.39097064e-10]]]],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>sectionDeformations</span></div><div class='xr-var-dims'>(time, eleTags, secPoints, secDofs)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-0.0001213 -5.052e-22 ... 2.179e-17</div><input id='attrs-b9b08705-db44-4d4f-8063-7d5dc1ebf36c' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-b9b08705-db44-4d4f-8063-7d5dc1ebf36c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-67243680-2b26-49b0-975e-0d725b7957a3' class='xr-var-data-in' type='checkbox'><label for='data-67243680-2b26-49b0-975e-0d725b7957a3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[[-1.21280216e-04, -5.05237112e-22, -0.00000000e+00,
+      shape=(451, 3, 6), dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>sectionDeformations</span></div><div class='xr-var-dims'>(time, eleTags, secPoints, secDofs)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-0.0001213 -5.052e-22 ... 2.179e-17</div><input id='attrs-2740271a-1bfe-445c-b53c-d644113757c0' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-2740271a-1bfe-445c-b53c-d644113757c0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-913bbcb2-ad39-41c2-90ce-2224d6de1918' class='xr-var-data-in' type='checkbox'><label for='data-913bbcb2-ad39-41c2-90ce-2224d6de1918' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[[-1.21280216e-04, -5.05237112e-22, -0.00000000e+00,
           -2.55591357e-21,  0.00000000e+00,  9.95732736e-23],
          [-1.21280216e-04,  4.80823312e-23, -0.00000000e+00,
           -1.46240817e-21,  0.00000000e+00,  9.95732736e-23],
@@ -1593,7 +1666,47 @@ Attributes:
            1.01009799e-04,  0.00000000e+00,  2.17914198e-17],
          [ 5.05564140e-06,  1.29609328e-18, -0.00000000e+00,
            1.50237567e-04,  0.00000000e+00,  2.17914198e-17]]]],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>sectionLocs</span></div><div class='xr-var-dims'>(time, eleTags, secPoints, locs)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 0.0 0.0 0.0 ... 360.0 0.0 144.0</div><input id='attrs-9e30ed17-9ef5-47b0-9c43-84190b18aee2' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-9e30ed17-9ef5-47b0-9c43-84190b18aee2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ca0b5868-2f1a-40a5-82f1-77e22269b182' class='xr-var-data-in' type='checkbox'><label for='data-ca0b5868-2f1a-40a5-82f1-77e22269b182' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[[0.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00],
+      shape=(451, 3, 7, 6), dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>sectionForces</span></div><div class='xr-var-dims'>(time, eleTags, secPoints, secDofs)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-180.0 7.105e-15 ... 4.391e-10</div><input id='attrs-844af893-173e-4bb9-a843-bf022abb3be5' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-844af893-173e-4bb9-a843-bf022abb3be5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b7056246-ff74-43a0-a1b5-b999f9e244bd' class='xr-var-data-in' type='checkbox'><label for='data-b7056246-ff74-43a0-a1b5-b999f9e244bd' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[[-1.80000000e+02,  7.10542736e-15, -0.00000000e+00,
+          -5.68434189e-14,  0.00000000e+00,  9.95732758e-17],
+         [-1.80000000e+02, -0.00000000e+00, -0.00000000e+00,
+          -1.95399252e-14,  0.00000000e+00,  9.95732758e-17],
+         [-1.80000000e+02,  7.10542736e-15, -0.00000000e+00,
+           8.52651283e-14,  0.00000000e+00,  9.95732758e-17],
+         ...,
+         [-1.80000000e+02,  2.13162821e-14, -0.00000000e+00,
+           6.57252031e-14,  0.00000000e+00,  9.95732758e-17],
+         [            nan,             nan,             nan,
+                      nan,             nan,             nan],
+         [            nan,             nan,             nan,
+                      nan,             nan,             nan]],
+
+        [[-1.80000000e+02, -3.55271368e-14, -0.00000000e+00,
+           6.39488462e-14,  0.00000000e+00,  9.95732758e-17],
+         [-1.80000000e+02,  3.55271368e-15, -0.00000000e+00,
+           2.13162821e-14,  0.00000000e+00,  9.95732758e-17],
+         [-1.80000000e+02, -8.52651283e-14, -0.00000000e+00,
+           2.30926389e-14,  0.00000000e+00,  9.95732758e-17],
+...
+          -5.23115137e+03,  0.00000000e+00,  4.51286647e-11],
+         [            nan,             nan,             nan,
+                      nan,             nan,             nan],
+         [            nan,             nan,             nan,
+                      nan,             nan,             nan]],
+
+        [[ 7.33472490e+00, -4.51289284e-11,  2.50716277e-13,
+          -5.05327637e+03,  2.85678558e+01,  4.39097064e-10],
+         [ 7.33472490e+00, -3.00859511e-11,  2.50716277e-13,
+          -3.33920508e+03,  2.85678558e+01,  4.39097064e-10],
+         [ 7.33472490e+00, -1.50429755e-11,  2.50716277e-13,
+          -1.62513367e+03,  2.85678558e+01,  4.39097064e-10],
+         ...,
+         [ 7.33472490e+00,  1.50429773e-11,  2.50716277e-13,
+           1.80300903e+03,  2.85678558e+01,  4.39097064e-10],
+         [ 7.33472490e+00,  3.00859546e-11,  2.50716277e-13,
+           3.51708032e+03,  2.85678558e+01,  4.39097064e-10],
+         [ 7.33472490e+00,  4.51289318e-11,  2.50716277e-13,
+           5.23115186e+03,  2.85678558e+01,  4.39097064e-10]]]],
+      shape=(451, 3, 7, 6), dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>sectionLocs</span></div><div class='xr-var-dims'>(time, eleTags, secPoints, locs)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 0.0 0.0 0.0 ... 360.0 0.0 144.0</div><input id='attrs-b1e8e4f7-ce08-4772-a8be-09ff0be900f8' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-b1e8e4f7-ce08-4772-a8be-09ff0be900f8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-478be9a6-d0c9-4fae-a1d0-8a63ed801661' class='xr-var-data-in' type='checkbox'><label for='data-478be9a6-d0c9-4fae-a1d0-8a63ed801661' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[[0.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00],
          [1.7267317e-01, 0.0000000e+00, 0.0000000e+00, 2.4864937e+01],
          [5.0000000e-01, 0.0000000e+00, 0.0000000e+00, 7.2000000e+01],
          ...,
@@ -1633,18 +1746,7 @@ Attributes:
          [6.6666669e-01, 2.4000000e+02, 0.0000000e+00, 1.4400000e+02],
          [8.3333331e-01, 3.0000000e+02, 0.0000000e+00, 1.4400000e+02],
          [1.0000000e+00, 3.6000000e+02, 0.0000000e+00, 1.4400000e+02]]]],
-      dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-24973de3-9093-4250-92fb-47265b93d594' class='xr-section-summary-in' type='checkbox'  ><label for='section-24973de3-9093-4250-92fb-47265b93d594' class='xr-section-summary' >Indexes: <span>(7)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-523a8162-a41f-4b1e-be5b-a4e652477188' class='xr-index-data-in' type='checkbox'/><label for='index-523a8162-a41f-4b1e-be5b-a4e652477188' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([               0.0, 0.6715428829193115,  1.179153323173523,
-        1.567800760269165, 1.9007995128631592, 2.2036783695220947,
-        2.491940498352051, 2.7684249877929688, 3.0376155376434326,
-        3.301870584487915,
-       ...
-       1.6352343559265137,  1.624084711074829, 1.6128172874450684,
-        1.601424217224121,   1.58989679813385, 1.5782254934310913,
-       1.5663989782333374, 1.5513358116149902,  1.535522222518921,
-        1.518841028213501],
-      dtype=&#x27;float32&#x27;, name=&#x27;time&#x27;, length=451))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>eleTags</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-3edfefa6-57d7-4150-94db-18d346808cec' class='xr-index-data-in' type='checkbox'/><label for='index-3edfefa6-57d7-4150-94db-18d346808cec' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([1, 2, 3], dtype=&#x27;int32&#x27;, name=&#x27;eleTags&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>localDofs</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-b1357a2a-fb37-4f40-a8bf-4b7a59f15991' class='xr-index-data-in' type='checkbox'/><label for='index-b1357a2a-fb37-4f40-a8bf-4b7a59f15991' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([&#x27;FX1&#x27;, &#x27;FY1&#x27;, &#x27;FZ1&#x27;, &#x27;MX1&#x27;, &#x27;MY1&#x27;, &#x27;MZ1&#x27;, &#x27;FX2&#x27;, &#x27;FY2&#x27;, &#x27;FZ2&#x27;, &#x27;MX2&#x27;,
-       &#x27;MY2&#x27;, &#x27;MZ2&#x27;],
-      dtype=&#x27;object&#x27;, name=&#x27;localDofs&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>basicDofs</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-af2012c9-75d2-44e9-bf89-28280e7a3823' class='xr-index-data-in' type='checkbox'/><label for='index-af2012c9-75d2-44e9-bf89-28280e7a3823' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([&#x27;N&#x27;, &#x27;MZ1&#x27;, &#x27;MZ2&#x27;, &#x27;MY1&#x27;, &#x27;MY2&#x27;, &#x27;T&#x27;], dtype=&#x27;object&#x27;, name=&#x27;basicDofs&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>secPoints</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-add6bf7a-7660-40fc-b884-e26d9b5fae9e' class='xr-index-data-in' type='checkbox'/><label for='index-add6bf7a-7660-40fc-b884-e26d9b5fae9e' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([1, 2, 3, 4, 5, 6, 7], dtype=&#x27;int32&#x27;, name=&#x27;secPoints&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>secDofs</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-88ae17e7-362e-4c67-a61f-5966f2bef107' class='xr-index-data-in' type='checkbox'/><label for='index-88ae17e7-362e-4c67-a61f-5966f2bef107' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([&#x27;N&#x27;, &#x27;MZ&#x27;, &#x27;VY&#x27;, &#x27;MY&#x27;, &#x27;VZ&#x27;, &#x27;T&#x27;], dtype=&#x27;object&#x27;, name=&#x27;secDofs&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>locs</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-3b14978e-2e04-467b-adc0-1602013f832f' class='xr-index-data-in' type='checkbox'/><label for='index-3b14978e-2e04-467b-adc0-1602013f832f' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([&#x27;alpha&#x27;, &#x27;X&#x27;, &#x27;Y&#x27;, &#x27;Z&#x27;], dtype=&#x27;object&#x27;, name=&#x27;locs&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-e9959291-5cf5-4c49-b179-8a4685b6de5f' class='xr-section-summary-in' type='checkbox'  checked><label for='section-e9959291-5cf5-4c49-b179-8a4685b6de5f' class='xr-section-summary' >Attributes: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>localDofs :</span></dt><dd>local coord system dofs at end 1 and end 2</dd><dt><span>basicDofs :</span></dt><dd>basic coord system dofs at end 1 and end 2</dd><dt><span>secPoints :</span></dt><dd>section points No.</dd><dt><span>secDofs :</span></dt><dd>section forces and deformations Dofs. Note that the section DOFs are only valid for &lt;Elastic Section&gt;, &lt;Elastic Shear Section&gt;, and &lt;Fiber Section&gt;. For &lt;Aggregator Section&gt;, you should carefully check the data, as it may not correspond directly to the DOFs.</dd><dt><span>Notes :</span></dt><dd>Note that the deformations are displacements and rotations in the basicDofs;And strains and curvatures in the secDofs</dd></dl></div></li></ul></div></div></div>
+      shape=(451, 3, 7, 4), dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-a0ef1346-4cf8-4aab-9def-eac968185d85' class='xr-section-summary-in' type='checkbox'  checked><label for='section-a0ef1346-4cf8-4aab-9def-eac968185d85' class='xr-section-summary' >Attributes: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>localDofs :</span></dt><dd>local coord system dofs at end 1 and end 2</dd><dt><span>basicDofs :</span></dt><dd>basic coord system dofs at end 1 and end 2</dd><dt><span>secPoints :</span></dt><dd>section points No.</dd><dt><span>secDofs :</span></dt><dd>section forces and deformations Dofs. Note that the section DOFs are only valid for &lt;Elastic Section&gt;, &lt;Elastic Shear Section&gt;, and &lt;Fiber Section&gt;. For &lt;Aggregator Section&gt;, you should carefully check the data, as it may not correspond directly to the DOFs.</dd><dt><span>Notes :</span></dt><dd>Note that the deformations are displacements and rotations in the basicDofs;And strains and curvatures in the secDofs</dd></dl></div></li></ul></div></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
@@ -1678,39 +1780,86 @@ Attributes:
 </symbol>
 </defs>
 </svg>
-<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
- *
- */
+<style>/* CSS stylesheet for displaying xarray objects in notebooks */
 
 :root {
-  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-  --xr-border-color: var(--jp-border-color2, #e0e0e0);
-  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-  --xr-background-color: var(--jp-layout-color0, white);
-  --xr-background-color-row-even: var(--jp-layout-color1, white);
-  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
 }
 
-html[theme=dark],
-html[data-theme=dark],
-body[data-theme=dark],
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
 body.vscode-dark {
-  --xr-font-color0: rgba(255, 255, 255, 1);
-  --xr-font-color2: rgba(255, 255, 255, 0.54);
-  --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
-  --xr-disabled-color: #515151;
-  --xr-background-color: #111111;
-  --xr-background-color-row-even: #111111;
-  --xr-background-color-row-odd: #313131;
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
 }
 
 .xr-wrap {
   display: block !important;
   min-width: 300px;
   max-width: 700px;
+  line-height: 1.6;
 }
 
 .xr-text-repr-fallback {
@@ -1733,11 +1882,18 @@ body.vscode-dark {
 }
 
 .xr-obj-type,
-.xr-array-name {
+.xr-obj-name,
+.xr-group-name {
   margin-left: 2px;
   margin-right: 10px;
 }
 
+.xr-group-name::before {
+  content: "📁";
+  padding-right: 0.3em;
+}
+
+.xr-group-name,
 .xr-obj-type {
   color: var(--xr-font-color2);
 }
@@ -1746,6 +1902,8 @@ body.vscode-dark {
   padding-left: 0 !important;
   display: grid;
   grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .xr-section-item {
@@ -1755,10 +1913,13 @@ body.vscode-dark {
 .xr-section-item input {
   display: inline-block;
   opacity: 0;
+  height: 0;
+  margin: 0;
 }
 
 .xr-section-item input + label {
   color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
 }
 
 .xr-section-item input:enabled + label {
@@ -1767,7 +1928,7 @@ body.vscode-dark {
 }
 
 .xr-section-item input:focus + label {
-  border: 2px solid var(--xr-font-color0);
+  border: 2px solid var(--xr-font-color0) !important;
 }
 
 .xr-section-item input:enabled + label:hover {
@@ -1791,7 +1952,7 @@ body.vscode-dark {
 
 .xr-section-summary-in + label:before {
   display: inline-block;
-  content: '►';
+  content: "►";
   font-size: 11px;
   width: 15px;
   text-align: center;
@@ -1802,7 +1963,7 @@ body.vscode-dark {
 }
 
 .xr-section-summary-in:checked + label:before {
-  content: '▼';
+  content: "▼";
 }
 
 .xr-section-summary-in:checked + label > span {
@@ -1812,7 +1973,6 @@ body.vscode-dark {
 .xr-section-summary,
 .xr-section-inline-details {
   padding-top: 4px;
-  padding-bottom: 4px;
 }
 
 .xr-section-inline-details {
@@ -1822,11 +1982,38 @@ body.vscode-dark {
 .xr-section-details {
   display: none;
   grid-column: 1 / -1;
+  margin-top: 4px;
   margin-bottom: 5px;
 }
 
 .xr-section-summary-in:checked ~ .xr-section-details {
   display: contents;
+}
+
+.xr-group-box {
+  display: inline-grid;
+  grid-template-columns: 0px 20px auto;
+  width: 100%;
+}
+
+.xr-group-box-vline {
+  grid-column-start: 1;
+  border-right: 0.2em solid;
+  border-color: var(--xr-border-color);
+  width: 0px;
+}
+
+.xr-group-box-hline {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  height: 1em;
+  width: 20px;
+  border-bottom: 0.2em solid;
+  border-color: var(--xr-border-color);
+}
+
+.xr-group-box-contents {
+  grid-column-start: 3;
 }
 
 .xr-array-wrap {
@@ -1874,15 +2061,15 @@ body.vscode-dark {
 }
 
 .xr-dim-list:before {
-  content: '(';
+  content: "(";
 }
 
 .xr-dim-list:after {
-  content: ')';
+  content: ")";
 }
 
 .xr-dim-list li:not(:last-child):after {
-  content: ',';
+  content: ",";
   padding-right: 5px;
 }
 
@@ -1899,7 +2086,9 @@ body.vscode-dark {
 .xr-var-item label,
 .xr-var-item > .xr-var-name span {
   background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
   margin-bottom: 0;
+  padding-top: 2px;
 }
 
 .xr-var-item > .xr-var-name:hover span {
@@ -1910,6 +2099,7 @@ body.vscode-dark {
 .xr-var-list > li:nth-child(odd) > label,
 .xr-var-list > li:nth-child(odd) > .xr-var-name span {
   background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
 }
 
 .xr-var-name {
@@ -1959,8 +2149,15 @@ body.vscode-dark {
 .xr-var-data,
 .xr-index-data {
   display: none;
-  background-color: var(--xr-background-color) !important;
-  padding-bottom: 5px !important;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
 }
 
 .xr-var-attrs-in:checked ~ .xr-var-attrs,
@@ -1971,6 +2168,12 @@ body.vscode-dark {
 
 .xr-var-data > table {
   float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
 }
 
 .xr-var-name span,
@@ -2032,6 +2235,14 @@ dl.xr-attrs {
   stroke: currentColor;
   fill: currentColor;
 }
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
 </style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;sectionDeformations&#x27; (time: 5, secPoints: 5)&gt; Size: 100B
 array([[-2.5559136e-21, -1.4624082e-21, -1.5771168e-22,  2.1066618e-22,
          6.5240725e-22],
@@ -2045,9 +2256,9 @@ array([[-2.5559136e-21, -1.4624082e-21, -1.5771168e-22,  2.1066618e-22,
         -6.7724483e-05]], dtype=float32)
 Coordinates:
   * time       (time) float32 20B 0.0 0.6715 1.179 1.568 1.901
-    eleTags    int32 4B 1
-  * secPoints  (secPoints) int32 20B 1 2 3 4 5
-    secDofs    &lt;U2 8B &#x27;MY&#x27;</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'sectionDeformations'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 5</li><li><span class='xr-has-index'>secPoints</span>: 5</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-b46d7c2b-8566-4b9f-8864-3129e1aab6fc' class='xr-array-in' type='checkbox' checked><label for='section-b46d7c2b-8566-4b9f-8864-3129e1aab6fc' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-2.556e-21 -1.462e-21 -1.577e-22 ... 6.62e-06 -2.598e-05 -6.772e-05</span></div><div class='xr-array-data'><pre>array([[-2.5559136e-21, -1.4624082e-21, -1.5771168e-22,  2.1066618e-22,
+  * secPoints  (secPoints) int64 40B 1 2 3 4 5
+    eleTags    int64 8B 1
+    secDofs    &lt;U2 8B &#x27;MY&#x27;</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-obj-name'>&#x27;sectionDeformations&#x27;</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 5</li><li><span class='xr-has-index'>secPoints</span>: 5</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-dfa8352d-249b-4706-ac81-0ac6b1fa9a25' class='xr-array-in' type='checkbox' checked><label for='section-dfa8352d-249b-4706-ac81-0ac6b1fa9a25' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-2.556e-21 -1.462e-21 -1.577e-22 ... 6.62e-06 -2.598e-05 -6.772e-05</span></div><div class='xr-array-data'><pre>array([[-2.5559136e-21, -1.4624082e-21, -1.5771168e-22,  2.1066618e-22,
          6.5240725e-22],
        [ 2.1244745e-05,  1.4625922e-05,  4.2289248e-06, -6.0741395e-06,
         -1.1554748e-05],
@@ -2056,9 +2267,7 @@ Coordinates:
        [ 8.3909654e-05,  4.4445082e-05,  6.2719751e-06, -1.8140119e-05,
         -4.4766162e-05],
        [ 1.1238557e-04,  6.0898597e-05,  6.6196931e-06, -2.5983645e-05,
-        -6.7724483e-05]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-fedbdb85-b02c-4692-8ea0-3c050e7b3726' class='xr-section-summary-in' type='checkbox'  checked><label for='section-fedbdb85-b02c-4692-8ea0-3c050e7b3726' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 0.6715 1.179 1.568 1.901</div><input id='attrs-5e5b3afc-bcb7-4365-b47f-161e072025c1' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-5e5b3afc-bcb7-4365-b47f-161e072025c1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5cce13cb-4bc4-457c-9169-b73aa09b6539' class='xr-var-data-in' type='checkbox'><label for='data-5cce13cb-4bc4-457c-9169-b73aa09b6539' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0.      , 0.671543, 1.179153, 1.567801, 1.9008  ], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>eleTags</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>1</div><input id='attrs-8a5a0d68-531a-4a76-862c-ae7e6125d7e6' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-8a5a0d68-531a-4a76-862c-ae7e6125d7e6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-33e88ad5-f90b-4cc5-bd34-6555ded7f3c6' class='xr-var-data-in' type='checkbox'><label for='data-33e88ad5-f90b-4cc5-bd34-6555ded7f3c6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(1)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>secPoints</span></div><div class='xr-var-dims'>(secPoints)</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>1 2 3 4 5</div><input id='attrs-549ac978-2d66-4453-8a28-a1e1a1ce8e59' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-549ac978-2d66-4453-8a28-a1e1a1ce8e59' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-78c01a1a-5290-4d87-b311-56f6bdb3d5f1' class='xr-var-data-in' type='checkbox'><label for='data-78c01a1a-5290-4d87-b311-56f6bdb3d5f1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1, 2, 3, 4, 5])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>secDofs</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>&lt;U2</div><div class='xr-var-preview xr-preview'>&#x27;MY&#x27;</div><input id='attrs-b821ae20-ca45-4563-9fa5-175f1b828ebd' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-b821ae20-ca45-4563-9fa5-175f1b828ebd' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-fb4c0853-1bef-44b2-a0ed-32c21cfab300' class='xr-var-data-in' type='checkbox'><label for='data-fb4c0853-1bef-44b2-a0ed-32c21cfab300' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&#x27;MY&#x27;, dtype=&#x27;&lt;U2&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-b56f91e7-d362-429f-8d0d-1325f46c5811' class='xr-section-summary-in' type='checkbox'  ><label for='section-b56f91e7-d362-429f-8d0d-1325f46c5811' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-b048b242-e962-4a13-a032-5364fa3c3407' class='xr-index-data-in' type='checkbox'/><label for='index-b048b242-e962-4a13-a032-5364fa3c3407' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([               0.0, 0.6715428829193115,  1.179153323173523,
-        1.567800760269165, 1.9007995128631592],
-      dtype=&#x27;float32&#x27;, name=&#x27;time&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>secPoints</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-8feea1c0-5860-4f5e-ab86-ba78a017ab62' class='xr-index-data-in' type='checkbox'/><label for='index-8feea1c0-5860-4f5e-ab86-ba78a017ab62' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([1, 2, 3, 4, 5], dtype=&#x27;int32&#x27;, name=&#x27;secPoints&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-7b6232fc-5ac5-4be6-b574-f077b9f5e958' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-7b6232fc-5ac5-4be6-b574-f077b9f5e958' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div>
+        -6.7724483e-05]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-9f88b1be-6e54-4023-bb5e-817f76c1d5ec' class='xr-section-summary-in' type='checkbox'  checked><label for='section-9f88b1be-6e54-4023-bb5e-817f76c1d5ec' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 0.6715 1.179 1.568 1.901</div><input id='attrs-e7673e25-b72a-4a64-afdb-e64645415299' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-e7673e25-b72a-4a64-afdb-e64645415299' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a8c48e1a-fed5-427a-808e-0c9bdeedfb51' class='xr-var-data-in' type='checkbox'><label for='data-a8c48e1a-fed5-427a-808e-0c9bdeedfb51' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0.      , 0.671543, 1.179153, 1.567801, 1.9008  ], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>secPoints</span></div><div class='xr-var-dims'>(secPoints)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>1 2 3 4 5</div><input id='attrs-c7533735-bf00-4216-82a0-3c8436267647' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-c7533735-bf00-4216-82a0-3c8436267647' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d816da53-22f6-4e8a-b919-f2e375671994' class='xr-var-data-in' type='checkbox'><label for='data-d816da53-22f6-4e8a-b919-f2e375671994' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1, 2, 3, 4, 5])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>eleTags</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>1</div><input id='attrs-445e611f-5caf-43d3-a55b-19dff980e783' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-445e611f-5caf-43d3-a55b-19dff980e783' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-876ba9d3-c3b1-418c-96d6-c7ca61c53bec' class='xr-var-data-in' type='checkbox'><label for='data-876ba9d3-c3b1-418c-96d6-c7ca61c53bec' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(1)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>secDofs</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>&lt;U2</div><div class='xr-var-preview xr-preview'>&#x27;MY&#x27;</div><input id='attrs-a6e157f0-0818-4683-b56a-f586a94c7492' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-a6e157f0-0818-4683-b56a-f586a94c7492' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ca0f6b3e-ff9b-4465-86a2-bebbffb0cca2' class='xr-var-data-in' type='checkbox'><label for='data-ca0f6b3e-ff9b-4465-86a2-bebbffb0cca2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array(&#x27;MY&#x27;, dtype=&#x27;&lt;U2&#x27;)</pre></div></li></ul></div></li></ul></div></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
@@ -2170,7 +2379,7 @@ Coordinates:
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=665f1cdb"></script>
+</div><script src="../../_static/documentation_options.js?v=c22798c2"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
